@@ -1,397 +1,397 @@
-Rank,Player,POS,AVG,Player_fixed,player_clean,POS_group,year,adp_rank,adp_percentile
-1,Saquon Barkley,RB1,1.0,Saquon Barkley,saquon barkley,RB,2019,1,1.0
-2,Christian McCaffrey,RB2,2.5,Christian McCaffrey,christian mccaffrey,RB,2019,2,0.9971590909090909
-3,Alvin Kamara,RB3,2.5,Alvin Kamara,alvin kamara,RB,2019,2,0.9971590909090909
-4,Ezekiel Elliott,RB4,4.0,Ezekiel Elliott,ezekiel elliott,RB,2019,3,0.9943181818181818
-5,DeAndre Hopkins,WR1,5.3,DeAndre Hopkins,deandre hopkins,WR,2019,4,0.9914772727272727
-6,James Conner,RB5,6.5,James Conner,james conner,RB,2019,5,0.9886363636363636
-8,Davante Adams,WR2,9.0,Davante Adams,davante adams,WR,2019,6,0.9857954545454546
-9,David Johnson,RB7,9.3,David Johnson,david johnson,RB,2019,7,0.9829545454545454
-10,Nick Chubb,RB8,10.5,Nick Chubb,nick chubb,RB,2019,8,0.9801136363636364
-11,Todd Gurley,RB9,11.8,Todd Gurley,todd gurley,RB,2019,9,0.9772727272727273
-12,Patrick Mahomes II,QB1,12.0,Patrick Mahomes II,patrick mahomes ii,QB,2019,10,0.9744318181818182
-13,Michael Thomas,WR3,12.8,Michael Thomas,michael thomas,WR,2019,11,0.9715909090909091
-14,Julio Jones,WR4,13.0,Julio Jones,julio jones,WR,2019,12,0.96875
-15,Dalvin Cook,RB10,16.3,Dalvin Cook,dalvin cook,RB,2019,13,0.9659090909090909
-16,Tyreek Hill,WR5,16.3,Tyreek Hill,tyreek hill,WR,2019,13,0.9659090909090909
-17,JuJu Smith-Schuster,WR6,17.0,JuJu Smith-Schuster,juju smith-schuster,WR,2019,14,0.9630681818181818
-18,Odell Beckham Jr.,WR7,17.0,Odell Beckham Jr.,odell beckham jr,WR,2019,14,0.9630681818181818
-19,Joe Mixon,RB11,17.3,Joe Mixon,joe mixon,RB,2019,15,0.9602272727272727
-20,Travis Kelce,TE1,18.8,Travis Kelce,travis kelce,TE,2019,16,0.9573863636363636
-21,Leonard Fournette,RB12,21.5,Leonard Fournette,leonard fournette,RB,2019,17,0.9545454545454546
-22,Mike Evans,WR8,22.3,Mike Evans,mike evans,WR,2019,18,0.9517045454545454
-23,Antonio Brown,WR9,22.8,Antonio Brown,antonio brown,WR,2019,19,0.9488636363636364
-24,Adam Thielen,WR10,25.5,Adam Thielen,adam thielen,WR,2019,20,0.9460227272727273
-25,Damien Williams,RB13,26.0,Damien Williams,damien williams,RB,2019,21,0.9431818181818182
-26,Keenan Allen,WR11,26.8,Keenan Allen,keenan allen,WR,2019,22,0.9403409090909091
-27,Kerryon Johnson,RB14,27.0,Kerryon Johnson,kerryon johnson,RB,2019,23,0.9375
-28,Aaron Jones Sr.,RB15,28.0,Aaron Jones Sr.,aaron jones sr,RB,2019,24,0.9346590909090909
-29,Zach Ertz,TE2,31.3,Zach Ertz,zach ertz,TE,2019,25,0.9318181818181819
-30,Chris Carson ,RB16,31.8,Chris Carson ,chris carson,RB,2019,26,0.9289772727272727
-31,George Kittle,TE3,32.8,George Kittle,george kittle,TE,2019,27,0.9261363636363636
-32,Josh Jacobs,RB17,33.0,Josh Jacobs,josh jacobs,RB,2019,28,0.9232954545454546
-33,Devonta Freeman,RB18,33.3,Devonta Freeman,devonta freeman,RB,2019,29,0.9204545454545454
-34,Amari Cooper,WR12,33.3,Amari Cooper,amari cooper,WR,2019,29,0.9204545454545454
-35,Stefon Diggs,WR13,34.8,Stefon Diggs,stefon diggs,WR,2019,30,0.9176136363636364
-36,Derrick Henry,RB19,36.5,Derrick Henry,derrick henry,RB,2019,31,0.9147727272727273
-37,Deshaun Watson,QB2,38.0,Deshaun Watson,deshaun watson,QB,2019,32,0.9119318181818181
-38,David Montgomery,RB20,39.0,David Montgomery,david montgomery,RB,2019,33,0.9090909090909091
-39,Marlon Mack,RB21,39.0,Marlon Mack,marlon mack,RB,2019,33,0.9090909090909091
-40,Brandin Cooks,WR14,39.3,Brandin Cooks,brandin cooks,WR,2019,34,0.90625
-41,Mark Ingram,RB22,42.5,Mark Ingram,mark ingram,RB,2019,35,0.9034090909090909
-42,Robert Woods,WR15,43.3,Robert Woods,robert woods,WR,2019,36,0.9005681818181819
-43,Julian Edelman,WR16,44.0,Julian Edelman,julian edelman,WR,2019,37,0.8977272727272727
-44,Sony Michel,RB23,44.8,Sony Michel,sony michel,RB,2019,38,0.8948863636363636
-45,T.Y. Hilton,WR17,45.3,T.Y. Hilton,ty hilton,WR,2019,39,0.8920454545454546
-46,Tyler Lockett,WR18,45.5,Tyler Lockett,tyler lockett,WR,2019,40,0.8892045454545454
-47,Aaron Rodgers,QB3,46.5,Aaron Rodgers,aaron rodgers,QB,2019,41,0.8863636363636364
-48,Melvin Gordon,RB24,47.5,Melvin Gordon,melvin gordon,RB,2019,42,0.8835227272727273
-49,Kenny Golladay,WR19,48.5,Kenny Golladay,kenny golladay,WR,2019,43,0.8806818181818181
-50,Chris Godwin,WR20,49.0,Chris Godwin,chris godwin,WR,2019,44,0.8778409090909091
-51,Cooper Kupp,WR21,50.5,Cooper Kupp,cooper kupp,WR,2019,45,0.875
-52,Phillip Lindsay,RB25,51.5,Phillip Lindsay,phillip lindsay,RB,2019,46,0.8721590909090909
-53,Calvin Ridley,WR22,54.8,Calvin Ridley,calvin ridley,WR,2019,47,0.8693181818181819
-54,Baker Mayfield,QB4,56.0,Baker Mayfield,baker mayfield,QB,2019,48,0.8664772727272727
-55,O.J. Howard,TE4,56.5,O.J. Howard,oj howard,TE,2019,49,0.8636363636363636
-56,Tevin Coleman,RB26,57.0,Tevin Coleman,tevin coleman,RB,2019,50,0.8607954545454546
-57,Tyler Boyd,WR23,58.0,Tyler Boyd,tyler boyd,WR,2019,51,0.8579545454545454
-58,Austin Ekeler,RB27,60.3,Austin Ekeler,austin ekeler,RB,2019,52,0.8551136363636364
-59,Mike Williams,WR24,60.8,Mike Williams,mike williams,WR,2019,53,0.8522727272727273
-60,A.J. Green ,WR25,62.5,A.J. Green ,aj green,WR,2019,54,0.8494318181818181
-61,Evan Engram,TE5,63.8,Evan Engram,evan engram,TE,2019,55,0.8465909090909091
-62,Matt Ryan,QB5,64.3,Matt Ryan,matt ryan,QB,2019,56,0.84375
-63,Alshon Jeffery ,WR26,64.5,Alshon Jeffery ,alshon jeffery,WR,2019,57,0.8409090909090909
-64,James White,RB28,64.8,James White,james white,RB,2019,58,0.8380681818181819
-65,Josh Gordon,WR27,67.3,Josh Gordon,josh gordon,WR,2019,59,0.8352272727272727
-66,Hunter Henry,TE6,68.3,Hunter Henry,hunter henry,TE,2019,60,0.8323863636363636
-67,DJ Moore,WR28,68.8,DJ Moore,dj moore,WR,2019,61,0.8295454545454546
-68,Miles Sanders,RB29,69.0,Miles Sanders,miles sanders,RB,2019,62,0.8267045454545454
-69,Jarvis Landry,WR29,71.0,Jarvis Landry,jarvis landry,WR,2019,63,0.8238636363636364
-70,Duke Johnson Jr.,RB30,71.3,Duke Johnson Jr.,duke johnson jr,RB,2019,64,0.8210227272727273
-71,Drew Brees,QB6,72.3,Drew Brees,drew brees,QB,2019,65,0.8181818181818181
-72,Carson Wentz,QB7,72.5,Carson Wentz,carson wentz,QB,2019,66,0.8153409090909091
-73,Derrius Guice ,RB31,73.8,Derrius Guice ,derrius guice,RB,2019,67,0.8125
-74,Kenyan Drake,RB32,74.0,Kenyan Drake,kenyan drake,RB,2019,68,0.8096590909090909
-75,Jared Cook,TE7,74.3,Jared Cook,jared cook,TE,2019,69,0.8068181818181819
-76,Tarik Cohen,RB33,74.5,Tarik Cohen,tarik cohen,RB,2019,70,0.8039772727272727
-77,Allen Robinson,WR30,75.3,Allen Robinson,allen robinson,WR,2019,71,0.8011363636363636
-78,Robbie Chosen,WR31,77.3,Robbie Chosen,robbie chosen,WR,2019,72,0.7982954545454546
-79,Jared Goff,QB8,79.0,Jared Goff,jared goff,QB,2019,73,0.7954545454545454
-80,Dede Westbrook,WR32,80.0,Dede Westbrook,dede westbrook,WR,2019,74,0.7926136363636364
-81,William Fuller,WR33,81.3,William Fuller,william fuller,WR,2019,75,0.7897727272727273
-82,Russell Wilson,QB9,83.0,Russell Wilson,russell wilson,QB,2019,76,0.7869318181818181
-83,Latavius Murray,RB34,85.3,Latavius Murray,latavius murray,RB,2019,77,0.7840909090909091
-84,Chicago Bears,DST1,89.0,Chicago Bears,chicago bears,DST,2019,78,0.78125
-85,Vance McDonald,TE8,89.3,Vance McDonald,vance mcdonald,TE,2019,79,0.7784090909090909
-86,Sammy Watkins,WR34,89.5,Sammy Watkins,sammy watkins,WR,2019,80,0.7755681818181819
-87,Jordan Howard,RB35,89.8,Jordan Howard,jordan howard,RB,2019,81,0.7727272727272727
-88,Emmanuel Sanders,WR35,91.0,Emmanuel Sanders,emmanuel sanders,WR,2019,82,0.7698863636363636
-89,Cam Newton ,QB10,91.0,Cam Newton ,cam newton,QB,2019,82,0.7698863636363636
-90,Christian Kirk,WR36,91.3,Christian Kirk,christian kirk,WR,2019,83,0.7670454545454546
-91,Sterling Shepard,WR37,93.5,Sterling Shepard,sterling shepard,WR,2019,84,0.7642045454545454
-92,Corey Davis,WR38,95.5,Corey Davis,corey davis,WR,2019,85,0.7613636363636364
-93,Marvin Jones Jr. ,WR39,97.0,Marvin Jones Jr. ,marvin jones jr,WR,2019,86,0.7585227272727273
-94,LeSean McCoy,RB36,98.3,LeSean McCoy,lesean mccoy,RB,2019,87,0.7556818181818181
-95,Eric Ebron ,TE9,99.0,Eric Ebron ,eric ebron,TE,2019,88,0.7528409090909091
-96,Ben Roethlisberger ,QB11,99.5,Ben Roethlisberger ,ben roethlisberger,QB,2019,89,0.75
-97,Matt Breida,RB37,99.8,Matt Breida,matt breida,RB,2019,90,0.7471590909090908
-98,Curtis Samuel,WR40,100.0,Curtis Samuel,curtis samuel,WR,2019,91,0.7443181818181819
-99,Devin Singletary,RB38,100.8,Devin Singletary,devin singletary,RB,2019,92,0.7414772727272727
-100,Rashaad Penny ,RB39,101.3,Rashaad Penny ,rashaad penny,RB,2019,93,0.7386363636363636
-101,David Njoku,TE10,102.0,David Njoku,david njoku,TE,2019,94,0.7357954545454546
-102,Darrell Henderson Jr.,RB40,102.3,Darrell Henderson Jr.,darrell henderson jr,RB,2019,95,0.7329545454545454
-103,Jameis Winston,QB12,103.5,Jameis Winston,jameis winston,QB,2019,96,0.7301136363636364
-104,Larry Fitzgerald,WR41,103.8,Larry Fitzgerald,larry fitzgerald,WR,2019,97,0.7272727272727273
-105,Tom Brady,QB13,104.0,Tom Brady,tom brady,QB,2019,98,0.7244318181818181
-106,Lamar Jackson,QB14,104.3,Lamar Jackson,lamar jackson,QB,2019,99,0.7215909090909092
-107,Peyton Barber,RB41,111.3,Peyton Barber,peyton barber,RB,2019,100,0.71875
-108,Kyler Murray,QB15,111.8,Kyler Murray,kyler murray,QB,2019,101,0.7159090909090908
-109,Dante Pettis,WR42,112.0,Dante Pettis,dante pettis,WR,2019,102,0.7130681818181819
-110,Kareem Hunt,RB42,113.0,Kareem Hunt,kareem hunt,RB,2019,103,0.7102272727272727
-111,Los Angeles Rams,DST2,113.0,Los Angeles Rams,los angeles rams,DST,2019,103,0.7102272727272727
-112,Royce Freeman,RB43,113.3,Royce Freeman,royce freeman,RB,2019,104,0.7073863636363636
-113,Marquez Valdes-Scantling,WR43,113.5,Marquez Valdes-Scantling,marquez valdes-scantling,WR,2019,105,0.7045454545454546
-114,Tony Pollard,RB44,114.3,Tony Pollard,tony pollard,RB,2019,106,0.7017045454545454
-115,Courtland Sutton,WR44,114.8,Courtland Sutton,courtland sutton,WR,2019,107,0.6988636363636364
-116,Philip Rivers,QB16,115.0,Philip Rivers,philip rivers,QB,2019,108,0.6960227272727273
-117,Delanie Walker ,TE11,116.3,Delanie Walker ,delanie walker,TE,2019,109,0.6931818181818181
-118,Greg Zuerlein,K1,117.5,Greg Zuerlein,greg zuerlein,K,2019,110,0.6903409090909092
-119,James Washington,WR45,119.3,James Washington,james washington,WR,2019,111,0.6875
-120,Geronimo Allison,WR46,123.3,Geronimo Allison,geronimo allison,WR,2019,112,0.6846590909090908
-121,Darwin Thompson,RB45,123.8,Darwin Thompson,darwin thompson,RB,2019,113,0.6818181818181819
-122,Dak Prescott,QB17,123.8,Dak Prescott,dak prescott,QB,2019,113,0.6818181818181819
-123,Adrian Peterson,RB46,124.8,Adrian Peterson,adrian peterson,RB,2019,114,0.6789772727272727
-124,Justin Tucker,K2,125.5,Justin Tucker,justin tucker,K,2019,115,0.6761363636363636
-125,Jacksonville Jaguars,DST3,125.5,Jacksonville Jaguars,jacksonville jaguars,DST,2019,115,0.6761363636363636
-126,Minnesota Vikings,DST4,125.8,Minnesota Vikings,minnesota vikings,DST,2019,116,0.6732954545454546
-127,DeSean Jackson ,WR47,130.5,DeSean Jackson ,desean jackson,WR,2019,117,0.6704545454545454
-128,Justin Jackson,RB47,131.3,Justin Jackson,justin jackson,RB,2019,118,0.6676136363636364
-129,Austin Hooper,TE12,132.3,Austin Hooper,austin hooper,TE,2019,119,0.6647727272727273
-130,Kalen Ballage ,RB48,132.8,Kalen Ballage ,kalen ballage,RB,2019,120,0.6619318181818181
-131,Dion Lewis,RB49,133.8,Dion Lewis,dion lewis,RB,2019,121,0.6590909090909092
-132,Michael Gallup,WR48,135.3,Michael Gallup,michael gallup,WR,2019,122,0.65625
-133,Baltimore Ravens,DST5,135.3,Baltimore Ravens,baltimore ravens,DST,2019,122,0.65625
-134,Kirk Cousins,QB18,137.0,Kirk Cousins,kirk cousins,QB,2019,123,0.6534090909090908
-135,Donte Moncrief,WR49,139.0,Donte Moncrief,donte moncrief,WR,2019,124,0.6505681818181819
-136,T.J. Hockenson,TE13,139.3,T.J. Hockenson,tj hockenson,TE,2019,125,0.6477272727272727
-137,Jaylen Samuels,RB50,139.3,Jaylen Samuels,jaylen samuels,RB,2019,125,0.6477272727272727
-138,Harrison Butker,K3,139.5,Harrison Butker,harrison butker,K,2019,126,0.6448863636363636
-139,Tyrell Williams,WR50,140.5,Tyrell Williams,tyrell williams,WR,2019,127,0.6420454545454546
-140,Mark Andrews,TE14,144.8,Mark Andrews,mark andrews,TE,2019,129,0.6363636363636364
-141,Mitchell Trubisky,QB19,146.5,Mitchell Trubisky,mitchell trubisky,QB,2019,131,0.6306818181818181
-142,John Brown,WR51,147.0,John Brown,john brown,WR,2019,132,0.6278409090909092
-143,Stephen Gostkowski ,K4,147.3,Stephen Gostkowski ,stephen gostkowski,K,2019,133,0.625
-144,Anthony Miller,WR52,147.8,Anthony Miller,anthony miller,WR,2019,134,0.6221590909090908
-145,DK Metcalf,WR53,148.3,DK Metcalf,dk metcalf,WR,2019,135,0.6193181818181819
-146,Golden Tate,WR54,148.5,Golden Tate,golden tate,WR,2019,136,0.6164772727272727
-147,Greg Olsen,TE15,151.3,Greg Olsen,greg olsen,TE,2019,138,0.6107954545454546
-148,Justice Hill,RB51,151.5,Justice Hill,justice hill,RB,2019,139,0.6079545454545454
-149,Ronald Jones,RB52,152.5,Ronald Jones,ronald jones,RB,2019,140,0.6051136363636364
-150,Jimmy Garoppolo,QB20,154.3,Jimmy Garoppolo,jimmy garoppolo,QB,2019,141,0.6022727272727273
-151,Carlos Hyde,RB53,155.5,Carlos Hyde,carlos hyde,RB,2019,142,0.5994318181818181
-152,Trey Burton ,TE16,156.3,Trey Burton ,trey burton,TE,2019,143,0.5965909090909092
-153,Alexander Mattison,RB54,159.3,Alexander Mattison,alexander mattison,RB,2019,146,0.5880681818181819
-154,Josh Allen,QB21,159.3,Josh Allen,josh allen,QB,2019,146,0.5880681818181819
-155,Denver Broncos,DST6,161.5,Denver Broncos,denver broncos,DST,2019,147,0.5852272727272727
-156,New England Patriots,DST7,161.8,New England Patriots,new england patriots,DST,2019,148,0.5823863636363636
-157,Houston Texans,DST8,161.8,Houston Texans,houston texans,DST,2019,148,0.5823863636363636
-158,Keke Coutee,WR55,162.0,Keke Coutee,keke coutee,WR,2019,149,0.5795454545454546
-159,Damien Harris,RB55,163.5,Damien Harris,damien harris,RB,2019,150,0.5767045454545454
-160,Ka'imi Fairbairn,K5,164.3,Ka'imi Fairbairn,kaimi fairbairn,K,2019,151,0.5738636363636364
-161,Buffalo Bills,DST9,166.8,Buffalo Bills,buffalo bills,DST,2019,152,0.5710227272727273
-162,Cleveland Browns,DST10,168.8,Cleveland Browns,cleveland browns,DST,2019,154,0.5653409090909092
-163,Dallas Cowboys,DST11,170.5,Dallas Cowboys,dallas cowboys,DST,2019,155,0.5625
-164,Ito Smith ,RB56,171.5,Ito Smith ,ito smith,RB,2019,156,0.5596590909090908
-165,Jamison Crowder,WR56,172.5,Jamison Crowder,jamison crowder,WR,2019,158,0.5539772727272727
-166,Matthew Stafford,QB22,176.5,Matthew Stafford,matthew stafford,QB,2019,160,0.5482954545454546
-167,Robbie Gould,K6,179.3,Robbie Gould,robbie gould,K,2019,163,0.5397727272727273
-168,Los Angeles Chargers,DST12,143.3,Los Angeles Chargers,los angeles chargers,DST,2019,128,0.6392045454545454
-169,Kyle Rudolph,TE17,146.3,Kyle Rudolph,kyle rudolph,TE,2019,130,0.6335227272727273
-170,Deebo Samuel Sr.,WR57,185.3,Deebo Samuel Sr.,deebo samuel sr,WR,2019,164,0.5369318181818181
-171,Wil Lutz,K7,149.7,Wil Lutz,wil lutz,K,2019,137,0.6136363636363636
-172,Seattle Seahawks,DST13,187.0,Seattle Seahawks,seattle seahawks,DST,2019,167,0.5284090909090908
-174,Jordan Reed,TE18,156.7,Jordan Reed,jordan reed,TE,2019,144,0.59375
-175,Marquise Goodwin,WR59,193.0,Marquise Goodwin,marquise goodwin,WR,2019,173,0.5113636363636364
-176,New Orleans Saints,DST14,158.7,New Orleans Saints,new orleans saints,DST,2019,145,0.5909090909090908
-177,Jimmy Graham,TE19,158.7,Jimmy Graham,jimmy graham,TE,2019,145,0.5909090909090908
-178,Jake Elliott,K8,196.0,Jake Elliott,jake elliott,K,2019,174,0.5085227272727273
-179,Philadelphia Eagles,DST15,199.8,Philadelphia Eagles,philadelphia eagles,DST,2019,175,0.5056818181818181
-180,Mohamed Sanu Sr.,WR60,168.0,Mohamed Sanu Sr.,mohamed sanu sr,WR,2019,153,0.5681818181818181
-181,Michael Badgley,K9,202.8,Michael Badgley,michael badgley,K,2019,181,0.48863636363636365
-182,Derek Carr,QB23,172.0,Derek Carr,derek carr,QB,2019,157,0.5568181818181819
-183,Nyheim Miller-Hines,RB57,175.7,Nyheim Miller-Hines,nyheim miller-hines,RB,2019,159,0.5511363636363636
-184,Marquise Brown,WR61,178.0,Marquise Brown,marquise brown,WR,2019,161,0.5454545454545454
-185,Mecole Hardman Jr.,WR62,179.0,Mecole Hardman Jr.,mecole hardman jr,WR,2019,162,0.5426136363636364
-186,Sam Darnold,QB24,185.7,Sam Darnold,sam darnold,QB,2019,165,0.5340909090909092
-187,Kenny Stills,WR63,186.7,Kenny Stills,kenny stills,WR,2019,166,0.53125
-188,Kansas City Chiefs,DST16,188.3,Kansas City Chiefs,kansas city chiefs,DST,2019,168,0.5255681818181819
-189,C.J. Anderson,RB58,188.7,C.J. Anderson,cj anderson,RB,2019,169,0.5227272727272727
-190,Chris Thompson,RB59,189.0,Chris Thompson,chris thompson,RB,2019,170,0.5198863636363636
-191,Noah Fant,TE20,190.3,Noah Fant,noah fant,TE,2019,171,0.5170454545454546
-192,Pittsburgh Steelers,DST17,192.3,Pittsburgh Steelers,pittsburgh steelers,DST,2019,172,0.5142045454545454
-193,Jamaal Williams,RB60,200.3,Jamaal Williams,jamaal williams,RB,2019,177,0.5
-194,Darren Waller,TE21,202.7,Darren Waller,darren waller,TE,2019,180,0.4914772727272727
-195,Nick Foles,QB25,205.3,Nick Foles,nick foles,QB,2019,183,0.4829545454545454
-196,Jalen Richard,RB61,206.0,Jalen Richard,jalen richard,RB,2019,184,0.48011363636363635
-197,Zay Jones,WR64,206.3,Zay Jones,zay jones,WR,2019,185,0.4772727272727273
-198,Malcolm Brown,RB62,207.7,Malcolm Brown,malcolm brown,RB,2019,188,0.46875
-199,Dare Ogunbowale,RB63,208.3,Dare Ogunbowale,dare ogunbowale,RB,2019,189,0.46590909090909094
-200,Devin Funchess ,WR65,163.5,Devin Funchess ,devin funchess,WR,2019,150,0.5767045454545454
-202,Nelson Agholor,WR67,210.0,Nelson Agholor,nelson agholor,WR,2019,190,0.46306818181818177
-203,Mason Crosby,K10,210.3,Mason Crosby,mason crosby,K,2019,191,0.4602272727272727
-204,DaeSean Hamilton,WR68,210.7,DaeSean Hamilton,daesean hamilton,WR,2019,192,0.45738636363636365
-205,Albert Wilson,WR69,212.7,Albert Wilson,albert wilson,WR,2019,196,0.4460227272727273
-206,Matt Prater,K11,213.3,Matt Prater,matt prater,K,2019,198,0.44034090909090906
-207,DeVante Parker,WR70,172.5,DeVante Parker,devante parker,WR,2019,158,0.5539772727272727
-209,Ty Montgomery,RB64,217.3,Ty Montgomery,ty montgomery,RB,2019,200,0.43465909090909094
-210,Jack Doyle,TE22,217.7,Jack Doyle,jack doyle,TE,2019,201,0.43181818181818177
-211,Jason Witten,TE23,218.7,Jason Witten,jason witten,TE,2019,203,0.42613636363636365
-212,Frank Gore,RB65,219.7,Frank Gore,frank gore,RB,2019,205,0.4204545454545454
-213,Miles Boykin,WR72,225.3,Miles Boykin,miles boykin,WR,2019,207,0.4147727272727273
-214,Adam Vinatieri ,K12,226.3,Adam Vinatieri ,adam vinatieri,K,2019,208,0.41193181818181823
-215,Indianapolis Colts,DST18,226.7,Indianapolis Colts,indianapolis colts,DST,2019,209,0.40909090909090906
-216,Matt Bryant,K13,250.3,Matt Bryant,matt bryant,K,2019,233,0.34090909090909094
-217,Jason Myers,K14,228.0,Jason Myers,jason myers,K,2019,210,0.40625
-218,Brett Maher,K15,228.3,Brett Maher,brett maher,K,2019,211,0.40340909090909094
-219,Chris Herndon IV ,TE24,196.0,Chris Herndon IV ,chris herndon iv,TE,2019,174,0.5085227272727273
-220,Green Bay Packers,DST19,231.0,Green Bay Packers,green bay packers,DST,2019,215,0.3920454545454546
-221,Adam Humphries,WR73,200.5,Adam Humphries,adam humphries,WR,2019,178,0.49715909090909094
-222,J.J. Arcega-Whiteside,WR74,201.0,J.J. Arcega-Whiteside,jj arcega-whiteside,WR,2019,179,0.49431818181818177
-223,Tennessee Titans,DST20,233.7,Tennessee Titans,tennessee titans,DST,2019,217,0.38636363636363635
-224,Dallas Goedert,TE25,207.0,Dallas Goedert,dallas goedert,TE,2019,186,0.47443181818181823
-225,Giovani Bernard,RB66,207.5,Giovani Bernard,giovani bernard,RB,2019,187,0.47159090909090906
-226,Austin Seibert,K16,240.3,Austin Seibert,austin seibert,K,2019,220,0.37784090909090906
-227,Parris Campbell ,WR75,211.5,Parris Campbell ,parris campbell,WR,2019,194,0.4517045454545454
-228,Chris Boswell,K17,242.3,Chris Boswell,chris boswell,K,2019,224,0.3664772727272727
-229,Marcus Mariota,QB26,215.0,Marcus Mariota,marcus mariota,QB,2019,199,0.4375
-230,A.J. Brown,WR76,218.5,A.J. Brown,aj brown,WR,2019,202,0.4289772727272727
-231,Gus Edwards,RB67,218.5,Gus Edwards,gus edwards,RB,2019,202,0.4289772727272727
-232,Randall Cobb,WR77,219.0,Randall Cobb,randall cobb,WR,2019,204,0.4232954545454546
-233,Cameron Brate,TE26,259.3,Cameron Brate,cameron brate,TE,2019,240,0.3210227272727273
-234,Giorgio Tavecchio,K18,229.5,Giorgio Tavecchio,giorgio tavecchio,K,2019,213,0.3977272727272727
-235,Mike Davis,RB68,231.0,Mike Davis,mike davis,RB,2019,215,0.3920454545454546
-236,Demaryius Thomas,WR78,232.0,Demaryius Thomas,demaryius thomas,WR,2019,216,0.3892045454545454
-237,Washington Commanders,DST21,256.0,Washington Commanders,washington commanders,DST,2019,238,0.3267045454545454
-238,Andy Isabella,WR79,234.0,Andy Isabella,andy isabella,WR,2019,218,0.3835227272727273
-239,Chase Edmonds,RB69,234.5,Chase Edmonds,chase edmonds,RB,2019,219,0.38068181818181823
-240,Chris Moore,WR80,288.5,Chris Moore,chris moore,WR,2019,265,0.25
-241,Tyler Eifert,TE27,241.5,Tyler Eifert,tyler eifert,TE,2019,222,0.37215909090909094
-242,Antonio Callaway ,WR81,187.0,Antonio Callaway ,antonio callaway,WR,2019,167,0.5284090909090908
-243,Jacoby Brissett,QB27,243.0,Jacoby Brissett,jacoby brissett,QB,2019,225,0.36363636363636365
-244,Darrel Williams ,RB70,189.0,Darrel Williams ,darrel williams,RB,2019,170,0.5198863636363636
-245,T.J. Yeldon,RB71,244.0,T.J. Yeldon,tj yeldon,RB,2019,226,0.3607954545454546
-246,Ted Ginn Jr.,WR82,248.5,Ted Ginn Jr.,ted ginn jr,WR,2019,230,0.34943181818181823
-247,Quincy Enunwa ,WR83,246.5,Quincy Enunwa ,quincy enunwa,WR,2019,228,0.35511363636363635
-248,Kelvin Harmon,WR84,196.0,Kelvin Harmon,kelvin harmon,WR,2019,174,0.5085227272727273
-249,Willie Snead,WR85,249.0,Willie Snead,willie snead,WR,2019,231,0.34659090909090906
-250,Trayveon Williams,RB72,200.0,Trayveon Williams,trayveon williams,RB,2019,176,0.5028409090909092
-251,Andy Dalton,QB28,250.0,Andy Dalton,andy dalton,QB,2019,232,0.34375
-252,Mike Gesicki,TE28,250.5,Mike Gesicki,mike gesicki,TE,2019,234,0.33806818181818177
-253,Diontae Johnson,WR86,203.0,Diontae Johnson,diontae johnson,WR,2019,182,0.4857954545454546
-254,San Francisco 49ers,DST22,251.0,San Francisco 49ers,san francisco 49ers,DST,2019,235,0.3352272727272727
-255,Ryquell Armstead,RB73,251.5,Ryquell Armstead,ryquell armstead,RB,2019,236,0.33238636363636365
-256,Rashard Higgins,WR87,254.5,Rashard Higgins,rashard higgins,WR,2019,237,0.3295454545454546
-257,Aldrick Rosas,K19,254.5,Aldrick Rosas,aldrick rosas,K,2019,237,0.3295454545454546
-258,Robert Foster,WR88,211.0,Robert Foster,robert foster,WR,2019,193,0.4545454545454546
-259,Jakobi Meyers,WR89,212.0,Jakobi Meyers,jakobi meyers,WR,2019,195,0.44886363636363635
-260,Preston Williams ,WR90,213.0,Preston Williams ,preston williams,WR,2019,197,0.44318181818181823
-261,Cole Beasley,WR91,256.0,Cole Beasley,cole beasley,WR,2019,238,0.3267045454545454
-262,Matt LaCosse,TE29,222.0,Matt LaCosse,matt lacosse,TE,2019,206,0.41761363636363635
-263,Dontrell Hilliard,RB74,260.5,Dontrell Hilliard,dontrell hilliard,RB,2019,242,0.31534090909090906
-264,Trey Quinn ,WR92,262.0,Trey Quinn ,trey quinn,WR,2019,243,0.3125
-265,Paul Richardson Jr. ,WR93,262.0,Paul Richardson Jr. ,paul richardson jr,WR,2019,243,0.3125
-266,Atlanta Falcons,DST23,269.0,Atlanta Falcons,atlanta falcons,DST,2019,249,0.2954545454545454
-267,Irv Smith Jr.,TE30,229.0,Irv Smith Jr.,irv smith jr,TE,2019,212,0.40056818181818177
-268,Dan Bailey,K20,264.0,Dan Bailey,dan bailey,K,2019,245,0.30681818181818177
-269,Jalen Hurd,WR94,230.0,Jalen Hurd,jalen hurd,WR,2019,214,0.39488636363636365
-270,Matt Gay,K21,265.0,Matt Gay,matt gay,K,2019,246,0.3039772727272727
-271,Danny Amendola,WR95,265.0,Danny Amendola,danny amendola,WR,2019,246,0.3039772727272727
-272,Benjamin Watson,TE31,289.0,Benjamin Watson,benjamin watson,TE,2019,266,0.24715909090909094
-273,Joe Flacco,QB29,270.5,Joe Flacco,joe flacco,QB,2019,250,0.29261363636363635
-274,Riley Ridley,WR96,241.0,Riley Ridley,riley ridley,WR,2019,221,0.375
-275,Ryan Succop ,K22,281.5,Ryan Succop ,ryan succop,K,2019,261,0.26136363636363635
-276,Arizona Cardinals,DST24,242.0,Arizona Cardinals,arizona cardinals,DST,2019,223,0.36931818181818177
-277,Las Vegas Raiders,DST25,312.0,Las Vegas Raiders,las vegas raiders,DST,2019,281,0.20454545454545459
-278,Carolina Panthers,DST26,271.5,Carolina Panthers,carolina panthers,DST,2019,252,0.28693181818181823
-279,Jake Kumerow,WR97,307.5,Jake Kumerow,jake kumerow,WR,2019,277,0.21590909090909094
-280,Alfred Morris,RB75,246.0,Alfred Morris,alfred morris,RB,2019,227,0.3579545454545454
-281,Brian Hill,RB76,247.0,Brian Hill,brian hill,RB,2019,229,0.3522727272727273
-282,Dwayne Haskins,QB30,273.0,Dwayne Haskins,dwayne haskins,QB,2019,254,0.28125
-283,Qadree Ollison,RB77,251.0,Qadree Ollison,qadree ollison,RB,2019,235,0.3352272727272727
-284,Hunter Renfrow,WR98,275.0,Hunter Renfrow,hunter renfrow,WR,2019,256,0.27556818181818177
-285,New York Jets,DST27,281.0,New York Jets,new york jets,DST,2019,260,0.2642045454545454
-286,Demarcus Robinson,WR99,257.0,Demarcus Robinson,demarcus robinson,WR,2019,239,0.32386363636363635
-287,Josh Doctson,WR100,279.0,Josh Doctson,josh doctson,WR,2019,258,0.26988636363636365
-288,Dexter Williams,RB78,260.0,Dexter Williams,dexter williams,RB,2019,241,0.31818181818181823
-289,Damarea Crockett,RB79,260.0,Damarea Crockett,damarea crockett,RB,2019,241,0.31818181818181823
-290,Will Dissly,TE32,312.5,Will Dissly,will dissly,TE,2019,282,0.20170454545454541
-291,DJ Chark Jr.,WR101,262.0,DJ Chark Jr.,dj chark jr,WR,2019,243,0.3125
-292,Josh Reynolds,WR102,263.0,Josh Reynolds,josh reynolds,WR,2019,244,0.30965909090909094
-293,John Ross,WR103,282.0,John Ross,john ross,WR,2019,262,0.2585227272727273
-294,Gerald Everett,TE33,266.0,Gerald Everett,gerald everett,TE,2019,247,0.30113636363636365
-295,Eddy Pineiro,K23,282.5,Eddy Pineiro,eddy pineiro,K,2019,263,0.25568181818181823
-296,Brandon McManus,K24,296.0,Brandon McManus,brandon mcmanus,K,2019,271,0.23295454545454541
-297,Myles Gaskin,RB80,267.0,Myles Gaskin,myles gaskin,RB,2019,248,0.2982954545454546
-298,Detroit Lions,DST28,289.0,Detroit Lions,detroit lions,DST,2019,266,0.24715909090909094
-299,Cincinnati Bengals,DST29,271.0,Cincinnati Bengals,cincinnati bengals,DST,2019,251,0.2897727272727273
-300,David Moore,WR104,272.0,David Moore,david moore,WR,2019,253,0.28409090909090906
-301,Wayne Gallman Jr.,RB81,301.5,Wayne Gallman Jr.,wayne gallman jr,RB,2019,275,0.22159090909090906
-302,KeeSean Johnson,WR105,273.0,KeeSean Johnson,keesean johnson,WR,2019,254,0.28125
-303,Jay Ajayi,RB82,274.0,Jay Ajayi,jay ajayi,RB,2019,255,0.27840909090909094
-304,Stephen Hauschka,K25,322.5,Stephen Hauschka,stephen hauschka,K,2019,291,0.17613636363636365
-305,Daniel Carlson,K26,324.0,Daniel Carlson,daniel carlson,K,2019,293,0.17045454545454541
-306,Bruce Anderson,RB83,276.0,Bruce Anderson,bruce anderson,RB,2019,257,0.2727272727272727
-307,Miami Dolphins,DST30,317.0,Miami Dolphins,miami dolphins,DST,2019,286,0.19034090909090906
-308,Phillip Dorsett II,WR106,308.5,Phillip Dorsett II,phillip dorsett ii,WR,2019,279,0.2102272727272727
-309,Theo Riddick,RB84,279.0,Theo Riddick,theo riddick,RB,2019,258,0.26988636363636365
-310,Ian Thomas,TE34,280.0,Ian Thomas,ian thomas,TE,2019,259,0.2670454545454546
-311,Travis Benjamin,WR107,281.0,Travis Benjamin,travis benjamin,WR,2019,260,0.2642045454545454
-312,Rex Burkhead,RB85,290.0,Rex Burkhead,rex burkhead,RB,2019,267,0.24431818181818177
-313,Taylor Gabriel,WR108,282.0,Taylor Gabriel,taylor gabriel,WR,2019,262,0.2585227272727273
-314,Vernon Davis,TE35,338.0,Vernon Davis,vernon davis,TE,2019,305,0.13636363636363635
-315,Josh Lambo,K27,327.5,Josh Lambo,josh lambo,K,2019,296,0.16193181818181823
-316,Benny Snell Jr.,RB86,284.0,Benny Snell Jr.,benny snell jr,RB,2019,264,0.25284090909090906
-317,Eli Manning,QB31,295.0,Eli Manning,eli manning,QB,2019,270,0.23579545454545459
-318,Alfred Blue,RB87,292.0,Alfred Blue,alfred blue,RB,2019,269,0.23863636363636365
-319,Joey Slye,K28,332.0,Joey Slye,joey slye,K,2019,299,0.15340909090909094
-320,Daniel Jones,QB32,324.0,Daniel Jones,daniel jones,QB,2019,293,0.17045454545454541
-321,Doug Martin,RB88,289.0,Doug Martin,doug martin,RB,2019,266,0.24715909090909094
-322,Taywan Taylor,WR109,291.0,Taywan Taylor,taywan taylor,WR,2019,268,0.2414772727272727
-323,Ryan Fitzpatrick,QB33,307.5,Ryan Fitzpatrick,ryan fitzpatrick,QB,2019,277,0.21590909090909094
-324,Josh Rosen,QB34,292.0,Josh Rosen,josh rosen,QB,2019,269,0.23863636363636365
-325,New York Giants,DST31,339.0,New York Giants,new york giants,DST,2019,306,0.1335227272727273
-326,Dustin Hopkins,K29,332.0,Dustin Hopkins,dustin hopkins,K,2019,299,0.15340909090909094
-327,Randy Bullock,K30,322.5,Randy Bullock,randy bullock,K,2019,291,0.17613636363636365
-328,Corey Clement,RB89,298.0,Corey Clement,corey clement,RB,2019,272,0.23011363636363635
-329,Alex Collins,RB90,300.0,Alex Collins,alex collins,RB,2019,273,0.2272727272727273
-330,Chris Conley,WR110,301.0,Chris Conley,chris conley,WR,2019,274,0.22443181818181823
-331,Hayden Hurst,TE36,303.0,Hayden Hurst,hayden hurst,TE,2019,276,0.21875
-332,Devontae Booker,RB91,308.0,Devontae Booker,devontae booker,RB,2019,278,0.21306818181818177
-333,Chris Hogan,WR111,310.0,Chris Hogan,chris hogan,WR,2019,280,0.20738636363636365
-334,Laquon Treadwell,WR112,313.0,Laquon Treadwell,laquon treadwell,WR,2019,283,0.19886363636363635
-336,Kendrick Bourne,WR113,315.0,Kendrick Bourne,kendrick bourne,WR,2019,284,0.1960227272727273
-337,Ricky Seals-Jones,TE37,316.0,Ricky Seals-Jones,ricky seals-jones,TE,2019,285,0.19318181818181823
-338,Case Keenum,QB35,317.0,Case Keenum,case keenum,QB,2019,286,0.19034090909090906
-339,Deon Cain,WR114,318.0,Deon Cain,deon cain,WR,2019,287,0.1875
-340,Zach Zenner,RB92,319.0,Zach Zenner,zach zenner,RB,2019,288,0.18465909090909094
-341,Blake Jarwin,TE38,320.0,Blake Jarwin,blake jarwin,TE,2019,289,0.18181818181818177
-342,Spencer Ware,RB93,321.0,Spencer Ware,spencer ware,RB,2019,290,0.1789772727272727
-343,Breshad Perriman,WR115,323.0,Breshad Perriman,breshad perriman,WR,2019,292,0.17329545454545459
-344,Cordarrelle Patterson,RB94,325.0,Cordarrelle Patterson,cordarrelle patterson,RB,2019,294,0.16761363636363635
-345,Bilal Powell,RB95,327.0,Bilal Powell,bilal powell,RB,2019,295,0.1647727272727273
-346,Michael Crabtree,WR116,329.0,Michael Crabtree,michael crabtree,WR,2019,297,0.15909090909090906
-347,Cameron Artis-Payne,RB96,330.0,Cameron Artis-Payne,cameron artis-payne,RB,2019,298,0.15625
-348,C.J. Uzomah,TE39,332.0,C.J. Uzomah,cj uzomah,TE,2019,299,0.15340909090909094
-349,Chester Rogers ,WR117,333.0,Chester Rogers ,chester rogers,WR,2019,300,0.15056818181818177
-350,Jesse James,TE40,334.0,Jesse James,jesse james,TE,2019,301,0.1477272727272727
-351,Jaron Brown,WR118,335.0,Jaron Brown,jaron brown,WR,2019,302,0.14488636363636365
-352,Wendell Smallwood,RB97,336.0,Wendell Smallwood,wendell smallwood,RB,2019,303,0.14204545454545459
-353,Kyle Juszczyk,RB98,337.0,Kyle Juszczyk,kyle juszczyk,RB,2019,304,0.13920454545454541
-354,Jordan Matthews,TE41,338.0,Jordan Matthews,jordan matthews,TE,2019,305,0.13636363636363635
-355,Seth Roberts,WR119,340.0,Seth Roberts,seth roberts,WR,2019,307,0.13068181818181823
-356,Geoff Swaim,TE42,341.0,Geoff Swaim,geoff swaim,TE,2019,308,0.12784090909090906
-357,Jarius Wright,WR120,342.0,Jarius Wright,jarius wright,WR,2019,309,0.125
-358,Tajae Sharpe,WR121,343.0,Tajae Sharpe,tajae sharpe,WR,2019,310,0.12215909090909094
-359,Drew Lock,QB36,344.0,Drew Lock,drew lock,QB,2019,311,0.11931818181818177
-360,Isaiah McKenzie,WR122,345.0,Isaiah McKenzie,isaiah mckenzie,WR,2019,312,0.11647727272727271
-361,Tim Patrick,WR123,347.0,Tim Patrick,tim patrick,WR,2019,313,0.11363636363636365
-362,Keelan Cole Sr.,WR124,349.0,Keelan Cole Sr.,keelan cole sr,WR,2019,314,0.11079545454545459
-363,Jordan Wilkins,RB99,350.0,Jordan Wilkins,jordan wilkins,RB,2019,315,0.10795454545454541
-364,Jordan Thomas,TE43,351.0,Jordan Thomas,jordan thomas,TE,2019,316,0.10511363636363635
-365,Kapri Bibbs,RB100,352.0,Kapri Bibbs,kapri bibbs,RB,2019,317,0.10227272727272729
-366,James Develin ,RB101,353.0,James Develin ,james develin,RB,2019,318,0.09943181818181823
-367,Blake Bortles,QB37,354.0,Blake Bortles,blake bortles,QB,2019,319,0.09659090909090906
-368,Zach Pascal,WR125,355.0,Zach Pascal,zach pascal,WR,2019,320,0.09375
-369,Nick Vannett,TE44,356.0,Nick Vannett,nick vannett,TE,2019,321,0.09090909090909094
-370,Aldrick Robinson,WR126,357.0,Aldrick Robinson,aldrick robinson,WR,2019,322,0.08806818181818177
-371,Ryan Tannehill,QB38,359.0,Ryan Tannehill,ryan tannehill,QB,2019,323,0.08522727272727271
-372,C.J. Beathard,QB39,361.0,C.J. Beathard,cj beathard,QB,2019,324,0.08238636363636365
-373,Chris Ivory,RB102,362.0,Chris Ivory,chris ivory,RB,2019,325,0.07954545454545459
-374,Terry McLaurin,WR127,363.0,Terry McLaurin,terry mclaurin,WR,2019,326,0.07670454545454541
-375,Jason Sanders,K31,365.0,Jason Sanders,jason sanders,K,2019,327,0.07386363636363635
-376,Manasseh Garner,TE45,366.0,Manasseh Garner,manasseh garner,TE,2019,328,0.07102272727272729
-377,Demetrius Harris,TE46,368.0,Demetrius Harris,demetrius harris,TE,2019,329,0.06818181818181823
-378,Felton Davis,WR128,374.0,Felton Davis,felton davis,WR,2019,330,0.06534090909090906
-379,Ty Johnson,RB103,375.0,Ty Johnson,ty johnson,RB,2019,331,0.0625
-380,Greg Joseph,K32,376.0,Greg Joseph,greg joseph,K,2019,332,0.05965909090909094
-381,James 'Shaughnessy,TE47,377.0,James 'Shaughnessy,james shaughnessy,TE,2019,333,0.05681818181818177
-382,Dawson Knox,TE48,379.0,Dawson Knox,dawson knox,TE,2019,334,0.05397727272727271
-383,Darren Sproles ,RB104,380.0,Darren Sproles ,darren sproles,RB,2019,335,0.051136363636363646
-384,Jeff Heuerman,TE49,381.0,Jeff Heuerman,jeff heuerman,TE,2019,336,0.048295454545454586
-385,Garrett Gilbert,QB40,383.0,Garrett Gilbert,garrett gilbert,QB,2019,337,0.045454545454545414
-386,Trent Taylor,WR129,384.0,Trent Taylor,trent taylor,WR,2019,338,0.042613636363636354
-387,Mason Rudolph,QB41,386.0,Mason Rudolph,mason rudolph,QB,2019,339,0.03977272727272729
-388,C.J. Prosise ,RB105,387.0,C.J. Prosise ,cj prosise,RB,2019,340,0.03693181818181823
-390,Quadree Henderson,WR130,389.0,Quadree Henderson,quadree henderson,WR,2019,341,0.03409090909090906
-391,Gary Jennings Jr. ,WR131,390.0,Gary Jennings Jr. ,gary jennings jr,WR,2019,342,0.03125
-392,Tampa Bay Buccaneers,DST32,391.0,Tampa Bay Buccaneers,tampa bay buccaneers,DST,2019,343,0.02840909090909094
-393,Jakeem Grant Sr.,WR132,393.0,Jakeem Grant Sr.,jakeem grant sr,WR,2019,344,0.025568181818181768
-394,Mark Walton,RB107,395.0,Mark Walton,mark walton,RB,2019,345,0.022727272727272707
-395,Josh liver,TE50,396.0,Josh liver,josh liver,TE,2019,346,0.019886363636363646
-396,Dontrelle Inman,WR133,397.0,Dontrelle Inman,dontrelle inman,WR,2019,347,0.017045454545454586
-397,Ryan Switzer,WR134,398.0,Ryan Switzer,ryan switzer,WR,2019,348,0.014204545454545414
-398,Andre Ellington,RB108,399.0,Andre Ellington,andre ellington,RB,2019,349,0.011363636363636354
-399,Tyler Kroft,TE51,401.0,Tyler Kroft,tyler kroft,TE,2019,350,0.008522727272727293
-400,Jonnu Smith,TE52,402.0,Jonnu Smith,jonnu smith,TE,2019,351,0.005681818181818232
-401,Foster Moreau,TE53,403.0,Foster Moreau,foster moreau,TE,2019,352,0.0028409090909090606
-402,Bryce Love,RB109,408.0,Bryce Love,bryce love,RB,2019,353,0.0
+Rank,Player,POS,AVG,Player_fixed,player_clean,POS_group,year,adp_rank,adp_percentile,adp_rank_pos,adp_percentile_pos
+1,Saquon Barkley,RB1,1.0,Saquon Barkley,saquon barkley,RB,2019,1,1.0,1,1.0
+2,Christian McCaffrey,RB2,2.5,Christian McCaffrey,christian mccaffrey,RB,2019,2,0.9971590909090909,2,0.9901960784313726
+3,Alvin Kamara,RB3,2.5,Alvin Kamara,alvin kamara,RB,2019,2,0.9971590909090909,2,0.9901960784313726
+4,Ezekiel Elliott,RB4,4.0,Ezekiel Elliott,ezekiel elliott,RB,2019,3,0.9943181818181818,3,0.9803921568627451
+5,DeAndre Hopkins,WR1,5.3,DeAndre Hopkins,deandre hopkins,WR,2019,4,0.9914772727272727,1,1.0
+6,James Conner,RB5,6.5,James Conner,james conner,RB,2019,5,0.9886363636363636,4,0.9705882352941176
+8,Davante Adams,WR2,9.0,Davante Adams,davante adams,WR,2019,6,0.9857954545454546,2,0.992
+9,David Johnson,RB7,9.3,David Johnson,david johnson,RB,2019,7,0.9829545454545454,5,0.9607843137254902
+10,Nick Chubb,RB8,10.5,Nick Chubb,nick chubb,RB,2019,8,0.9801136363636364,6,0.9509803921568627
+11,Todd Gurley,RB9,11.8,Todd Gurley,todd gurley,RB,2019,9,0.9772727272727273,7,0.9411764705882353
+12,Patrick Mahomes II,QB1,12.0,Patrick Mahomes II,patrick mahomes ii,QB,2019,10,0.9744318181818182,1,1.0
+13,Michael Thomas,WR3,12.8,Michael Thomas,michael thomas,WR,2019,11,0.9715909090909091,3,0.984
+14,Julio Jones,WR4,13.0,Julio Jones,julio jones,WR,2019,12,0.96875,4,0.976
+15,Dalvin Cook,RB10,16.3,Dalvin Cook,dalvin cook,RB,2019,13,0.9659090909090909,8,0.9313725490196079
+16,Tyreek Hill,WR5,16.3,Tyreek Hill,tyreek hill,WR,2019,13,0.9659090909090909,5,0.968
+17,JuJu Smith-Schuster,WR6,17.0,JuJu Smith-Schuster,juju smith-schuster,WR,2019,14,0.9630681818181818,6,0.96
+18,Odell Beckham Jr.,WR7,17.0,Odell Beckham Jr.,odell beckham jr,WR,2019,14,0.9630681818181818,6,0.96
+19,Joe Mixon,RB11,17.3,Joe Mixon,joe mixon,RB,2019,15,0.9602272727272727,9,0.9215686274509804
+20,Travis Kelce,TE1,18.8,Travis Kelce,travis kelce,TE,2019,16,0.9573863636363636,1,1.0
+21,Leonard Fournette,RB12,21.5,Leonard Fournette,leonard fournette,RB,2019,17,0.9545454545454546,10,0.9117647058823529
+22,Mike Evans,WR8,22.3,Mike Evans,mike evans,WR,2019,18,0.9517045454545454,7,0.952
+23,Antonio Brown,WR9,22.8,Antonio Brown,antonio brown,WR,2019,19,0.9488636363636364,8,0.944
+24,Adam Thielen,WR10,25.5,Adam Thielen,adam thielen,WR,2019,20,0.9460227272727273,9,0.9359999999999999
+25,Damien Williams,RB13,26.0,Damien Williams,damien williams,RB,2019,21,0.9431818181818182,11,0.9019607843137255
+26,Keenan Allen,WR11,26.8,Keenan Allen,keenan allen,WR,2019,22,0.9403409090909091,10,0.928
+27,Kerryon Johnson,RB14,27.0,Kerryon Johnson,kerryon johnson,RB,2019,23,0.9375,12,0.892156862745098
+28,Aaron Jones Sr.,RB15,28.0,Aaron Jones Sr.,aaron jones sr,RB,2019,24,0.9346590909090909,13,0.8823529411764706
+29,Zach Ertz,TE2,31.3,Zach Ertz,zach ertz,TE,2019,25,0.9318181818181819,2,0.9803921568627451
+30,Chris Carson ,RB16,31.8,Chris Carson ,chris carson,RB,2019,26,0.9289772727272727,14,0.8725490196078431
+31,George Kittle,TE3,32.8,George Kittle,george kittle,TE,2019,27,0.9261363636363636,3,0.9607843137254902
+32,Josh Jacobs,RB17,33.0,Josh Jacobs,josh jacobs,RB,2019,28,0.9232954545454546,15,0.8627450980392157
+33,Devonta Freeman,RB18,33.3,Devonta Freeman,devonta freeman,RB,2019,29,0.9204545454545454,16,0.8529411764705882
+34,Amari Cooper,WR12,33.3,Amari Cooper,amari cooper,WR,2019,29,0.9204545454545454,11,0.92
+35,Stefon Diggs,WR13,34.8,Stefon Diggs,stefon diggs,WR,2019,30,0.9176136363636364,12,0.912
+36,Derrick Henry,RB19,36.5,Derrick Henry,derrick henry,RB,2019,31,0.9147727272727273,17,0.8431372549019608
+37,Deshaun Watson,QB2,38.0,Deshaun Watson,deshaun watson,QB,2019,32,0.9119318181818181,2,0.975
+38,David Montgomery,RB20,39.0,David Montgomery,david montgomery,RB,2019,33,0.9090909090909091,18,0.8333333333333334
+39,Marlon Mack,RB21,39.0,Marlon Mack,marlon mack,RB,2019,33,0.9090909090909091,18,0.8333333333333334
+40,Brandin Cooks,WR14,39.3,Brandin Cooks,brandin cooks,WR,2019,34,0.90625,13,0.904
+41,Mark Ingram,RB22,42.5,Mark Ingram,mark ingram,RB,2019,35,0.9034090909090909,19,0.8235294117647058
+42,Robert Woods,WR15,43.3,Robert Woods,robert woods,WR,2019,36,0.9005681818181819,14,0.896
+43,Julian Edelman,WR16,44.0,Julian Edelman,julian edelman,WR,2019,37,0.8977272727272727,15,0.888
+44,Sony Michel,RB23,44.8,Sony Michel,sony michel,RB,2019,38,0.8948863636363636,20,0.8137254901960784
+45,T.Y. Hilton,WR17,45.3,T.Y. Hilton,ty hilton,WR,2019,39,0.8920454545454546,16,0.88
+46,Tyler Lockett,WR18,45.5,Tyler Lockett,tyler lockett,WR,2019,40,0.8892045454545454,17,0.872
+47,Aaron Rodgers,QB3,46.5,Aaron Rodgers,aaron rodgers,QB,2019,41,0.8863636363636364,3,0.95
+48,Melvin Gordon,RB24,47.5,Melvin Gordon,melvin gordon,RB,2019,42,0.8835227272727273,21,0.803921568627451
+49,Kenny Golladay,WR19,48.5,Kenny Golladay,kenny golladay,WR,2019,43,0.8806818181818181,18,0.864
+50,Chris Godwin,WR20,49.0,Chris Godwin,chris godwin,WR,2019,44,0.8778409090909091,19,0.856
+51,Cooper Kupp,WR21,50.5,Cooper Kupp,cooper kupp,WR,2019,45,0.875,20,0.848
+52,Phillip Lindsay,RB25,51.5,Phillip Lindsay,phillip lindsay,RB,2019,46,0.8721590909090909,22,0.7941176470588236
+53,Calvin Ridley,WR22,54.8,Calvin Ridley,calvin ridley,WR,2019,47,0.8693181818181819,21,0.84
+54,Baker Mayfield,QB4,56.0,Baker Mayfield,baker mayfield,QB,2019,48,0.8664772727272727,4,0.925
+55,O.J. Howard,TE4,56.5,O.J. Howard,oj howard,TE,2019,49,0.8636363636363636,4,0.9411764705882353
+56,Tevin Coleman,RB26,57.0,Tevin Coleman,tevin coleman,RB,2019,50,0.8607954545454546,23,0.7843137254901961
+57,Tyler Boyd,WR23,58.0,Tyler Boyd,tyler boyd,WR,2019,51,0.8579545454545454,22,0.832
+58,Austin Ekeler,RB27,60.3,Austin Ekeler,austin ekeler,RB,2019,52,0.8551136363636364,24,0.7745098039215687
+59,Mike Williams,WR24,60.8,Mike Williams,mike williams,WR,2019,53,0.8522727272727273,23,0.8240000000000001
+60,A.J. Green ,WR25,62.5,A.J. Green ,aj green,WR,2019,54,0.8494318181818181,24,0.8160000000000001
+61,Evan Engram,TE5,63.8,Evan Engram,evan engram,TE,2019,55,0.8465909090909091,5,0.9215686274509804
+62,Matt Ryan,QB5,64.3,Matt Ryan,matt ryan,QB,2019,56,0.84375,5,0.9
+63,Alshon Jeffery ,WR26,64.5,Alshon Jeffery ,alshon jeffery,WR,2019,57,0.8409090909090909,25,0.808
+64,James White,RB28,64.8,James White,james white,RB,2019,58,0.8380681818181819,25,0.7647058823529411
+65,Josh Gordon,WR27,67.3,Josh Gordon,josh gordon,WR,2019,59,0.8352272727272727,26,0.8
+66,Hunter Henry,TE6,68.3,Hunter Henry,hunter henry,TE,2019,60,0.8323863636363636,6,0.9019607843137255
+67,DJ Moore,WR28,68.8,DJ Moore,dj moore,WR,2019,61,0.8295454545454546,27,0.792
+68,Miles Sanders,RB29,69.0,Miles Sanders,miles sanders,RB,2019,62,0.8267045454545454,26,0.7549019607843137
+69,Jarvis Landry,WR29,71.0,Jarvis Landry,jarvis landry,WR,2019,63,0.8238636363636364,28,0.784
+70,Duke Johnson Jr.,RB30,71.3,Duke Johnson Jr.,duke johnson jr,RB,2019,64,0.8210227272727273,27,0.7450980392156863
+71,Drew Brees,QB6,72.3,Drew Brees,drew brees,QB,2019,65,0.8181818181818181,6,0.875
+72,Carson Wentz,QB7,72.5,Carson Wentz,carson wentz,QB,2019,66,0.8153409090909091,7,0.85
+73,Derrius Guice ,RB31,73.8,Derrius Guice ,derrius guice,RB,2019,67,0.8125,28,0.7352941176470589
+74,Kenyan Drake,RB32,74.0,Kenyan Drake,kenyan drake,RB,2019,68,0.8096590909090909,29,0.7254901960784313
+75,Jared Cook,TE7,74.3,Jared Cook,jared cook,TE,2019,69,0.8068181818181819,7,0.8823529411764706
+76,Tarik Cohen,RB33,74.5,Tarik Cohen,tarik cohen,RB,2019,70,0.8039772727272727,30,0.7156862745098039
+77,Allen Robinson,WR30,75.3,Allen Robinson,allen robinson,WR,2019,71,0.8011363636363636,29,0.776
+78,Robbie Chosen,WR31,77.3,Robbie Chosen,robbie chosen,WR,2019,72,0.7982954545454546,30,0.768
+79,Jared Goff,QB8,79.0,Jared Goff,jared goff,QB,2019,73,0.7954545454545454,8,0.825
+80,Dede Westbrook,WR32,80.0,Dede Westbrook,dede westbrook,WR,2019,74,0.7926136363636364,31,0.76
+81,William Fuller,WR33,81.3,William Fuller,william fuller,WR,2019,75,0.7897727272727273,32,0.752
+82,Russell Wilson,QB9,83.0,Russell Wilson,russell wilson,QB,2019,76,0.7869318181818181,9,0.8
+83,Latavius Murray,RB34,85.3,Latavius Murray,latavius murray,RB,2019,77,0.7840909090909091,31,0.7058823529411764
+84,Chicago Bears,DST1,89.0,Chicago Bears,chicago bears,DST,2019,78,0.78125,1,1.0
+85,Vance McDonald,TE8,89.3,Vance McDonald,vance mcdonald,TE,2019,79,0.7784090909090909,8,0.8627450980392157
+86,Sammy Watkins,WR34,89.5,Sammy Watkins,sammy watkins,WR,2019,80,0.7755681818181819,33,0.744
+87,Jordan Howard,RB35,89.8,Jordan Howard,jordan howard,RB,2019,81,0.7727272727272727,32,0.696078431372549
+88,Emmanuel Sanders,WR35,91.0,Emmanuel Sanders,emmanuel sanders,WR,2019,82,0.7698863636363636,34,0.736
+89,Cam Newton ,QB10,91.0,Cam Newton ,cam newton,QB,2019,82,0.7698863636363636,10,0.775
+90,Christian Kirk,WR36,91.3,Christian Kirk,christian kirk,WR,2019,83,0.7670454545454546,35,0.728
+91,Sterling Shepard,WR37,93.5,Sterling Shepard,sterling shepard,WR,2019,84,0.7642045454545454,36,0.72
+92,Corey Davis,WR38,95.5,Corey Davis,corey davis,WR,2019,85,0.7613636363636364,37,0.712
+93,Marvin Jones Jr. ,WR39,97.0,Marvin Jones Jr. ,marvin jones jr,WR,2019,86,0.7585227272727273,38,0.704
+94,LeSean McCoy,RB36,98.3,LeSean McCoy,lesean mccoy,RB,2019,87,0.7556818181818181,33,0.6862745098039216
+95,Eric Ebron ,TE9,99.0,Eric Ebron ,eric ebron,TE,2019,88,0.7528409090909091,9,0.8431372549019608
+96,Ben Roethlisberger ,QB11,99.5,Ben Roethlisberger ,ben roethlisberger,QB,2019,89,0.75,11,0.75
+97,Matt Breida,RB37,99.8,Matt Breida,matt breida,RB,2019,90,0.7471590909090908,34,0.6764705882352942
+98,Curtis Samuel,WR40,100.0,Curtis Samuel,curtis samuel,WR,2019,91,0.7443181818181819,39,0.696
+99,Devin Singletary,RB38,100.8,Devin Singletary,devin singletary,RB,2019,92,0.7414772727272727,35,0.6666666666666667
+100,Rashaad Penny ,RB39,101.3,Rashaad Penny ,rashaad penny,RB,2019,93,0.7386363636363636,36,0.6568627450980392
+101,David Njoku,TE10,102.0,David Njoku,david njoku,TE,2019,94,0.7357954545454546,10,0.8235294117647058
+102,Darrell Henderson Jr.,RB40,102.3,Darrell Henderson Jr.,darrell henderson jr,RB,2019,95,0.7329545454545454,37,0.6470588235294117
+103,Jameis Winston,QB12,103.5,Jameis Winston,jameis winston,QB,2019,96,0.7301136363636364,12,0.725
+104,Larry Fitzgerald,WR41,103.8,Larry Fitzgerald,larry fitzgerald,WR,2019,97,0.7272727272727273,40,0.688
+105,Tom Brady,QB13,104.0,Tom Brady,tom brady,QB,2019,98,0.7244318181818181,13,0.7
+106,Lamar Jackson,QB14,104.3,Lamar Jackson,lamar jackson,QB,2019,99,0.7215909090909092,14,0.675
+107,Peyton Barber,RB41,111.3,Peyton Barber,peyton barber,RB,2019,100,0.71875,38,0.6372549019607843
+108,Kyler Murray,QB15,111.8,Kyler Murray,kyler murray,QB,2019,101,0.7159090909090908,15,0.65
+109,Dante Pettis,WR42,112.0,Dante Pettis,dante pettis,WR,2019,102,0.7130681818181819,41,0.6799999999999999
+110,Kareem Hunt,RB42,113.0,Kareem Hunt,kareem hunt,RB,2019,103,0.7102272727272727,39,0.6274509803921569
+111,Los Angeles Rams,DST2,113.0,Los Angeles Rams,los angeles rams,DST,2019,103,0.7102272727272727,2,0.9666666666666667
+112,Royce Freeman,RB43,113.3,Royce Freeman,royce freeman,RB,2019,104,0.7073863636363636,40,0.6176470588235294
+113,Marquez Valdes-Scantling,WR43,113.5,Marquez Valdes-Scantling,marquez valdes-scantling,WR,2019,105,0.7045454545454546,42,0.6719999999999999
+114,Tony Pollard,RB44,114.3,Tony Pollard,tony pollard,RB,2019,106,0.7017045454545454,41,0.607843137254902
+115,Courtland Sutton,WR44,114.8,Courtland Sutton,courtland sutton,WR,2019,107,0.6988636363636364,43,0.6639999999999999
+116,Philip Rivers,QB16,115.0,Philip Rivers,philip rivers,QB,2019,108,0.6960227272727273,16,0.625
+117,Delanie Walker ,TE11,116.3,Delanie Walker ,delanie walker,TE,2019,109,0.6931818181818181,11,0.803921568627451
+118,Greg Zuerlein,K1,117.5,Greg Zuerlein,greg zuerlein,K,2019,110,0.6903409090909092,1,1.0
+119,James Washington,WR45,119.3,James Washington,james washington,WR,2019,111,0.6875,44,0.656
+120,Geronimo Allison,WR46,123.3,Geronimo Allison,geronimo allison,WR,2019,112,0.6846590909090908,45,0.648
+121,Darwin Thompson,RB45,123.8,Darwin Thompson,darwin thompson,RB,2019,113,0.6818181818181819,42,0.5980392156862745
+122,Dak Prescott,QB17,123.8,Dak Prescott,dak prescott,QB,2019,113,0.6818181818181819,17,0.6
+123,Adrian Peterson,RB46,124.8,Adrian Peterson,adrian peterson,RB,2019,114,0.6789772727272727,43,0.5882352941176471
+124,Justin Tucker,K2,125.5,Justin Tucker,justin tucker,K,2019,115,0.6761363636363636,2,0.9655172413793104
+125,Jacksonville Jaguars,DST3,125.5,Jacksonville Jaguars,jacksonville jaguars,DST,2019,115,0.6761363636363636,3,0.9333333333333333
+126,Minnesota Vikings,DST4,125.8,Minnesota Vikings,minnesota vikings,DST,2019,116,0.6732954545454546,4,0.9
+127,DeSean Jackson ,WR47,130.5,DeSean Jackson ,desean jackson,WR,2019,117,0.6704545454545454,46,0.64
+128,Justin Jackson,RB47,131.3,Justin Jackson,justin jackson,RB,2019,118,0.6676136363636364,44,0.5784313725490196
+129,Austin Hooper,TE12,132.3,Austin Hooper,austin hooper,TE,2019,119,0.6647727272727273,12,0.7843137254901961
+130,Kalen Ballage ,RB48,132.8,Kalen Ballage ,kalen ballage,RB,2019,120,0.6619318181818181,45,0.5686274509803921
+131,Dion Lewis,RB49,133.8,Dion Lewis,dion lewis,RB,2019,121,0.6590909090909092,46,0.5588235294117647
+132,Michael Gallup,WR48,135.3,Michael Gallup,michael gallup,WR,2019,122,0.65625,47,0.632
+133,Baltimore Ravens,DST5,135.3,Baltimore Ravens,baltimore ravens,DST,2019,122,0.65625,5,0.8666666666666667
+134,Kirk Cousins,QB18,137.0,Kirk Cousins,kirk cousins,QB,2019,123,0.6534090909090908,18,0.575
+135,Donte Moncrief,WR49,139.0,Donte Moncrief,donte moncrief,WR,2019,124,0.6505681818181819,48,0.624
+136,T.J. Hockenson,TE13,139.3,T.J. Hockenson,tj hockenson,TE,2019,125,0.6477272727272727,13,0.7647058823529411
+137,Jaylen Samuels,RB50,139.3,Jaylen Samuels,jaylen samuels,RB,2019,125,0.6477272727272727,47,0.5490196078431373
+138,Harrison Butker,K3,139.5,Harrison Butker,harrison butker,K,2019,126,0.6448863636363636,3,0.9310344827586207
+139,Tyrell Williams,WR50,140.5,Tyrell Williams,tyrell williams,WR,2019,127,0.6420454545454546,49,0.616
+140,Mark Andrews,TE14,144.8,Mark Andrews,mark andrews,TE,2019,129,0.6363636363636364,14,0.7450980392156863
+141,Mitchell Trubisky,QB19,146.5,Mitchell Trubisky,mitchell trubisky,QB,2019,131,0.6306818181818181,19,0.55
+142,John Brown,WR51,147.0,John Brown,john brown,WR,2019,132,0.6278409090909092,50,0.608
+143,Stephen Gostkowski ,K4,147.3,Stephen Gostkowski ,stephen gostkowski,K,2019,133,0.625,4,0.896551724137931
+144,Anthony Miller,WR52,147.8,Anthony Miller,anthony miller,WR,2019,134,0.6221590909090908,51,0.6
+145,DK Metcalf,WR53,148.3,DK Metcalf,dk metcalf,WR,2019,135,0.6193181818181819,52,0.5920000000000001
+146,Golden Tate,WR54,148.5,Golden Tate,golden tate,WR,2019,136,0.6164772727272727,53,0.5840000000000001
+147,Greg Olsen,TE15,151.3,Greg Olsen,greg olsen,TE,2019,138,0.6107954545454546,16,0.7058823529411764
+148,Justice Hill,RB51,151.5,Justice Hill,justice hill,RB,2019,139,0.6079545454545454,48,0.5392156862745099
+149,Ronald Jones,RB52,152.5,Ronald Jones,ronald jones,RB,2019,140,0.6051136363636364,49,0.5294117647058824
+150,Jimmy Garoppolo,QB20,154.3,Jimmy Garoppolo,jimmy garoppolo,QB,2019,141,0.6022727272727273,20,0.525
+151,Carlos Hyde,RB53,155.5,Carlos Hyde,carlos hyde,RB,2019,142,0.5994318181818181,50,0.5196078431372548
+152,Trey Burton ,TE16,156.3,Trey Burton ,trey burton,TE,2019,143,0.5965909090909092,17,0.6862745098039216
+153,Alexander Mattison,RB54,159.3,Alexander Mattison,alexander mattison,RB,2019,146,0.5880681818181819,51,0.5098039215686274
+154,Josh Allen,QB21,159.3,Josh Allen,josh allen,QB,2019,146,0.5880681818181819,21,0.5
+155,Denver Broncos,DST6,161.5,Denver Broncos,denver broncos,DST,2019,147,0.5852272727272727,8,0.7666666666666666
+156,New England Patriots,DST7,161.8,New England Patriots,new england patriots,DST,2019,148,0.5823863636363636,9,0.7333333333333334
+157,Houston Texans,DST8,161.8,Houston Texans,houston texans,DST,2019,148,0.5823863636363636,9,0.7333333333333334
+158,Keke Coutee,WR55,162.0,Keke Coutee,keke coutee,WR,2019,149,0.5795454545454546,54,0.5760000000000001
+159,Damien Harris,RB55,163.5,Damien Harris,damien harris,RB,2019,150,0.5767045454545454,52,0.5
+160,Ka'imi Fairbairn,K5,164.3,Ka'imi Fairbairn,kaimi fairbairn,K,2019,151,0.5738636363636364,6,0.8275862068965517
+161,Buffalo Bills,DST9,166.8,Buffalo Bills,buffalo bills,DST,2019,152,0.5710227272727273,10,0.7
+162,Cleveland Browns,DST10,168.8,Cleveland Browns,cleveland browns,DST,2019,154,0.5653409090909092,11,0.6666666666666667
+163,Dallas Cowboys,DST11,170.5,Dallas Cowboys,dallas cowboys,DST,2019,155,0.5625,12,0.6333333333333333
+164,Ito Smith ,RB56,171.5,Ito Smith ,ito smith,RB,2019,156,0.5596590909090908,53,0.4901960784313726
+165,Jamison Crowder,WR56,172.5,Jamison Crowder,jamison crowder,WR,2019,158,0.5539772727272727,57,0.552
+166,Matthew Stafford,QB22,176.5,Matthew Stafford,matthew stafford,QB,2019,160,0.5482954545454546,23,0.44999999999999996
+167,Robbie Gould,K6,179.3,Robbie Gould,robbie gould,K,2019,163,0.5397727272727273,7,0.7931034482758621
+168,Los Angeles Chargers,DST12,143.3,Los Angeles Chargers,los angeles chargers,DST,2019,128,0.6392045454545454,6,0.8333333333333334
+169,Kyle Rudolph,TE17,146.3,Kyle Rudolph,kyle rudolph,TE,2019,130,0.6335227272727273,15,0.7254901960784313
+170,Deebo Samuel Sr.,WR57,185.3,Deebo Samuel Sr.,deebo samuel sr,WR,2019,164,0.5369318181818181,60,0.528
+171,Wil Lutz,K7,149.7,Wil Lutz,wil lutz,K,2019,137,0.6136363636363636,5,0.8620689655172413
+172,Seattle Seahawks,DST13,187.0,Seattle Seahawks,seattle seahawks,DST,2019,167,0.5284090909090908,13,0.6
+174,Jordan Reed,TE18,156.7,Jordan Reed,jordan reed,TE,2019,144,0.59375,18,0.6666666666666667
+175,Marquise Goodwin,WR59,193.0,Marquise Goodwin,marquise goodwin,WR,2019,173,0.5113636363636364,63,0.504
+176,New Orleans Saints,DST14,158.7,New Orleans Saints,new orleans saints,DST,2019,145,0.5909090909090908,7,0.8
+177,Jimmy Graham,TE19,158.7,Jimmy Graham,jimmy graham,TE,2019,145,0.5909090909090908,19,0.6470588235294117
+178,Jake Elliott,K8,196.0,Jake Elliott,jake elliott,K,2019,174,0.5085227272727273,8,0.7586206896551724
+179,Philadelphia Eagles,DST15,199.8,Philadelphia Eagles,philadelphia eagles,DST,2019,175,0.5056818181818181,16,0.5
+180,Mohamed Sanu Sr.,WR60,168.0,Mohamed Sanu Sr.,mohamed sanu sr,WR,2019,153,0.5681818181818181,56,0.56
+181,Michael Badgley,K9,202.8,Michael Badgley,michael badgley,K,2019,181,0.48863636363636365,9,0.7241379310344828
+182,Derek Carr,QB23,172.0,Derek Carr,derek carr,QB,2019,157,0.5568181818181819,22,0.475
+183,Nyheim Miller-Hines,RB57,175.7,Nyheim Miller-Hines,nyheim miller-hines,RB,2019,159,0.5511363636363636,54,0.48039215686274506
+184,Marquise Brown,WR61,178.0,Marquise Brown,marquise brown,WR,2019,161,0.5454545454545454,58,0.544
+185,Mecole Hardman Jr.,WR62,179.0,Mecole Hardman Jr.,mecole hardman jr,WR,2019,162,0.5426136363636364,59,0.536
+186,Sam Darnold,QB24,185.7,Sam Darnold,sam darnold,QB,2019,165,0.5340909090909092,24,0.42500000000000004
+187,Kenny Stills,WR63,186.7,Kenny Stills,kenny stills,WR,2019,166,0.53125,61,0.52
+188,Kansas City Chiefs,DST16,188.3,Kansas City Chiefs,kansas city chiefs,DST,2019,168,0.5255681818181819,14,0.5666666666666667
+189,C.J. Anderson,RB58,188.7,C.J. Anderson,cj anderson,RB,2019,169,0.5227272727272727,55,0.47058823529411764
+190,Chris Thompson,RB59,189.0,Chris Thompson,chris thompson,RB,2019,170,0.5198863636363636,56,0.4607843137254902
+191,Noah Fant,TE20,190.3,Noah Fant,noah fant,TE,2019,171,0.5170454545454546,20,0.6274509803921569
+192,Pittsburgh Steelers,DST17,192.3,Pittsburgh Steelers,pittsburgh steelers,DST,2019,172,0.5142045454545454,15,0.5333333333333333
+193,Jamaal Williams,RB60,200.3,Jamaal Williams,jamaal williams,RB,2019,177,0.5,58,0.4411764705882353
+194,Darren Waller,TE21,202.7,Darren Waller,darren waller,TE,2019,180,0.4914772727272727,22,0.5882352941176471
+195,Nick Foles,QB25,205.3,Nick Foles,nick foles,QB,2019,183,0.4829545454545454,25,0.4
+196,Jalen Richard,RB61,206.0,Jalen Richard,jalen richard,RB,2019,184,0.48011363636363635,59,0.43137254901960786
+197,Zay Jones,WR64,206.3,Zay Jones,zay jones,WR,2019,185,0.4772727272727273,68,0.46399999999999997
+198,Malcolm Brown,RB62,207.7,Malcolm Brown,malcolm brown,RB,2019,188,0.46875,61,0.4117647058823529
+199,Dare Ogunbowale,RB63,208.3,Dare Ogunbowale,dare ogunbowale,RB,2019,189,0.46590909090909094,62,0.4019607843137255
+200,Devin Funchess ,WR65,163.5,Devin Funchess ,devin funchess,WR,2019,150,0.5767045454545454,55,0.5680000000000001
+202,Nelson Agholor,WR67,210.0,Nelson Agholor,nelson agholor,WR,2019,190,0.46306818181818177,69,0.45599999999999996
+203,Mason Crosby,K10,210.3,Mason Crosby,mason crosby,K,2019,191,0.4602272727272727,10,0.6896551724137931
+204,DaeSean Hamilton,WR68,210.7,DaeSean Hamilton,daesean hamilton,WR,2019,192,0.45738636363636365,70,0.44799999999999995
+205,Albert Wilson,WR69,212.7,Albert Wilson,albert wilson,WR,2019,196,0.4460227272727273,74,0.41600000000000004
+206,Matt Prater,K11,213.3,Matt Prater,matt prater,K,2019,198,0.44034090909090906,11,0.6551724137931034
+207,DeVante Parker,WR70,172.5,DeVante Parker,devante parker,WR,2019,158,0.5539772727272727,57,0.552
+209,Ty Montgomery,RB64,217.3,Ty Montgomery,ty montgomery,RB,2019,200,0.43465909090909094,63,0.3921568627450981
+210,Jack Doyle,TE22,217.7,Jack Doyle,jack doyle,TE,2019,201,0.43181818181818177,24,0.5490196078431373
+211,Jason Witten,TE23,218.7,Jason Witten,jason witten,TE,2019,203,0.42613636363636365,25,0.5294117647058824
+212,Frank Gore,RB65,219.7,Frank Gore,frank gore,RB,2019,205,0.4204545454545454,65,0.37254901960784315
+213,Miles Boykin,WR72,225.3,Miles Boykin,miles boykin,WR,2019,207,0.4147727272727273,78,0.384
+214,Adam Vinatieri ,K12,226.3,Adam Vinatieri ,adam vinatieri,K,2019,208,0.41193181818181823,12,0.6206896551724138
+215,Indianapolis Colts,DST18,226.7,Indianapolis Colts,indianapolis colts,DST,2019,209,0.40909090909090906,17,0.4666666666666667
+216,Matt Bryant,K13,250.3,Matt Bryant,matt bryant,K,2019,233,0.34090909090909094,18,0.4137931034482759
+217,Jason Myers,K14,228.0,Jason Myers,jason myers,K,2019,210,0.40625,13,0.5862068965517242
+218,Brett Maher,K15,228.3,Brett Maher,brett maher,K,2019,211,0.40340909090909094,14,0.5517241379310345
+219,Chris Herndon IV ,TE24,196.0,Chris Herndon IV ,chris herndon iv,TE,2019,174,0.5085227272727273,21,0.607843137254902
+220,Green Bay Packers,DST19,231.0,Green Bay Packers,green bay packers,DST,2019,215,0.3920454545454546,18,0.43333333333333335
+221,Adam Humphries,WR73,200.5,Adam Humphries,adam humphries,WR,2019,178,0.49715909090909094,65,0.488
+222,J.J. Arcega-Whiteside,WR74,201.0,J.J. Arcega-Whiteside,jj arcega-whiteside,WR,2019,179,0.49431818181818177,66,0.48
+223,Tennessee Titans,DST20,233.7,Tennessee Titans,tennessee titans,DST,2019,217,0.38636363636363635,19,0.4
+224,Dallas Goedert,TE25,207.0,Dallas Goedert,dallas goedert,TE,2019,186,0.47443181818181823,23,0.5686274509803921
+225,Giovani Bernard,RB66,207.5,Giovani Bernard,giovani bernard,RB,2019,187,0.47159090909090906,60,0.42156862745098034
+226,Austin Seibert,K16,240.3,Austin Seibert,austin seibert,K,2019,220,0.37784090909090906,16,0.48275862068965514
+227,Parris Campbell ,WR75,211.5,Parris Campbell ,parris campbell,WR,2019,194,0.4517045454545454,72,0.43200000000000005
+228,Chris Boswell,K17,242.3,Chris Boswell,chris boswell,K,2019,224,0.3664772727272727,17,0.4482758620689655
+229,Marcus Mariota,QB26,215.0,Marcus Mariota,marcus mariota,QB,2019,199,0.4375,26,0.375
+230,A.J. Brown,WR76,218.5,A.J. Brown,aj brown,WR,2019,202,0.4289772727272727,76,0.4
+231,Gus Edwards,RB67,218.5,Gus Edwards,gus edwards,RB,2019,202,0.4289772727272727,64,0.38235294117647056
+232,Randall Cobb,WR77,219.0,Randall Cobb,randall cobb,WR,2019,204,0.4232954545454546,77,0.392
+233,Cameron Brate,TE26,259.3,Cameron Brate,cameron brate,TE,2019,240,0.3210227272727273,30,0.43137254901960786
+234,Giorgio Tavecchio,K18,229.5,Giorgio Tavecchio,giorgio tavecchio,K,2019,213,0.3977272727272727,15,0.5172413793103448
+235,Mike Davis,RB68,231.0,Mike Davis,mike davis,RB,2019,215,0.3920454545454546,66,0.36274509803921573
+236,Demaryius Thomas,WR78,232.0,Demaryius Thomas,demaryius thomas,WR,2019,216,0.3892045454545454,80,0.368
+237,Washington Commanders,DST21,256.0,Washington Commanders,washington commanders,DST,2019,238,0.3267045454545454,22,0.30000000000000004
+238,Andy Isabella,WR79,234.0,Andy Isabella,andy isabella,WR,2019,218,0.3835227272727273,81,0.36
+239,Chase Edmonds,RB69,234.5,Chase Edmonds,chase edmonds,RB,2019,219,0.38068181818181823,67,0.3529411764705882
+240,Chris Moore,WR80,288.5,Chris Moore,chris moore,WR,2019,265,0.25,98,0.22399999999999998
+241,Tyler Eifert,TE27,241.5,Tyler Eifert,tyler eifert,TE,2019,222,0.37215909090909094,28,0.47058823529411764
+242,Antonio Callaway ,WR81,187.0,Antonio Callaway ,antonio callaway,WR,2019,167,0.5284090909090908,62,0.512
+243,Jacoby Brissett,QB27,243.0,Jacoby Brissett,jacoby brissett,QB,2019,225,0.36363636363636365,27,0.35
+244,Darrel Williams ,RB70,189.0,Darrel Williams ,darrel williams,RB,2019,170,0.5198863636363636,56,0.4607843137254902
+245,T.J. Yeldon,RB71,244.0,T.J. Yeldon,tj yeldon,RB,2019,226,0.3607954545454546,68,0.3431372549019608
+246,Ted Ginn Jr.,WR82,248.5,Ted Ginn Jr.,ted ginn jr,WR,2019,230,0.34943181818181823,84,0.33599999999999997
+247,Quincy Enunwa ,WR83,246.5,Quincy Enunwa ,quincy enunwa,WR,2019,228,0.35511363636363635,83,0.344
+248,Kelvin Harmon,WR84,196.0,Kelvin Harmon,kelvin harmon,WR,2019,174,0.5085227272727273,64,0.496
+249,Willie Snead,WR85,249.0,Willie Snead,willie snead,WR,2019,231,0.34659090909090906,85,0.32799999999999996
+250,Trayveon Williams,RB72,200.0,Trayveon Williams,trayveon williams,RB,2019,176,0.5028409090909092,57,0.4509803921568627
+251,Andy Dalton,QB28,250.0,Andy Dalton,andy dalton,QB,2019,232,0.34375,28,0.32499999999999996
+252,Mike Gesicki,TE28,250.5,Mike Gesicki,mike gesicki,TE,2019,234,0.33806818181818177,29,0.4509803921568627
+253,Diontae Johnson,WR86,203.0,Diontae Johnson,diontae johnson,WR,2019,182,0.4857954545454546,67,0.472
+254,San Francisco 49ers,DST22,251.0,San Francisco 49ers,san francisco 49ers,DST,2019,235,0.3352272727272727,21,0.33333333333333337
+255,Ryquell Armstead,RB73,251.5,Ryquell Armstead,ryquell armstead,RB,2019,236,0.33238636363636365,72,0.303921568627451
+256,Rashard Higgins,WR87,254.5,Rashard Higgins,rashard higgins,WR,2019,237,0.3295454545454546,86,0.31999999999999995
+257,Aldrick Rosas,K19,254.5,Aldrick Rosas,aldrick rosas,K,2019,237,0.3295454545454546,19,0.3793103448275862
+258,Robert Foster,WR88,211.0,Robert Foster,robert foster,WR,2019,193,0.4545454545454546,71,0.43999999999999995
+259,Jakobi Meyers,WR89,212.0,Jakobi Meyers,jakobi meyers,WR,2019,195,0.44886363636363635,73,0.42400000000000004
+260,Preston Williams ,WR90,213.0,Preston Williams ,preston williams,WR,2019,197,0.44318181818181823,75,0.40800000000000003
+261,Cole Beasley,WR91,256.0,Cole Beasley,cole beasley,WR,2019,238,0.3267045454545454,87,0.31200000000000006
+262,Matt LaCosse,TE29,222.0,Matt LaCosse,matt lacosse,TE,2019,206,0.41761363636363635,26,0.5098039215686274
+263,Dontrell Hilliard,RB74,260.5,Dontrell Hilliard,dontrell hilliard,RB,2019,242,0.31534090909090906,74,0.28431372549019607
+264,Trey Quinn ,WR92,262.0,Trey Quinn ,trey quinn,WR,2019,243,0.3125,89,0.29600000000000004
+265,Paul Richardson Jr. ,WR93,262.0,Paul Richardson Jr. ,paul richardson jr,WR,2019,243,0.3125,89,0.29600000000000004
+266,Atlanta Falcons,DST23,269.0,Atlanta Falcons,atlanta falcons,DST,2019,249,0.2954545454545454,23,0.2666666666666667
+267,Irv Smith Jr.,TE30,229.0,Irv Smith Jr.,irv smith jr,TE,2019,212,0.40056818181818177,27,0.4901960784313726
+268,Dan Bailey,K20,264.0,Dan Bailey,dan bailey,K,2019,245,0.30681818181818177,20,0.3448275862068966
+269,Jalen Hurd,WR94,230.0,Jalen Hurd,jalen hurd,WR,2019,214,0.39488636363636365,79,0.376
+270,Matt Gay,K21,265.0,Matt Gay,matt gay,K,2019,246,0.3039772727272727,21,0.31034482758620685
+271,Danny Amendola,WR95,265.0,Danny Amendola,danny amendola,WR,2019,246,0.3039772727272727,91,0.28
+272,Benjamin Watson,TE31,289.0,Benjamin Watson,benjamin watson,TE,2019,266,0.24715909090909094,33,0.37254901960784315
+273,Joe Flacco,QB29,270.5,Joe Flacco,joe flacco,QB,2019,250,0.29261363636363635,29,0.30000000000000004
+274,Riley Ridley,WR96,241.0,Riley Ridley,riley ridley,WR,2019,221,0.375,82,0.352
+275,Ryan Succop ,K22,281.5,Ryan Succop ,ryan succop,K,2019,261,0.26136363636363635,22,0.27586206896551724
+276,Arizona Cardinals,DST24,242.0,Arizona Cardinals,arizona cardinals,DST,2019,223,0.36931818181818177,20,0.3666666666666667
+277,Las Vegas Raiders,DST25,312.0,Las Vegas Raiders,las vegas raiders,DST,2019,281,0.20454545454545459,28,0.09999999999999998
+278,Carolina Panthers,DST26,271.5,Carolina Panthers,carolina panthers,DST,2019,252,0.28693181818181823,25,0.19999999999999996
+279,Jake Kumerow,WR97,307.5,Jake Kumerow,jake kumerow,WR,2019,277,0.21590909090909094,101,0.19999999999999996
+280,Alfred Morris,RB75,246.0,Alfred Morris,alfred morris,RB,2019,227,0.3579545454545454,69,0.33333333333333337
+281,Brian Hill,RB76,247.0,Brian Hill,brian hill,RB,2019,229,0.3522727272727273,70,0.32352941176470584
+282,Dwayne Haskins,QB30,273.0,Dwayne Haskins,dwayne haskins,QB,2019,254,0.28125,30,0.275
+283,Qadree Ollison,RB77,251.0,Qadree Ollison,qadree ollison,RB,2019,235,0.3352272727272727,71,0.3137254901960784
+284,Hunter Renfrow,WR98,275.0,Hunter Renfrow,hunter renfrow,WR,2019,256,0.27556818181818177,94,0.256
+285,New York Jets,DST27,281.0,New York Jets,new york jets,DST,2019,260,0.2642045454545454,26,0.16666666666666663
+286,Demarcus Robinson,WR99,257.0,Demarcus Robinson,demarcus robinson,WR,2019,239,0.32386363636363635,88,0.30400000000000005
+287,Josh Doctson,WR100,279.0,Josh Doctson,josh doctson,WR,2019,258,0.26988636363636365,95,0.248
+288,Dexter Williams,RB78,260.0,Dexter Williams,dexter williams,RB,2019,241,0.31818181818181823,73,0.2941176470588235
+289,Damarea Crockett,RB79,260.0,Damarea Crockett,damarea crockett,RB,2019,241,0.31818181818181823,73,0.2941176470588235
+290,Will Dissly,TE32,312.5,Will Dissly,will dissly,TE,2019,282,0.20170454545454541,35,0.33333333333333337
+291,DJ Chark Jr.,WR101,262.0,DJ Chark Jr.,dj chark jr,WR,2019,243,0.3125,89,0.29600000000000004
+292,Josh Reynolds,WR102,263.0,Josh Reynolds,josh reynolds,WR,2019,244,0.30965909090909094,90,0.28800000000000003
+293,John Ross,WR103,282.0,John Ross,john ross,WR,2019,262,0.2585227272727273,97,0.23199999999999998
+294,Gerald Everett,TE33,266.0,Gerald Everett,gerald everett,TE,2019,247,0.30113636363636365,31,0.4117647058823529
+295,Eddy Pineiro,K23,282.5,Eddy Pineiro,eddy pineiro,K,2019,263,0.25568181818181823,23,0.24137931034482762
+296,Brandon McManus,K24,296.0,Brandon McManus,brandon mcmanus,K,2019,271,0.23295454545454541,24,0.2068965517241379
+297,Myles Gaskin,RB80,267.0,Myles Gaskin,myles gaskin,RB,2019,248,0.2982954545454546,75,0.27450980392156865
+298,Detroit Lions,DST28,289.0,Detroit Lions,detroit lions,DST,2019,266,0.24715909090909094,27,0.1333333333333333
+299,Cincinnati Bengals,DST29,271.0,Cincinnati Bengals,cincinnati bengals,DST,2019,251,0.2897727272727273,24,0.23333333333333328
+300,David Moore,WR104,272.0,David Moore,david moore,WR,2019,253,0.28409090909090906,92,0.272
+301,Wayne Gallman Jr.,RB81,301.5,Wayne Gallman Jr.,wayne gallman jr,RB,2019,275,0.22159090909090906,85,0.17647058823529416
+302,KeeSean Johnson,WR105,273.0,KeeSean Johnson,keesean johnson,WR,2019,254,0.28125,93,0.264
+303,Jay Ajayi,RB82,274.0,Jay Ajayi,jay ajayi,RB,2019,255,0.27840909090909094,76,0.2647058823529411
+304,Stephen Hauschka,K25,322.5,Stephen Hauschka,stephen hauschka,K,2019,291,0.17613636363636365,25,0.1724137931034483
+305,Daniel Carlson,K26,324.0,Daniel Carlson,daniel carlson,K,2019,293,0.17045454545454541,26,0.13793103448275867
+306,Bruce Anderson,RB83,276.0,Bruce Anderson,bruce anderson,RB,2019,257,0.2727272727272727,77,0.2549019607843137
+307,Miami Dolphins,DST30,317.0,Miami Dolphins,miami dolphins,DST,2019,286,0.19034090909090906,29,0.06666666666666665
+308,Phillip Dorsett II,WR106,308.5,Phillip Dorsett II,phillip dorsett ii,WR,2019,279,0.2102272727272727,102,0.19199999999999995
+309,Theo Riddick,RB84,279.0,Theo Riddick,theo riddick,RB,2019,258,0.26988636363636365,78,0.2450980392156863
+310,Ian Thomas,TE34,280.0,Ian Thomas,ian thomas,TE,2019,259,0.2670454545454546,32,0.3921568627450981
+311,Travis Benjamin,WR107,281.0,Travis Benjamin,travis benjamin,WR,2019,260,0.2642045454545454,96,0.24
+312,Rex Burkhead,RB85,290.0,Rex Burkhead,rex burkhead,RB,2019,267,0.24431818181818177,81,0.21568627450980393
+313,Taylor Gabriel,WR108,282.0,Taylor Gabriel,taylor gabriel,WR,2019,262,0.2585227272727273,97,0.23199999999999998
+314,Vernon Davis,TE35,338.0,Vernon Davis,vernon davis,TE,2019,305,0.13636363636363635,40,0.23529411764705888
+315,Josh Lambo,K27,327.5,Josh Lambo,josh lambo,K,2019,296,0.16193181818181823,27,0.10344827586206895
+316,Benny Snell Jr.,RB86,284.0,Benny Snell Jr.,benny snell jr,RB,2019,264,0.25284090909090906,79,0.23529411764705888
+317,Eli Manning,QB31,295.0,Eli Manning,eli manning,QB,2019,270,0.23579545454545459,32,0.22499999999999998
+318,Alfred Blue,RB87,292.0,Alfred Blue,alfred blue,RB,2019,269,0.23863636363636365,82,0.20588235294117652
+319,Joey Slye,K28,332.0,Joey Slye,joey slye,K,2019,299,0.15340909090909094,28,0.06896551724137934
+320,Daniel Jones,QB32,324.0,Daniel Jones,daniel jones,QB,2019,293,0.17045454545454541,35,0.15000000000000002
+321,Doug Martin,RB88,289.0,Doug Martin,doug martin,RB,2019,266,0.24715909090909094,80,0.22549019607843135
+322,Taywan Taylor,WR109,291.0,Taywan Taylor,taywan taylor,WR,2019,268,0.2414772727272727,99,0.21599999999999997
+323,Ryan Fitzpatrick,QB33,307.5,Ryan Fitzpatrick,ryan fitzpatrick,QB,2019,277,0.21590909090909094,33,0.19999999999999996
+324,Josh Rosen,QB34,292.0,Josh Rosen,josh rosen,QB,2019,269,0.23863636363636365,31,0.25
+325,New York Giants,DST31,339.0,New York Giants,new york giants,DST,2019,306,0.1335227272727273,30,0.033333333333333326
+326,Dustin Hopkins,K29,332.0,Dustin Hopkins,dustin hopkins,K,2019,299,0.15340909090909094,28,0.06896551724137934
+327,Randy Bullock,K30,322.5,Randy Bullock,randy bullock,K,2019,291,0.17613636363636365,25,0.1724137931034483
+328,Corey Clement,RB89,298.0,Corey Clement,corey clement,RB,2019,272,0.23011363636363635,83,0.196078431372549
+329,Alex Collins,RB90,300.0,Alex Collins,alex collins,RB,2019,273,0.2272727272727273,84,0.18627450980392157
+330,Chris Conley,WR110,301.0,Chris Conley,chris conley,WR,2019,274,0.22443181818181823,100,0.20799999999999996
+331,Hayden Hurst,TE36,303.0,Hayden Hurst,hayden hurst,TE,2019,276,0.21875,34,0.3529411764705882
+332,Devontae Booker,RB91,308.0,Devontae Booker,devontae booker,RB,2019,278,0.21306818181818177,86,0.16666666666666663
+333,Chris Hogan,WR111,310.0,Chris Hogan,chris hogan,WR,2019,280,0.20738636363636365,103,0.18400000000000005
+334,Laquon Treadwell,WR112,313.0,Laquon Treadwell,laquon treadwell,WR,2019,283,0.19886363636363635,104,0.17600000000000005
+336,Kendrick Bourne,WR113,315.0,Kendrick Bourne,kendrick bourne,WR,2019,284,0.1960227272727273,105,0.16800000000000004
+337,Ricky Seals-Jones,TE37,316.0,Ricky Seals-Jones,ricky seals-jones,TE,2019,285,0.19318181818181823,36,0.3137254901960784
+338,Case Keenum,QB35,317.0,Case Keenum,case keenum,QB,2019,286,0.19034090909090906,34,0.17500000000000004
+339,Deon Cain,WR114,318.0,Deon Cain,deon cain,WR,2019,287,0.1875,106,0.16000000000000003
+340,Zach Zenner,RB92,319.0,Zach Zenner,zach zenner,RB,2019,288,0.18465909090909094,87,0.1568627450980392
+341,Blake Jarwin,TE38,320.0,Blake Jarwin,blake jarwin,TE,2019,289,0.18181818181818177,37,0.2941176470588235
+342,Spencer Ware,RB93,321.0,Spencer Ware,spencer ware,RB,2019,290,0.1789772727272727,88,0.1470588235294118
+343,Breshad Perriman,WR115,323.0,Breshad Perriman,breshad perriman,WR,2019,292,0.17329545454545459,107,0.15200000000000002
+344,Cordarrelle Patterson,RB94,325.0,Cordarrelle Patterson,cordarrelle patterson,RB,2019,294,0.16761363636363635,89,0.13725490196078427
+345,Bilal Powell,RB95,327.0,Bilal Powell,bilal powell,RB,2019,295,0.1647727272727273,90,0.12745098039215685
+346,Michael Crabtree,WR116,329.0,Michael Crabtree,michael crabtree,WR,2019,297,0.15909090909090906,108,0.14400000000000002
+347,Cameron Artis-Payne,RB96,330.0,Cameron Artis-Payne,cameron artis-payne,RB,2019,298,0.15625,91,0.11764705882352944
+348,C.J. Uzomah,TE39,332.0,C.J. Uzomah,cj uzomah,TE,2019,299,0.15340909090909094,38,0.27450980392156865
+349,Chester Rogers ,WR117,333.0,Chester Rogers ,chester rogers,WR,2019,300,0.15056818181818177,109,0.136
+350,Jesse James,TE40,334.0,Jesse James,jesse james,TE,2019,301,0.1477272727272727,39,0.2549019607843137
+351,Jaron Brown,WR118,335.0,Jaron Brown,jaron brown,WR,2019,302,0.14488636363636365,110,0.128
+352,Wendell Smallwood,RB97,336.0,Wendell Smallwood,wendell smallwood,RB,2019,303,0.14204545454545459,92,0.10784313725490191
+353,Kyle Juszczyk,RB98,337.0,Kyle Juszczyk,kyle juszczyk,RB,2019,304,0.13920454545454541,93,0.0980392156862745
+354,Jordan Matthews,TE41,338.0,Jordan Matthews,jordan matthews,TE,2019,305,0.13636363636363635,40,0.23529411764705888
+355,Seth Roberts,WR119,340.0,Seth Roberts,seth roberts,WR,2019,307,0.13068181818181823,111,0.12
+356,Geoff Swaim,TE42,341.0,Geoff Swaim,geoff swaim,TE,2019,308,0.12784090909090906,41,0.21568627450980393
+357,Jarius Wright,WR120,342.0,Jarius Wright,jarius wright,WR,2019,309,0.125,112,0.11199999999999999
+358,Tajae Sharpe,WR121,343.0,Tajae Sharpe,tajae sharpe,WR,2019,310,0.12215909090909094,113,0.10399999999999998
+359,Drew Lock,QB36,344.0,Drew Lock,drew lock,QB,2019,311,0.11931818181818177,36,0.125
+360,Isaiah McKenzie,WR122,345.0,Isaiah McKenzie,isaiah mckenzie,WR,2019,312,0.11647727272727271,114,0.09599999999999997
+361,Tim Patrick,WR123,347.0,Tim Patrick,tim patrick,WR,2019,313,0.11363636363636365,115,0.08799999999999997
+362,Keelan Cole Sr.,WR124,349.0,Keelan Cole Sr.,keelan cole sr,WR,2019,314,0.11079545454545459,116,0.07999999999999996
+363,Jordan Wilkins,RB99,350.0,Jordan Wilkins,jordan wilkins,RB,2019,315,0.10795454545454541,94,0.08823529411764708
+364,Jordan Thomas,TE43,351.0,Jordan Thomas,jordan thomas,TE,2019,316,0.10511363636363635,42,0.196078431372549
+365,Kapri Bibbs,RB100,352.0,Kapri Bibbs,kapri bibbs,RB,2019,317,0.10227272727272729,95,0.07843137254901966
+366,James Develin ,RB101,353.0,James Develin ,james develin,RB,2019,318,0.09943181818181823,96,0.06862745098039214
+367,Blake Bortles,QB37,354.0,Blake Bortles,blake bortles,QB,2019,319,0.09659090909090906,37,0.09999999999999998
+368,Zach Pascal,WR125,355.0,Zach Pascal,zach pascal,WR,2019,320,0.09375,117,0.07199999999999995
+369,Nick Vannett,TE44,356.0,Nick Vannett,nick vannett,TE,2019,321,0.09090909090909094,43,0.17647058823529416
+370,Aldrick Robinson,WR126,357.0,Aldrick Robinson,aldrick robinson,WR,2019,322,0.08806818181818177,118,0.06399999999999995
+371,Ryan Tannehill,QB38,359.0,Ryan Tannehill,ryan tannehill,QB,2019,323,0.08522727272727271,38,0.07499999999999996
+372,C.J. Beathard,QB39,361.0,C.J. Beathard,cj beathard,QB,2019,324,0.08238636363636365,39,0.050000000000000044
+373,Chris Ivory,RB102,362.0,Chris Ivory,chris ivory,RB,2019,325,0.07954545454545459,97,0.05882352941176472
+374,Terry McLaurin,WR127,363.0,Terry McLaurin,terry mclaurin,WR,2019,326,0.07670454545454541,119,0.05600000000000005
+375,Jason Sanders,K31,365.0,Jason Sanders,jason sanders,K,2019,327,0.07386363636363635,29,0.03448275862068961
+376,Manasseh Garner,TE45,366.0,Manasseh Garner,manasseh garner,TE,2019,328,0.07102272727272729,44,0.1568627450980392
+377,Demetrius Harris,TE46,368.0,Demetrius Harris,demetrius harris,TE,2019,329,0.06818181818181823,45,0.13725490196078427
+378,Felton Davis,WR128,374.0,Felton Davis,felton davis,WR,2019,330,0.06534090909090906,120,0.04800000000000004
+379,Ty Johnson,RB103,375.0,Ty Johnson,ty johnson,RB,2019,331,0.0625,98,0.0490196078431373
+380,Greg Joseph,K32,376.0,Greg Joseph,greg joseph,K,2019,332,0.05965909090909094,30,0.0
+381,James 'Shaughnessy,TE47,377.0,James 'Shaughnessy,james shaughnessy,TE,2019,333,0.05681818181818177,46,0.11764705882352944
+382,Dawson Knox,TE48,379.0,Dawson Knox,dawson knox,TE,2019,334,0.05397727272727271,47,0.0980392156862745
+383,Darren Sproles ,RB104,380.0,Darren Sproles ,darren sproles,RB,2019,335,0.051136363636363646,99,0.039215686274509776
+384,Jeff Heuerman,TE49,381.0,Jeff Heuerman,jeff heuerman,TE,2019,336,0.048295454545454586,48,0.07843137254901966
+385,Garrett Gilbert,QB40,383.0,Garrett Gilbert,garrett gilbert,QB,2019,337,0.045454545454545414,40,0.025000000000000022
+386,Trent Taylor,WR129,384.0,Trent Taylor,trent taylor,WR,2019,338,0.042613636363636354,121,0.040000000000000036
+387,Mason Rudolph,QB41,386.0,Mason Rudolph,mason rudolph,QB,2019,339,0.03977272727272729,41,0.0
+388,C.J. Prosise ,RB105,387.0,C.J. Prosise ,cj prosise,RB,2019,340,0.03693181818181823,100,0.02941176470588236
+390,Quadree Henderson,WR130,389.0,Quadree Henderson,quadree henderson,WR,2019,341,0.03409090909090906,122,0.03200000000000003
+391,Gary Jennings Jr. ,WR131,390.0,Gary Jennings Jr. ,gary jennings jr,WR,2019,342,0.03125,123,0.02400000000000002
+392,Tampa Bay Buccaneers,DST32,391.0,Tampa Bay Buccaneers,tampa bay buccaneers,DST,2019,343,0.02840909090909094,31,0.0
+393,Jakeem Grant Sr.,WR132,393.0,Jakeem Grant Sr.,jakeem grant sr,WR,2019,344,0.025568181818181768,124,0.016000000000000014
+394,Mark Walton,RB107,395.0,Mark Walton,mark walton,RB,2019,345,0.022727272727272707,101,0.019607843137254943
+395,Josh liver,TE50,396.0,Josh liver,josh liver,TE,2019,346,0.019886363636363646,49,0.05882352941176472
+396,Dontrelle Inman,WR133,397.0,Dontrelle Inman,dontrelle inman,WR,2019,347,0.017045454545454586,125,0.008000000000000007
+397,Ryan Switzer,WR134,398.0,Ryan Switzer,ryan switzer,WR,2019,348,0.014204545454545414,126,0.0
+398,Andre Ellington,RB108,399.0,Andre Ellington,andre ellington,RB,2019,349,0.011363636363636354,102,0.009803921568627416
+399,Tyler Kroft,TE51,401.0,Tyler Kroft,tyler kroft,TE,2019,350,0.008522727272727293,50,0.039215686274509776
+400,Jonnu Smith,TE52,402.0,Jonnu Smith,jonnu smith,TE,2019,351,0.005681818181818232,51,0.019607843137254943
+401,Foster Moreau,TE53,403.0,Foster Moreau,foster moreau,TE,2019,352,0.0028409090909090606,52,0.0
+402,Bryce Love,RB109,408.0,Bryce Love,bryce love,RB,2019,353,0.0,103,0.0

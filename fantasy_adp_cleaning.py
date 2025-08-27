@@ -34,6 +34,7 @@ def detect_player_col(df: pd.DataFrame) -> str:
     return df.columns[1] if len(df.columns) > 1 else df.columns[0]
 
 def detect_pos_col(df: pd.DataFrame):
+    # If you *know* it's always "POS", you could just: return "POS"
     for c in ["POS", "Pos", "Position"]:
         if "POS" in df.columns:
             return c
@@ -84,22 +85,37 @@ for year in YEARS:
     df["year"] = year
 
     # convert AVG (average draft pick) to numeric
-    df["AVG"] = pd.to_numeric(df["AVG"], errors="coerce")
+    df["AVG"] = pd.to_numeric(df.get("AVG"), errors="coerce")
 
-    # turn AVG into a rank (1 = earliest pick)
-    df["adp_rank"] = df["AVG"].rank(method="dense", ascending=True).astype(int)
+    # ---- Overall ADP rank & percentile (within year) ----
+    df["adp_rank"] = df["AVG"].rank(method="dense", ascending=True).astype("Int64")
+    n_rank = int(df["adp_rank"].max()) if df["adp_rank"].notna().any() else 0
 
-    # number of ranks this year
-    n_rank = int(df["adp_rank"].max())
-
-    # percentile: 1.0 = earliest pick, 0.0 = last pick
     if n_rank > 1:
         df["adp_percentile"] = 1 - ((df["adp_rank"] - 1) / (n_rank - 1))
     else:
         df["adp_percentile"] = 0.0
-
-    # make sure it's clipped safely
     df["adp_percentile"] = df["adp_percentile"].clip(0, 1)
+
+    # ---- Position ADP rank & percentile (within POS_group, same year) ----
+    # rank within each position: 1 = earliest pick in that position
+    df["adp_rank_pos"] = (
+        df.groupby("POS_group", dropna=False)["AVG"]
+          .rank(method="dense", ascending=True)
+          .astype("Int64")
+    )
+
+    # n per position (use max rank in group which equals group size for dense ranking)
+    df["_n_pos"] = df.groupby("POS_group", dropna=False)["adp_rank_pos"].transform("max")
+
+    # percentile within position: 1.0 = earliest pick in that position
+    has_pos = df["_n_pos"].fillna(0) > 1
+    df.loc[has_pos, "adp_percentile_pos"] = 1 - ((df.loc[has_pos, "adp_rank_pos"] - 1) / (df.loc[has_pos, "_n_pos"] - 1))
+    df.loc[~has_pos, "adp_percentile_pos"] = 0.0  # edge case: 0 or 1 player in that POS
+    df["adp_percentile_pos"] = df["adp_percentile_pos"].astype(float).clip(0, 1)
+
+    # clean helper
+    df = df.drop(columns=["_n_pos"])
 
     # Save per-year cleaned file
     out_path = out_dir / f"FantasyPros_ADP_cleaned_{year}.csv"
@@ -107,7 +123,8 @@ for year in YEARS:
     print(
         f"✅ Saved {year} → {out_path.name} "
         f"({df.shape[0]} rows, {df.shape[1]} cols) | "
-        f"percentile min/max: {df['adp_percentile'].min():.3f}/{df['adp_percentile'].max():.3f}"
+        f"overall pct min/max: {df['adp_percentile'].min():.3f}/{df['adp_percentile'].max():.3f} | "
+        f"pos pct min/max: {df['adp_percentile_pos'].min():.3f}/{df['adp_percentile_pos'].max():.3f}"
     )
 
     all_years.append(df)
@@ -122,8 +139,12 @@ if all_years:
         f"({master.shape[0]} rows, {master.shape[1]} cols)"
     )
     print(
-        f"   Global percentile min/max: "
+        f"   Global overall pct min/max: "
         f"{master['adp_percentile'].min():.3f}/{master['adp_percentile'].max():.3f}"
+    )
+    print(
+        f"   Global pos pct min/max: "
+        f"{master['adp_percentile_pos'].min():.3f}/{master['adp_percentile_pos'].max():.3f}"
     )
 else:
     print("No years processed — check file names/paths.")
