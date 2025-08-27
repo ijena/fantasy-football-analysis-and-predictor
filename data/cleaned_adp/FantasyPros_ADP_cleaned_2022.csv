@@ -1,353 +1,353 @@
-Rank,Player,POS,AVG,Player_fixed,player_clean,POS_group,year,adp_rank,adp_percentile
-1,Jonathan Taylor,RB1,1.0,Jonathan Taylor,jonathan taylor,RB,2022,1,1.0
-2,Christian McCaffrey,RB2,2.0,Christian McCaffrey,christian mccaffrey,RB,2022,2,0.9966216216216216
-3,Austin Ekeler,RB3,3.8,Austin Ekeler,austin ekeler,RB,2022,3,0.9932432432432432
-4,Cooper Kupp,WR1,4.0,Cooper Kupp,cooper kupp,WR,2022,4,0.9898648648648649
-5,Derrick Henry,RB4,5.3,Derrick Henry,derrick henry,RB,2022,5,0.9864864864864865
-6,Justin Jefferson,WR2,5.5,Justin Jefferson,justin jefferson,WR,2022,6,0.9831081081081081
-7,Dalvin Cook,RB5,7.5,Dalvin Cook,dalvin cook,RB,2022,7,0.9797297297297297
-8,Najee Harris,RB6,8.0,Najee Harris,najee harris,RB,2022,8,0.9763513513513513
-9,Ja'Marr Chase,WR3,8.3,Ja'Marr Chase,jamarr chase,WR,2022,9,0.972972972972973
-10,Joe Mixon,RB7,10.3,Joe Mixon,joe mixon,RB,2022,10,0.9695945945945946
-11,Davante Adams,WR4,12.3,Davante Adams,davante adams,WR,2022,11,0.9662162162162162
-12,Stefon Diggs,WR5,12.5,Stefon Diggs,stefon diggs,WR,2022,12,0.9628378378378378
-13,Alvin Kamara,RB8,13.3,Alvin Kamara,alvin kamara,RB,2022,13,0.9594594594594594
-14,Travis Kelce,TE1,15.0,Travis Kelce,travis kelce,TE,2022,14,0.956081081081081
-15,D'Andre Swift,RB9,15.5,D'Andre Swift,dandre swift,RB,2022,15,0.9527027027027027
-16,Deebo Samuel Sr.,WR6,17.0,Deebo Samuel Sr.,deebo samuel sr,WR,2022,16,0.9493243243243243
-17,Aaron Jones Sr.,RB10,19.5,Aaron Jones Sr.,aaron jones sr,RB,2022,17,0.9459459459459459
-18,CeeDee Lamb,WR7,19.5,CeeDee Lamb,ceedee lamb,WR,2022,17,0.9459459459459459
-19,Tyreek Hill,WR8,19.8,Tyreek Hill,tyreek hill,WR,2022,18,0.9425675675675675
-20,Nick Chubb,RB11,20.0,Nick Chubb,nick chubb,RB,2022,19,0.9391891891891891
-21,Saquon Barkley,RB12,20.3,Saquon Barkley,saquon barkley,RB,2022,20,0.9358108108108109
-22,Josh Allen,QB1,20.8,Josh Allen,josh allen,QB,2022,21,0.9324324324324325
-23,Mark Andrews,TE2,21.8,Mark Andrews,mark andrews,TE,2022,22,0.9290540540540541
-24,Leonard Fournette,RB13,22.0,Leonard Fournette,leonard fournette,RB,2022,23,0.9256756756756757
-25,Javonte Williams,RB14,22.8,Javonte Williams,javonte williams,RB,2022,24,0.9222972972972973
-26,Mike Evans,WR9,26.8,Mike Evans,mike evans,WR,2022,25,0.9189189189189189
-27,Keenan Allen,WR10,28.3,Keenan Allen,keenan allen,WR,2022,26,0.9155405405405406
-28,James Conner,RB15,29.3,James Conner,james conner,RB,2022,27,0.9121621621621622
-29,Patrick Mahomes II,QB2,29.8,Patrick Mahomes II,patrick mahomes ii,QB,2022,28,0.9087837837837838
-30,Ezekiel Elliott,RB16,30.3,Ezekiel Elliott,ezekiel elliott,RB,2022,29,0.9054054054054054
-31,A.J. Brown,WR11,30.8,A.J. Brown,aj brown,WR,2022,30,0.902027027027027
-32,Kyle Pitts Sr.,TE3,32.8,Kyle Pitts Sr.,kyle pitts sr,TE,2022,31,0.8986486486486487
-33,Michael Pittman Jr.,WR12,33.5,Michael Pittman Jr.,michael pittman jr,WR,2022,32,0.8952702702702703
-34,Tee Higgins,WR13,33.8,Tee Higgins,tee higgins,WR,2022,33,0.8918918918918919
-35,Justin Herbert,QB3,34.5,Justin Herbert,justin herbert,QB,2022,34,0.8885135135135135
-36,David Montgomery,RB17,36.5,David Montgomery,david montgomery,RB,2022,35,0.8851351351351351
-37,Cam Akers,RB18,39.8,Cam Akers,cam akers,RB,2022,36,0.8817567567567568
-38,George Kittle,TE4,39.8,George Kittle,george kittle,TE,2022,36,0.8817567567567568
-39,Travis Etienne Jr.,RB19,40.5,Travis Etienne Jr.,travis etienne jr,RB,2022,37,0.8783783783783784
-40,Terry McLaurin,WR14,41.0,Terry McLaurin,terry mclaurin,WR,2022,38,0.875
-41,Lamar Jackson,QB4,43.5,Lamar Jackson,lamar jackson,QB,2022,39,0.8716216216216216
-42,DJ Moore,WR15,43.8,DJ Moore,dj moore,WR,2022,40,0.8682432432432432
-43,Diontae Johnson,WR16,43.8,Diontae Johnson,diontae johnson,WR,2022,40,0.8682432432432432
-44,Darren Waller,TE5,44.8,Darren Waller,darren waller,TE,2022,41,0.8648648648648649
-45,Mike Williams,WR17,46.0,Mike Williams,mike williams,WR,2022,42,0.8614864864864865
-46,Jaylen Waddle,WR18,47.3,Jaylen Waddle,jaylen waddle,WR,2022,43,0.8581081081081081
-47,DK Metcalf,WR19,48.3,DK Metcalf,dk metcalf,WR,2022,44,0.8547297297297297
-48,Josh Jacobs,RB20,49.5,Josh Jacobs,josh jacobs,RB,2022,45,0.8513513513513513
-49,Elijah Mitchell,RB21,52.0,Elijah Mitchell,elijah mitchell,RB,2022,46,0.847972972972973
-50,J.K. Dobbins,RB22,52.0,J.K. Dobbins,jk dobbins,RB,2022,46,0.847972972972973
-51,Breece Hall,RB23,52.3,Breece Hall,breece hall,RB,2022,47,0.8445945945945946
-52,Kyler Murray,QB5,53.8,Kyler Murray,kyler murray,QB,2022,48,0.8412162162162162
-53,Jalen Hurts,QB6,55.3,Jalen Hurts,jalen hurts,QB,2022,49,0.8378378378378378
-54,Brandin Cooks,WR20,56.0,Brandin Cooks,brandin cooks,WR,2022,50,0.8344594594594594
-55,Dalton Schultz,TE6,57.3,Dalton Schultz,dalton schultz,TE,2022,51,0.8310810810810811
-56,Courtland Sutton,WR21,58.0,Courtland Sutton,courtland sutton,WR,2022,52,0.8277027027027027
-57,Joe Burrow,QB7,60.3,Joe Burrow,joe burrow,QB,2022,53,0.8243243243243243
-58,Marquise Brown,WR22,61.5,Marquise Brown,marquise brown,WR,2022,54,0.8209459459459459
-59,Chris Godwin,WR23,61.8,Chris Godwin,chris godwin,WR,2022,55,0.8175675675675675
-60,Allen Robinson II ,WR24,62.8,Allen Robinson II ,allen robinson ii,WR,2022,56,0.8141891891891893
-61,Amon-Ra St. Brown,WR25,63.5,Amon-Ra St. Brown,amon-ra st brown,WR,2022,57,0.8108108108108107
-62,Clyde Edwards-Helaire,RB24,64.0,Clyde Edwards-Helaire,clyde edwards-helaire,RB,2022,58,0.8074324324324325
-63,Antonio Gibson,RB25,64.8,Antonio Gibson,antonio gibson,RB,2022,59,0.8040540540540541
-64,Jerry Jeudy,WR26,65.8,Jerry Jeudy,jerry jeudy,WR,2022,60,0.8006756756756757
-65,T.J. Hockenson,TE7,65.8,T.J. Hockenson,tj hockenson,TE,2022,60,0.8006756756756757
-66,Gabe Davis,WR27,67.3,Gabe Davis,gabe davis,WR,2022,61,0.7972972972972973
-67,A.J. Dillon,RB26,67.8,A.J. Dillon,aj dillon,RB,2022,62,0.7939189189189189
-68,Amari Cooper,WR28,67.8,Amari Cooper,amari cooper,WR,2022,62,0.7939189189189189
-69,Dallas Goedert,TE8,70.5,Dallas Goedert,dallas goedert,TE,2022,63,0.7905405405405406
-70,Tom Brady,QB8,72.0,Tom Brady,tom brady,QB,2022,64,0.7871621621621622
-71,Adam Thielen,WR29,73.3,Adam Thielen,adam thielen,WR,2022,65,0.7837837837837838
-72,Darnell Mooney,WR30,73.5,Darnell Mooney,darnell mooney,WR,2022,66,0.7804054054054054
-73,JuJu Smith-Schuster,WR31,74.3,JuJu Smith-Schuster,juju smith-schuster,WR,2022,67,0.777027027027027
-74,Russell Wilson,QB9,77.5,Russell Wilson,russell wilson,QB,2022,68,0.7736486486486487
-75,Michael Thomas ,WR32,80.0,Michael Thomas ,michael thomas,WR,2022,69,0.7702702702702703
-76,Aaron Rodgers,QB10,80.3,Aaron Rodgers,aaron rodgers,QB,2022,70,0.7668918918918919
-77,Dak Prescott,QB11,82.0,Dak Prescott,dak prescott,QB,2022,71,0.7635135135135135
-78,Devin Singletary,RB27,82.5,Devin Singletary,devin singletary,RB,2022,72,0.7601351351351351
-79,Hunter Renfrow,WR33,83.3,Hunter Renfrow,hunter renfrow,WR,2022,73,0.7567567567567568
-80,DeAndre Hopkins,WR34,83.3,DeAndre Hopkins,deandre hopkins,WR,2022,73,0.7567567567567568
-81,Dameon Pierce,RB28,83.5,Dameon Pierce,dameon pierce,RB,2022,74,0.7533783783783784
-82,Damien Harris,RB29,83.8,Damien Harris,damien harris,RB,2022,75,0.75
-83,Miles Sanders,RB30,84.5,Miles Sanders,miles sanders,RB,2022,76,0.7466216216216216
-84,Kareem Hunt,RB31,85.3,Kareem Hunt,kareem hunt,RB,2022,77,0.7432432432432432
-85,Cordarrelle Patterson,RB32,85.8,Cordarrelle Patterson,cordarrelle patterson,RB,2022,78,0.7398648648648649
-86,Tony Pollard,RB33,86.0,Tony Pollard,tony pollard,RB,2022,79,0.7364864864864865
-87,Chase Edmonds,RB34,86.8,Chase Edmonds,chase edmonds,RB,2022,80,0.7331081081081081
-88,Rashaad Penny ,RB35,87.0,Rashaad Penny ,rashaad penny,RB,2022,81,0.7297297297297297
-89,Rashod Bateman,WR35,88.5,Rashod Bateman,rashod bateman,WR,2022,82,0.7263513513513513
-90,Zach Ertz,TE9,88.8,Zach Ertz,zach ertz,TE,2022,83,0.722972972972973
-91,Dawson Knox,TE10,90.0,Dawson Knox,dawson knox,TE,2022,84,0.7195945945945945
-92,Elijah Moore,WR36,90.0,Elijah Moore,elijah moore,WR,2022,84,0.7195945945945945
-93,DeVonta Smith,WR37,90.3,DeVonta Smith,devonta smith,WR,2022,85,0.7162162162162162
-94,Buffalo Bills,DST1,92.0,Buffalo Bills,buffalo bills,DST,2022,86,0.7128378378378378
-95,Matthew Stafford,QB12,92.0,Matthew Stafford,matthew stafford,QB,2022,86,0.7128378378378378
-96,Tyler Lockett,WR38,96.5,Tyler Lockett,tyler lockett,WR,2022,87,0.7094594594594594
-97,Brandon Aiyuk,WR39,98.0,Brandon Aiyuk,brandon aiyuk,WR,2022,88,0.7060810810810811
-98,Drake London,WR40,98.5,Drake London,drake london,WR,2022,89,0.7027027027027026
-99,Rhamondre Stevenson,RB36,100.0,Rhamondre Stevenson,rhamondre stevenson,RB,2022,90,0.6993243243243243
-100,Christian Kirk,WR41,100.3,Christian Kirk,christian kirk,WR,2022,91,0.6959459459459459
-101,Trey Lance,QB13,101.5,Trey Lance,trey lance,QB,2022,92,0.6925675675675675
-102,Robert Woods,WR42,103.0,Robert Woods,robert woods,WR,2022,93,0.6891891891891893
-103,Allen Lazard,WR43,104.5,Allen Lazard,allen lazard,WR,2022,94,0.6858108108108107
-104,Justin Tucker,K1,105.5,Justin Tucker,justin tucker,K,2022,95,0.6824324324324325
-105,Melvin Gordon,RB37,107.5,Melvin Gordon,melvin gordon,RB,2022,96,0.6790540540540541
-106,Pat Freiermuth,TE11,108.5,Pat Freiermuth,pat freiermuth,TE,2022,97,0.6756756756756757
-107,Chris Olave,WR44,110.8,Chris Olave,chris olave,WR,2022,98,0.6722972972972974
-108,Tampa Bay Buccaneers,DST2,112.3,Tampa Bay Buccaneers,tampa bay buccaneers,DST,2022,99,0.6689189189189189
-109,Derek Carr,QB14,113.3,Derek Carr,derek carr,QB,2022,100,0.6655405405405406
-110,Kenneth Walker III,RB38,116.0,Kenneth Walker III,kenneth walker iii,RB,2022,101,0.6621621621621622
-111,Chase Claypool,WR45,116.3,Chase Claypool,chase claypool,WR,2022,102,0.6587837837837838
-112,James Robinson,RB39,117.0,James Robinson,james robinson,RB,2022,103,0.6554054054054055
-113,Michael Carter,RB40,117.0,Michael Carter,michael carter,RB,2022,103,0.6554054054054055
-114,San Francisco 49ers,DST3,118.8,San Francisco 49ers,san francisco 49ers,DST,2022,104,0.652027027027027
-115,Kadarius Toney,WR46,119.0,Kadarius Toney,kadarius toney,WR,2022,105,0.6486486486486487
-116,James Cook,RB41,120.0,James Cook,james cook,RB,2022,106,0.6452702702702703
-117,Cole Kmet,TE12,121.8,Cole Kmet,cole kmet,TE,2022,107,0.6418918918918919
-118,Indianapolis Colts,DST4,123.5,Indianapolis Colts,indianapolis colts,DST,2022,108,0.6385135135135135
-119,Kirk Cousins,QB15,125.3,Kirk Cousins,kirk cousins,QB,2022,109,0.6351351351351351
-120,George Pickens,WR47,127.8,George Pickens,george pickens,WR,2022,110,0.6317567567567568
-121,Los Angeles Rams,DST5,129.0,Los Angeles Rams,los angeles rams,DST,2022,111,0.6283783783783784
-122,Harrison Butker,K2,129.0,Harrison Butker,harrison butker,K,2022,111,0.6283783783783784
-123,Evan McPherson,K3,129.0,Evan McPherson,evan mcpherson,K,2022,111,0.6283783783783784
-124,Mike Gesicki,TE13,129.0,Mike Gesicki,mike gesicki,TE,2022,111,0.6283783783783784
-125,Hunter Henry,TE14,130.3,Hunter Henry,hunter henry,TE,2022,112,0.625
-126,Treylon Burks,WR48,131.8,Treylon Burks,treylon burks,WR,2022,113,0.6216216216216216
-127,Daniel Carlson,K4,132.3,Daniel Carlson,daniel carlson,K,2022,114,0.6182432432432432
-128,Darrell Henderson Jr.,RB42,132.5,Darrell Henderson Jr.,darrell henderson jr,RB,2022,115,0.6148648648648649
-129,Tyler Bass,K5,132.8,Tyler Bass,tyler bass,K,2022,116,0.6114864864864865
-130,Alexander Mattison,RB43,135.0,Alexander Mattison,alexander mattison,RB,2022,117,0.6081081081081081
-131,New Orleans Saints,DST6,135.3,New Orleans Saints,new orleans saints,DST,2022,118,0.6047297297297297
-132,Matt Gay,K6,135.8,Matt Gay,matt gay,K,2022,119,0.6013513513513513
-133,Tyler Boyd,WR49,137.8,Tyler Boyd,tyler boyd,WR,2022,120,0.597972972972973
-134,Garrett Wilson,WR50,138.0,Garrett Wilson,garrett wilson,WR,2022,121,0.5945945945945945
-135,Dallas Cowboys,DST7,138.8,Dallas Cowboys,dallas cowboys,DST,2022,122,0.5912162162162162
-136,Michael Gallup,WR51,139.3,Michael Gallup,michael gallup,WR,2022,123,0.5878378378378378
-137,Nyheim Miller-Hines,RB44,140.5,Nyheim Miller-Hines,nyheim miller-hines,RB,2022,124,0.5844594594594594
-138,Tua Tagovailoa,QB16,140.5,Tua Tagovailoa,tua tagovailoa,QB,2022,124,0.5844594594594594
-139,Green Bay Packers,DST8,142.5,Green Bay Packers,green bay packers,DST,2022,125,0.5810810810810811
-140,Skyy Moore,WR52,142.8,Skyy Moore,skyy moore,WR,2022,126,0.5777027027027026
-141,Julio Jones,WR53,143.8,Julio Jones,julio jones,WR,2022,127,0.5743243243243243
-142,Raheem Mostert,RB45,144.8,Raheem Mostert,raheem mostert,RB,2022,128,0.5709459459459459
-143,Russell Gage Jr.,WR54,145.5,Russell Gage Jr.,russell gage jr,WR,2022,129,0.5675675675675675
-144,Kenneth Gainwell,RB46,146.8,Kenneth Gainwell,kenneth gainwell,RB,2022,130,0.5641891891891893
-145,DJ Chark Jr.,WR55,147.5,DJ Chark Jr.,dj chark jr,WR,2022,131,0.5608108108108107
-146,Justin Fields,QB17,148.0,Justin Fields,justin fields,QB,2022,132,0.5574324324324325
-147,Los Angeles Chargers,DST9,148.8,Los Angeles Chargers,los angeles chargers,DST,2022,133,0.5540540540540541
-148,Marquez Valdes-Scantling,WR56,148.8,Marquez Valdes-Scantling,marquez valdes-scantling,WR,2022,133,0.5540540540540541
-149,Matt Prater,K7,151.0,Matt Prater,matt prater,K,2022,134,0.5506756756756757
-150,Brian Robinson Jr.,RB47,153.8,Brian Robinson Jr.,brian robinson jr,RB,2022,135,0.5472972972972974
-151,Trevor Lawrence,QB18,155.0,Trevor Lawrence,trevor lawrence,QB,2022,136,0.5439189189189189
-152,Tyler Higbee,TE15,155.3,Tyler Higbee,tyler higbee,TE,2022,137,0.5405405405405406
-153,Jarvis Landry ,WR57,157.3,Jarvis Landry ,jarvis landry,WR,2022,138,0.5371621621621622
-154,Baltimore Ravens,DST10,159.8,Baltimore Ravens,baltimore ravens,DST,2022,139,0.5337837837837838
-155,DeVante Parker,WR58,161.5,DeVante Parker,devante parker,WR,2022,140,0.5304054054054055
-156,David Njoku,TE16,161.8,David Njoku,david njoku,TE,2022,141,0.527027027027027
-157,Jakobi Meyers,WR59,162.3,Jakobi Meyers,jakobi meyers,WR,2022,142,0.5236486486486487
-158,Noah Fant,TE17,164.3,Noah Fant,noah fant,TE,2022,143,0.5202702702702703
-159,J.D. McKissic ,RB48,165.3,J.D. McKissic ,jd mckissic,RB,2022,144,0.5168918918918919
-160,New England Patriots,DST11,166.0,New England Patriots,new england patriots,DST,2022,145,0.5135135135135135
-161,Jameis Winston,QB19,166.3,Jameis Winston,jameis winston,QB,2022,146,0.5101351351351351
-162,Younghoe Koo,K8,166.5,Younghoe Koo,younghoe koo,K,2022,147,0.5067567567567568
-163,Mecole Hardman Jr.,WR60,168.8,Mecole Hardman Jr.,mecole hardman jr,WR,2022,149,0.5
-164,Denver Broncos,DST12,169.0,Denver Broncos,denver broncos,DST,2022,150,0.4966216216216216
-165,Miami Dolphins,DST13,169.3,Miami Dolphins,miami dolphins,DST,2022,151,0.4932432432432432
-166,Albert Okwuegbunam Jr.,TE18,169.3,Albert Okwuegbunam Jr.,albert okwuegbunam jr,TE,2022,151,0.4932432432432432
-167,Jamaal Williams,RB49,170.0,Jamaal Williams,jamaal williams,RB,2022,152,0.4898648648648649
-168,Nick Folk,K9,172.0,Nick Folk,nick folk,K,2022,154,0.4831081081081081
-169,Matt Ryan,QB20,172.3,Matt Ryan,matt ryan,QB,2022,155,0.4797297297297297
-170,Brandon McManus,K10,173.8,Brandon McManus,brandon mcmanus,K,2022,156,0.4763513513513513
-171,Jahan Dotson,WR61,174.8,Jahan Dotson,jahan dotson,WR,2022,157,0.472972972972973
-172,Pittsburgh Steelers,DST14,174.8,Pittsburgh Steelers,pittsburgh steelers,DST,2022,157,0.472972972972973
-173,Irv Smith Jr.,TE19,175.8,Irv Smith Jr.,irv smith jr,TE,2022,158,0.4695945945945946
-174,Romeo Doubs,WR62,176.3,Romeo Doubs,romeo doubs,WR,2022,159,0.46621621621621623
-175,Isaiah McKenzie,WR63,176.3,Isaiah McKenzie,isaiah mckenzie,WR,2022,159,0.46621621621621623
-176,Robert Tonyan,TE20,177.8,Robert Tonyan,robert tonyan,TE,2022,161,0.45945945945945943
-177,Ryan Succop,K11,179.0,Ryan Succop,ryan succop,K,2022,163,0.45270270270270274
-178,Mark Ingram II ,RB50,179.0,Mark Ingram II ,mark ingram ii,RB,2022,163,0.45270270270270274
-179,Khalil Herbert,RB51,181.3,Khalil Herbert,khalil herbert,RB,2022,164,0.44932432432432434
-180,Ryan Tannehill ,QB21,185.3,Ryan Tannehill ,ryan tannehill,QB,2022,166,0.44256756756756754
-181,Tyler Allgeier,RB52,186.3,Tyler Allgeier,tyler allgeier,RB,2022,167,0.43918918918918914
-182,Rondale Moore,WR64,186.3,Rondale Moore,rondale moore,WR,2022,167,0.43918918918918914
-183,Mac Jones,QB22,188.0,Mac Jones,mac jones,QB,2022,169,0.43243243243243246
-184,Gerald Everett,TE21,189.3,Gerald Everett,gerald everett,TE,2022,171,0.42567567567567566
-185,Rachaad White,RB53,193.0,Rachaad White,rachaad white,RB,2022,174,0.41554054054054057
-186,Evan Engram,TE22,193.8,Evan Engram,evan engram,TE,2022,175,0.41216216216216217
-187,Deshaun Watson,QB23,194.5,Deshaun Watson,deshaun watson,QB,2022,176,0.40878378378378377
-188,Baker Mayfield,QB24,195.3,Baker Mayfield,baker mayfield,QB,2022,177,0.4054054054054054
-189,Philadelphia Eagles,DST15,197.3,Philadelphia Eagles,philadelphia eagles,DST,2022,179,0.3986486486486487
-190,Cleveland Browns,DST16,198.0,Cleveland Browns,cleveland browns,DST,2022,180,0.3952702702702703
-191,Zamir White,RB54,201.3,Zamir White,zamir white,RB,2022,183,0.3851351351351351
-192,Robbie Gould,K12,201.3,Robbie Gould,robbie gould,K,2022,183,0.3851351351351351
-193,Odell Beckham Jr.,WR65,202.0,Odell Beckham Jr.,odell beckham jr,WR,2022,184,0.3817567567567568
-194,Joshua Palmer,WR66,202.3,Joshua Palmer,joshua palmer,WR,2022,185,0.3783783783783784
-195,Isiah Pacheco,RB55,178.0,Isiah Pacheco,isiah pacheco,RB,2022,162,0.45608108108108103
-196,Hayden Hurst,TE23,206.0,Hayden Hurst,hayden hurst,TE,2022,188,0.3682432432432432
-197,Kansas City Chiefs,DST17,183.3,Kansas City Chiefs,kansas city chiefs,DST,2022,165,0.44594594594594594
-198,Robbie Chosen,WR67,208.5,Robbie Chosen,robbie chosen,WR,2022,192,0.3547297297297297
-199,Austin Hooper,TE24,209.0,Austin Hooper,austin hooper,TE,2022,193,0.3513513513513513
-200,Jalen Tolbert,WR68,210.3,Jalen Tolbert,jalen tolbert,WR,2022,194,0.347972972972973
-201,Kenny Golladay,WR69,210.5,Kenny Golladay,kenny golladay,WR,2022,195,0.3445945945945946
-202,Christian Watson,WR70,188.3,Christian Watson,christian watson,WR,2022,170,0.42905405405405406
-203,Marvin Jones Jr.,WR71,212.3,Marvin Jones Jr.,marvin jones jr,WR,2022,199,0.33108108108108103
-204,Wil Lutz,K13,212.3,Wil Lutz,wil lutz,K,2022,199,0.33108108108108103
-205,Ronald Jones,RB56,191.0,Ronald Jones,ronald jones,RB,2022,172,0.42229729729729726
-206,Nico Collins,WR72,213.8,Nico Collins,nico collins,WR,2022,200,0.32770270270270274
-207,Daniel Jones,QB25,213.8,Daniel Jones,daniel jones,QB,2022,200,0.32770270270270274
-208,Rodrigo Blankenship,K14,214.5,Rodrigo Blankenship,rodrigo blankenship,K,2022,201,0.32432432432432434
-209,Jared Goff,QB26,214.8,Jared Goff,jared goff,QB,2022,202,0.32094594594594594
-210,Chuba Hubbard,RB57,193.0,Chuba Hubbard,chuba hubbard,RB,2022,174,0.41554054054054057
-211,Taysom Hill,TE25,216.5,Taysom Hill,taysom hill,TE,2022,205,0.31081081081081086
-212,Greg Joseph,K15,195.3,Greg Joseph,greg joseph,K,2022,177,0.4054054054054054
-213,Sammy Watkins,WR73,217.0,Sammy Watkins,sammy watkins,WR,2022,206,0.30743243243243246
-214,Isaiah Spiller,RB58,199.7,Isaiah Spiller,isaiah spiller,RB,2022,181,0.3918918918918919
-215,Cincinnati Bengals,DST18,220.5,Cincinnati Bengals,cincinnati bengals,DST,2022,210,0.29391891891891897
-216,Kenyan Drake,RB59,221.3,Kenyan Drake,kenyan drake,RB,2022,212,0.28716216216216217
-217,Chris Boswell,K16,202.7,Chris Boswell,chris boswell,K,2022,186,0.375
-218,Jameson Williams,WR74,202.7,Jameson Williams,jameson williams,WR,2022,186,0.375
-219,Kenny Pickett,QB27,225.3,Kenny Pickett,kenny pickett,QB,2022,219,0.2635135135135135
-220,Mason Crosby,K17,170.5,Mason Crosby,mason crosby,K,2022,153,0.4864864864864865
-221,Carson Wentz,QB28,208.3,Carson Wentz,carson wentz,QB,2022,191,0.3581081081081081
-222,Logan Thomas,TE26,208.3,Logan Thomas,logan thomas,TE,2022,191,0.3581081081081081
-223,Alec Pierce,WR75,211.3,Alec Pierce,alec pierce,WR,2022,196,0.34121621621621623
-224,Jerick McKinnon,RB60,216.3,Jerick McKinnon,jerick mckinnon,RB,2022,204,0.31418918918918914
-225,Van Jefferson,WR76,217.3,Van Jefferson,van jefferson,WR,2022,207,0.30405405405405406
-226,Jake Elliott,K18,218.0,Jake Elliott,jake elliott,K,2022,208,0.30067567567567566
-227,Marlon Mack,RB61,187.5,Marlon Mack,marlon mack,RB,2022,168,0.43581081081081086
-229,Marcus Mariota,QB29,235.5,Marcus Mariota,marcus mariota,QB,2022,231,0.22297297297297303
-230,Isaiah Likely,TE27,221.0,Isaiah Likely,isaiah likely,TE,2022,211,0.29054054054054057
-231,Darrel Williams,RB63,191.5,Darrel Williams,darrel williams,RB,2022,173,0.41891891891891897
-232,Tennessee Titans,DST19,222.0,Tennessee Titans,tennessee titans,DST,2022,213,0.28378378378378377
-233,Minnesota Vikings,DST20,224.0,Minnesota Vikings,minnesota vikings,DST,2022,215,0.277027027027027
-234,Wan'Dale Robinson,WR77,224.7,Wan'Dale Robinson,wandale robinson,WR,2022,217,0.2702702702702703
-235,Zach Wilson,QB30,239.0,Zach Wilson,zach wilson,QB,2022,234,0.21283783783783783
-236,K.J. Osborn,WR78,226.7,K.J. Osborn,kj osborn,WR,2022,221,0.2567567567567568
-237,Myles Gaskin,RB64,200.0,Myles Gaskin,myles gaskin,RB,2022,182,0.3885135135135135
-238,Washington Commanders,DST21,231.7,Washington Commanders,washington commanders,DST,2022,225,0.2432432432432432
-239,Cade York,K19,234.0,Cade York,cade york,K,2022,228,0.23310810810810811
-240,Rex Burkhead,RB65,234.3,Rex Burkhead,rex burkhead,RB,2022,229,0.22972972972972971
-241,Corey Davis,WR79,211.5,Corey Davis,corey davis,WR,2022,197,0.33783783783783783
-242,Tyrion Davis-Price,RB66,211.5,Tyrion Davis-Price,tyrion davis-price,RB,2022,197,0.33783783783783783
-243,Parris Campbell,WR80,212.0,Parris Campbell,parris campbell,WR,2022,198,0.33445945945945943
-244,A.J. Green,WR81,212.0,A.J. Green,aj green,WR,2022,198,0.33445945945945943
-245,Graham Gano,K20,214.5,Graham Gano,graham gano,K,2022,201,0.32432432432432434
-246,Kyle Rudolph,TE28,237.7,Kyle Rudolph,kyle rudolph,TE,2022,232,0.21959459459459463
-247,Dustin Hopkins,K21,217.0,Dustin Hopkins,dustin hopkins,K,2022,206,0.30743243243243246
-248,Cameron Brate,TE29,240.0,Cameron Brate,cameron brate,TE,2022,235,0.20945945945945943
-249,Jeff Wilson Jr.,RB67,167.0,Jeff Wilson Jr.,jeff wilson jr,RB,2022,148,0.5033783783783784
-250,Randall Cobb,WR82,224.5,Randall Cobb,randall cobb,WR,2022,216,0.2736486486486487
-251,Eno Benjamin,RB68,225.0,Eno Benjamin,eno benjamin,RB,2022,218,0.2668918918918919
-252,Dontrell Hilliard ,RB69,226.0,Dontrell Hilliard ,dontrell hilliard,RB,2022,220,0.2601351351351351
-253,Mitchell Trubisky,QB31,244.3,Mitchell Trubisky,mitchell trubisky,QB,2022,239,0.19594594594594594
-254,Mike Davis,RB70,177.0,Mike Davis,mike davis,RB,2022,160,0.46283783783783783
-255,KJ Hamler,WR83,229.0,KJ Hamler,kj hamler,WR,2022,222,0.2533783783783784
-256,Arizona Cardinals,DST22,233.5,Arizona Cardinals,arizona cardinals,DST,2022,227,0.2364864864864865
-257,Kendrick Bourne,WR84,235.0,Kendrick Bourne,kendrick bourne,WR,2022,230,0.22635135135135132
-258,Randy Bullock,K22,197.0,Randy Bullock,randy bullock,K,2022,178,0.402027027027027
-259,Sony Michel,RB71,240.0,Sony Michel,sony michel,RB,2022,235,0.20945945945945943
-260,Donovan Peoples-Jones,WR85,253.7,Donovan Peoples-Jones,donovan peoples-jones,WR,2022,251,0.15540540540540537
-261,Ameer Abdullah,RB72,242.5,Ameer Abdullah,ameer abdullah,RB,2022,236,0.20608108108108103
-262,Matt Breida,RB73,205.0,Matt Breida,matt breida,RB,2022,187,0.3716216216216216
-263,David Bell,WR86,243.0,David Bell,david bell,WR,2022,237,0.20270270270270274
-264,Las Vegas Raiders,DST23,207.0,Las Vegas Raiders,las vegas raiders,DST,2022,189,0.3648648648648649
-265,Jason Sanders,K23,244.0,Jason Sanders,jason sanders,K,2022,238,0.19932432432432434
-266,Austin Seibert,K24,208.0,Austin Seibert,austin seibert,K,2022,190,0.3614864864864865
-267,Gus Edwards,RB74,247.0,Gus Edwards,gus edwards,RB,2022,240,0.19256756756756754
-268,Chicago Bears,DST24,247.5,Chicago Bears,chicago bears,DST,2022,241,0.18918918918918914
-269,C.J. Uzomah,TE30,215.0,C.J. Uzomah,cj uzomah,TE,2022,203,0.31756756756756754
-270,Samaje Perine,RB75,249.5,Samaje Perine,samaje perine,RB,2022,244,0.17905405405405406
-271,Davis Mills,QB32,250.0,Davis Mills,davis mills,QB,2022,245,0.17567567567567566
-272,Jordan Mason,RB76,220.0,Jordan Mason,jordan mason,RB,2022,209,0.29729729729729726
-273,Hassan Haskins,RB77,250.5,Hassan Haskins,hassan haskins,RB,2022,246,0.17229729729729726
-274,Carolina Panthers,DST25,251.0,Carolina Panthers,carolina panthers,DST,2022,247,0.16891891891891897
-275,Brevin Jordan,TE31,223.0,Brevin Jordan,brevin jordan,TE,2022,214,0.2804054054054054
-276,Jamison Crowder,WR87,253.5,Jamison Crowder,jamison crowder,WR,2022,250,0.15878378378378377
-277,Curtis Samuel,WR88,263.3,Curtis Samuel,curtis samuel,WR,2022,263,0.11486486486486491
-278,Cairo Santos,K25,230.0,Cairo Santos,cairo santos,K,2022,223,0.25
-279,Ke'Shawn Vaughn,RB78,230.0,Ke'Shawn Vaughn,keshawn vaughn,RB,2022,223,0.25
-280,Damien Williams,RB79,231.0,Damien Williams,damien williams,RB,2022,224,0.2466216216216216
-281,Zack Moss,RB80,256.5,Zack Moss,zack moss,RB,2022,255,0.14189189189189189
-282,Jimmy Garoppolo,QB33,233.0,Jimmy Garoppolo,jimmy garoppolo,QB,2022,226,0.2398648648648649
-283,Brett Maher,K26,238.0,Brett Maher,brett maher,K,2022,233,0.21621621621621623
-284,Boston Scott,RB81,262.0,Boston Scott,boston scott,RB,2022,261,0.1216216216216216
-285,D'Ernest Johnson,RB82,266.5,D'Ernest Johnson,dernest johnson,RB,2022,267,0.10135135135135132
-286,Jason Myers,K27,244.0,Jason Myers,jason myers,K,2022,238,0.19932432432432434
-287,Joshua Kelley,RB83,244.0,Joshua Kelley,joshua kelley,RB,2022,238,0.19932432432432434
-288,DeAndre Torrey,RB84,247.0,DeAndre Torrey,deandre torrey,RB,2022,240,0.19256756756756754
-289,Mo Alie-Cox,TE32,248.0,Mo Alie-Cox,mo alie-cox,TE,2022,242,0.18581081081081086
-290,Jake Powell,TE33,248.0,Jake Powell,jake powell,TE,2022,242,0.18581081081081086
-291,Anthony Johnson,DT1,249.0,Anthony Johnson,anthony johnson,DT,2022,243,0.18243243243243246
-292,Tyler Conklin,TE34,250.0,Tyler Conklin,tyler conklin,TE,2022,245,0.17567567567567566
-293,Collin Hill,QB34,250.0,Collin Hill,collin hill,QB,2022,245,0.17567567567567566
-294,Chad Muma,LB1,251.0,Chad Muma,chad muma,LB,2022,247,0.16891891891891897
-295,Ben Johnson,OT1,252.0,Ben Johnson,ben johnson,OT,2022,248,0.16554054054054057
-296,Braxton Berrios,WR89,252.0,Braxton Berrios,braxton berrios,WR,2022,248,0.16554054054054057
-297,Kyle Juszczyk,RB85,253.0,Kyle Juszczyk,kyle juszczyk,RB,2022,249,0.16216216216216217
-298,Austin Walter,RB86,253.0,Austin Walter,austin walter,RB,2022,249,0.16216216216216217
-299,Zay Jones,WR90,254.0,Zay Jones,zay jones,WR,2022,252,0.15202702702702697
-300,Kayvon Thibodeaux,DE1,254.0,Kayvon Thibodeaux,kayvon thibodeaux,DE,2022,252,0.15202702702702697
-301,Karan Higdon,RB87,255.0,Karan Higdon,karan higdon,RB,2022,253,0.14864864864864868
-302,Marquez Callaway,WR91,268.0,Marquez Callaway,marquez callaway,WR,2022,269,0.09459459459459463
-303,Seattle Seahawks,DST26,256.0,Seattle Seahawks,seattle seahawks,DST,2022,254,0.14527027027027029
-304,Jordan Johnson,RB88,256.0,Jordan Johnson,jordan johnson,RB,2022,254,0.14527027027027029
-305,Stephen Baggett,TE35,257.0,Stephen Baggett,stephen baggett,TE,2022,256,0.1385135135135135
-306,Alex Barnes,RB89,258.0,Alex Barnes,alex barnes,RB,2022,257,0.1351351351351351
-307,Jaylen Warren,RB90,258.0,Jaylen Warren,jaylen warren,RB,2022,257,0.1351351351351351
-308,Detroit Lions,DST27,259.0,Detroit Lions,detroit lions,DST,2022,258,0.1317567567567568
-309,Zach Olstad,RB91,259.0,Zach Olstad,zach olstad,RB,2022,258,0.1317567567567568
-310,Temarrick Hemingway,TE36,260.0,Temarrick Hemingway,temarrick hemingway,TE,2022,259,0.1283783783783784
-311,Jerome Washington,TE37,261.0,Jerome Washington,jerome washington,TE,2022,260,0.125
-312,New York Giants,DST28,262.0,New York Giants,new york giants,DST,2022,261,0.1216216216216216
-313,Stephon Robinson Jr.,WR92,262.0,Stephon Robinson Jr.,stephon robinson jr,WR,2022,261,0.1216216216216216
-314,Nick Bawden,RB92,263.0,Nick Bawden,nick bawden,RB,2022,262,0.1182432432432432
-315,Michael Jacobson,TE38,264.0,Michael Jacobson,michael jacobson,TE,2022,264,0.11148648648648651
-316,Jamel Johnson,WR93,265.0,Jamel Johnson,jamel johnson,WR,2022,265,0.10810810810810811
-317,Sterling Shepard,WR94,281.5,Sterling Shepard,sterling shepard,WR,2022,283,0.04729729729729726
-318,Brandon Barnes,TE39,266.0,Brandon Barnes,brandon barnes,TE,2022,266,0.10472972972972971
-319,Drew Anderson,QB35,267.0,Drew Anderson,drew anderson,QB,2022,268,0.09797297297297303
-320,Zach Conque,QB36,268.0,Zach Conque,zach conque,QB,2022,269,0.09459459459459463
-321,Bobby Wagner,LB2,269.0,Bobby Wagner,bobby wagner,LB,2022,270,0.09121621621621623
-322,Kendrick Rogers,WR95,270.0,Kendrick Rogers,kendrick rogers,WR,2022,271,0.08783783783783783
-323,Taywan Taylor,WR96,271.0,Taywan Taylor,taywan taylor,WR,2022,272,0.08445945945945943
-324,New York Jets,DST29,272.0,New York Jets,new york jets,DST,2022,273,0.08108108108108103
-325,Kyle Lewis,WR97,272.0,Kyle Lewis,kyle lewis,WR,2022,273,0.08108108108108103
-326,Ryan Davis,DE2,273.0,Ryan Davis,ryan davis,DE,2022,274,0.07770270270270274
-327,Jonnu Smith,TE40,273.0,Jonnu Smith,jonnu smith,TE,2022,274,0.07770270270270274
-328,Papi White,WR98,274.0,Papi White,papi white,WR,2022,275,0.07432432432432434
-329,Laviska Shenault Jr.,WR99,275.0,Laviska Shenault Jr.,laviska shenault jr,WR,2022,276,0.07094594594594594
-330,Houston Texans,DST30,276.0,Houston Texans,houston texans,DST,2022,277,0.06756756756756754
-331,Krishawn Hogan,WR100,276.0,Krishawn Hogan,krishawn hogan,WR,2022,277,0.06756756756756754
-332,Brogan Roback,QB37,277.0,Brogan Roback,brogan roback,QB,2022,278,0.06418918918918914
-333,Cedrick Wilson Jr.,WR101,278.0,Cedrick Wilson Jr.,cedrick wilson jr,WR,2022,279,0.060810810810810856
-334,Cole Hunt,TE41,278.0,Cole Hunt,cole hunt,TE,2022,279,0.060810810810810856
-335,David Watford,WR102,279.0,David Watford,david watford,WR,2022,280,0.057432432432432456
-336,Chris Evans,RB93,280.0,Chris Evans,chris evans,RB,2022,281,0.05405405405405406
-337,Zaire Mitchell-Paden,TE42,280.0,Zaire Mitchell-Paden,zaire mitchell-paden,TE,2022,281,0.05405405405405406
-338,Brandon Bolden,RB94,281.0,Brandon Bolden,brandon bolden,RB,2022,282,0.05067567567567566
-339,Josh Smith,WR103,281.0,Josh Smith,josh smith,WR,2022,282,0.05067567567567566
-340,Nelson Agholor,WR104,283.0,Nelson Agholor,nelson agholor,WR,2022,284,0.04391891891891897
-341,Foster Moreau,TE43,284.0,Foster Moreau,foster moreau,TE,2022,285,0.04054054054054057
-342,Quez Watkins,WR105,287.0,Quez Watkins,quez watkins,WR,2022,286,0.03716216216216217
-343,J.J. Taylor,RB95,288.0,J.J. Taylor,jj taylor,RB,2022,287,0.03378378378378377
-344,Byron Pringle,WR106,289.0,Byron Pringle,byron pringle,WR,2022,288,0.030405405405405372
-345,Jacksonville Jaguars,DST31,290.0,Jacksonville Jaguars,jacksonville jaguars,DST,2022,289,0.027027027027026973
-346,Drew Lock,QB38,291.0,Drew Lock,drew lock,QB,2022,290,0.023648648648648685
-347,Jauan Jennings,WR107,293.0,Jauan Jennings,jauan jennings,WR,2022,291,0.020270270270270285
-348,DeeJay Dallas,RB96,294.0,DeeJay Dallas,deejay dallas,RB,2022,292,0.016891891891891886
-349,Ka'imi Fairbairn,K28,295.0,Ka'imi Fairbairn,kaimi fairbairn,K,2022,293,0.013513513513513487
-350,Trey Sermon,RB97,296.0,Trey Sermon,trey sermon,RB,2022,294,0.010135135135135087
-351,Malik Willis,QB39,297.0,Malik Willis,malik willis,QB,2022,295,0.006756756756756799
-352,Joey Slye,K29,299.0,Joey Slye,joey slye,K,2022,296,0.0033783783783783994
-353,O.J. Howard,TE44,300.0,O.J. Howard,oj howard,TE,2022,297,0.0
+Rank,Player,POS,AVG,Player_fixed,player_clean,POS_group,year,adp_rank,adp_percentile,adp_rank_pos,adp_percentile_pos
+1,Jonathan Taylor,RB1,1.0,Jonathan Taylor,jonathan taylor,RB,2022,1,1.0,1,1.0
+2,Christian McCaffrey,RB2,2.0,Christian McCaffrey,christian mccaffrey,RB,2022,2,0.9966216216216216,2,0.9887640449438202
+3,Austin Ekeler,RB3,3.8,Austin Ekeler,austin ekeler,RB,2022,3,0.9932432432432432,3,0.9775280898876404
+4,Cooper Kupp,WR1,4.0,Cooper Kupp,cooper kupp,WR,2022,4,0.9898648648648649,1,1.0
+5,Derrick Henry,RB4,5.3,Derrick Henry,derrick henry,RB,2022,5,0.9864864864864865,4,0.9662921348314607
+6,Justin Jefferson,WR2,5.5,Justin Jefferson,justin jefferson,WR,2022,6,0.9831081081081081,2,0.9901960784313726
+7,Dalvin Cook,RB5,7.5,Dalvin Cook,dalvin cook,RB,2022,7,0.9797297297297297,5,0.9550561797752809
+8,Najee Harris,RB6,8.0,Najee Harris,najee harris,RB,2022,8,0.9763513513513513,6,0.9438202247191011
+9,Ja'Marr Chase,WR3,8.3,Ja'Marr Chase,jamarr chase,WR,2022,9,0.972972972972973,3,0.9803921568627451
+10,Joe Mixon,RB7,10.3,Joe Mixon,joe mixon,RB,2022,10,0.9695945945945946,7,0.9325842696629214
+11,Davante Adams,WR4,12.3,Davante Adams,davante adams,WR,2022,11,0.9662162162162162,4,0.9705882352941176
+12,Stefon Diggs,WR5,12.5,Stefon Diggs,stefon diggs,WR,2022,12,0.9628378378378378,5,0.9607843137254902
+13,Alvin Kamara,RB8,13.3,Alvin Kamara,alvin kamara,RB,2022,13,0.9594594594594594,8,0.9213483146067416
+14,Travis Kelce,TE1,15.0,Travis Kelce,travis kelce,TE,2022,14,0.956081081081081,1,1.0
+15,D'Andre Swift,RB9,15.5,D'Andre Swift,dandre swift,RB,2022,15,0.9527027027027027,9,0.9101123595505618
+16,Deebo Samuel Sr.,WR6,17.0,Deebo Samuel Sr.,deebo samuel sr,WR,2022,16,0.9493243243243243,6,0.9509803921568627
+17,Aaron Jones Sr.,RB10,19.5,Aaron Jones Sr.,aaron jones sr,RB,2022,17,0.9459459459459459,10,0.898876404494382
+18,CeeDee Lamb,WR7,19.5,CeeDee Lamb,ceedee lamb,WR,2022,17,0.9459459459459459,7,0.9411764705882353
+19,Tyreek Hill,WR8,19.8,Tyreek Hill,tyreek hill,WR,2022,18,0.9425675675675675,8,0.9313725490196079
+20,Nick Chubb,RB11,20.0,Nick Chubb,nick chubb,RB,2022,19,0.9391891891891891,11,0.8876404494382022
+21,Saquon Barkley,RB12,20.3,Saquon Barkley,saquon barkley,RB,2022,20,0.9358108108108109,12,0.8764044943820225
+22,Josh Allen,QB1,20.8,Josh Allen,josh allen,QB,2022,21,0.9324324324324325,1,1.0
+23,Mark Andrews,TE2,21.8,Mark Andrews,mark andrews,TE,2022,22,0.9290540540540541,2,0.9761904761904762
+24,Leonard Fournette,RB13,22.0,Leonard Fournette,leonard fournette,RB,2022,23,0.9256756756756757,13,0.8651685393258427
+25,Javonte Williams,RB14,22.8,Javonte Williams,javonte williams,RB,2022,24,0.9222972972972973,14,0.8539325842696629
+26,Mike Evans,WR9,26.8,Mike Evans,mike evans,WR,2022,25,0.9189189189189189,9,0.9215686274509804
+27,Keenan Allen,WR10,28.3,Keenan Allen,keenan allen,WR,2022,26,0.9155405405405406,10,0.9117647058823529
+28,James Conner,RB15,29.3,James Conner,james conner,RB,2022,27,0.9121621621621622,15,0.8426966292134832
+29,Patrick Mahomes II,QB2,29.8,Patrick Mahomes II,patrick mahomes ii,QB,2022,28,0.9087837837837838,2,0.972972972972973
+30,Ezekiel Elliott,RB16,30.3,Ezekiel Elliott,ezekiel elliott,RB,2022,29,0.9054054054054054,16,0.8314606741573034
+31,A.J. Brown,WR11,30.8,A.J. Brown,aj brown,WR,2022,30,0.902027027027027,11,0.9019607843137255
+32,Kyle Pitts Sr.,TE3,32.8,Kyle Pitts Sr.,kyle pitts sr,TE,2022,31,0.8986486486486487,3,0.9523809523809523
+33,Michael Pittman Jr.,WR12,33.5,Michael Pittman Jr.,michael pittman jr,WR,2022,32,0.8952702702702703,12,0.892156862745098
+34,Tee Higgins,WR13,33.8,Tee Higgins,tee higgins,WR,2022,33,0.8918918918918919,13,0.8823529411764706
+35,Justin Herbert,QB3,34.5,Justin Herbert,justin herbert,QB,2022,34,0.8885135135135135,3,0.9459459459459459
+36,David Montgomery,RB17,36.5,David Montgomery,david montgomery,RB,2022,35,0.8851351351351351,17,0.8202247191011236
+37,Cam Akers,RB18,39.8,Cam Akers,cam akers,RB,2022,36,0.8817567567567568,18,0.8089887640449438
+38,George Kittle,TE4,39.8,George Kittle,george kittle,TE,2022,36,0.8817567567567568,4,0.9285714285714286
+39,Travis Etienne Jr.,RB19,40.5,Travis Etienne Jr.,travis etienne jr,RB,2022,37,0.8783783783783784,19,0.797752808988764
+40,Terry McLaurin,WR14,41.0,Terry McLaurin,terry mclaurin,WR,2022,38,0.875,14,0.8725490196078431
+41,Lamar Jackson,QB4,43.5,Lamar Jackson,lamar jackson,QB,2022,39,0.8716216216216216,4,0.9189189189189189
+42,DJ Moore,WR15,43.8,DJ Moore,dj moore,WR,2022,40,0.8682432432432432,15,0.8627450980392157
+43,Diontae Johnson,WR16,43.8,Diontae Johnson,diontae johnson,WR,2022,40,0.8682432432432432,15,0.8627450980392157
+44,Darren Waller,TE5,44.8,Darren Waller,darren waller,TE,2022,41,0.8648648648648649,5,0.9047619047619048
+45,Mike Williams,WR17,46.0,Mike Williams,mike williams,WR,2022,42,0.8614864864864865,16,0.8529411764705882
+46,Jaylen Waddle,WR18,47.3,Jaylen Waddle,jaylen waddle,WR,2022,43,0.8581081081081081,17,0.8431372549019608
+47,DK Metcalf,WR19,48.3,DK Metcalf,dk metcalf,WR,2022,44,0.8547297297297297,18,0.8333333333333334
+48,Josh Jacobs,RB20,49.5,Josh Jacobs,josh jacobs,RB,2022,45,0.8513513513513513,20,0.7865168539325843
+49,Elijah Mitchell,RB21,52.0,Elijah Mitchell,elijah mitchell,RB,2022,46,0.847972972972973,21,0.7752808988764045
+50,J.K. Dobbins,RB22,52.0,J.K. Dobbins,jk dobbins,RB,2022,46,0.847972972972973,21,0.7752808988764045
+51,Breece Hall,RB23,52.3,Breece Hall,breece hall,RB,2022,47,0.8445945945945946,22,0.7640449438202247
+52,Kyler Murray,QB5,53.8,Kyler Murray,kyler murray,QB,2022,48,0.8412162162162162,5,0.8918918918918919
+53,Jalen Hurts,QB6,55.3,Jalen Hurts,jalen hurts,QB,2022,49,0.8378378378378378,6,0.8648648648648649
+54,Brandin Cooks,WR20,56.0,Brandin Cooks,brandin cooks,WR,2022,50,0.8344594594594594,19,0.8235294117647058
+55,Dalton Schultz,TE6,57.3,Dalton Schultz,dalton schultz,TE,2022,51,0.8310810810810811,6,0.8809523809523809
+56,Courtland Sutton,WR21,58.0,Courtland Sutton,courtland sutton,WR,2022,52,0.8277027027027027,20,0.8137254901960784
+57,Joe Burrow,QB7,60.3,Joe Burrow,joe burrow,QB,2022,53,0.8243243243243243,7,0.8378378378378378
+58,Marquise Brown,WR22,61.5,Marquise Brown,marquise brown,WR,2022,54,0.8209459459459459,21,0.803921568627451
+59,Chris Godwin,WR23,61.8,Chris Godwin,chris godwin,WR,2022,55,0.8175675675675675,22,0.7941176470588236
+60,Allen Robinson II ,WR24,62.8,Allen Robinson II ,allen robinson ii,WR,2022,56,0.8141891891891893,23,0.7843137254901961
+61,Amon-Ra St. Brown,WR25,63.5,Amon-Ra St. Brown,amon-ra st brown,WR,2022,57,0.8108108108108107,24,0.7745098039215687
+62,Clyde Edwards-Helaire,RB24,64.0,Clyde Edwards-Helaire,clyde edwards-helaire,RB,2022,58,0.8074324324324325,23,0.752808988764045
+63,Antonio Gibson,RB25,64.8,Antonio Gibson,antonio gibson,RB,2022,59,0.8040540540540541,24,0.7415730337078652
+64,Jerry Jeudy,WR26,65.8,Jerry Jeudy,jerry jeudy,WR,2022,60,0.8006756756756757,25,0.7647058823529411
+65,T.J. Hockenson,TE7,65.8,T.J. Hockenson,tj hockenson,TE,2022,60,0.8006756756756757,7,0.8571428571428572
+66,Gabe Davis,WR27,67.3,Gabe Davis,gabe davis,WR,2022,61,0.7972972972972973,26,0.7549019607843137
+67,A.J. Dillon,RB26,67.8,A.J. Dillon,aj dillon,RB,2022,62,0.7939189189189189,25,0.7303370786516854
+68,Amari Cooper,WR28,67.8,Amari Cooper,amari cooper,WR,2022,62,0.7939189189189189,27,0.7450980392156863
+69,Dallas Goedert,TE8,70.5,Dallas Goedert,dallas goedert,TE,2022,63,0.7905405405405406,8,0.8333333333333334
+70,Tom Brady,QB8,72.0,Tom Brady,tom brady,QB,2022,64,0.7871621621621622,8,0.8108108108108107
+71,Adam Thielen,WR29,73.3,Adam Thielen,adam thielen,WR,2022,65,0.7837837837837838,28,0.7352941176470589
+72,Darnell Mooney,WR30,73.5,Darnell Mooney,darnell mooney,WR,2022,66,0.7804054054054054,29,0.7254901960784313
+73,JuJu Smith-Schuster,WR31,74.3,JuJu Smith-Schuster,juju smith-schuster,WR,2022,67,0.777027027027027,30,0.7156862745098039
+74,Russell Wilson,QB9,77.5,Russell Wilson,russell wilson,QB,2022,68,0.7736486486486487,9,0.7837837837837838
+75,Michael Thomas ,WR32,80.0,Michael Thomas ,michael thomas,WR,2022,69,0.7702702702702703,31,0.7058823529411764
+76,Aaron Rodgers,QB10,80.3,Aaron Rodgers,aaron rodgers,QB,2022,70,0.7668918918918919,10,0.7567567567567568
+77,Dak Prescott,QB11,82.0,Dak Prescott,dak prescott,QB,2022,71,0.7635135135135135,11,0.7297297297297297
+78,Devin Singletary,RB27,82.5,Devin Singletary,devin singletary,RB,2022,72,0.7601351351351351,26,0.7191011235955056
+79,Hunter Renfrow,WR33,83.3,Hunter Renfrow,hunter renfrow,WR,2022,73,0.7567567567567568,32,0.696078431372549
+80,DeAndre Hopkins,WR34,83.3,DeAndre Hopkins,deandre hopkins,WR,2022,73,0.7567567567567568,32,0.696078431372549
+81,Dameon Pierce,RB28,83.5,Dameon Pierce,dameon pierce,RB,2022,74,0.7533783783783784,27,0.7078651685393258
+82,Damien Harris,RB29,83.8,Damien Harris,damien harris,RB,2022,75,0.75,28,0.696629213483146
+83,Miles Sanders,RB30,84.5,Miles Sanders,miles sanders,RB,2022,76,0.7466216216216216,29,0.6853932584269663
+84,Kareem Hunt,RB31,85.3,Kareem Hunt,kareem hunt,RB,2022,77,0.7432432432432432,30,0.6741573033707865
+85,Cordarrelle Patterson,RB32,85.8,Cordarrelle Patterson,cordarrelle patterson,RB,2022,78,0.7398648648648649,31,0.6629213483146068
+86,Tony Pollard,RB33,86.0,Tony Pollard,tony pollard,RB,2022,79,0.7364864864864865,32,0.651685393258427
+87,Chase Edmonds,RB34,86.8,Chase Edmonds,chase edmonds,RB,2022,80,0.7331081081081081,33,0.6404494382022472
+88,Rashaad Penny ,RB35,87.0,Rashaad Penny ,rashaad penny,RB,2022,81,0.7297297297297297,34,0.6292134831460674
+89,Rashod Bateman,WR35,88.5,Rashod Bateman,rashod bateman,WR,2022,82,0.7263513513513513,33,0.6862745098039216
+90,Zach Ertz,TE9,88.8,Zach Ertz,zach ertz,TE,2022,83,0.722972972972973,9,0.8095238095238095
+91,Dawson Knox,TE10,90.0,Dawson Knox,dawson knox,TE,2022,84,0.7195945945945945,10,0.7857142857142857
+92,Elijah Moore,WR36,90.0,Elijah Moore,elijah moore,WR,2022,84,0.7195945945945945,34,0.6764705882352942
+93,DeVonta Smith,WR37,90.3,DeVonta Smith,devonta smith,WR,2022,85,0.7162162162162162,35,0.6666666666666667
+94,Buffalo Bills,DST1,92.0,Buffalo Bills,buffalo bills,DST,2022,86,0.7128378378378378,1,1.0
+95,Matthew Stafford,QB12,92.0,Matthew Stafford,matthew stafford,QB,2022,86,0.7128378378378378,12,0.7027027027027026
+96,Tyler Lockett,WR38,96.5,Tyler Lockett,tyler lockett,WR,2022,87,0.7094594594594594,36,0.6568627450980392
+97,Brandon Aiyuk,WR39,98.0,Brandon Aiyuk,brandon aiyuk,WR,2022,88,0.7060810810810811,37,0.6470588235294117
+98,Drake London,WR40,98.5,Drake London,drake london,WR,2022,89,0.7027027027027026,38,0.6372549019607843
+99,Rhamondre Stevenson,RB36,100.0,Rhamondre Stevenson,rhamondre stevenson,RB,2022,90,0.6993243243243243,35,0.6179775280898876
+100,Christian Kirk,WR41,100.3,Christian Kirk,christian kirk,WR,2022,91,0.6959459459459459,39,0.6274509803921569
+101,Trey Lance,QB13,101.5,Trey Lance,trey lance,QB,2022,92,0.6925675675675675,13,0.6756756756756757
+102,Robert Woods,WR42,103.0,Robert Woods,robert woods,WR,2022,93,0.6891891891891893,40,0.6176470588235294
+103,Allen Lazard,WR43,104.5,Allen Lazard,allen lazard,WR,2022,94,0.6858108108108107,41,0.607843137254902
+104,Justin Tucker,K1,105.5,Justin Tucker,justin tucker,K,2022,95,0.6824324324324325,1,1.0
+105,Melvin Gordon,RB37,107.5,Melvin Gordon,melvin gordon,RB,2022,96,0.6790540540540541,36,0.6067415730337078
+106,Pat Freiermuth,TE11,108.5,Pat Freiermuth,pat freiermuth,TE,2022,97,0.6756756756756757,11,0.7619047619047619
+107,Chris Olave,WR44,110.8,Chris Olave,chris olave,WR,2022,98,0.6722972972972974,42,0.5980392156862745
+108,Tampa Bay Buccaneers,DST2,112.3,Tampa Bay Buccaneers,tampa bay buccaneers,DST,2022,99,0.6689189189189189,2,0.9666666666666667
+109,Derek Carr,QB14,113.3,Derek Carr,derek carr,QB,2022,100,0.6655405405405406,14,0.6486486486486487
+110,Kenneth Walker III,RB38,116.0,Kenneth Walker III,kenneth walker iii,RB,2022,101,0.6621621621621622,37,0.5955056179775281
+111,Chase Claypool,WR45,116.3,Chase Claypool,chase claypool,WR,2022,102,0.6587837837837838,43,0.5882352941176471
+112,James Robinson,RB39,117.0,James Robinson,james robinson,RB,2022,103,0.6554054054054055,38,0.5842696629213483
+113,Michael Carter,RB40,117.0,Michael Carter,michael carter,RB,2022,103,0.6554054054054055,38,0.5842696629213483
+114,San Francisco 49ers,DST3,118.8,San Francisco 49ers,san francisco 49ers,DST,2022,104,0.652027027027027,3,0.9333333333333333
+115,Kadarius Toney,WR46,119.0,Kadarius Toney,kadarius toney,WR,2022,105,0.6486486486486487,44,0.5784313725490196
+116,James Cook,RB41,120.0,James Cook,james cook,RB,2022,106,0.6452702702702703,39,0.5730337078651686
+117,Cole Kmet,TE12,121.8,Cole Kmet,cole kmet,TE,2022,107,0.6418918918918919,12,0.7380952380952381
+118,Indianapolis Colts,DST4,123.5,Indianapolis Colts,indianapolis colts,DST,2022,108,0.6385135135135135,4,0.9
+119,Kirk Cousins,QB15,125.3,Kirk Cousins,kirk cousins,QB,2022,109,0.6351351351351351,15,0.6216216216216216
+120,George Pickens,WR47,127.8,George Pickens,george pickens,WR,2022,110,0.6317567567567568,45,0.5686274509803921
+121,Los Angeles Rams,DST5,129.0,Los Angeles Rams,los angeles rams,DST,2022,111,0.6283783783783784,5,0.8666666666666667
+122,Harrison Butker,K2,129.0,Harrison Butker,harrison butker,K,2022,111,0.6283783783783784,2,0.96
+123,Evan McPherson,K3,129.0,Evan McPherson,evan mcpherson,K,2022,111,0.6283783783783784,2,0.96
+124,Mike Gesicki,TE13,129.0,Mike Gesicki,mike gesicki,TE,2022,111,0.6283783783783784,13,0.7142857142857143
+125,Hunter Henry,TE14,130.3,Hunter Henry,hunter henry,TE,2022,112,0.625,14,0.6904761904761905
+126,Treylon Burks,WR48,131.8,Treylon Burks,treylon burks,WR,2022,113,0.6216216216216216,46,0.5588235294117647
+127,Daniel Carlson,K4,132.3,Daniel Carlson,daniel carlson,K,2022,114,0.6182432432432432,3,0.92
+128,Darrell Henderson Jr.,RB42,132.5,Darrell Henderson Jr.,darrell henderson jr,RB,2022,115,0.6148648648648649,40,0.5617977528089888
+129,Tyler Bass,K5,132.8,Tyler Bass,tyler bass,K,2022,116,0.6114864864864865,4,0.88
+130,Alexander Mattison,RB43,135.0,Alexander Mattison,alexander mattison,RB,2022,117,0.6081081081081081,41,0.550561797752809
+131,New Orleans Saints,DST6,135.3,New Orleans Saints,new orleans saints,DST,2022,118,0.6047297297297297,6,0.8333333333333334
+132,Matt Gay,K6,135.8,Matt Gay,matt gay,K,2022,119,0.6013513513513513,5,0.84
+133,Tyler Boyd,WR49,137.8,Tyler Boyd,tyler boyd,WR,2022,120,0.597972972972973,47,0.5490196078431373
+134,Garrett Wilson,WR50,138.0,Garrett Wilson,garrett wilson,WR,2022,121,0.5945945945945945,48,0.5392156862745099
+135,Dallas Cowboys,DST7,138.8,Dallas Cowboys,dallas cowboys,DST,2022,122,0.5912162162162162,7,0.8
+136,Michael Gallup,WR51,139.3,Michael Gallup,michael gallup,WR,2022,123,0.5878378378378378,49,0.5294117647058824
+137,Nyheim Miller-Hines,RB44,140.5,Nyheim Miller-Hines,nyheim miller-hines,RB,2022,124,0.5844594594594594,42,0.5393258426966292
+138,Tua Tagovailoa,QB16,140.5,Tua Tagovailoa,tua tagovailoa,QB,2022,124,0.5844594594594594,16,0.5945945945945945
+139,Green Bay Packers,DST8,142.5,Green Bay Packers,green bay packers,DST,2022,125,0.5810810810810811,8,0.7666666666666666
+140,Skyy Moore,WR52,142.8,Skyy Moore,skyy moore,WR,2022,126,0.5777027027027026,50,0.5196078431372548
+141,Julio Jones,WR53,143.8,Julio Jones,julio jones,WR,2022,127,0.5743243243243243,51,0.5098039215686274
+142,Raheem Mostert,RB45,144.8,Raheem Mostert,raheem mostert,RB,2022,128,0.5709459459459459,43,0.5280898876404494
+143,Russell Gage Jr.,WR54,145.5,Russell Gage Jr.,russell gage jr,WR,2022,129,0.5675675675675675,52,0.5
+144,Kenneth Gainwell,RB46,146.8,Kenneth Gainwell,kenneth gainwell,RB,2022,130,0.5641891891891893,44,0.5168539325842696
+145,DJ Chark Jr.,WR55,147.5,DJ Chark Jr.,dj chark jr,WR,2022,131,0.5608108108108107,53,0.4901960784313726
+146,Justin Fields,QB17,148.0,Justin Fields,justin fields,QB,2022,132,0.5574324324324325,17,0.5675675675675675
+147,Los Angeles Chargers,DST9,148.8,Los Angeles Chargers,los angeles chargers,DST,2022,133,0.5540540540540541,9,0.7333333333333334
+148,Marquez Valdes-Scantling,WR56,148.8,Marquez Valdes-Scantling,marquez valdes-scantling,WR,2022,133,0.5540540540540541,54,0.48039215686274506
+149,Matt Prater,K7,151.0,Matt Prater,matt prater,K,2022,134,0.5506756756756757,6,0.8
+150,Brian Robinson Jr.,RB47,153.8,Brian Robinson Jr.,brian robinson jr,RB,2022,135,0.5472972972972974,45,0.5056179775280899
+151,Trevor Lawrence,QB18,155.0,Trevor Lawrence,trevor lawrence,QB,2022,136,0.5439189189189189,18,0.5405405405405406
+152,Tyler Higbee,TE15,155.3,Tyler Higbee,tyler higbee,TE,2022,137,0.5405405405405406,15,0.6666666666666667
+153,Jarvis Landry ,WR57,157.3,Jarvis Landry ,jarvis landry,WR,2022,138,0.5371621621621622,55,0.47058823529411764
+154,Baltimore Ravens,DST10,159.8,Baltimore Ravens,baltimore ravens,DST,2022,139,0.5337837837837838,10,0.7
+155,DeVante Parker,WR58,161.5,DeVante Parker,devante parker,WR,2022,140,0.5304054054054055,56,0.4607843137254902
+156,David Njoku,TE16,161.8,David Njoku,david njoku,TE,2022,141,0.527027027027027,16,0.6428571428571428
+157,Jakobi Meyers,WR59,162.3,Jakobi Meyers,jakobi meyers,WR,2022,142,0.5236486486486487,57,0.4509803921568627
+158,Noah Fant,TE17,164.3,Noah Fant,noah fant,TE,2022,143,0.5202702702702703,17,0.6190476190476191
+159,J.D. McKissic ,RB48,165.3,J.D. McKissic ,jd mckissic,RB,2022,144,0.5168918918918919,46,0.4943820224719101
+160,New England Patriots,DST11,166.0,New England Patriots,new england patriots,DST,2022,145,0.5135135135135135,11,0.6666666666666667
+161,Jameis Winston,QB19,166.3,Jameis Winston,jameis winston,QB,2022,146,0.5101351351351351,19,0.5135135135135135
+162,Younghoe Koo,K8,166.5,Younghoe Koo,younghoe koo,K,2022,147,0.5067567567567568,7,0.76
+163,Mecole Hardman Jr.,WR60,168.8,Mecole Hardman Jr.,mecole hardman jr,WR,2022,149,0.5,58,0.4411764705882353
+164,Denver Broncos,DST12,169.0,Denver Broncos,denver broncos,DST,2022,150,0.4966216216216216,12,0.6333333333333333
+165,Miami Dolphins,DST13,169.3,Miami Dolphins,miami dolphins,DST,2022,151,0.4932432432432432,13,0.6
+166,Albert Okwuegbunam Jr.,TE18,169.3,Albert Okwuegbunam Jr.,albert okwuegbunam jr,TE,2022,151,0.4932432432432432,18,0.5952380952380952
+167,Jamaal Williams,RB49,170.0,Jamaal Williams,jamaal williams,RB,2022,152,0.4898648648648649,48,0.4719101123595506
+168,Nick Folk,K9,172.0,Nick Folk,nick folk,K,2022,154,0.4831081081081081,9,0.6799999999999999
+169,Matt Ryan,QB20,172.3,Matt Ryan,matt ryan,QB,2022,155,0.4797297297297297,20,0.4864864864864865
+170,Brandon McManus,K10,173.8,Brandon McManus,brandon mcmanus,K,2022,156,0.4763513513513513,10,0.64
+171,Jahan Dotson,WR61,174.8,Jahan Dotson,jahan dotson,WR,2022,157,0.472972972972973,59,0.43137254901960786
+172,Pittsburgh Steelers,DST14,174.8,Pittsburgh Steelers,pittsburgh steelers,DST,2022,157,0.472972972972973,14,0.5666666666666667
+173,Irv Smith Jr.,TE19,175.8,Irv Smith Jr.,irv smith jr,TE,2022,158,0.4695945945945946,19,0.5714285714285714
+174,Romeo Doubs,WR62,176.3,Romeo Doubs,romeo doubs,WR,2022,159,0.46621621621621623,60,0.42156862745098034
+175,Isaiah McKenzie,WR63,176.3,Isaiah McKenzie,isaiah mckenzie,WR,2022,159,0.46621621621621623,60,0.42156862745098034
+176,Robert Tonyan,TE20,177.8,Robert Tonyan,robert tonyan,TE,2022,161,0.45945945945945943,20,0.5476190476190477
+177,Ryan Succop,K11,179.0,Ryan Succop,ryan succop,K,2022,163,0.45270270270270274,11,0.6
+178,Mark Ingram II ,RB50,179.0,Mark Ingram II ,mark ingram ii,RB,2022,163,0.45270270270270274,51,0.4382022471910112
+179,Khalil Herbert,RB51,181.3,Khalil Herbert,khalil herbert,RB,2022,164,0.44932432432432434,52,0.4269662921348315
+180,Ryan Tannehill ,QB21,185.3,Ryan Tannehill ,ryan tannehill,QB,2022,166,0.44256756756756754,21,0.45945945945945943
+181,Tyler Allgeier,RB52,186.3,Tyler Allgeier,tyler allgeier,RB,2022,167,0.43918918918918914,53,0.4157303370786517
+182,Rondale Moore,WR64,186.3,Rondale Moore,rondale moore,WR,2022,167,0.43918918918918914,61,0.4117647058823529
+183,Mac Jones,QB22,188.0,Mac Jones,mac jones,QB,2022,169,0.43243243243243246,22,0.43243243243243246
+184,Gerald Everett,TE21,189.3,Gerald Everett,gerald everett,TE,2022,171,0.42567567567567566,21,0.5238095238095238
+185,Rachaad White,RB53,193.0,Rachaad White,rachaad white,RB,2022,174,0.41554054054054057,57,0.3707865168539326
+186,Evan Engram,TE22,193.8,Evan Engram,evan engram,TE,2022,175,0.41216216216216217,22,0.5
+187,Deshaun Watson,QB23,194.5,Deshaun Watson,deshaun watson,QB,2022,176,0.40878378378378377,23,0.4054054054054054
+188,Baker Mayfield,QB24,195.3,Baker Mayfield,baker mayfield,QB,2022,177,0.4054054054054054,24,0.3783783783783784
+189,Philadelphia Eagles,DST15,197.3,Philadelphia Eagles,philadelphia eagles,DST,2022,179,0.3986486486486487,16,0.5
+190,Cleveland Browns,DST16,198.0,Cleveland Browns,cleveland browns,DST,2022,180,0.3952702702702703,17,0.4666666666666667
+191,Zamir White,RB54,201.3,Zamir White,zamir white,RB,2022,183,0.3851351351351351,60,0.3370786516853933
+192,Robbie Gould,K12,201.3,Robbie Gould,robbie gould,K,2022,183,0.3851351351351351,14,0.48
+193,Odell Beckham Jr.,WR65,202.0,Odell Beckham Jr.,odell beckham jr,WR,2022,184,0.3817567567567568,63,0.3921568627450981
+194,Joshua Palmer,WR66,202.3,Joshua Palmer,joshua palmer,WR,2022,185,0.3783783783783784,64,0.38235294117647056
+195,Isiah Pacheco,RB55,178.0,Isiah Pacheco,isiah pacheco,RB,2022,162,0.45608108108108103,50,0.449438202247191
+196,Hayden Hurst,TE23,206.0,Hayden Hurst,hayden hurst,TE,2022,188,0.3682432432432432,23,0.47619047619047616
+197,Kansas City Chiefs,DST17,183.3,Kansas City Chiefs,kansas city chiefs,DST,2022,165,0.44594594594594594,15,0.5333333333333333
+198,Robbie Chosen,WR67,208.5,Robbie Chosen,robbie chosen,WR,2022,192,0.3547297297297297,66,0.36274509803921573
+199,Austin Hooper,TE24,209.0,Austin Hooper,austin hooper,TE,2022,193,0.3513513513513513,25,0.4285714285714286
+200,Jalen Tolbert,WR68,210.3,Jalen Tolbert,jalen tolbert,WR,2022,194,0.347972972972973,67,0.3529411764705882
+201,Kenny Golladay,WR69,210.5,Kenny Golladay,kenny golladay,WR,2022,195,0.3445945945945946,68,0.3431372549019608
+202,Christian Watson,WR70,188.3,Christian Watson,christian watson,WR,2022,170,0.42905405405405406,62,0.4019607843137255
+203,Marvin Jones Jr.,WR71,212.3,Marvin Jones Jr.,marvin jones jr,WR,2022,199,0.33108108108108103,72,0.303921568627451
+204,Wil Lutz,K13,212.3,Wil Lutz,wil lutz,K,2022,199,0.33108108108108103,17,0.36
+205,Ronald Jones,RB56,191.0,Ronald Jones,ronald jones,RB,2022,172,0.42229729729729726,55,0.3932584269662921
+206,Nico Collins,WR72,213.8,Nico Collins,nico collins,WR,2022,200,0.32770270270270274,73,0.2941176470588235
+207,Daniel Jones,QB25,213.8,Daniel Jones,daniel jones,QB,2022,200,0.32770270270270274,26,0.32432432432432434
+208,Rodrigo Blankenship,K14,214.5,Rodrigo Blankenship,rodrigo blankenship,K,2022,201,0.32432432432432434,18,0.31999999999999995
+209,Jared Goff,QB26,214.8,Jared Goff,jared goff,QB,2022,202,0.32094594594594594,27,0.29729729729729726
+210,Chuba Hubbard,RB57,193.0,Chuba Hubbard,chuba hubbard,RB,2022,174,0.41554054054054057,57,0.3707865168539326
+211,Taysom Hill,TE25,216.5,Taysom Hill,taysom hill,TE,2022,205,0.31081081081081086,27,0.38095238095238093
+212,Greg Joseph,K15,195.3,Greg Joseph,greg joseph,K,2022,177,0.4054054054054054,12,0.56
+213,Sammy Watkins,WR73,217.0,Sammy Watkins,sammy watkins,WR,2022,206,0.30743243243243246,74,0.28431372549019607
+214,Isaiah Spiller,RB58,199.7,Isaiah Spiller,isaiah spiller,RB,2022,181,0.3918918918918919,58,0.3595505617977528
+215,Cincinnati Bengals,DST18,220.5,Cincinnati Bengals,cincinnati bengals,DST,2022,210,0.29391891891891897,19,0.4
+216,Kenyan Drake,RB59,221.3,Kenyan Drake,kenyan drake,RB,2022,212,0.28716216216216217,65,0.2808988764044944
+217,Chris Boswell,K16,202.7,Chris Boswell,chris boswell,K,2022,186,0.375,15,0.43999999999999995
+218,Jameson Williams,WR74,202.7,Jameson Williams,jameson williams,WR,2022,186,0.375,65,0.37254901960784315
+219,Kenny Pickett,QB27,225.3,Kenny Pickett,kenny pickett,QB,2022,219,0.2635135135135135,28,0.2702702702702703
+220,Mason Crosby,K17,170.5,Mason Crosby,mason crosby,K,2022,153,0.4864864864864865,8,0.72
+221,Carson Wentz,QB28,208.3,Carson Wentz,carson wentz,QB,2022,191,0.3581081081081081,25,0.3513513513513513
+222,Logan Thomas,TE26,208.3,Logan Thomas,logan thomas,TE,2022,191,0.3581081081081081,24,0.45238095238095233
+223,Alec Pierce,WR75,211.3,Alec Pierce,alec pierce,WR,2022,196,0.34121621621621623,69,0.33333333333333337
+224,Jerick McKinnon,RB60,216.3,Jerick McKinnon,jerick mckinnon,RB,2022,204,0.31418918918918914,63,0.3033707865168539
+225,Van Jefferson,WR76,217.3,Van Jefferson,van jefferson,WR,2022,207,0.30405405405405406,75,0.27450980392156865
+226,Jake Elliott,K18,218.0,Jake Elliott,jake elliott,K,2022,208,0.30067567567567566,20,0.24
+227,Marlon Mack,RB61,187.5,Marlon Mack,marlon mack,RB,2022,168,0.43581081081081086,54,0.4044943820224719
+229,Marcus Mariota,QB29,235.5,Marcus Mariota,marcus mariota,QB,2022,231,0.22297297297297303,30,0.21621621621621623
+230,Isaiah Likely,TE27,221.0,Isaiah Likely,isaiah likely,TE,2022,211,0.29054054054054057,28,0.3571428571428571
+231,Darrel Williams,RB63,191.5,Darrel Williams,darrel williams,RB,2022,173,0.41891891891891897,56,0.3820224719101124
+232,Tennessee Titans,DST19,222.0,Tennessee Titans,tennessee titans,DST,2022,213,0.28378378378378377,20,0.3666666666666667
+233,Minnesota Vikings,DST20,224.0,Minnesota Vikings,minnesota vikings,DST,2022,215,0.277027027027027,21,0.33333333333333337
+234,Wan'Dale Robinson,WR77,224.7,Wan'Dale Robinson,wandale robinson,WR,2022,217,0.2702702702702703,77,0.2549019607843137
+235,Zach Wilson,QB30,239.0,Zach Wilson,zach wilson,QB,2022,234,0.21283783783783783,31,0.18918918918918914
+236,K.J. Osborn,WR78,226.7,K.J. Osborn,kj osborn,WR,2022,221,0.2567567567567568,78,0.2450980392156863
+237,Myles Gaskin,RB64,200.0,Myles Gaskin,myles gaskin,RB,2022,182,0.3885135135135135,59,0.348314606741573
+238,Washington Commanders,DST21,231.7,Washington Commanders,washington commanders,DST,2022,225,0.2432432432432432,22,0.30000000000000004
+239,Cade York,K19,234.0,Cade York,cade york,K,2022,228,0.23310810810810811,22,0.16000000000000003
+240,Rex Burkhead,RB65,234.3,Rex Burkhead,rex burkhead,RB,2022,229,0.22972972972972971,70,0.2247191011235955
+241,Corey Davis,WR79,211.5,Corey Davis,corey davis,WR,2022,197,0.33783783783783783,70,0.32352941176470584
+242,Tyrion Davis-Price,RB66,211.5,Tyrion Davis-Price,tyrion davis-price,RB,2022,197,0.33783783783783783,62,0.3146067415730337
+243,Parris Campbell,WR80,212.0,Parris Campbell,parris campbell,WR,2022,198,0.33445945945945943,71,0.3137254901960784
+244,A.J. Green,WR81,212.0,A.J. Green,aj green,WR,2022,198,0.33445945945945943,71,0.3137254901960784
+245,Graham Gano,K20,214.5,Graham Gano,graham gano,K,2022,201,0.32432432432432434,18,0.31999999999999995
+246,Kyle Rudolph,TE28,237.7,Kyle Rudolph,kyle rudolph,TE,2022,232,0.21959459459459463,30,0.30952380952380953
+247,Dustin Hopkins,K21,217.0,Dustin Hopkins,dustin hopkins,K,2022,206,0.30743243243243246,19,0.28
+248,Cameron Brate,TE29,240.0,Cameron Brate,cameron brate,TE,2022,235,0.20945945945945943,31,0.2857142857142857
+249,Jeff Wilson Jr.,RB67,167.0,Jeff Wilson Jr.,jeff wilson jr,RB,2022,148,0.5033783783783784,47,0.4831460674157303
+250,Randall Cobb,WR82,224.5,Randall Cobb,randall cobb,WR,2022,216,0.2736486486486487,76,0.2647058823529411
+251,Eno Benjamin,RB68,225.0,Eno Benjamin,eno benjamin,RB,2022,218,0.2668918918918919,66,0.2696629213483146
+252,Dontrell Hilliard ,RB69,226.0,Dontrell Hilliard ,dontrell hilliard,RB,2022,220,0.2601351351351351,67,0.2584269662921348
+253,Mitchell Trubisky,QB31,244.3,Mitchell Trubisky,mitchell trubisky,QB,2022,239,0.19594594594594594,32,0.16216216216216217
+254,Mike Davis,RB70,177.0,Mike Davis,mike davis,RB,2022,160,0.46283783783783783,49,0.4606741573033708
+255,KJ Hamler,WR83,229.0,KJ Hamler,kj hamler,WR,2022,222,0.2533783783783784,79,0.23529411764705888
+256,Arizona Cardinals,DST22,233.5,Arizona Cardinals,arizona cardinals,DST,2022,227,0.2364864864864865,23,0.2666666666666667
+257,Kendrick Bourne,WR84,235.0,Kendrick Bourne,kendrick bourne,WR,2022,230,0.22635135135135132,80,0.22549019607843135
+258,Randy Bullock,K22,197.0,Randy Bullock,randy bullock,K,2022,178,0.402027027027027,13,0.52
+259,Sony Michel,RB71,240.0,Sony Michel,sony michel,RB,2022,235,0.20945945945945943,71,0.2134831460674157
+260,Donovan Peoples-Jones,WR85,253.7,Donovan Peoples-Jones,donovan peoples-jones,WR,2022,251,0.15540540540540537,84,0.18627450980392157
+261,Ameer Abdullah,RB72,242.5,Ameer Abdullah,ameer abdullah,RB,2022,236,0.20608108108108103,72,0.202247191011236
+262,Matt Breida,RB73,205.0,Matt Breida,matt breida,RB,2022,187,0.3716216216216216,61,0.3258426966292135
+263,David Bell,WR86,243.0,David Bell,david bell,WR,2022,237,0.20270270270270274,81,0.21568627450980393
+264,Las Vegas Raiders,DST23,207.0,Las Vegas Raiders,las vegas raiders,DST,2022,189,0.3648648648648649,18,0.43333333333333335
+265,Jason Sanders,K23,244.0,Jason Sanders,jason sanders,K,2022,238,0.19932432432432434,24,0.07999999999999996
+266,Austin Seibert,K24,208.0,Austin Seibert,austin seibert,K,2022,190,0.3614864864864865,16,0.4
+267,Gus Edwards,RB74,247.0,Gus Edwards,gus edwards,RB,2022,240,0.19256756756756754,74,0.1797752808988764
+268,Chicago Bears,DST24,247.5,Chicago Bears,chicago bears,DST,2022,241,0.18918918918918914,24,0.23333333333333328
+269,C.J. Uzomah,TE30,215.0,C.J. Uzomah,cj uzomah,TE,2022,203,0.31756756756756754,26,0.40476190476190477
+270,Samaje Perine,RB75,249.5,Samaje Perine,samaje perine,RB,2022,244,0.17905405405405406,75,0.1685393258426966
+271,Davis Mills,QB32,250.0,Davis Mills,davis mills,QB,2022,245,0.17567567567567566,33,0.1351351351351351
+272,Jordan Mason,RB76,220.0,Jordan Mason,jordan mason,RB,2022,209,0.29729729729729726,64,0.2921348314606742
+273,Hassan Haskins,RB77,250.5,Hassan Haskins,hassan haskins,RB,2022,246,0.17229729729729726,76,0.1573033707865169
+274,Carolina Panthers,DST25,251.0,Carolina Panthers,carolina panthers,DST,2022,247,0.16891891891891897,25,0.19999999999999996
+275,Brevin Jordan,TE31,223.0,Brevin Jordan,brevin jordan,TE,2022,214,0.2804054054054054,29,0.33333333333333337
+276,Jamison Crowder,WR87,253.5,Jamison Crowder,jamison crowder,WR,2022,250,0.15878378378378377,83,0.196078431372549
+277,Curtis Samuel,WR88,263.3,Curtis Samuel,curtis samuel,WR,2022,263,0.11486486486486491,87,0.1568627450980392
+278,Cairo Santos,K25,230.0,Cairo Santos,cairo santos,K,2022,223,0.25,21,0.19999999999999996
+279,Ke'Shawn Vaughn,RB78,230.0,Ke'Shawn Vaughn,keshawn vaughn,RB,2022,223,0.25,68,0.2471910112359551
+280,Damien Williams,RB79,231.0,Damien Williams,damien williams,RB,2022,224,0.2466216216216216,69,0.2359550561797753
+281,Zack Moss,RB80,256.5,Zack Moss,zack moss,RB,2022,255,0.14189189189189189,80,0.1123595505617978
+282,Jimmy Garoppolo,QB33,233.0,Jimmy Garoppolo,jimmy garoppolo,QB,2022,226,0.2398648648648649,29,0.2432432432432432
+283,Brett Maher,K26,238.0,Brett Maher,brett maher,K,2022,233,0.21621621621621623,23,0.12
+284,Boston Scott,RB81,262.0,Boston Scott,boston scott,RB,2022,261,0.1216216216216216,83,0.0786516853932584
+285,D'Ernest Johnson,RB82,266.5,D'Ernest Johnson,dernest johnson,RB,2022,267,0.10135135135135132,85,0.0561797752808989
+286,Jason Myers,K27,244.0,Jason Myers,jason myers,K,2022,238,0.19932432432432434,24,0.07999999999999996
+287,Joshua Kelley,RB83,244.0,Joshua Kelley,joshua kelley,RB,2022,238,0.19932432432432434,73,0.1910112359550562
+288,DeAndre Torrey,RB84,247.0,DeAndre Torrey,deandre torrey,RB,2022,240,0.19256756756756754,74,0.1797752808988764
+289,Mo Alie-Cox,TE32,248.0,Mo Alie-Cox,mo alie-cox,TE,2022,242,0.18581081081081086,32,0.26190476190476186
+290,Jake Powell,TE33,248.0,Jake Powell,jake powell,TE,2022,242,0.18581081081081086,32,0.26190476190476186
+291,Anthony Johnson,DT1,249.0,Anthony Johnson,anthony johnson,DT,2022,243,0.18243243243243246,1,0.0
+292,Tyler Conklin,TE34,250.0,Tyler Conklin,tyler conklin,TE,2022,245,0.17567567567567566,33,0.23809523809523814
+293,Collin Hill,QB34,250.0,Collin Hill,collin hill,QB,2022,245,0.17567567567567566,33,0.1351351351351351
+294,Chad Muma,LB1,251.0,Chad Muma,chad muma,LB,2022,247,0.16891891891891897,1,1.0
+295,Ben Johnson,OT1,252.0,Ben Johnson,ben johnson,OT,2022,248,0.16554054054054057,1,0.0
+296,Braxton Berrios,WR89,252.0,Braxton Berrios,braxton berrios,WR,2022,248,0.16554054054054057,82,0.20588235294117652
+297,Kyle Juszczyk,RB85,253.0,Kyle Juszczyk,kyle juszczyk,RB,2022,249,0.16216216216216217,77,0.1460674157303371
+298,Austin Walter,RB86,253.0,Austin Walter,austin walter,RB,2022,249,0.16216216216216217,77,0.1460674157303371
+299,Zay Jones,WR90,254.0,Zay Jones,zay jones,WR,2022,252,0.15202702702702697,85,0.17647058823529416
+300,Kayvon Thibodeaux,DE1,254.0,Kayvon Thibodeaux,kayvon thibodeaux,DE,2022,252,0.15202702702702697,1,1.0
+301,Karan Higdon,RB87,255.0,Karan Higdon,karan higdon,RB,2022,253,0.14864864864864868,78,0.1348314606741573
+302,Marquez Callaway,WR91,268.0,Marquez Callaway,marquez callaway,WR,2022,269,0.09459459459459463,89,0.13725490196078427
+303,Seattle Seahawks,DST26,256.0,Seattle Seahawks,seattle seahawks,DST,2022,254,0.14527027027027029,26,0.16666666666666663
+304,Jordan Johnson,RB88,256.0,Jordan Johnson,jordan johnson,RB,2022,254,0.14527027027027029,79,0.1235955056179775
+305,Stephen Baggett,TE35,257.0,Stephen Baggett,stephen baggett,TE,2022,256,0.1385135135135135,34,0.2142857142857143
+306,Alex Barnes,RB89,258.0,Alex Barnes,alex barnes,RB,2022,257,0.1351351351351351,81,0.101123595505618
+307,Jaylen Warren,RB90,258.0,Jaylen Warren,jaylen warren,RB,2022,257,0.1351351351351351,81,0.101123595505618
+308,Detroit Lions,DST27,259.0,Detroit Lions,detroit lions,DST,2022,258,0.1317567567567568,27,0.1333333333333333
+309,Zach Olstad,RB91,259.0,Zach Olstad,zach olstad,RB,2022,258,0.1317567567567568,82,0.0898876404494382
+310,Temarrick Hemingway,TE36,260.0,Temarrick Hemingway,temarrick hemingway,TE,2022,259,0.1283783783783784,35,0.19047619047619047
+311,Jerome Washington,TE37,261.0,Jerome Washington,jerome washington,TE,2022,260,0.125,36,0.16666666666666663
+312,New York Giants,DST28,262.0,New York Giants,new york giants,DST,2022,261,0.1216216216216216,28,0.09999999999999998
+313,Stephon Robinson Jr.,WR92,262.0,Stephon Robinson Jr.,stephon robinson jr,WR,2022,261,0.1216216216216216,86,0.16666666666666663
+314,Nick Bawden,RB92,263.0,Nick Bawden,nick bawden,RB,2022,262,0.1182432432432432,84,0.0674157303370787
+315,Michael Jacobson,TE38,264.0,Michael Jacobson,michael jacobson,TE,2022,264,0.11148648648648651,37,0.1428571428571429
+316,Jamel Johnson,WR93,265.0,Jamel Johnson,jamel johnson,WR,2022,265,0.10810810810810811,88,0.1470588235294118
+317,Sterling Shepard,WR94,281.5,Sterling Shepard,sterling shepard,WR,2022,283,0.04729729729729726,99,0.039215686274509776
+318,Brandon Barnes,TE39,266.0,Brandon Barnes,brandon barnes,TE,2022,266,0.10472972972972971,38,0.11904761904761907
+319,Drew Anderson,QB35,267.0,Drew Anderson,drew anderson,QB,2022,268,0.09797297297297303,34,0.10810810810810811
+320,Zach Conque,QB36,268.0,Zach Conque,zach conque,QB,2022,269,0.09459459459459463,35,0.08108108108108103
+321,Bobby Wagner,LB2,269.0,Bobby Wagner,bobby wagner,LB,2022,270,0.09121621621621623,2,0.0
+322,Kendrick Rogers,WR95,270.0,Kendrick Rogers,kendrick rogers,WR,2022,271,0.08783783783783783,90,0.12745098039215685
+323,Taywan Taylor,WR96,271.0,Taywan Taylor,taywan taylor,WR,2022,272,0.08445945945945943,91,0.11764705882352944
+324,New York Jets,DST29,272.0,New York Jets,new york jets,DST,2022,273,0.08108108108108103,29,0.06666666666666665
+325,Kyle Lewis,WR97,272.0,Kyle Lewis,kyle lewis,WR,2022,273,0.08108108108108103,92,0.10784313725490191
+326,Ryan Davis,DE2,273.0,Ryan Davis,ryan davis,DE,2022,274,0.07770270270270274,2,0.0
+327,Jonnu Smith,TE40,273.0,Jonnu Smith,jonnu smith,TE,2022,274,0.07770270270270274,39,0.09523809523809523
+328,Papi White,WR98,274.0,Papi White,papi white,WR,2022,275,0.07432432432432434,93,0.0980392156862745
+329,Laviska Shenault Jr.,WR99,275.0,Laviska Shenault Jr.,laviska shenault jr,WR,2022,276,0.07094594594594594,94,0.08823529411764708
+330,Houston Texans,DST30,276.0,Houston Texans,houston texans,DST,2022,277,0.06756756756756754,30,0.033333333333333326
+331,Krishawn Hogan,WR100,276.0,Krishawn Hogan,krishawn hogan,WR,2022,277,0.06756756756756754,95,0.07843137254901966
+332,Brogan Roback,QB37,277.0,Brogan Roback,brogan roback,QB,2022,278,0.06418918918918914,36,0.05405405405405406
+333,Cedrick Wilson Jr.,WR101,278.0,Cedrick Wilson Jr.,cedrick wilson jr,WR,2022,279,0.060810810810810856,96,0.06862745098039214
+334,Cole Hunt,TE41,278.0,Cole Hunt,cole hunt,TE,2022,279,0.060810810810810856,40,0.0714285714285714
+335,David Watford,WR102,279.0,David Watford,david watford,WR,2022,280,0.057432432432432456,97,0.05882352941176472
+336,Chris Evans,RB93,280.0,Chris Evans,chris evans,RB,2022,281,0.05405405405405406,86,0.0449438202247191
+337,Zaire Mitchell-Paden,TE42,280.0,Zaire Mitchell-Paden,zaire mitchell-paden,TE,2022,281,0.05405405405405406,41,0.04761904761904767
+338,Brandon Bolden,RB94,281.0,Brandon Bolden,brandon bolden,RB,2022,282,0.05067567567567566,87,0.0337078651685393
+339,Josh Smith,WR103,281.0,Josh Smith,josh smith,WR,2022,282,0.05067567567567566,98,0.0490196078431373
+340,Nelson Agholor,WR104,283.0,Nelson Agholor,nelson agholor,WR,2022,284,0.04391891891891897,100,0.02941176470588236
+341,Foster Moreau,TE43,284.0,Foster Moreau,foster moreau,TE,2022,285,0.04054054054054057,42,0.023809523809523836
+342,Quez Watkins,WR105,287.0,Quez Watkins,quez watkins,WR,2022,286,0.03716216216216217,101,0.019607843137254943
+343,J.J. Taylor,RB95,288.0,J.J. Taylor,jj taylor,RB,2022,287,0.03378378378378377,88,0.022471910112359605
+344,Byron Pringle,WR106,289.0,Byron Pringle,byron pringle,WR,2022,288,0.030405405405405372,102,0.009803921568627416
+345,Jacksonville Jaguars,DST31,290.0,Jacksonville Jaguars,jacksonville jaguars,DST,2022,289,0.027027027027026973,31,0.0
+346,Drew Lock,QB38,291.0,Drew Lock,drew lock,QB,2022,290,0.023648648648648685,37,0.027027027027026973
+347,Jauan Jennings,WR107,293.0,Jauan Jennings,jauan jennings,WR,2022,291,0.020270270270270285,103,0.0
+348,DeeJay Dallas,RB96,294.0,DeeJay Dallas,deejay dallas,RB,2022,292,0.016891891891891886,89,0.011235955056179803
+349,Ka'imi Fairbairn,K28,295.0,Ka'imi Fairbairn,kaimi fairbairn,K,2022,293,0.013513513513513487,25,0.040000000000000036
+350,Trey Sermon,RB97,296.0,Trey Sermon,trey sermon,RB,2022,294,0.010135135135135087,90,0.0
+351,Malik Willis,QB39,297.0,Malik Willis,malik willis,QB,2022,295,0.006756756756756799,38,0.0
+352,Joey Slye,K29,299.0,Joey Slye,joey slye,K,2022,296,0.0033783783783783994,26,0.0
+353,O.J. Howard,TE44,300.0,O.J. Howard,oj howard,TE,2022,297,0.0,43,0.0
