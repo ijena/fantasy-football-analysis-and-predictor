@@ -1,111 +1,145 @@
 import numpy as np
 import pandas as pd
 
+# Optional LOWESS
 try:
     import statsmodels.api as sm
     _HAS_LOESS = True
 except Exception:
     _HAS_LOESS = False
 
+# NFL regular-season length by year (simplified; adjust if you include 2020 oddities/playoffs)
+SEASON_LEN = {y: (16 if y <= 2020 else 17) for y in range(2000, 2031)}
 
-def add_expected_ppr(
+def add_expected_ppr_per_game(
     df: pd.DataFrame,
+    *,
     adp_col: str = "AVG",
     ppr_col: str | None = None,
+    games_col: str | None = None,
     pos_col: str | None = None,
-    per_year: bool = False,            # <-- default to pooled
+    per_year: bool = True,        # fit per YEAR+POSITION as you suggested
     loess_frac: float = 0.3,
     min_group: int = 25,
     fallback_bins: int = 12,
 ) -> pd.DataFrame:
     """
-    Adds:
-      - expected_PPR: pooled (position-level) smoothed ADP->PPR expectation
-      - overperf_points: actual minus expected
+    Adds per-game normalization and expectations:
+      - ppr_pg
+      - expected_ppr_pg
+      - overperf_pg
+      - expected_ppr_season_std  (expected per-game × era season length)
+      - actual_ppr_season_std    (actual per-game × era season length)
+      - overperf_season_std
     """
+    df = df.copy()
+
+    # --- column detection ---
     if adp_col not in df.columns:
-        raise ValueError(f"ADP column '{adp_col}' not found in df.")
+        raise ValueError(f"ADP column '{adp_col}' not in df.")
 
     if ppr_col is None:
-        for c in ["Fantasy_PPR", "PPR", "PPR_total", "PPR Points", "Fantasy PPR", "PPR_"]:
+        for c in ["Fantasy_PPR", "PPR", "PPR_total", "PPR Points", "Fantasy PPR"]:
             if c in df.columns:
-                ppr_col = c
-                break
+                ppr_col = c; break
         if ppr_col is None:
-            raise ValueError("Could not find a PPR column; please pass ppr_col explicitly.")
+            raise ValueError("Could not find a PPR column; pass ppr_col explicitly.")
+
+    if games_col is None:
+        for c in ["G", "Games", "GP"]:
+            if c in df.columns:
+                games_col = c; break
+        if games_col is None:
+            raise ValueError("Could not find a games column; pass games_col explicitly.")
 
     if pos_col is None:
-        for c in ["POS_group_adp", "POS_group_rank", "POS_group", "POS"]:
+        for c in ["POS_group_adp", "POS_group_rank", "POS_group", "POS", "FantPos"]:
             if c in df.columns:
-                pos_col = c
-                break
+                pos_col = c; break
         if pos_col is None:
-            raise ValueError("Could not find a position column; please pass pos_col explicitly.")
+            raise ValueError("Could not find a position column; pass pos_col explicitly.")
 
-    df = df.copy()
+    if "year" not in df.columns and per_year:
+        raise ValueError("Column 'year' required when per_year=True.")
+
+    # --- ensure numeric ---
     df[adp_col] = pd.to_numeric(df[adp_col], errors="coerce")
     df[ppr_col] = pd.to_numeric(df[ppr_col], errors="coerce")
+    df[games_col] = pd.to_numeric(df[games_col], errors="coerce")
 
-    expected = pd.Series(np.nan, index=df.index, dtype=float)
+    # --- actual PPR per game ---
+    df["ppr_pg"] = np.where(df[games_col] > 0, df[ppr_col] / df[games_col], np.nan)
 
-    # POOLED: one curve per position across all years
-    group_keys = [pos_col] if not per_year else ["year", pos_col]
+    # --- fit expected per game from ADP ---
+    expected_pg = pd.Series(np.nan, index=df.index, dtype=float)
+    group_keys = ["year", pos_col] if per_year else [pos_col]
 
     def _fit_group(g: pd.DataFrame) -> pd.Series:
-        gg = g[[adp_col, ppr_col]].dropna()
+        gg = g[[adp_col, "ppr_pg"]].dropna()
         if len(gg) < max(min_group, 5):
             return pd.Series(np.nan, index=g.index)
 
         x = gg[adp_col].values
-        y = gg[ppr_col].values
+        y = gg["ppr_pg"].values
 
+        # LOWESS smoothing if available
         if _HAS_LOESS and len(gg) >= min_group:
             try:
                 smoothed = sm.nonparametric.lowess(y, x, frac=loess_frac, return_sorted=True)
                 xs, ys = smoothed[:, 0], smoothed[:, 1]
-                exp_vals = np.interp(g[adp_col], xs, ys, left=np.nan, right=np.nan)
-                return pd.Series(exp_vals, index=g.index)
+                vals = np.interp(g[adp_col], xs, ys, left=np.nan, right=np.nan)
+                return pd.Series(vals, index=g.index)
             except Exception:
                 pass
 
+        # Fallback: quantile bins on ADP rank -> mean PPG -> interpolate
         try:
-            gg = gg.assign(_rank=np.argsort(np.argsort(x)) / max(len(x) - 1, 1))
-            gg["_bin"] = pd.qcut(gg["_rank"], q=min(fallback_bins, len(gg)), duplicates="drop")
-            bin_means = gg.groupby("_bin")[ppr_col].mean()
+            ranks = np.argsort(np.argsort(x))
+            gg = gg.assign(_r=ranks / max(len(x) - 1, 1))
+            gg["_bin"] = pd.qcut(gg["_r"], q=min(fallback_bins, len(gg)), duplicates="drop")
+            bin_means = gg.groupby("_bin")["ppr_pg"].mean()
             bin_adp = gg.groupby("_bin")[adp_col].median()
-            xs = bin_adp.values
-            ys = bin_means.values
+            xs, ys = bin_adp.values, bin_means.values
             order = np.argsort(xs)
             xs, ys = xs[order], ys[order]
-            exp_vals = np.interp(g[adp_col], xs, ys, left=np.nan, right=np.nan)
-            return pd.Series(exp_vals, index=g.index)
+            vals = np.interp(g[adp_col], xs, ys, left=np.nan, right=np.nan)
+            return pd.Series(vals, index=g.index)
         except Exception:
             return pd.Series(np.nan, index=g.index)
 
-    for keys, g in df.groupby(group_keys):
-        expected.loc[g.index] = _fit_group(g)
+    for _, g in df.groupby(group_keys):
+        expected_pg.loc[g.index] = _fit_group(g)
 
-    df["expected_PPR"] = expected
-    df["overperf_points"] = df[ppr_col] - df["expected_PPR"]
+    df["expected_ppr_pg"] = expected_pg
+    df["overperf_pg"] = df["ppr_pg"] - df["expected_ppr_pg"]
+
+    # --- season-standardized versions (use era schedule length for comparability) ---
+    # If year missing or out of dict, default to 17
+    season_len = df.get("year", pd.Series(17, index=df.index)).map(SEASON_LEN).fillna(17)
+    df["expected_ppr_season_std"] = df["expected_ppr_pg"] * season_len
+    df["actual_ppr_season_std"]   = df["ppr_pg"] * season_len
+    df["overperf_season_std"]     = df["actual_ppr_season_std"] - df["expected_ppr_season_std"]
+
     return df
 from pathlib import Path
 import pandas as pd
 
 BASE = Path(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data")
-MERGED_PATH = BASE / "merged_dataset" / "merged_adp_ranks_2015_2024_with_metrics.csv"
-OUT_PATH    = BASE / "merged_dataset" / "merged_adp_ranks_2015_2024_with_expected_points.csv"
+MERGED = BASE / "merged_dataset" / "merged_adp_ranks_2015_2024_with_metrics.csv"
+OUT    = BASE / "merged_dataset" / "merged_with_expected_ppg.csv"
 
-df = pd.read_csv(MERGED_PATH)
+df = pd.read_csv(MERGED)
 
-df = add_expected_ppr(
+df = add_expected_ppr_per_game(
     df,
     adp_col="AVG",
     ppr_col="Fantasy_PPR",
-    pos_col="POS_group_adp",   # or "POS_group_rank"
-    per_year=False,            # <-- pooled across years by position
+    games_col="Games_G",             # change if your file uses "Games" or "GP"
+    pos_col="POS_group_adp",
+    per_year=True,             # fit per YEAR+POSITION (as you asked)
     loess_frac=0.3,
     min_group=25,
 )
 
-df.to_csv(OUT_PATH, index=False)
-print("Saved pooled expected_PPR:", OUT_PATH)
+df.to_csv(OUT, index=False)
+print("Saved:", OUT)
