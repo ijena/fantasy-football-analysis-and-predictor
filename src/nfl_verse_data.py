@@ -33,7 +33,7 @@ def load_combine_data(years, fantasy_positions):
     combine_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")   
     return combine_data
 
-def load_draft_picks(years):
+def load_draft_picks(years,fantasy_positions):
     draft_pick_data = nfl_data_py.import_draft_picks(years)
     draft_pick_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\draft_pick_data.csv")   
     return draft_pick_data
@@ -44,4 +44,4 @@ fantasy_positions = ["QB", "RB", "TE", "WR"]
 depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
 combine_data = load_combine_data(years, fantasy_positions)
-draft_pick_data = load_draft_picks(years)
+draft_pick_data = load_draft_picks(years, fantasy_positions)
