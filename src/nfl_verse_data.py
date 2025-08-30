@@ -1,14 +1,13 @@
 import nfl_data_py
 import pandas as pd
 
-def load_depth_chart_data(years):
+def load_depth_chart_data(years, fantasy_positions):
 
 
     depth_charts = nfl_data_py.import_depth_charts(years)
 
     #filter for fantasy relevant positions
-    fantasy_positions = ["QB", "RB", "TE", "WR"]
-    
+    #drop irrelevant columns
     depth_charts = depth_charts.drop(columns = ["jersey_number"])
     depth_charts = depth_charts[depth_charts["position"].isin(fantasy_positions)]
     #filter for regular season games only
@@ -20,9 +19,17 @@ def load_depth_chart_data(years):
     return depth_charts
 def load_seasonal_data(years):
     season_stats = nfl_data_py.import_seasonal_data(years)
+    #drop special teams stats
     season_stats = season_stats.drop(columns = ["special_teams_tds"])
     season_stats.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_stats.csv")   
     return season_stats
+def load_combine_data(years, fantasy_positions):
+    combine_data = nfl_data_py.import_combine_data(years, fantasy_positions)
+    combine_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")   
+    return combine_data
 years = range(2014,2025)
-depth_chart = load_depth_chart_data(years)
+fantasy_positions = ["QB", "RB", "TE", "WR"]
+
+depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
+combine_data = load_combine_data(years, fantasy_positions)
