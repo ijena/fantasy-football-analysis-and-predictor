@@ -24,7 +24,12 @@ def load_seasonal_data(years):
     season_stats.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_stats.csv")   
     return season_stats
 def load_combine_data(years, fantasy_positions):
+    #fantasy_positiions helps us get data only for fantasy relevant positions
     combine_data = nfl_data_py.import_combine_data(years, fantasy_positions)
+    #height column is messed up in the dataset and populated with birth data
+    combine_data = combine_data.drop(columns = ["ht"])
+    #remove undrafted players
+    combine_data = combine_data.dropna(subset=["draft_team"])
     combine_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")   
     return combine_data
 years = range(2014,2025)
