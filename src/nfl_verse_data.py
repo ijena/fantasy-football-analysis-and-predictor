@@ -43,6 +43,10 @@ def load_draft_picks(years,fantasy_positions):
     draft_pick_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\draft_pick_data.csv")   
     return draft_pick_data
     
+def load_draft_values (years):
+    draft_value_data = nfl_data_py.import_draft_values()
+    draft_value_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\draft_value_data.csv")   
+    return draft_value_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 
@@ -50,3 +54,4 @@ depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
 combine_data = load_combine_data(years, fantasy_positions)
 draft_pick_data = load_draft_picks(years, fantasy_positions)
+draft_value_data = load_draft_values(years)
