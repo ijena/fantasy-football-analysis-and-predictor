@@ -83,6 +83,15 @@ def load_snap_counts(years,fantasy_positions):
     snap_count_data = snap_count_data[snap_count_data["game_type"]=="REG"]
     snap_count_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\snap_count_data.csv")
     return snap_count_data
+
+def load_play_by_play_data(years):
+    play_by_play_data = nfl_data_py.import_pbp_data(years)
+    for col in play_by_play_data.columns:
+        print(col)
+        
+    # play_by_play_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\play_by_play_data.csv")
+    return play_by_play_data
+
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 depth_chart = load_depth_chart_data(years, fantasy_positions)
@@ -99,8 +108,5 @@ seasonal_pfr_pass_data = load_seasonal_pfr("pass")
 seasonal_pfr_rush_data = load_seasonal_pfr("rush")
 seasonal_pfr_rec_data = load_seasonal_pfr("rec")
 snap_count_data = load_snap_counts(years, fantasy_positions)
-
-# nfl_data_py.import_snap_counts
+play_by_play_data = load_play_by_play_data(years)
 # nfl_data_py.import_pbp_data
-# nfl_data_py.import_win_totals
-# nfl_data_py.import_team_desc
