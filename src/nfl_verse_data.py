@@ -60,3 +60,7 @@ season_stats = load_seasonal_data(years)
 combine_data = load_combine_data(years, fantasy_positions)
 draft_pick_data = load_draft_picks(years, fantasy_positions)
 ngs_data_passing = load_ngs_data("passing",years)
+ngs_data_rushing = load_ngs_data("rushing",years)
+ngs_data_receiving = load_ngs_data("receiving",years)
+
+
