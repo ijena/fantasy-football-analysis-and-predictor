@@ -52,8 +52,9 @@ def load_ngs_data (stat_type, years):
     ngs_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\ngs_{stat_type}_data.csv")
     return ngs_data
 
-def load_player_data(fantasy_positions):
+def load_player_data(years,fantasy_positions):
     player_data = nfl_data_py.import_players()
+    player_data = player_data[player_data["last_season"].between(years[0],years[len(years)-1])]
     player_data = player_data[player_data["position_group"].isin(fantasy_positions)]
     player_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\player_data.csv")
     return player_data
@@ -67,6 +68,6 @@ draft_pick_data = load_draft_picks(years, fantasy_positions)
 ngs_data_passing = load_ngs_data("passing",years)
 ngs_data_rushing = load_ngs_data("rushing",years)
 ngs_data_receiving = load_ngs_data("receiving",years)
-player_data = load_player_data(fantasy_positions)
+player_data = load_player_data(years, fantasy_positions)
 
 
