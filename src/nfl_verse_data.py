@@ -59,8 +59,12 @@ def load_player_data(years,fantasy_positions):
     #filter data for fantasy relevant positions"
     player_data = player_data[player_data["position_group"].isin(fantasy_positions)]
     player_data = player_data.drop(columns="jersey_number")
-    player_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\player_data.csv")
+    player_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\player_data.csv")
     return player_data
+def load_qbr_data(years, level):
+    qbr_data = nfl_data_py.import_qbr(years, level)
+    qbr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{level}_qbr_data.csv")
+    return qbr_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 
@@ -72,5 +76,4 @@ ngs_data_passing = load_ngs_data("passing",years)
 ngs_data_rushing = load_ngs_data("rushing",years)
 ngs_data_receiving = load_ngs_data("receiving",years)
 player_data = load_player_data(years, fantasy_positions)
-
-
+nfl_qbr_data = load_qbr_data(years, "nfl")
