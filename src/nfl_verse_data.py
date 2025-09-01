@@ -63,18 +63,31 @@ def load_player_data(years,fantasy_positions):
     return player_data
 def load_qbr_data(years, level):
     qbr_data = nfl_data_py.import_qbr(years, level)
-    qbr_data = qbr_data[qbr_data["season_type"] == "Regular"]
+    #filter out data for just regular season 
+    if(level=="nfl"):
+        qbr_data = qbr_data[qbr_data["season_type"] == "Regular"]
     qbr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{level}_qbr_data.csv")
     return qbr_data
+# def load_seasonal_pfr(stats_type, years):
+#     seasonal_pfr_data = nfl_data_py.import_seasonal_pfr(stats_type, years)
+#     seasonal_pfr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{level}_qbr_data.csv")
+
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 
-# depth_chart = load_depth_chart_data(years, fantasy_positions)
-# season_stats = load_seasonal_data(years)
-# combine_data = load_combine_data(years, fantasy_positions)
-# draft_pick_data = load_draft_picks(years, fantasy_positions)
-# ngs_data_passing = load_ngs_data("passing",years)
-# ngs_data_rushing = load_ngs_data("rushing",years)
-# ngs_data_receiving = load_ngs_data("receiving",years)
-# player_data = load_player_data(years, fantasy_positions)
+depth_chart = load_depth_chart_data(years, fantasy_positions)
+season_stats = load_seasonal_data(years)
+combine_data = load_combine_data(years, fantasy_positions)
+draft_pick_data = load_draft_picks(years, fantasy_positions)
+ngs_data_passing = load_ngs_data("passing",years)
+ngs_data_rushing = load_ngs_data("rushing",years)
+ngs_data_receiving = load_ngs_data("receiving",years)
+player_data = load_player_data(years, fantasy_positions)
 nfl_qbr_data = load_qbr_data(years, "nfl")
+college_qbr_data = load_qbr_data(years,"college")
+# seasonal_pfr_pass_data = load_seasonal_pfr("pass",years)
+# nfl_data_py.import_seasonal_pfr
+# nfl_data_py.import_snap_counts
+# nfl_data_py.import_pbp_data
+# nfl_data_py.import_win_totals
+# nfl_data_py.import_team_desc
