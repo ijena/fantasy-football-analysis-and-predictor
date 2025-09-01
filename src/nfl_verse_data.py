@@ -75,8 +75,12 @@ def load_seasonal_pfr(stats_type):
     return seasonal_pfr_data
 def load_snap_counts(years,fantasy_positions):
     snap_count_data = nfl_data_py.import_snap_counts(years)
+    #drop columns for defense and special team stats
+    snap_count_data = snap_count_data.drop(columns=["defense_snaps","defense_pct","st_snaps","st_pct"])
     #filter data only for relevant fantasy positions
     snap_count_data = snap_count_data[snap_count_data["position"].isin(fantasy_positions)]
+    #filter for just regular season games
+    snap_count_data = snap_count_data[snap_count_data["game_type"]=="REG"]
     snap_count_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\snap_count_data.csv")
     return snap_count_data
 years = range(2014,2025)
