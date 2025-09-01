@@ -43,10 +43,15 @@ def load_draft_picks(years,fantasy_positions):
     draft_pick_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\draft_pick_data.csv")   
     return draft_pick_data
     
-def load_draft_values (years):
-    draft_value_data = nfl_data_py.import_draft_values()
-    draft_value_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\draft_value_data.csv")   
-    return draft_value_data
+def load_ngs_data (stat_type, years):
+    ngs_data = nfl_data_py.import_ngs_data(stat_type=stat_type, years=years)
+    #filter for just regular season games
+    ngs_data = ngs_data[ngs_data["season_type"]=="REG"]
+    #remove irrelevant columns like jersey number
+    ngs_data = ngs_data.drop(columns="player_jersey_number")
+    ngs_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\ngs_{stat_type}_data.csv")
+    return ngs_data
+
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 
@@ -54,4 +59,4 @@ depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
 combine_data = load_combine_data(years, fantasy_positions)
 draft_pick_data = load_draft_picks(years, fantasy_positions)
-draft_value_data = load_draft_values(years)
+ngs_data_passing = load_ngs_data("passing",years)
