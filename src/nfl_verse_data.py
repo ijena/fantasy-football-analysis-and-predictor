@@ -68,10 +68,11 @@ def load_qbr_data(years, level):
         qbr_data = qbr_data[qbr_data["season_type"] == "Regular"]
     qbr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{level}_qbr_data.csv")
     return qbr_data
-# def load_seasonal_pfr(stats_type, years):
-#     seasonal_pfr_data = nfl_data_py.import_seasonal_pfr(stats_type, years)
-#     seasonal_pfr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{level}_qbr_data.csv")
-
+def load_seasonal_pfr(stats_type):
+    #data only available from 2018
+    seasonal_pfr_data = nfl_data_py.import_seasonal_pfr(stats_type)
+    seasonal_pfr_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\{stats_type}_seasonal_pfr_data.csv")
+    return seasonal_pfr_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 
@@ -85,7 +86,10 @@ ngs_data_receiving = load_ngs_data("receiving",years)
 player_data = load_player_data(years, fantasy_positions)
 nfl_qbr_data = load_qbr_data(years, "nfl")
 college_qbr_data = load_qbr_data(years,"college")
-# seasonal_pfr_pass_data = load_seasonal_pfr("pass",years)
+seasonal_pfr_pass_data = load_seasonal_pfr("pass")
+seasonal_pfr_rush_data = load_seasonal_pfr("rush")
+seasonal_pfr_rec_data = load_seasonal_pfr("rec")
+
 # nfl_data_py.import_seasonal_pfr
 # nfl_data_py.import_snap_counts
 # nfl_data_py.import_pbp_data
