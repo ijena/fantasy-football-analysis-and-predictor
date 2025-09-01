@@ -54,8 +54,11 @@ def load_ngs_data (stat_type, years):
 
 def load_player_data(years,fantasy_positions):
     player_data = nfl_data_py.import_players()
+    #filter data for player's last season being after 2014
     player_data = player_data[player_data["last_season"].between(years[0],years[len(years)-1])]
+    #filter data for fantasy relevant positions"
     player_data = player_data[player_data["position_group"].isin(fantasy_positions)]
+    player_data = player_data.drop(columns="jersey_number")
     player_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\player_data.csv")
     return player_data
 years = range(2014,2025)
