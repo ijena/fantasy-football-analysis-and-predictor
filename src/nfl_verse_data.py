@@ -81,6 +81,7 @@ def load_snap_counts(years,fantasy_positions):
     snap_count_data = snap_count_data[snap_count_data["position"].isin(fantasy_positions)]
     #filter for just regular season games
     snap_count_data = snap_count_data[snap_count_data["game_type"]=="REG"]
+    
     snap_count_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\snap_count_data.csv")
     return snap_count_data
 
@@ -88,6 +89,9 @@ def load_play_by_play_data(years):
     play_by_play_data = nfl_data_py.import_pbp_data(years)
     #filter for regular season game
     play_by_play_data = play_by_play_data[play_by_play_data["season_type"]=="REG"]
+    #filter for relevant plays
+    play_by_play_data = play_by_play_data[play_by_play_data["play_type"].isin["run","pass"]]
+
     for col in play_by_play_data.columns:
         print(col)
         
