@@ -86,6 +86,8 @@ def load_snap_counts(years,fantasy_positions):
 
 def load_play_by_play_data(years):
     play_by_play_data = nfl_data_py.import_pbp_data(years)
+    #filter for regular season game
+    play_by_play_data = play_by_play_data[play_by_play_data["season_type"]=="REG"]
     for col in play_by_play_data.columns:
         print(col)
         
