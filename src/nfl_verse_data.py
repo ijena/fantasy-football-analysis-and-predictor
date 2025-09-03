@@ -82,6 +82,7 @@ def load_snap_counts(years,fantasy_positions):
     #filter for just regular season games
     snap_count_data = snap_count_data[snap_count_data["game_type"]=="REG"]
     
+    #calculate season snaps played for each player
     season_agg = (
     snap_count_data.groupby(["team","season", "player"], as_index=False)
     .agg({
@@ -89,10 +90,14 @@ def load_snap_counts(years,fantasy_positions):
         })
 )
 
+    #calculate weekly team snaps
     season_agg_temp= (snap_count_data.groupby(["week","season","team"], as_index = False).agg({"offense_snaps": "max"}))
     season_agg_temp["team_snaps"] = season_agg_temp["offense_snaps"]
+    #calculate season team snaps
     temp_season_agg = (season_agg_temp.groupby(["season","team"], as_index = False).agg({"team_snaps": "sum"}))
+    #merge season team snaps and season player snaps
     season_snap_counts = season_agg.merge(temp_season_agg, on=["season","team"])
+    #calculate percentage of team snaps that a player was involved in
     season_snap_counts["offense_snap_percentage"] = season_snap_counts["offense_snaps"]/season_snap_counts["team_snaps"]
     season_snap_counts.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_snap_count_data.csv")
     return season_snap_counts
