@@ -180,7 +180,7 @@ def load_play_by_play_data(years):
 def merge_season_stats_player_data(season_stats, player_data):
     merged_season_stats_player_data = season_stats.merge(player_data,left_on =["player_id"], right_on = ["gsis_id"],
                                                          how="left")
-    # merged_season_stats_player_data["rookie_season"] = (merged_season_stats_player_data[""])
+    merged_season_stats_player_data["rookie"] = (merged_season_stats_player_data["rookie_season"]==merged_season_stats_player_data["season"]).astype(int)
     merged_season_stats_player_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\merged_season_stats_player_data.csv")
     return merged_season_stats_player_data
 
