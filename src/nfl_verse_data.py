@@ -55,7 +55,7 @@ def load_ngs_data (stat_type, years):
 def load_player_data(years,fantasy_positions):
     player_data = nfl_data_py.import_players()
     #filter data for player's last season being after 2014
-    player_data = player_data[player_data["last_season"].between(years[0],years[len(years)-1])]
+    player_data = player_data[player_data["last_season"].between(years[0],years[len(years)-1]+1)]
     #filter data for fantasy relevant positions"
     player_data = player_data[player_data["position_group"].isin(fantasy_positions)]
     player_data = player_data.drop(columns="jersey_number")
@@ -180,6 +180,7 @@ def load_play_by_play_data(years):
 def merge_season_stats_player_data(season_stats, player_data):
     merged_season_stats_player_data = season_stats.merge(player_data,left_on =["player_id"], right_on = ["gsis_id"],
                                                          how="left")
+    # merged_season_stats_player_data["rookie_season"] = (merged_season_stats_player_data[""])
     merged_season_stats_player_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\merged_season_stats_player_data.csv")
     return merged_season_stats_player_data
 
@@ -199,5 +200,5 @@ seasonal_pfr_pass_data = load_seasonal_pfr("pass")
 seasonal_pfr_rush_data = load_seasonal_pfr("rush")
 seasonal_pfr_rec_data = load_seasonal_pfr("rec")
 snap_count_data = load_snap_counts(years, fantasy_positions)
-play_by_play_data = load_play_by_play_data(years)
+# play_by_play_data = load_play_by_play_data(years)
 merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
