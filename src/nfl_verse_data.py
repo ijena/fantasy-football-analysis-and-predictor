@@ -76,14 +76,26 @@ def load_seasonal_pfr(stats_type):
 def load_snap_counts(years,fantasy_positions):
     snap_count_data = nfl_data_py.import_snap_counts(years)
     #drop columns for defense and special team stats
-    snap_count_data = snap_count_data.drop(columns=["defense_snaps","defense_pct","st_snaps","st_pct"])
+    snap_count_data = snap_count_data.drop(columns=["defense_snaps","defense_pct","st_snaps","st_pct",".progress"])
     #filter data only for relevant fantasy positions
     snap_count_data = snap_count_data[snap_count_data["position"].isin(fantasy_positions)]
     #filter for just regular season games
     snap_count_data = snap_count_data[snap_count_data["game_type"]=="REG"]
     
-    snap_count_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\snap_count_data.csv")
-    return snap_count_data
+    season_agg = (
+    snap_count_data.groupby(["team","season", "player"], as_index=False)
+    .agg({
+        "offense_snaps": "sum",
+        })
+)
+
+    season_agg_temp= (snap_count_data.groupby(["week","season","team"], as_index = False).agg({"offense_snaps": "max"}))
+    season_agg_temp["team_snaps"] = season_agg_temp["offense_snaps"]
+    temp_season_agg = (season_agg_temp.groupby(["season","team"], as_index = False).agg({"team_snaps": "sum"}))
+    season_snap_counts = season_agg.merge(temp_season_agg, on=["season","team"])
+    season_snap_counts["offense_snap_percentage"] = season_snap_counts["offense_snaps"]/season_snap_counts["team_snaps"]
+    season_snap_counts.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_snap_count_data.csv")
+    return season_snap_counts
 
 def load_play_by_play_data(years):
     play_by_play_data = nfl_data_py.import_pbp_data(years)
@@ -168,20 +180,19 @@ def merge_season_stats_player_data(season_stats, player_data):
 
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
-# depth_chart = load_depth_chart_data(years, fantasy_positions)
+depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
-# combine_data = load_combine_data(years, fantasy_positions)
-# draft_pick_data = load_draft_picks(years, fantasy_positions)
-# ngs_data_passing = load_ngs_data("passing",years)
-# ngs_data_rushing = load_ngs_data("rushing",years)
-# ngs_data_receiving = load_ngs_data("receiving",years)
+combine_data = load_combine_data(years, fantasy_positions)
+draft_pick_data = load_draft_picks(years, fantasy_positions)
+ngs_data_passing = load_ngs_data("passing",years)
+ngs_data_rushing = load_ngs_data("rushing",years)
+ngs_data_receiving = load_ngs_data("receiving",years)
 player_data = load_player_data(years, fantasy_positions)
-# nfl_qbr_data = load_qbr_data(years, "nfl")
-# college_qbr_data = load_qbr_data(years,"college")
-# seasonal_pfr_pass_data = load_seasonal_pfr("pass")
-# seasonal_pfr_rush_data = load_seasonal_pfr("rush")
-# seasonal_pfr_rec_data = load_seasonal_pfr("rec")
-# snap_count_data = load_snap_counts(years, fantasy_positions)
-# play_by_play_data = load_play_by_play_data(years)
+nfl_qbr_data = load_qbr_data(years, "nfl")
+college_qbr_data = load_qbr_data(years,"college")
+seasonal_pfr_pass_data = load_seasonal_pfr("pass")
+seasonal_pfr_rush_data = load_seasonal_pfr("rush")
+seasonal_pfr_rec_data = load_seasonal_pfr("rec")
+snap_count_data = load_snap_counts(years, fantasy_positions)
+play_by_play_data = load_play_by_play_data(years)
 merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
-# nfl_data_py.import_pbp_data
