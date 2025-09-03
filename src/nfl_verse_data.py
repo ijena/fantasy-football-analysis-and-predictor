@@ -140,7 +140,7 @@ def load_play_by_play_data(years):
     "fumble_recovery_1_player_name","fumble_recovery_2_team","fumble_recovery_2_yards",	"fumble_recovery_2_player_id",
     "fumble_recovery_2_player_name","sack_player_id","sack_player_name","half_sack_1_player_id","half_sack_1_player_name",
     "half_sack_2_player_id","half_sack_2_player_name","return_team","return_yards","penalty_team","penalty_player_id",
-    "penalty_player_name","penalty_yards","replay_or_challenge","replay_or_challenge_result	penalty_type",
+    "penalty_player_name","penalty_yards","replay_or_challenge","replay_or_challenge_result","penalty_type",
     "defensive_two_point_attempt","defensive_two_point_conv","defensive_extra_point_attempt","defensive_extra_point_conv",
     "safety_player_name","safety_player_id","series","series_success","series_result","order_sequence",	"start_time",
     "time_of_day","stadium","weather","play_clock","play_deleted","play_type_nfl","special_teams_play",	"st_play_type",
@@ -155,26 +155,33 @@ def load_play_by_play_data(years):
 
     play_by_play_data = play_by_play_data[play_by_play_data["season_type"]=="REG"]
     #filter for relevant plays
-    play_by_play_data = play_by_play_data[play_by_play_data["play_type"].isin["run","pass"]]
+    play_by_play_data = play_by_play_data[play_by_play_data["play_type"].isin(["run","pass"])]
         
     play_by_play_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\play_by_play_data.csv")
     return play_by_play_data
 
+def merge_season_stats_player_data(season_stats, player_data):
+    merged_season_stats_player_data = season_stats.merge(player_data,left_on =["player_id"], right_on = ["gsis_id"],
+                                                         how="left")
+    merged_season_stats_player_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\merged_season_stats_player_data.csv")
+    return merged_season_stats_player_data
+
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
-depth_chart = load_depth_chart_data(years, fantasy_positions)
+# depth_chart = load_depth_chart_data(years, fantasy_positions)
 season_stats = load_seasonal_data(years)
-combine_data = load_combine_data(years, fantasy_positions)
-draft_pick_data = load_draft_picks(years, fantasy_positions)
-ngs_data_passing = load_ngs_data("passing",years)
-ngs_data_rushing = load_ngs_data("rushing",years)
-ngs_data_receiving = load_ngs_data("receiving",years)
+# combine_data = load_combine_data(years, fantasy_positions)
+# draft_pick_data = load_draft_picks(years, fantasy_positions)
+# ngs_data_passing = load_ngs_data("passing",years)
+# ngs_data_rushing = load_ngs_data("rushing",years)
+# ngs_data_receiving = load_ngs_data("receiving",years)
 player_data = load_player_data(years, fantasy_positions)
-nfl_qbr_data = load_qbr_data(years, "nfl")
-college_qbr_data = load_qbr_data(years,"college")
-seasonal_pfr_pass_data = load_seasonal_pfr("pass")
-seasonal_pfr_rush_data = load_seasonal_pfr("rush")
-seasonal_pfr_rec_data = load_seasonal_pfr("rec")
-snap_count_data = load_snap_counts(years, fantasy_positions)
-play_by_play_data = load_play_by_play_data(years)
+# nfl_qbr_data = load_qbr_data(years, "nfl")
+# college_qbr_data = load_qbr_data(years,"college")
+# seasonal_pfr_pass_data = load_seasonal_pfr("pass")
+# seasonal_pfr_rush_data = load_seasonal_pfr("rush")
+# seasonal_pfr_rec_data = load_seasonal_pfr("rec")
+# snap_count_data = load_snap_counts(years, fantasy_positions)
+# play_by_play_data = load_play_by_play_data(years)
+merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
 # nfl_data_py.import_pbp_data
