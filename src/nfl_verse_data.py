@@ -205,7 +205,7 @@ def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr
 
     #merging next gen stats for qbs with the above dataset
     merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data = merged_nfl_qbr_data_pass_seasonal_pfr_data.merge(ngs_data_passing,left_on=["name_display","season"],right_on=["player_display_name","season"],how="left")
-    merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test2.csv")
+    # merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test2.csv")
 
     #filtering out just the qb stats from the merged season stats and player data
     merged_qb_season_stats_player_data= merged_season_stats_player_data[merged_season_stats_player_data["position"]=="QB"]
