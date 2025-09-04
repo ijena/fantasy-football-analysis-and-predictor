@@ -47,6 +47,7 @@ def load_ngs_data (stat_type, years):
     ngs_data = nfl_data_py.import_ngs_data(stat_type=stat_type, years=years)
     #filter for just regular season games
     ngs_data = ngs_data[ngs_data["season_type"]=="REG"]
+    ngs_data = ngs_data[ngs_data["week"]==0]
     #remove irrelevant columns like jersey number
     ngs_data = ngs_data.drop(columns="player_jersey_number")
     ngs_data.to_csv(fr"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\ngs_{stat_type}_data.csv")
@@ -179,11 +180,41 @@ def load_play_by_play_data(years):
 
 def merge_season_stats_player_data(season_stats, player_data):
     merged_season_stats_player_data = season_stats.merge(player_data,left_on =["player_id"], right_on = ["gsis_id"],
-                                                         how="left")
+                                                         how="inner")
     merged_season_stats_player_data["rookie"] = (merged_season_stats_player_data["rookie_season"]==merged_season_stats_player_data["season"]).astype(int)
     merged_season_stats_player_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\merged_season_stats_player_data.csv")
     return merged_season_stats_player_data
 
+def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr_pass_data,ngs_data_passing):
+    #merging advanced qbr stats with their counting stats for each qb and season
+    merged_nfl_qbr_data_pass_seasonal_pfr_data = nfl_qbr_data.merge(seasonal_pfr_pass_data,left_on=["name_display","season"],
+                                                                  right_on=["player","season"],how="left")
+
+    # # 1) Check key uniqueness on the left (before merging NGS)
+    # left_keys = ["name_display", "season"]
+    # dups_left = merged_nfl_qbr_data_pass_seasonal_pfr_data.duplicated(left_keys, keep=False)
+    # print("Left dup rows:", dups_left.sum())
+    # print(merged_nfl_qbr_data_pass_seasonal_pfr_data.loc[dups_left, left_keys].value_counts().head())
+
+    
+    # # 2) Check key uniqueness on NGS
+    # right_keys = ["player_display_name", "season"]
+    # dups_right = ngs_data_passing.duplicated(right_keys, keep=False)
+    # print("Right dup rows:", dups_right.sum())
+    # print(ngs_data_passing.loc[dups_right, right_keys].value_counts().head())
+
+    #merging next gen stats for qbs with the above dataset
+    merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data = merged_nfl_qbr_data_pass_seasonal_pfr_data.merge(ngs_data_passing,left_on=["name_display","season"],right_on=["player_display_name","season"],how="left")
+    merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test2.csv")
+
+    #filtering out just the qb stats from the merged season stats and player data
+    merged_qb_season_stats_player_data= merged_season_stats_player_data[merged_season_stats_player_data["position"]=="QB"]
+    
+    
+    #create a master passing dataset with all the passing data except college qb data
+    master_passing_data = merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.merge(merged_qb_season_stats_player_data, left_on=["player_display_name","season"],right_on=["display_name","season"], how ="inner")
+    master_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_passing_data.csv")
+    return master_passing_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 depth_chart = load_depth_chart_data(years, fantasy_positions)
@@ -202,3 +233,4 @@ seasonal_pfr_rec_data = load_seasonal_pfr("rec")
 snap_count_data = load_snap_counts(years, fantasy_positions)
 # play_by_play_data = load_play_by_play_data(years)
 merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
+master_passing_data = merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr_pass_data,ngs_data_passing)
