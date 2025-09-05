@@ -190,22 +190,9 @@ def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr
     merged_nfl_qbr_data_pass_seasonal_pfr_data = nfl_qbr_data.merge(seasonal_pfr_pass_data,left_on=["name_display","season"],
                                                                   right_on=["player","season"],how="left")
 
-    # # 1) Check key uniqueness on the left (before merging NGS)
-    # left_keys = ["name_display", "season"]
-    # dups_left = merged_nfl_qbr_data_pass_seasonal_pfr_data.duplicated(left_keys, keep=False)
-    # print("Left dup rows:", dups_left.sum())
-    # print(merged_nfl_qbr_data_pass_seasonal_pfr_data.loc[dups_left, left_keys].value_counts().head())
-
     
-    # # 2) Check key uniqueness on NGS
-    # right_keys = ["player_display_name", "season"]
-    # dups_right = ngs_data_passing.duplicated(right_keys, keep=False)
-    # print("Right dup rows:", dups_right.sum())
-    # print(ngs_data_passing.loc[dups_right, right_keys].value_counts().head())
-
     #merging next gen stats for qbs with the above dataset
     merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data = merged_nfl_qbr_data_pass_seasonal_pfr_data.merge(ngs_data_passing,left_on=["name_display","season"],right_on=["player_display_name","season"],how="left")
-    # merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test2.csv")
 
     #filtering out just the qb stats from the merged season stats and player data
     merged_qb_season_stats_player_data= merged_season_stats_player_data[merged_season_stats_player_data["position"]=="QB"]
@@ -213,8 +200,21 @@ def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr
     
     #create a master passing dataset with all the passing data except college qb data
     master_passing_data = merged_nfl_qbr_data_pass_seasonal_pfr_ngs_passing_data.merge(merged_qb_season_stats_player_data, left_on=["player_display_name","season"],right_on=["display_name","season"], how ="inner")
+    master_passing_data= master_passing_data.drop(columns=["season_type_x","game_week","player","team_y","intended_air_yards","intended_air_yards_per_pass_attempt","completed_air_yards","completed_air_yards_per_completion"
+                                      ,"completed_air_yards_per_pass_attempt","pass_yards_after_catch",	"pass_yards_after_catch_per_completion","scrambles","scramble_yards_per_attempt","season_type_y",
+                                      "week","player_display_name",	"player_position","team_abbr","player_first_name","player_last_name","player_short_name","season_type","receptions",
+                                      "targets","receiving_yards","receiving_tds","receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_yards_after_catch",	"receiving_first_downs",	
+                                      "receiving_epa","receiving_2pt_conversions","racr","target_share","air_yards_share","wopr_x","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","rtdfd_sh",
+                                      "dom","w8dom","yptmpa","display_name","first_name","last_name","position_group","position","ngs_position_group","ngs_position"])
     master_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_passing_data.csv")
     return master_passing_data
+
+def merge_rushing_data(seasonal_pfr_rush_data,ngs_rushing_data,merged_season_stats_player_data):
+    merged_seasonal_pfr_ngs_rush_data = seasonal_pfr_rush_data.merge(ngs_rushing_data, left_on=["player","season"],right_on= ["player_display_name","season"],how="left")
+    merged_seasonal_pfr_ngs_rush_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
+    master_rushing_data = merged_seasonal_pfr_ngs_rush_data.merge(merged_season_stats_player_data, how="right",left_on =["player","season"],right_on=["display_name","season"])
+    master_rushing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_rushing_data.csv")
+    return master_rushing_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 depth_chart = load_depth_chart_data(years, fantasy_positions)
@@ -234,3 +234,4 @@ snap_count_data = load_snap_counts(years, fantasy_positions)
 # play_by_play_data = load_play_by_play_data(years)
 merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
 master_passing_data = merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr_pass_data,ngs_data_passing)
+master_rushing_data = merge_rushing_data(seasonal_pfr_rush_data,ngs_data_rushing,merged_season_stats_player_data)
