@@ -226,6 +226,11 @@ def merge_receiving_data(seasonal_pfr_rec_data,ngs_receiving_data,merged_season_
     merged_seasonal_pfr_ngs_rec_data = seasonal_pfr_rec_data.merge(ngs_receiving_data, left_on=["player","season"],right_on= ["player_display_name","season"],how="left")
     # merged_seasonal_pfr_ngs_rec_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
     master_receiving_data = merged_seasonal_pfr_ngs_rec_data.merge(merged_season_stats_player_data, how="right",left_on =["player","season"],right_on=["display_name","season"])
+    master_receiving_data = master_receiving_data.drop(columns=["loaded","season_type_x","week","player_display_name","season_type_y","completions",
+                                                              "attempts","passing_yards","passing_tds","interceptions","sacks",	"sack_yards","sack_fumbles","sack_fumbles_lost"
+                                                              ,"passing_air_yards",	"passing_yards_after_catch","passing_first_downs","passing_epa","passing_2pt_conversions","pacr",
+                                                              "dakota","carries","rushing_yards","rushing_tds",	"rushing_fumbles","rushing_fumbles_lost","rushing_first_downs",
+                                                              "rushing_epa","rushing_2pt_conversions","display_name","first_name","last_name"])
     master_receiving_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_receiving_data.csv")
     return master_receiving_data
 years = range(2014,2025)
