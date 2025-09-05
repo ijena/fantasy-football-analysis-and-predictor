@@ -211,10 +211,16 @@ def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr
 
 def merge_rushing_data(seasonal_pfr_rush_data,ngs_rushing_data,merged_season_stats_player_data):
     merged_seasonal_pfr_ngs_rush_data = seasonal_pfr_rush_data.merge(ngs_rushing_data, left_on=["player","season"],right_on= ["player_display_name","season"],how="left")
-    merged_seasonal_pfr_ngs_rush_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
+    # merged_seasonal_pfr_ngs_rush_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
     master_rushing_data = merged_seasonal_pfr_ngs_rush_data.merge(merged_season_stats_player_data, how="right",left_on =["player","season"],right_on=["display_name","season"])
     master_rushing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_rushing_data.csv")
     return master_rushing_data
+def merge_receiving_data(seasonal_pfr_rec_data,ngs_receiving_data,merged_season_stats_player_data):
+    merged_seasonal_pfr_ngs_rec_data = seasonal_pfr_rec_data.merge(ngs_receiving_data, left_on=["player","season"],right_on= ["player_display_name","season"],how="left")
+    # merged_seasonal_pfr_ngs_rec_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
+    master_receiving_data = merged_seasonal_pfr_ngs_rec_data.merge(merged_season_stats_player_data, how="right",left_on =["player","season"],right_on=["display_name","season"])
+    master_receiving_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_receiving_data.csv")
+    return master_receiving_data
 years = range(2014,2025)
 fantasy_positions = ["QB", "RB", "TE", "WR"]
 depth_chart = load_depth_chart_data(years, fantasy_positions)
@@ -235,3 +241,4 @@ snap_count_data = load_snap_counts(years, fantasy_positions)
 merged_season_stats_player_data = merge_season_stats_player_data(season_stats,player_data)
 master_passing_data = merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr_pass_data,ngs_data_passing)
 master_rushing_data = merge_rushing_data(seasonal_pfr_rush_data,ngs_data_rushing,merged_season_stats_player_data)
+master_receiving_data = merge_receiving_data(seasonal_pfr_rec_data,ngs_data_receiving,merged_season_stats_player_data)
