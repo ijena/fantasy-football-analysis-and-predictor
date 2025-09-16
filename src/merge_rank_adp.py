@@ -95,10 +95,11 @@ else:
 
 # ====== Merge ======
 merged = adp_agg.merge(
-    ranks_dedup,
+    ranks_dedup[["year","player_clean","Fantasy_FantPt","Fantasy_PPR","Fantasy_DKPt","Fantasy_FDPt","Fantasy_VBD",
+                 "Fantasy_PosRank","Fantasy_OvRank","PPR_rank_year","ppr_percentile_overall",
+                 "ppr_percentile_pos"]],
     on=["year","player_clean"],
     how="inner",
-    suffixes=("_adp", "_rank")
 )
 
 # Determine POS column to use for position-based metrics
