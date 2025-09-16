@@ -43,3 +43,15 @@ master_receiving_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\
 cleaned_master_receiving_df = clean_features(master_receiving_df)
 master_rushing_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_rushing_data.csv")
 cleaned_master_rushing_df = clean_features(master_rushing_df)
+#merging college qbr and counting stats
+college_qbr_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\college_qbr_data.csv")
+college_stats_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\college_football_data 2014-2024\cleaned_wide_cfbd_player_season_stats_2014_2024_master.csv")
+
+# Merge on season + player vs name_short
+master_college_stats_ = pd.merge(
+    college_stats_df,
+    college_qbr_df,
+    left_on=["season", "player"],
+    right_on=["season", "name_short"],
+    how="left")
+master_college_stats_.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\master_college_stats.csv")
