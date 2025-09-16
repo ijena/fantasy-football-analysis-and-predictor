@@ -95,7 +95,7 @@ else:
 
 # ====== Merge ======
 merged = adp_agg.merge(
-    ranks_dedup[["Games_G","year","player_clean","Fantasy_FantPt","Fantasy_PPR","Fantasy_DKPt","Fantasy_FDPt","Fantasy_VBD",
+    ranks_dedup[["FantPos","Games_G","year","player_clean","Fantasy_FantPt","Fantasy_PPR","Fantasy_DKPt","Fantasy_FDPt","Fantasy_VBD",
                  "Fantasy_PosRank","Fantasy_OvRank","PPR_rank_year","ppr_percentile_overall",
                  "ppr_percentile_pos"]],
     on=["year","player_clean"],
