@@ -205,7 +205,7 @@ def merge_passing_data(merged_season_stats_player_data,nfl_qbr_data,seasonal_pfr
                                       "week","player_display_name",	"player_position","team_abbr","player_first_name","player_last_name","player_short_name","season_type","receptions",
                                       "targets","receiving_yards","receiving_tds","receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_yards_after_catch",	"receiving_first_downs",	
                                       "receiving_epa","receiving_2pt_conversions","racr","target_share","air_yards_share","wopr_x","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","rtdfd_sh",
-                                      "dom","w8dom","yptmpa","display_name","first_name","last_name","position_group","position","ngs_position_group","ngs_position"])
+                                      "dom","w8dom","yptmpa","first_name","last_name","position_group","position","ngs_position_group","ngs_position"])
     master_passing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_passing_data.csv")
     return master_passing_data
 
@@ -213,12 +213,12 @@ def merge_rushing_data(seasonal_pfr_rush_data,ngs_rushing_data,merged_season_sta
     merged_seasonal_pfr_ngs_rush_data = seasonal_pfr_rush_data.merge(ngs_rushing_data, left_on=["player","season"],right_on= ["player_display_name","season"],how="left")
     # merged_seasonal_pfr_ngs_rush_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\test1.csv")
     master_rushing_data = merged_seasonal_pfr_ngs_rush_data.merge(merged_season_stats_player_data, how="right",left_on =["player","season"],right_on=["display_name","season"])
-    master_rushing_data = master_rushing_data.drop(columns = ["season_type_x","week","player_display_name","player_position","team_abbr", "season_type_y","completions",
+    master_rushing_data = master_rushing_data.drop(columns = ["season_type_x","week","player_position","team_abbr", "season_type_y","completions",
                                                               "attempts","passing_yards","passing_tds","interceptions","sacks",	"sack_yards","sack_fumbles","sack_fumbles_lost"
                                                               ,"passing_air_yards",	"passing_yards_after_catch","passing_first_downs","passing_epa","passing_2pt_conversions","pacr",
                                                               "dakota","receptions","targets","receiving_yards","receiving_tds","receiving_fumbles","receiving_fumbles_lost","receiving_air_yards",
                                                               "receiving_yards_after_catch","receiving_first_downs","receiving_epa","receiving_2pt_conversions","racr",	"target_share","air_yards_share",
-                                                              "wopr_x","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh",	"rfd_sh","rtdfd_sh","dom","w8dom","yptmpa","ppr_sh","display_name",	
+                                                              "wopr_x","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh",	"rfd_sh","rtdfd_sh","dom","w8dom","yptmpa","ppr_sh",	
                                                               "common_first_name","first_name","last_name",	"short_name"])
     master_rushing_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_rushing_data.csv")
     return master_rushing_data
@@ -230,7 +230,7 @@ def merge_receiving_data(seasonal_pfr_rec_data,ngs_receiving_data,merged_season_
                                                               "attempts","passing_yards","passing_tds","interceptions","sacks",	"sack_yards","sack_fumbles","sack_fumbles_lost"
                                                               ,"passing_air_yards",	"passing_yards_after_catch","passing_first_downs","passing_epa","passing_2pt_conversions","pacr",
                                                               "dakota","carries","rushing_yards","rushing_tds",	"rushing_fumbles","rushing_fumbles_lost","rushing_first_downs",
-                                                              "rushing_epa","rushing_2pt_conversions","display_name","first_name","last_name"])
+                                                              "rushing_epa","rushing_2pt_conversions","first_name","last_name"])
     master_receiving_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_receiving_data.csv")
     return master_receiving_data
 years = range(2014,2025)

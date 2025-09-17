@@ -58,3 +58,17 @@ cleaned_master_college_stats = clean_features(master_college_stats)
 snap_counts_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_snap_count_data.csv")
 combine_data_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")
 merged_fantasy_rank_adp_with_expected_points_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\merged_dataset\merged_with_expected_ppg.csv")
+
+#merge all datasets and then split based on position and whether rookie
+merged_combine_data_fantasy_rank_adp_with_expected_points_df = merged_fantasy_rank_adp_with_expected_points_df.merge(combine_data_df,how='left',left_on=["Player_fixed","year"],
+                                                                                                                     right_on=["player_name","season"])
+merged_combine_data_fantasy_rank_adp_with_expected_points_df= merged_combine_data_fantasy_rank_adp_with_expected_points_df.drop(columns=["player_name","season"])
+merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_combine_data_fantasy_rank_adp_with_expected_points_df.merge(snap_counts_df,how="left",left_on=["Player_fixed","year"],
+                                                                                                                                 right_on=["player","season"])
+merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.drop(columns=["player","season"])
+merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_combine_data_fantasy_rank_adp_with_expected_points_df.merge(cleaned_master_college_stats,how="left",left_on=["Player_fixed","year"],
+                                                                                                                                                            right_on=["player","season"])
+merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.drop(columns=["player","season"])
+merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
