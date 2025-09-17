@@ -34,10 +34,10 @@ def clean_features(df, corr_threshold=0.99):
     upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
     corr_cols = [col for col in upper.columns if any(upper[col] > corr_threshold)]
     df_cleaned = df_cleaned.drop(columns=corr_cols)
-
+    
     return df_cleaned
 
-master_passing_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_passing_data.csv")
+master_passing_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_passing_data.csv").drop(columns=["Unnamed: 0"])
 cleaned_master_passing_df = clean_features(master_passing_df)
 master_receiving_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\master_receiving_data.csv")
 cleaned_master_receiving_df = clean_features(master_receiving_df)
@@ -47,6 +47,7 @@ cleaned_master_rushing_df = clean_features(master_rushing_df)
 college_qbr_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\college_qbr_data.csv")
 college_stats_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\college_football_data 2014-2024\cleaned_wide_cfbd_player_season_stats_2014_2024_master.csv")
 
+adp_master_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\cleaned_adp\FantasyPros_ADP_cleaned_2015_2024_master.csv")
 # Merge on season + player vs name_short
 master_college_stats = pd.merge(
     college_stats_df,
@@ -57,7 +58,17 @@ master_college_stats = pd.merge(
 cleaned_master_college_stats = clean_features(master_college_stats)
 snap_counts_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_snap_count_data.csv")
 combine_data_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")
+
+qb_passing_rushing_df = cleaned_master_passing_df.merge(cleaned_master_rushing_df[cleaned_master_rushing_df["pos"]=="QB"],how="left",left_on = ["name_display","season"],right_on=["display_name","season"])
+#qb_passing_rushing_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+qb_snap_count_passing_rushing_df = qb_passing_rushing_df.merge(snap_counts_df[snap_counts_df["position"]=="QB"],how="left",left_on =["name_display","season"],right_on=["player","season"])
+# qb_snap_count_passing_rushing_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+qb_adp_snap_count_passing_rushing_df = qb_snap_count_passing_rushing_df.merge(adp_master_df[adp_master_df["POS_group"]=="QB"],how="inner",left_on=["name_display","season"], right_on=["Player","year"])
+qb_adp_snap_count_passing_rushing_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
 merged_fantasy_rank_adp_with_expected_points_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\merged_dataset\merged_with_expected_ppg.csv")
+
 
 #merge all datasets and then split based on position and whether rookie
 merged_combine_data_fantasy_rank_adp_with_expected_points_df = merged_fantasy_rank_adp_with_expected_points_df.merge(combine_data_df,how='left',left_on=["Player_fixed","year"],
@@ -66,9 +77,9 @@ merged_combine_data_fantasy_rank_adp_with_expected_points_df= merged_combine_dat
 merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_combine_data_fantasy_rank_adp_with_expected_points_df.merge(snap_counts_df,how="left",left_on=["Player_fixed","year"],
                                                                                                                                  right_on=["player","season"])
 merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.drop(columns=["player","season"])
-merged_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
 
 merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_combine_data_fantasy_rank_adp_with_expected_points_df.merge(cleaned_master_college_stats,how="left",left_on=["Player_fixed","year"],
                                                                                                                                                             right_on=["player","season"])
 merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df = merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.drop(columns=["player","season"])
-merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+# merged_college_stats_snap_counts_combine_data_fantasy_rank_adp_with_expected_points_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
