@@ -57,3 +57,4 @@ master_college_stats = pd.merge(
 cleaned_master_college_stats = clean_features(master_college_stats)
 snap_counts_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\season_snap_count_data.csv")
 combine_data_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\nflverse_data\combine_data.csv")
+merged_fantasy_rank_adp_with_expected_points_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\merged_dataset\merged_with_expected_ppg.csv")

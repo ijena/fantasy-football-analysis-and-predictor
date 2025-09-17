@@ -85,7 +85,7 @@ def load_snap_counts(years,fantasy_positions):
     
     #calculate season snaps played for each player
     season_agg = (
-    snap_count_data.groupby(["team","season", "player"], as_index=False)
+    snap_count_data.groupby(["team","season", "player","position"], as_index=False)
     .agg({
         "offense_snaps": "sum",
         })
