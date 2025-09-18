@@ -186,7 +186,7 @@ def main():
     for f in files:
         year = extract_year_from_name(f.name)
         # Keep only 2015–2024
-        if year is None or not (2015 <= year <= 2024):
+        if year is None or not (2014 <= year <= 2024):
             print(f"Skipping {f.name} (year={year})")
             continue
 
@@ -222,8 +222,8 @@ def main():
     master = pd.concat(per_year_frames, axis=0, ignore_index=True, sort=False)
 
     # Save master
-    master_csv = OUTPUT_DIR / "fantasy_ranks_master_2015_2024.csv"
-    master_parquet = OUTPUT_DIR / "fantasy_ranks_master_2015_2024.parquet"
+    master_csv = OUTPUT_DIR / "fantasy_ranks_master_2014_2024.csv"
+    master_parquet = OUTPUT_DIR / "fantasy_ranks_master_2014_2024.parquet"
     master.to_csv(master_csv, index=False)
     try:
         master.to_parquet(master_parquet, index=False)

@@ -89,16 +89,18 @@ qb_snap_count_passing_rushing_df = qb_passing_rushing_df.merge(
     left_on=["name_display","season"],
     right_on=["player","season"]
 )
-qb_snap_count_passing_rushing_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+# qb_snap_count_passing_rushing_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
 
-
+#ensuring that adp from season N gets merged with stats from season N-1 to avoid leakage
+qb_snap_count_passing_rushing_df["merge_year"] = qb_snap_count_passing_rushing_df["season"] + 1
 qb_expected_points_adp_snap_count_passing_rushing_df = qb_snap_count_passing_rushing_df.merge(
     merged_expected_points_adp_df[merged_expected_points_adp_df["POS_group"]=="QB"],
     how="right",
-    left_on=["name_display","season"],
+    left_on=["name_display","merge_year"],
     right_on=["Player_fixed","year"]
 )
 # Veteran dataset
+qb_expected_points_adp_snap_count_passing_rushing_df["rookie_x"] = qb_expected_points_adp_snap_count_passing_rushing_df["rookie_x"].fillna(0)
 master_qb_vet_model_df = qb_expected_points_adp_snap_count_passing_rushing_df[
     qb_expected_points_adp_snap_count_passing_rushing_df["rookie_x"] == 0
 ]
