@@ -177,6 +177,40 @@ te_expected_points_adp_snap_count_receiving_df["rookie"] == 0
 master_te_vet_model_df = clean_features(master_te_vet_model_df)
 master_te_vet_model_df.to_csv(BASE / "model_data" / "master_te_vet_data.csv", index=False)
 
+
+#creating WR veteran dataset
+wr_receiving_df = cleaned_master_receiving_df[cleaned_master_receiving_df["position"]=="WR"]
+
+# rb_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+wr_snap_count_receiving_df = wr_receiving_df.merge(
+    snap_counts_df[snap_counts_df["position"]=="WR"],
+    how="left",
+    left_on=["display_name","season"],
+    right_on=["player","season"]
+)
+# rb_snap_count_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+#ensuring that ADP from season N gets merged with stats from season N-1
+wr_snap_count_receiving_df["merge_year"] = te_snap_count_receiving_df["season"] + 1
+
+
+wr_expected_points_adp_snap_count_receiving_df = wr_snap_count_receiving_df.merge(
+    merged_expected_points_adp_df[merged_expected_points_adp_df["POS_group"]=="WR"],
+    how="right",
+    left_on=["display_name","merge_year"],
+    right_on=["Player_fixed","year"]
+)
+
+# Veteran dataset
+
+wr_expected_points_adp_snap_count_receiving_df["rookie"] =wr_expected_points_adp_snap_count_receiving_df["rookie"].fillna(0)
+master_wr_vet_model_df = wr_expected_points_adp_snap_count_receiving_df[
+wr_expected_points_adp_snap_count_receiving_df["rookie"] == 0
+]
+master_wr_vet_model_df = clean_features(master_wr_vet_model_df)
+master_wr_vet_model_df.to_csv(BASE / "model_data" / "master_wr_vet_data.csv", index=False)
+
 # =====================
 # Rookie QB: Merge Combine + 4yrs College
 # =====================
