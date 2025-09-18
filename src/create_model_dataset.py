@@ -21,7 +21,7 @@ def clean_features(df, corr_threshold=0.99):
     # Drop highly correlated
     corr_matrix = df_cleaned.corr().abs()
     upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(bool))
-    corr_cols = [col for col in upper.columns if any(upper[col] > corr_threshold)]
+    corr_cols = [col for col in upper.columns if any(upper[col] > corr_threshold) and col not in ["merge_year"]]
     df_cleaned = df_cleaned.drop(columns=corr_cols, errors="ignore")
     
     return df_cleaned
@@ -114,7 +114,7 @@ master_qb_vet_model_df.to_csv(BASE / "model_data" / "master_qb_vet_data.csv", in
 rb_rushing_receiving_df = cleaned_master_rushing_df[cleaned_master_rushing_df["position"]=="RB"].merge(
     cleaned_master_receiving_df[cleaned_master_receiving_df["position"]=="RB"],how="left",on=["display_name","season"])
 
-rb_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+# rb_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
 
 rb_snap_count_rushing_receiving_df = rb_rushing_receiving_df.merge(
     snap_counts_df[snap_counts_df["position"]=="RB"],
@@ -143,6 +143,40 @@ master_rb_vet_model_df = rb_expected_points_adp_snap_count_rushing_receiving_df[
 ]
 master_rb_vet_model_df = clean_features(master_rb_vet_model_df)
 master_rb_vet_model_df.to_csv(BASE / "model_data" / "master_rb_vet_data.csv", index=False)
+
+#creating TE veteran dataset
+te_receiving_df = cleaned_master_receiving_df[cleaned_master_receiving_df["position"]=="TE"]
+
+# rb_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+te_snap_count_receiving_df = te_receiving_df.merge(
+    snap_counts_df[snap_counts_df["position"]=="TE"],
+    how="left",
+    left_on=["display_name","season"],
+    right_on=["player","season"]
+)
+# rb_snap_count_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
+
+#ensuring that ADP from season N gets merged with stats from season N-1
+te_snap_count_receiving_df["merge_year"] = te_snap_count_receiving_df["season"] + 1
+
+
+te_expected_points_adp_snap_count_receiving_df = te_snap_count_receiving_df.merge(
+    merged_expected_points_adp_df[merged_expected_points_adp_df["POS_group"]=="TE"],
+    how="right",
+    left_on=["display_name","merge_year"],
+    right_on=["Player_fixed","year"]
+)
+
+# Veteran dataset
+
+te_expected_points_adp_snap_count_receiving_df["rookie"] = te_expected_points_adp_snap_count_receiving_df["rookie"].fillna(0)
+master_te_vet_model_df = te_expected_points_adp_snap_count_receiving_df[
+te_expected_points_adp_snap_count_receiving_df["rookie"] == 0
+]
+master_te_vet_model_df = clean_features(master_te_vet_model_df)
+master_te_vet_model_df.to_csv(BASE / "model_data" / "master_te_vet_data.csv", index=False)
+
 # =====================
 # Rookie QB: Merge Combine + 4yrs College
 # =====================
