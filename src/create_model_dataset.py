@@ -70,7 +70,7 @@ feature_cols = [
     "POS_group", "FantPos", "year","Player_fixed",
     "expected_ppr_pg_prev", "expected_ppr_season_prev",
     "expected_ppr_pg_curr_hist", "expected_ppr_season_curr_hist",
-    "Games_G"
+    "Games_G","Fantasy_PPR"
 ]
 merged_expected_points_adp_df = merged_fantasy_rank_adp_with_expected_points_df[feature_cols]
 
