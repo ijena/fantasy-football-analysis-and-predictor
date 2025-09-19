@@ -192,7 +192,7 @@ wr_snap_count_receiving_df = wr_receiving_df.merge(
 # rb_snap_count_rushing_receiving_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\test.csv")
 
 #ensuring that ADP from season N gets merged with stats from season N-1
-wr_snap_count_receiving_df["merge_year"] = te_snap_count_receiving_df["season"] + 1
+wr_snap_count_receiving_df["merge_year"] = wr_snap_count_receiving_df["season"] + 1
 
 
 wr_expected_points_adp_snap_count_receiving_df = wr_snap_count_receiving_df.merge(
