@@ -9,7 +9,7 @@ base_dir = Path(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-a
 out_dir = Path(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\cleaned_adp")
 out_dir.mkdir(exist_ok=True, parents=True)
 
-YEARS = range(2015, 2025)
+YEARS = range(2015, 2026)
 file_pattern = "FantasyPros_{year}_Overall_ADP_Rankings.csv"
 
 # Columns we don't need for modeling/merging

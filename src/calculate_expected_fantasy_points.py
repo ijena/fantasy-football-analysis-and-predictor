@@ -184,7 +184,7 @@ df = add_expected_from_adp_history(
     adp_col="AVG",
     ppr_col="Fantasy_PPR",
     games_col="Games_G",
-    pos_col="FantPos",
+    pos_col="POS_group",
     loess_frac=0.3,
     min_group=25,
 )

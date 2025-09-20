@@ -99,7 +99,7 @@ merged = adp_agg.merge(
                  "Fantasy_PosRank","Fantasy_OvRank","PPR_rank_year","ppr_percentile_overall",
                  "ppr_percentile_pos"]],
     on=["year","player_clean"],
-    how="inner",
+    how="left",
 )
 
 # Determine POS column to use for position-based metrics
