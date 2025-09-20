@@ -3,6 +3,7 @@ import numpy as np
 from xgboost import XGBClassifier
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # ---------- Load ----------
 wr = pd.read_csv(
@@ -142,3 +143,5 @@ print("\nClass counts (val):")
 print(pd.Series(y_val_i).map(inv_label).value_counts())
 print("\nClass counts (test):")
 print(pd.Series(y_test_i).map(inv_label).value_counts())
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\wr_model_xg_boost_classification_percentile.pkl")

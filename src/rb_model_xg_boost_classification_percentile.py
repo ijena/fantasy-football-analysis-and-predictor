@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report, confusion_matrix
 from xgboost import XGBClassifier
+import joblib
 
 # ===== Load RB Data =====
 rb = pd.read_csv(
@@ -117,3 +118,5 @@ print(out.sort_values("prob_over", ascending=False).head(15))
 
 print("\nTop 15 RBs by probability of UNDER-performing (Test 2024):")
 print(out.sort_values("prob_under", ascending=False).head(15))
+
+joblib.dump(xgb,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\rb_model_xg_boost_classification_percentile.pkl")

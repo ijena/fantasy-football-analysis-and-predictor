@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics import classification_report, confusion_matrix
 from xgboost import XGBClassifier
+import joblib
 
 # ------------------ Load Data ------------------
 wr = pd.read_csv(
@@ -155,3 +156,5 @@ print(
            .head(15)[["Player_fixed","display_name","FantPos","merge_year",
                       "prob_neutral","prob_over","prob_under"]]
 )
+
+joblib.dump(xgb,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\wr_model_xg_boost_classification.pkl")

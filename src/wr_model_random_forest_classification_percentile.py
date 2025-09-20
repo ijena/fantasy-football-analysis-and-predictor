@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # =========================
 # Load WR data
@@ -161,3 +162,5 @@ if len(X_test) > 0:
     print(prob_df_under[cols_to_show])
 else:
     print("\n(No 2024 test rows found after filtering.)")
+
+joblib.dump(rf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\wr_model_random_forest_classification_percentile.pkl")

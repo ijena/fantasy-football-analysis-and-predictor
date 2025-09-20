@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-
+import joblib
 # ===== Load RB dataset =====
 rb_model_data = pd.read_csv(
     r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\master_rb_vet_data.csv"
@@ -97,3 +97,5 @@ prob_df["display_name"] = rb_model_data.loc[test, "display_name"].values
 
 print("\nTop 15 RBs by probability of OVER-performing:")
 print(prob_df.sort_values("over", ascending=False).head(15))
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\rb_model_random_forest_classification_percentile.pkl")

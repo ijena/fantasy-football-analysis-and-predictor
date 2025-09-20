@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # ---------------- Load WR Data ----------------
 wr = pd.read_csv(
@@ -149,3 +150,5 @@ print("\nClass counts (val):")
 print(y_val.value_counts())
 print("\nClass counts (test):")
 print(y_test.value_counts())
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\wr_model_random_forest_classification.pkl")

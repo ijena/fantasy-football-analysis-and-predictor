@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report, confusion_matrix
 from xgboost import XGBClassifier
+import joblib
 
 # --- load ---
 qb = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\master_qb_vet_data.csv")
@@ -100,3 +101,5 @@ def report(split_name, X_i, y_true):
 
 report("Validation", X_val_i, y_val.values)
 report("Test",       X_test_i, y_test.values)
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\qb_model_xg_boost_classification_percentile.pkl")

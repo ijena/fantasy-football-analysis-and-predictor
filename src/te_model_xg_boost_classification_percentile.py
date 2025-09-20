@@ -8,6 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.utils.class_weight import compute_sample_weight
 
 from xgboost import XGBClassifier
+import joblib
 
 # ==== Load ====
 te = pd.read_csv(
@@ -145,3 +146,5 @@ print(top_over)
 top_under = out_test.sort_values("prob_under", ascending=False).head(15)
 print("\nTop 15 TEs by probability of UNDER-performing (Test 2024):")
 print(top_under)
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\te_model_xg_boost_classification_percentile.pkl")

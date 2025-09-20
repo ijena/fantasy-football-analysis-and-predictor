@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # ===== Config =====
 POINT_THR = 2.0  # +/- PPR per game to define over/under
@@ -140,3 +141,5 @@ if hasattr(rf, "predict_proba"):
         print("\n[Note] 'under' class missing in training split; no under-probabilities to show.")
 else:
     print("\nModel does not support predict_proba; probabilities unavailable.")
+
+joblib.dump(rf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\te_model_random_forest_classification.pkl")

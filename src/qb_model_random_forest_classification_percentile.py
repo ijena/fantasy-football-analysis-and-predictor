@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # ===== Load =====
 qb = pd.read_csv(
@@ -105,3 +106,6 @@ print(classification_report(y_test, clf.predict(X_test_i), digits=3))
 
 print("\nConfusion Matrix (Test):")
 print(confusion_matrix(y_test, clf.predict(X_test_i), labels=["under","neutral","over"]))
+
+#Save model
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\qb_model_random_forest_classification_percentile.pkl")

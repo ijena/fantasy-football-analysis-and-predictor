@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import classification_report, confusion_matrix
 from xgboost import XGBClassifier
-
+import joblib
 # ===== Load TE data =====
 te = pd.read_csv(
     r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data\master_te_vet_data.csv"
@@ -99,3 +99,5 @@ print(probs_df.sort_values("prob_over", ascending=False).head(10))
 
 print("\nTop 10 TEs by probability of UNDER-performing (Test 2024):")
 print(probs_df.sort_values("prob_under", ascending=False).head(10))
+
+joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\te_model_xg_boost_classification.pkl")

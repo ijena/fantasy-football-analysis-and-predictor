@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
 
 # ===== Load RB dataset =====
 rb = pd.read_csv(
@@ -119,3 +120,5 @@ print(out_ranked.head(15))
 # ===== Also show likely busts (prob_under) =====
 print("\nTop 15 RBs by probability of UNDER-performing (Test 2024):")
 print(out.sort_values("prob_under", ascending=False).head(15))
+
+joblib.dump(rf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\rb_model_random_forest_classification.pkl")
