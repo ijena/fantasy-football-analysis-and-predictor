@@ -27,20 +27,18 @@ qb = qb.dropna(subset=["perf_class", "merge_year"]).copy()
 
 # --- features ---
 feature_candidates = [
-    "rank","qbr_total","pts_added","qb_plays","epa_total","pass","run","exp_sack","penalty","qbr_raw","sack",
-    "pass_attempts","throwaways","spikes","drops","drop_pct","bad_throws","bad_throw_pct","pocket_time",
-    "times_blitzed","times_hurried","times_hit","times_pressured","pressure_pct","batted_balls","on_tgt_throws",
-    "on_tgt_pct","rpo_plays","rpo_yards","rpo_pass_att","rpo_pass_yards","rpo_rush_att","rpo_rush_yards",
-    "pa_pass_att","pa_pass_yards","avg_time_to_throw","avg_completed_air_yards","avg_intended_air_yards",
-    "avg_air_yards_differential","aggressiveness","max_completed_air_distance","avg_air_yards_to_sticks",
-    "pass_yards","pass_touchdowns","interceptions_x","passer_rating","completion_percentage",
-    "expected_completion_percentage","completion_percentage_above_expectation","avg_air_distance","max_air_distance",
-    "sacks","sack_yards","sack_fumbles","sack_fumbles_lost","passing_air_yards","passing_yards_after_catch",
-    "passing_epa","passing_2pt_conversions","pacr","dakota","carries","rushing_yards","rushing_tds",
-    "rushing_fumbles_x","rushing_fumbles_lost_x","rushing_first_downs","rushing_epa_x","rushing_2pt_conversions_x",
-    "fantasy_points_x","games_x","ppr_sh","height_x","weight_x","draft_round_x","draft_pick_x","age","gs",
-    "ybc","ybc_att","yac","yac_att","brk_tkl","att_br","offense_snaps","team_snaps","AVG","adp_percentile",
-    "adp_percentile_pos","expected_ppr_pg_curr_hist","Games_G"
+    "att","yds_x","td_x","x1d_x","ybc_x","ybc_att","yac_x","yac_att","brk_tkl_x",
+    "att_br","efficiency","percent_attempts_gte_eight_defenders",
+    "expected_rush_yards","rush_yards_over_expected","rush_yards_over_expected_per_att",
+    "rush_pct_over_expected","rushing_fumbles","rushing_fumbles_lost","rushing_epa",
+    "rushing_2pt_conversions","fantasy_points_x","fantasy_points_ppr_x","games_x",
+    "height_x","weight_x","draft_round_x","draft_pick_x","tgt","yds_y","td_y","x1d_y",
+    "ybc_y","ybc_r","yac_y","yac_r","adot","brk_tkl_y","rec_br","drop","drop_percent","int","rat",
+    "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa",
+    "receiving_2pt_conversions","racr","target_share","air_yards_share","wopr_x","tgt_sh",
+    "ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa","ppr_sh",
+    "offense_snaps","team_snaps","AVG","adp_percentile","adp_percentile_pos",
+    "expected_ppr_pg_curr_hist","Games_G"
 ]
 feature_cols = [c for c in feature_candidates if c in qb.columns and pd.api.types.is_numeric_dtype(qb[c])]
 X_all = qb[feature_cols].copy()

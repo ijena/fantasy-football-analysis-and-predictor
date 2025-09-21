@@ -49,9 +49,9 @@ rb_features = [
     "rush_pct_over_expected","rushing_fumbles","rushing_fumbles_lost","rushing_epa",
     "rushing_2pt_conversions","fantasy_points_x","fantasy_points_ppr_x","games_x",
     "height_x","weight_x","draft_round_x","draft_pick_x","tgt","yds_y","td_y","x1d_y",
-    "ybc_y","ybc_r","yac_y","yac_r","adot","brk_tkl_y","rec_br","drop","drop_percent","int","rat"
+    "ybc_y","ybc_r","yac_y","yac_r","adot","brk_tkl_y","rec_br","drop","drop_percent","int","rat",
     "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa",
-    "receiving_2pt_conversions","racr","target_share","air_ysards_share","wopr_x","tgt_sh",
+    "receiving_2pt_conversions","racr","target_share","air_yards_share","wopr_x","tgt_sh",
     "ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa","ppr_sh",
     "offense_snaps","team_snaps","AVG","adp_percentile","adp_percentile_pos",
     "expected_ppr_pg_curr_hist","Games_G"
@@ -61,15 +61,15 @@ rb_features = [c for c in rb_features if pd.api.types.is_numeric_dtype(rb_df[c])
 
 
 te_features = ["age","g","gs","tgt","rec","yds","td","x1d","ybc","ybc_r","yac","yac_r","adot",
-    "brk_tkl","rec_br","drop","drop_percent","int","rat","avg_cushion","avg_separation",
-    "avg_intended_air_yards","percent_share_of_intended_air_yards","catch_percentage",
-    "avg_expected_yac","avg_yac_above_expectation","receiving_fumbles",
-    "receiving_fumbles_lost","receiving_air_yards","receiving_epa","receiving_2pt_conversions",
-    "racr","target_share","air_yards_share","fantasy_points","fantasy_points_ppr",
-    "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa",
-    "ppr_sh","height","weight","draft_round","draft_pick","offense_snaps","team_snaps",
-    "AVG","adp_percentile","adp_percentile_pos",
-    "expected_ppr_pg_curr_hist","Games_G"]
+            "brk_tkl","rec_br","drop","drop_percent","int","rat","avg_cushion","avg_separation",
+            "avg_intended_air_yards","percent_share_of_intended_air_yards","catch_percentage",
+            "avg_expected_yac","avg_yac_above_expectation","receiving_fumbles",
+            "receiving_fumbles_lost","receiving_air_yards","receiving_epa","receiving_2pt_conversions",
+            "racr","target_share","air_yards_share","fantasy_points","fantasy_points_ppr",	
+            "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom",	
+            "w8dom","yptmpa","ppr_sh","height","weight","draft_round","draft_pick",
+            "offense_snaps","team_snaps","AVG","adp_percentile",
+            "adp_percentile_pos","expected_ppr_pg_curr_hist","Games_G"]
 te_features = [c for c in te_features if pd.api.types.is_numeric_dtype(te_df[c])]
 
 

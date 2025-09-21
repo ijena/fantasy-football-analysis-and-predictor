@@ -22,7 +22,7 @@ features = ["age","g","gs","tgt","rec","yds","td","x1d","ybc","ybc_r","yac","yac
             "racr","target_share","air_yards_share","fantasy_points","fantasy_points_ppr",
             "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom",
             "w8dom","yptmpa","ppr_sh","height","weight","draft_round","draft_pick",
-            "offense_snaps","team_snaps","offense_snap_percentage","AVG","adp_percentile",
+            "offense_snaps","team_snaps","AVG","adp_percentile",
             "adp_percentile_pos","expected_ppr_pg_curr_hist","Games_G"]
 
 # --- helper to robustly pick columns if names differ slightly ---
