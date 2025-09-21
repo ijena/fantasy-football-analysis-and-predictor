@@ -59,15 +59,16 @@ feature_candidates = [
     "rush_pct_over_expected","rushing_fumbles","rushing_fumbles_lost","rushing_epa",
     "rushing_2pt_conversions","fantasy_points_x","fantasy_points_ppr_x","games_x",
     "height_x","weight_x","draft_round_x","draft_pick_x","tgt","yds_y","td_y","x1d_y",
-    "ybc_y","ybc_r","yac_y","yac_r","adot","brk_tkl_y","rec_br","drop","drop_percent",
+    "ybc_y","ybc_r","yac_y","yac_r","adot","brk_tkl_y","rec_br","drop","drop_percent","int","rat"
     "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa",
-    "receiving_2pt_conversions","racr","target_share","air_yards_share","wopr_x","tgt_sh",
+    "receiving_2pt_conversions","racr","target_share","air_ysards_share","wopr_x","tgt_sh",
     "ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa","ppr_sh",
     "offense_snaps","team_snaps","AVG","adp_percentile","adp_percentile_pos",
     "expected_ppr_pg_curr_hist","Games_G"
 ]
 feature_cols = [c for c in feature_candidates if c in rb.columns and pd.api.types.is_numeric_dtype(rb[c])]
 
+print(feature_cols)
 X_all = rb[feature_cols]
 y_all = rb["perf_class"]
 
