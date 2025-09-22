@@ -13,9 +13,28 @@ con.execute(f"CREATE OR REPLACE TABLE history AS SELECT * FROM read_csv_auto('{h
 
 print("Tables created ✅")
 
-# Quick peek at data
-print("\nPredictions sample:")
-print(con.execute("SELECT * FROM predictions LIMIT 5").df())
+# -------------------------------
+# Create views
+# -------------------------------
 
-print("\nHistory sample:")
-print(con.execute("SELECT * FROM history LIMIT 5").df())
+con.execute("""
+CREATE OR REPLACE VIEW v_predictions AS
+SELECT
+  Player_fixed AS player,
+  team_name             AS team,
+  position                      AS position,
+  merge_year                                        AS year,
+FROM predictions;
+""")
+
+con.execute("""
+CREATE OR REPLACE VIEW v_history AS
+SELECT
+  Player_fixed   AS player,
+  POS_group                         AS position,
+  merge_year                         AS year,
+  per_game_perf_rel_expectations  AS ppg_diff         
+FROM history;
+""")
+
+print("Views created ✅")
