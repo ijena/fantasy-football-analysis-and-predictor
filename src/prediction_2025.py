@@ -6,7 +6,7 @@ import joblib
 # ---------------- Paths ----------------
 DATA_DIR   = r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\model_data"
 MODEL_DIR  = r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models"
-OUT_DIR    = r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\predictions_2025"
+OUT_DIR    = r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\predictions_2025"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 # ---------------- Load 2025 Data ----------------
@@ -139,7 +139,7 @@ def run_models_for_position(pos_name, cfg):
         "position":     pos_name
     })
     id_df["team_name"] = df_pos[team_col] if team_col else ""
-
+    id_df["AVG_ADP"] = df_pos["AVG"]
     results = id_df.copy()
 
     for model_key, model_path in cfg["models"].items():
@@ -170,6 +170,7 @@ te_res = run_models_for_position("TE", MODELS["TE"])
 wr_res = run_models_for_position("WR", MODELS["WR"])
 
 grand = pd.concat([x for x in [qb_res, rb_res, te_res, wr_res] if not x.empty], ignore_index=True)
+
 grand_path = os.path.join(OUT_DIR, "ALL_POSITIONS_MODEL_PROBS_2025.csv")
 grand.to_csv(grand_path, index=False)
 print(f"\n🎉 Saved grand combined: {grand_path}")

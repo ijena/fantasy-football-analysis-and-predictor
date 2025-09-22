@@ -1,6 +1,6 @@
 import pandas as pd 
 
-predicted_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\predictions_2025\ALL_POSITIONS_MODEL_PROBS_2025.csv")
+predicted_df = pd.read_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\predictions_2025\ALL_POSITIONS_MODEL_PROBS_2025.csv")
 
 #renaming columns for clarity
 predicted_df = predicted_df.rename(columns={'xgb_classification_prob_0':'xgb_classification_prob_neutral',
@@ -10,6 +10,8 @@ predicted_df = predicted_df.rename(columns={'xgb_classification_prob_0':'xgb_cla
                                             'xgb_percentile_prob_1' : 'xgb_percentile_prob_over',
                                             'xgb_percentile_prob_2': 'xgb_percentile_prob_under'
 })
+
+predicted_df = predicted_df.drop_duplicates(subset=["Player_fixed"])
 
 #calculating average probability for each classification across all models
 predicted_df["average_probability_over"] = predicted_df[["xgb_classification_prob_over","xgb_percentile_prob_over",
@@ -27,3 +29,4 @@ predicted_df["average_probability_over"] = (predicted_df["average_probability_ov
 predicted_df["average_probability_under"] = (predicted_df["average_probability_under"] * 100).round(2)
 predicted_df["average_probability_neutral"] = (predicted_df["average_probability_neutral"] * 100).round(2)
 
+predicted_df.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\data\predictions_2025\final_model_2025.csv")
