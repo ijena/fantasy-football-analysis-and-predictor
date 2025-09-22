@@ -59,7 +59,6 @@ feature_candidates = [
     "age","g","gs","tgt","rec","yds","td","x1d","ybc","ybc_r","yac","yac_r","adot",
     "brk_tkl","rec_br","drop","drop_percent","int","rat",
     "avg_cushion","avg_separation","avg_intended_air_yards","percent_share_of_intended_air_yards",
-    # naming variants you mentioned:
     "receptions_x","targets_x","avg_yac","avg_expected_yac","avg_yac_above_expectation",
     "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa","receiving_2pt_conversions",
     "racr","target_share","air_yards_share","wopr_x","fantasy_points",

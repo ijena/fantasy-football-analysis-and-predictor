@@ -54,6 +54,7 @@ def to_class(x):
 
 te["perf_class"] = te["perf_pg"].apply(to_class)
 
+te = te.dropna(subset=["perf_pg"])
 # Drop rows missing label or year
 te = te.dropna(subset=["perf_class", "merge_year"]).copy()
 

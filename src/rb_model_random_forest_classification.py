@@ -122,3 +122,5 @@ print("\nTop 15 RBs by probability of UNDER-performing (Test 2024):")
 print(out.sort_values("prob_under", ascending=False).head(15))
 
 joblib.dump(rf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\rb_model_random_forest_classification.pkl")
+
+rb.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\historic_data\rb_dataset_with_historic_performance.csv")

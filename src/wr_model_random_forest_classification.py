@@ -33,7 +33,7 @@ if "expected_ppr_pg_curr_hist" not in wr.columns:
 
 # ---------------- Compute per-game actual and label (±2.0 PPG threshold) ----------------
 wr["ppg_actual"] = wr[ppr_col] / wr[games_col].replace(0, np.nan)
-wr["ppg_diff"] = wr["ppg_actual"] - wr["expected_ppr_pg_curr_hist"]
+wr["per_game_perf_rel_expectations"] = wr["ppg_actual"] - wr["expected_ppr_pg_curr_hist"]
 
 THRESH = 2.0  # over/under threshold in PPR per game
 
@@ -47,7 +47,7 @@ def label_perf(x, th=THRESH):
     else:
         return "neutral"
 
-wr["label"] = wr["ppg_diff"].apply(label_perf)
+wr["label"] = wr["per_game_perf_rel_expectations"].apply(label_perf)
 
 # ---------------- Year-based split: train/val/test ----------------
 # Train on 2016–2020, validate on 2021–2023, test on 2024 (what you'll ship for 2025 draft)
@@ -66,13 +66,13 @@ test_mask  = wr["merge_year"].eq(2024)
 # ---------------- Feature set (start with your TE-like set, keep only numeric & existing) ----------------
 raw_features = [
     "age","g","gs","tgt","rec","yds","td","x1d","ybc","ybc_r","yac","yac_r","adot",
-    "brk_tkl","rec_br","drop","drop_percent","int","rat","avg_cushion","avg_separation",
-    "avg_intended_air_yards","percent_share_of_intended_air_yards",
-    "receptions_x","catch_percentage","targets_x","avg_yac","avg_expected_yac","avg_yac_above_expectation",
+    "brk_tkl","rec_br","drop","drop_percent","int","rat",
+    "avg_cushion","avg_separation","avg_intended_air_yards","percent_share_of_intended_air_yards",
+    "receptions_x","targets_x","avg_yac","avg_expected_yac","avg_yac_above_expectation",
     "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa","receiving_2pt_conversions",
     "racr","target_share","air_yards_share","wopr_x","fantasy_points",
-    "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom",
-    "w8dom","yptmpa","ppr_sh","height","weight","draft_round","draft_pick",
+    "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa","ppr_sh",
+    "height","weight","draft_round","draft_pick",
     "offense_snaps","team_snaps","AVG","adp_percentile",
     "expected_ppr_pg_curr_hist","Games_G"
 ]
@@ -152,3 +152,5 @@ print("\nClass counts (test):")
 print(y_test.value_counts())
 
 joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\wr_model_random_forest_classification.pkl")
+
+wr.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\historic_data\wr_dataset_with_historic_performance.csv")

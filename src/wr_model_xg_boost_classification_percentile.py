@@ -13,12 +13,13 @@ wr = pd.read_csv(
 # ---------- Feature set (same style as TEs, trimmed to numeric & present) ----------
 feature_candidates = [
     "age","g","gs","tgt","rec","yds","td","x1d","ybc","ybc_r","yac","yac_r","adot",
-    "brk_tkl","rec_br","drop","drop_percent","int","rat","avg_cushion","avg_separation",
-    "percent_share_of_intended_air_yards","catch_percentage","avg_yac","avg_expected_yac","avg_yac_above_expectation",
+    "brk_tkl","rec_br","drop","drop_percent","int","rat",
+    "avg_cushion","avg_separation","avg_intended_air_yards","percent_share_of_intended_air_yards",
+    "receptions_x","targets_x","avg_yac","avg_expected_yac","avg_yac_above_expectation",
     "receiving_fumbles","receiving_fumbles_lost","receiving_air_yards","receiving_epa","receiving_2pt_conversions",
     "racr","target_share","air_yards_share","wopr_x","fantasy_points",
-    "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom",
-    "w8dom","yptmpa","ppr_sh","height","weight","draft_round","draft_pick",
+    "games","tgt_sh","ay_sh","yac_sh","wopr_y","ry_sh","rtd_sh","rfd_sh","dom","w8dom","yptmpa","ppr_sh",
+    "height","weight","draft_round","draft_pick",
     "offense_snaps","team_snaps","AVG","adp_percentile",
     "expected_ppr_pg_curr_hist","Games_G"
 ]

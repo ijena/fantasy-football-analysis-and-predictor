@@ -31,6 +31,7 @@ def label_from_perf(x, low=low_th, high=high_th):
         return "under"
     else:
         return "neutral"
+qb_model_data = qb_model_data.dropna(subset=["per_game_perf_rel_expectations"])
 
 qb_model_data["perf_class"] = qb_model_data["per_game_perf_rel_expectations"].apply(label_from_perf)
 

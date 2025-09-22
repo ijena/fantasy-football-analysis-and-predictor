@@ -37,6 +37,7 @@ def label_from_perf(x, th=2.0):
     else:
         return "neutral"
 
+te = te.dropna(subset=["perf_rel_exp"])
 te["perf_class"] = te["perf_rel_exp"].apply(label_from_perf)
 
 # Drop missing

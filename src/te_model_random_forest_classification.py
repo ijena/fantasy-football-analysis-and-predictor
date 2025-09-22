@@ -48,11 +48,11 @@ if missing:
 
 # ===== Targets: delta vs expected (per game) =====
 te["ppg_ppr"] = pd.to_numeric(te[ppr_col], errors="coerce") / pd.to_numeric(te[games_col], errors="coerce")
-te["delta_ppg"] = te["ppg_ppr"] - pd.to_numeric(te[exp_pg], errors="coerce")
+te["per_game_perf_rel_expectations"] = te["ppg_ppr"] - pd.to_numeric(te[exp_pg], errors="coerce")
 te[year_col] = pd.to_numeric(te[year_col], errors="coerce")
 
 # Remove rows without target or year
-te = te.dropna(subset=["delta_ppg", year_col]).copy()
+te = te.dropna(subset=["per_game_perf_rel_expectations", year_col]).copy()
 
 # ===== Labeling (fixed threshold) =====
 LOW_THR  = -POINT_THR
@@ -63,7 +63,7 @@ def label_from_delta(x: float) -> str:
     if x >= HIGH_THR: return "over"
     return "neutral"
 
-te["perf_class"] = te["delta_ppg"].apply(label_from_delta)
+te["perf_class"] = te["per_game_perf_rel_expectations"].apply(label_from_delta)
 
 # ===== Build feature matrix =====
 # keep only numeric columns that exist
@@ -143,3 +143,5 @@ else:
     print("\nModel does not support predict_proba; probabilities unavailable.")
 
 joblib.dump(rf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\te_model_random_forest_classification.pkl")
+
+te.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\historic_data\te_dataset_with_historic_performance.csv")

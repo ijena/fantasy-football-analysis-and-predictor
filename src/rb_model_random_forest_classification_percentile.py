@@ -15,6 +15,7 @@ rb_model_data["perf_rel_exp"] = (
     rb_model_data["ppg_Fantasy_PPR"] - rb_model_data["expected_ppr_pg_curr_hist"]
 )
 
+rb_model_data = rb_model_data.dropna(subset=["perf_rel_exp"])
 # Compute thresholds based on TRAIN split only (to avoid leakage)
 train_mask = rb_model_data["merge_year"].between(2016, 2020)
 train_perf = rb_model_data.loc[train_mask, "perf_rel_exp"].dropna()

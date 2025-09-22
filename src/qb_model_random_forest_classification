@@ -25,6 +25,7 @@ def label_from_perf(x, th=3.0):
     else:
         return "neutral"
 
+qb_model_data = qb_model_data.dropna(subset="per_game_perf_rel_expectations")
 qb_model_data["perf_class"] = qb_model_data["per_game_perf_rel_expectations"].apply(label_from_perf)
 
 # Drop NaNs
@@ -88,3 +89,4 @@ print("\nClass counts (test):\n", y_test.value_counts())
 #Save model
 
 joblib.dump(clf,r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\models\qb_model_random_forest_classification.pkl")
+qb_model_data.to_csv(r"C:\Users\idhan\Downloads\Nerds with Numbers\fantasy-football-analysis-and-predictor\historic_data\qb_dataset_with_historic_performance.csv")
