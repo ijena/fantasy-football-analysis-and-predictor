@@ -24,6 +24,10 @@ SELECT
   team_name             AS team,
   position                      AS position,
   merge_year                                        AS year,
+  AVG_ADP                                           AS AVG_ADP,
+  average_probability_over                          AS average_probability_over,
+  average_probability_under                         AS average_probability_under,
+  average_probability_neutral                       AS average_probability_neutral
 FROM predictions;
 """)
 
@@ -33,7 +37,8 @@ SELECT
   Player_fixed   AS player,
   POS_group                         AS position,
   merge_year                         AS year,
-  per_game_perf_rel_expectations  AS ppg_diff         
+  per_game_perf_rel_expectations  AS ppg_diff,
+  AVG_ADP                          AS AVG_ADP        
 FROM history;
 """)
 
