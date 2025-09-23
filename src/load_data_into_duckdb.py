@@ -43,3 +43,15 @@ FROM history;
 """)
 
 print("Views created ✅")
+
+import duckdb
+
+con = duckdb.connect("fantasy.duckdb")
+
+# show first 5 rows
+print(con.execute("SELECT * FROM predictions LIMIT 5").fetchdf())
+
+# OR get the whole table as a DataFrame
+df_pred = con.execute("SELECT * FROM predictions").fetchdf()
+print(df_pred.head())    # show first rows
+print(df_pred.columns)   # print all column names
