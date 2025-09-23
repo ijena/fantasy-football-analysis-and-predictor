@@ -1,0 +1,6 @@
+streamlit        # web app framework
+duckdb           # database engine you’re using
+pandas           # data wrangling
+plotly           # charts
+sqlparse         # SQL parsing/validation
+openai>=1.40.0   # LLM API client
