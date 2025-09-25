@@ -98,7 +98,6 @@ with colR:
     st.code("top 10 predicted overperformers for 2025")
     st.code("top 10 predicted quarterbacks as underperformers in 2025")
     st.code("worst 15 underperformers among WR in 2019")
-    st.code("show overperformers for 2025 WRs, top 10")
 
 run = st.button("Run")
 
