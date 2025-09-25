@@ -84,12 +84,12 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 # ----------------- UI -----------------
-st.title("🏈 Fantasy Football AI")
+st.title("🏈 Fantasy Football Prediction AI")
 
 colL, colR = st.columns([3, 2])
 with colL:
     question = st.text_input(
-        "Ask a question (examples below)",
+        "Ask a question about fantasy football predictions and historical performances",
         placeholder="show me the top 10 quarterbacks who overperformed in 2018",
     )
 
