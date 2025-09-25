@@ -42,6 +42,17 @@ SELECT
 FROM history;
 """)
 
+con.execute("""
+CREATE OR REPLACE VIEW v_adp AS
+SELECT player, position, year, AVG_ADP::DOUBLE AS adp
+FROM v_predictions
+WHERE AVG_ADP IS NOT NULL
+UNION ALL
+SELECT player, position, year, AVG_ADP::DOUBLE AS adp
+FROM v_history
+WHERE AVG_ADP IS NOT NULL;
+""")
+
 print("Views created ✅")
 
 
