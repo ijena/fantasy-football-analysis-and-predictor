@@ -92,16 +92,16 @@ st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 colL, colR = st.columns([3, 2])
 with colL:
     question = st.text_input(
-        "Ask a question about fantasy football predictions and historical performances",
+        "Ask a question about fantasy football performance predictions and historical performances",
         placeholder="show me the top 10 quarterbacks who overperformed in 2018",
     )
 
 with colR:
     st.markdown("**Examples**")
-    st.code("top 10 predicted overperformers for 2025")
-    st.code("top 10 predicted quarterbacks as underperformers in 2025")
+    st.code("top 10 predicted quarterback overperformers for 2025")
     st.code("worst 15 underperformers among WR in 2019")
-
+    st.code("ADP of Joe Burrow from 2021 - 2025")
+    
 run = st.button("Run")
 
 if run and question:
