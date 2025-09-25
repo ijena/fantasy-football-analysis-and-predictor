@@ -104,8 +104,8 @@ run = st.button("Run")
 if run and question:
     try:
         sql = llm_sql(question)
-        # st.subheader("Generated SQL")
-        # st.code(sql, language="sql")
+        st.subheader("Generated SQL")
+        st.code(sql, language="sql")
 
         df = con.execute(sql).df()
         if df.empty:
