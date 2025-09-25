@@ -99,7 +99,7 @@ with colL:
 with colR:
     st.markdown("**Examples**")
     st.code("top 10 predicted quarterback overperformers for 2025")
-    st.code("worst 15 underperformers among WR in 2019")
+    st.code("worst 15 underperformers in 2019")
     st.code("ADP of Joe Burrow from 2021 - 2025")
     
 run = st.button("Run")
