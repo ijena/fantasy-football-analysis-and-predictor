@@ -3,7 +3,6 @@ import pandas as pd
 def keep_columns(df,columns=["Player_fixed","POS_group","merge_year","per_game_perf_rel_expectations","AVG_ADP"]):
     #function to keep certain columns in the dataframe df
     df = df.rename(columns={'AVG':'AVG_ADP'})
-    df = df.drop_duplicates(subset="Player_fixed")
     return df[columns]
     
     

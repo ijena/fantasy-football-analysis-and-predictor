@@ -83,7 +83,7 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 # ----------------- UI -----------------
-st.title("🏈 Fantasy Football AI (DuckDB + OpenAI)")
+st.title("🏈 Fantasy Football AI")
 
 colL, colR = st.columns([3, 2])
 with colL:
