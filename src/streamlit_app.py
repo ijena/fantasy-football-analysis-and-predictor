@@ -87,7 +87,7 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 # ----------------- UI -----------------
-st.title("🏈 Fantasy Football Prediction AI")
+st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 
 colL, colR = st.columns([3, 2])
 with colL:
