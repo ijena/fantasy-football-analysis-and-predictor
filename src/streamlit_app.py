@@ -63,7 +63,8 @@ Rules:
 - For "top overperformers/underperformers", use v_history (ppg_diff) or probabilities in v_predictions.
 - Years: column is 'year'. Positions: 'QB','RB','WR','TE' in 'position'.
 - If user asks “top 10 overperformers from 2024”, use v_history where year =2024,ORDER BY ppg_diff DESC LIMIT 10.
-- If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over DESC LIMIT 10.
+- If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over  and only show average_probability_over among the probability columns DESC LIMIT 10.
+- If user asks "top 10 underperformers from 2025", use v_predictions ORDER BY average_probability_under and only show average_probability_under among the probability columns DESC LIMIT 10.
 
 """
 
@@ -130,7 +131,7 @@ if run and question:
                 st.altair_chart(chart, use_container_width=True)
             else:
                 # Try probability bar if present
-                prob_cols = [c for c in df.columns if c.lower().startswith("prob_")]
+                prob_cols = [c for c in df.columns if c.lower().startswith("average_")]
                 if "player" in df.columns and prob_cols:
                     ycol = prob_cols[0]
                     chart = (
