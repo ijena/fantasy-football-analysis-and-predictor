@@ -55,6 +55,8 @@ You may ONLY query these views and columns:
   player, position, year, AVG_ADP,average_probability_over,average_probability_under,average_probability_neutral
 -- v_history --
   player, position, year, AVG_ADP, ppg_diff
+--v_adp --
+    player, position, year, adp
 
 Rules:
 - Return ONLY a SQL query, no backticks, no prose.
@@ -65,7 +67,8 @@ Rules:
 - If user asks “top 10 overperformers from 2024”, use v_history where year =2024,ORDER BY ppg_diff DESC LIMIT 10.
 - If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over  and only show average_probability_over among the probability columns DESC LIMIT 10.
 - If user asks "top 10 underperformers from 2025", use v_predictions ORDER BY average_probability_under and only show average_probability_under among the probability columns DESC LIMIT 10.
-
+- For ADP-related queries, use v_adp.
+- If user asks for "ADP of Josh Allen from 2021 - 3025", use v_adp where player='Josh Allen'  and year BETWEEN 2021 AND 2025 ORDER BY year.
 """
 
 def llm_sql(user_question: str) -> str:
