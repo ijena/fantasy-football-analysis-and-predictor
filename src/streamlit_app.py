@@ -58,6 +58,8 @@ Rules:
 - Return ONLY a SQL query, no backticks, no prose.
 - Never write DDL/DML. SELECT only.
 - Always include an ORDER BY and a LIMIT when listing items (default LIMIT 25 if user doesn’t specify).
+- If year = 2025, ALWAYS query v_predictions (never v_history), even if the user omits the word “predicted”.
+- If year <= 2024, use v_history.
 - For "top overperformers/underperformers", use v_history (ppg_diff) or probabilities in v_predictions.
 - Years: column is 'year'. Positions: 'QB','RB','WR','TE' in 'position'.
 - If user asks “top 10 overperformers from 2024”, use v_history where year=2024 ORDER BY ppg_diff DESC LIMIT 10.
