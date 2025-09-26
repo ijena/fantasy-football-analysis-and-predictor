@@ -120,6 +120,8 @@ if run and question:
                     - `ppg_diff` = Actual fantasy points per game − Expected points per game (based on ADP).  
                     - Positive values → the player **overperformed expectations**.  
                     - Negative values → the player **underperformed expectations**.  
+                    - These values are valid only for Points Per Reception (PPR) scoring format.
+                    - Rookie seasons are excluded since they lack historical data.
                     """
                 )
                 chart = (
@@ -142,6 +144,8 @@ if run and question:
                       • **Overperform** expectations (`average_probability_over`)  
                       • **Underperform** expectations (`average_probability_under`)  
                       • Stay around expectations (`average_probability_neutral`)  
+                    - These values are valid only for Points Per Reception (PPR) scoring format.
+                    - Rookies are excluded since they lack historical data.
                     """
                 )
                 prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
