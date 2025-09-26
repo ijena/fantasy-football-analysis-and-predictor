@@ -55,7 +55,7 @@ You may ONLY query these views and columns:
   player, position, year, adp
 
 Rules:
-- Any questions outside the scope of these views should return no results.
+- Any questions outside the scope of these views should return nothing.
 - Return ONLY a SQL query, no backticks, no prose.
 - Never write DDL/DML. SELECT only.
 - Always include an ORDER BY and a LIMIT when listing items (default LIMIT 25 if user doesn’t specify).
