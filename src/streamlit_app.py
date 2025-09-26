@@ -12,8 +12,6 @@ from openai import OpenAI
 st.set_page_config(page_title="Fantasy Football AI", layout="wide")
 
 # ----------------- Secrets / Keys -----------------
-# On Streamlit Cloud, set in: Settings → Secrets as:
-# OPENAI_API_KEY = "sk-..."
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
 if not OPENAI_API_KEY:
     st.error("Missing OPENAI_API_KEY. Add it in Streamlit Secrets.")
@@ -24,7 +22,6 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 # ----------------- DB Connection -----------------
 @st.cache_resource
 def get_con():
-    # fantasy.duckdb should be in the repo root
     return duckdb.connect("fantasy.duckdb", read_only=True)
 
 con = get_con()
@@ -43,7 +40,6 @@ have_hist  = view_exists("v_history")
 if not (have_preds and have_hist):
     st.warning("Expected views v_predictions and v_history not found. "
                "Run your schema_setup to create them.")
-    # You can still continue if you know the tables are named differently.
 
 # ----------------- Prompt Template -----------------
 SCHEMA_GUIDE = """
@@ -55,8 +51,8 @@ You may ONLY query these views and columns:
   player, position, year, AVG_ADP,average_probability_over,average_probability_under,average_probability_neutral
 -- v_history --
   player, position, year, AVG_ADP, ppg_diff
---v_adp --
-    player, position, year, adp
+-- v_adp --
+  player, position, year, adp
 
 Rules:
 - Return ONLY a SQL query, no backticks, no prose.
@@ -64,11 +60,11 @@ Rules:
 - Always include an ORDER BY and a LIMIT when listing items (default LIMIT 25 if user doesn’t specify).
 - For "top overperformers/underperformers", use v_history (ppg_diff) or probabilities in v_predictions.
 - Years: column is 'year'. Positions: 'QB','RB','WR','TE' in 'position'.
-- If user asks “top 10 overperformers from 2024”, use v_history where year =2024,ORDER BY ppg_diff DESC LIMIT 10.
-- If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over  and only show average_probability_over among the probability columns DESC LIMIT 10.
+- If user asks “top 10 overperformers from 2024”, use v_history where year=2024 ORDER BY ppg_diff DESC LIMIT 10.
+- If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over and only show average_probability_over among the probability columns DESC LIMIT 10.
 - If user asks "top 10 underperformers from 2025", use v_predictions ORDER BY average_probability_under and only show average_probability_under among the probability columns DESC LIMIT 10.
 - For ADP-related queries, use v_adp.
-- If user asks for "ADP of Josh Allen from 2021 - 3025", use v_adp where exact match on player and year BETWEEN 2021 AND 2025 ORDER BY year. If exact match does not exist, do a fuzzy match using LIKE operator with wildcards.
+- If user asks for "ADP of Josh Allen from 2021 - 2025", use v_adp where exact match on player and year BETWEEN 2021 AND 2025 ORDER BY year. If exact match does not exist, do a fuzzy match using LIKE operator with wildcards.
 """
 
 def llm_sql(user_question: str) -> str:
@@ -80,7 +76,6 @@ def llm_sql(user_question: str) -> str:
         messages=[{"role": "user", "content": prompt}],
     )
     sql = resp.choices[0].message.content.strip()
-    # quick guard: ban dangerous keywords
     banned = ["INSERT", "UPDATE", "DELETE", "DROP", "ALTER", "CREATE", "ATTACH", "COPY", "EXPORT"]
     if any(b in sql.upper() for b in banned):
         raise ValueError("Unsafe SQL generated.")
@@ -101,25 +96,32 @@ with colR:
     st.code("top 10 predicted quarterback overperformers for 2025")
     st.code("worst 15 underperformers in 2019")
     st.code("Average Draft Position (ADP) of Joe Burrow from 2021 - 2025")
-    
+
 run = st.button("Run")
 
 if run and question:
     try:
         sql = llm_sql(question)
-        # st.subheader("Generated SQL")
-        # st.code(sql, language="sql")
-
         df = con.execute(sql).df()
+
         if df.empty:
             st.info("No rows returned.")
         else:
             st.subheader("Results")
             st.dataframe(df, use_container_width=True)
 
-            # Simple heuristics to chart smartly
+            # Explanations depending on data type
             cols = set(c.lower() for c in df.columns)
-            if "player" in cols and "ppg_diff" in cols:
+
+            if "ppg_diff" in cols:  # historical performance
+                st.markdown(
+                    """
+                    **Explanation:**  
+                    - `ppg_diff` = Actual fantasy points per game − Expected points per game (based on ADP).  
+                    - Positive values → the player **overperformed expectations**.  
+                    - Negative values → the player **underperformed expectations**.  
+                    """
+                )
                 chart = (
                     alt.Chart(df)
                     .mark_bar()
@@ -131,9 +133,19 @@ if run and question:
                     .properties(height=400)
                 )
                 st.altair_chart(chart, use_container_width=True)
-            else:
-                # Try probability bar if present
-                prob_cols = [c for c in df.columns if c.lower().startswith("average_")]
+
+            elif any(c.startswith("average_probability") for c in df.columns):  # predictions
+                st.markdown(
+                    """
+                    **Explanation:**  
+                    - These probabilities are the model’s estimate of whether a player will:  
+                      • **Overperform** expectations (`average_probability_over`)  
+                      • **Underperform** expectations (`average_probability_under`)  
+                      • Stay around expectations (`average_probability_neutral`)  
+                    - Example: A probability of 0.75 for overperformance means the model thinks the player has a 75% chance of beating expectations.  
+                    """
+                )
+                prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
                 if "player" in df.columns and prob_cols:
                     ycol = prob_cols[0]
                     chart = (
@@ -150,4 +162,3 @@ if run and question:
 
     except Exception as e:
         st.error(f"Error: {e}")
-
