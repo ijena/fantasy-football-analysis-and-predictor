@@ -87,7 +87,7 @@ st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 colL, colR = st.columns([3, 2])
 with colL:
     question = st.text_input(
-        "Ask a question about fantasy football performance predictions and historical performances",
+        "Ask a question about fantasy football performance predictions and historical performances (2016-2024)",
         placeholder="show me the top 10 quarterbacks who overperformed in 2018",
     )
 
@@ -142,7 +142,6 @@ if run and question:
                       • **Overperform** expectations (`average_probability_over`)  
                       • **Underperform** expectations (`average_probability_under`)  
                       • Stay around expectations (`average_probability_neutral`)  
-                    - Example: A probability of 0.75 for overperformance means the model thinks the player has a 75% chance of beating expectations.  
                     """
                 )
                 prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
