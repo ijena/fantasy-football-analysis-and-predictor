@@ -87,7 +87,7 @@ def llm_sql(user_question: str) -> str:
 # ----------------- UI -----------------
 st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 
-colL, colR = st.columns([3, 2])
+colL, colR = st.columns([2.5, 2.5])
 with colL:
     question = st.text_input(
         "Ask a question about fantasy football performance predictions and historical performances (2016-2024)",
