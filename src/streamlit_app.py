@@ -107,7 +107,7 @@ if run and question:
         df = con.execute(sql).df()
 
         if df.empty:
-            st.info("No rows returned.")
+            st.info("Question was outside the scope of the data. Try another one.")
         else:
             st.subheader("Results")
             st.dataframe(df, use_container_width=True)
