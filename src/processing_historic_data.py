@@ -1,6 +1,6 @@
 import pandas as pd
 
-def keep_columns(df,columns=["Player_fixed","POS_group","merge_year","per_game_perf_rel_expectations","AVG_ADP"]):
+def keep_columns(df,columns=["Player_fixed","POS_group","merge_year","per_game_perf_rel_expectations","AVG_ADP","ppg_Fantasy_PPR"]):
     #function to keep certain columns in the dataframe df
     df = df.rename(columns={'AVG':'AVG_ADP'})
     return df[columns]
