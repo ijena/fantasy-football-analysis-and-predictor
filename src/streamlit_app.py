@@ -148,6 +148,7 @@ if run and question:
                       • **Underperform** expectations (`average_probability_under`)  
                       • Stay around expectations (`average_probability_neutral`)  
                     - These values are valid only for Points Per Reception (PPR) scoring format.
+                    - ppg_Fantasy_PPR refers to actual fantasy points per game in PPR format.
                     - Rookies are excluded since they lack historical data.
                     """
                 )
