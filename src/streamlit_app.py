@@ -81,7 +81,7 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-4.1-nano",
+        model="gpt-5-nano",
         temperature=0,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -131,6 +131,8 @@ if run and question:
                     - Positive values → the player **overperformed expectations**.  
                     - Negative values → the player **underperformed expectations**.  
                     - These values are valid only for Points Per Reception (PPR) scoring format.
+                    - ppg_Fantasy_PPR refers to actual fantasy points per game in PPR format.
+
                     - Rookie seasons are excluded since they lack historical data.
                     """
                 )
@@ -155,7 +157,6 @@ if run and question:
                       • **Underperform** expectations (`average_probability_under`)  
                       • Stay around expectations (`average_probability_neutral`)  
                     - These values are valid only for Points Per Reception (PPR) scoring format.
-                    - ppg_Fantasy_PPR refers to actual fantasy points per game in PPR format.
                     - Rookies are excluded since they lack historical data.
                     """
                 )
