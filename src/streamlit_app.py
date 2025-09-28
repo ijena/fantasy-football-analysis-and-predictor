@@ -65,6 +65,7 @@ Rules:
 - If user asks “top 10 overperformers from 2024”, use v_history where year=2024 ORDER BY ppg_diff DESC LIMIT 10.
 - If user asks “top 10 overperformers from 2025”, use v_predictions ORDER BY average_probability_over and only show average_probability_over among the probability columns DESC LIMIT 10.
 - If user asks "top 10 underperformers from 2025", use v_predictions ORDER BY average_probability_under and only show average_probability_under among the probability columns DESC LIMIT 10.
+- If user asks "how did justin herbert do in 2024", use v_history where player LIKE '%justin herbert%' AND year=2024.
 - For ADP-related queries, use v_adp.
 - If user asks for "ADP of Josh Allen from 2021 - 2025", use v_adp where exact match on player and year BETWEEN 2021 AND 2025 ORDER BY year. If exact match does not exist, do a fuzzy match using LIKE operator with wildcards.
 - If the year is 2025, always use v_predictions.
