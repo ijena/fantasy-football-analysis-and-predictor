@@ -81,9 +81,10 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-5-nano",
+        model="gpt-5.1-nano",
         temperature=1.0,
         messages=[{"role": "user", "content": prompt}],
+        reasoning_effort = "low"
     )
     sql = resp.choices[0].message.content.strip()
     banned = ["INSERT", "UPDATE", "DELETE", "DROP", "ALTER", "CREATE", "ATTACH", "COPY", "EXPORT"]
