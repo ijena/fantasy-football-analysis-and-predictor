@@ -38,7 +38,8 @@ SELECT
   POS_group                         AS position,
   merge_year                         AS year,
   per_game_perf_rel_expectations  AS ppg_diff,
-  AVG_ADP                          AS AVG_ADP        
+  AVG_ADP                          AS AVG_ADP,
+  ppg_Fantasy_PPR                 AS ppg_fantasy_ppr        
 FROM history;
 """)
 
