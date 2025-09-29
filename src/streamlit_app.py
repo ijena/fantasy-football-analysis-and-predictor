@@ -97,11 +97,14 @@ st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 
 colL, colR = st.columns([2.5, 2.5])
 with colL:
-    question = st.text_input(
-        "Ask about fantasy football performance predictions and historical performances (2016-2024) (rookies excluded)",
-        placeholder="show me the top 10 quarterbacks who overperformed in 2018",
-    )
-    run = st.button("Run")
+    input_col,button_col = st.columns([6,1])
+    with input_col
+        question = st.text_input(
+            "Ask about fantasy football performance predictions and historical performances (2016-2024) (rookies excluded)",
+            placeholder="show me the top 10 quarterbacks who overperformed in 2018",
+        )
+    with button_col:
+        run = st.button("Run",use_container_width=True)
 
 
 with colR:
