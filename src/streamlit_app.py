@@ -81,8 +81,8 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-4.1-nano",
-        temperature=0,
+        model="gpt-5-nano",
+        temperature=1.0,
         messages=[{"role": "user", "content": prompt}]    )
     sql = resp.choices[0].message.content.strip()
     banned = ["INSERT", "UPDATE", "DELETE", "DROP", "ALTER", "CREATE", "ATTACH", "COPY", "EXPORT"]
@@ -141,17 +141,17 @@ if run and question:
                     - Rookie seasons are excluded since they lack historical data.
                     """
                 )
-                chart = (
-                    alt.Chart(df)
-                    .mark_bar()
-                    .encode(
-                        x=alt.X("player:N", sort="-y"),
-                        y=alt.Y("ppg_diff:Q"),
-                        tooltip=list(df.columns),
-                    )
-                    .properties(height=400)
-                )
-                st.altair_chart(chart, use_container_width=True)
+                # chart = (
+                #     alt.Chart(df)
+                #     .mark_bar()
+                #     .encode(
+                #         x=alt.X("player:N", sort="-y"),
+                #         y=alt.Y("ppg_diff:Q"),
+                #         tooltip=list(df.columns),
+                #     )
+                #     .properties(height=400)
+                # )
+                # st.altair_chart(chart, use_container_width=True)
 
             elif any(c.startswith("average_probability") for c in df.columns):  # predictions
                 st.markdown(
@@ -165,20 +165,20 @@ if run and question:
                     - Rookies are excluded since they lack historical data.
                     """
                 )
-                prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
-                if "player" in df.columns and prob_cols:
-                    ycol = prob_cols[0]
-                    chart = (
-                        alt.Chart(df)
-                        .mark_bar()
-                        .encode(
-                            x=alt.X("player:N", sort="-y"),
-                            y=alt.Y(f"{ycol}:Q"),
-                            tooltip=list(df.columns),
-                        )
-                        .properties(height=400)
-                    )
-                    st.altair_chart(chart, use_container_width=True)
+                # prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
+                # if "player" in df.columns and prob_cols:
+                #     ycol = prob_cols[0]
+                #     chart = (
+                #         alt.Chart(df)
+                #         .mark_bar()
+                #         .encode(
+                #             x=alt.X("player:N", sort="-y"),
+                #             y=alt.Y(f"{ycol}:Q"),
+                #             tooltip=list(df.columns),
+                #         )
+                #         .properties(height=400)
+                #     )
+                #     st.altair_chart(chart, use_container_width=True)
 
     except Exception as e:
         st.error(f"Error: {e}")
