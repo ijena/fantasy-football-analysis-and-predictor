@@ -104,6 +104,8 @@ with colL:
             placeholder="show me the top 10 quarterbacks who overperformed in 2018",
         )
     with button_col:
+        st.write("")
+        st.write("")
         run = st.button("Run",use_container_width=True)
 
 
