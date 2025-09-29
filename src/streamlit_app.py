@@ -81,8 +81,8 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-5-nano",
-        temperature=1.0,
+        model="gpt-4.1-nano",
+        temperature=0,
         messages=[{"role": "user", "content": prompt}],
         reasoning_effort = "low"
     )
@@ -100,7 +100,7 @@ with colL:
     input_col,button_col = st.columns([6,0.75])
     with input_col:
         question = st.text_input(
-            "Ask about fantasy football performance predictions and historical performances (2016-2024)\n (rookies excluded)",
+            "Ask about fantasy football performance predictions and historical performances (2016-2024)",
             placeholder="show me the top 10 quarterbacks who overperformed in 2018",
         )
     with button_col:
