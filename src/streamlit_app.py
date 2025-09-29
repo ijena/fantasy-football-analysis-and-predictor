@@ -95,20 +95,23 @@ def llm_sql(user_question: str) -> str:
 # ----------------- UI -----------------
 st.title("🏈 Fantasy Football AI Performance Predictor and Historic Data")
 
-colL, colR = st.columns([2.5, 2.5])
-with colL:
+c1, c2 = st.columns([6, 1])  # wider input, skinny button
+with c1:
     question = st.text_input(
         "Ask about fantasy football performance predictions and historical performances (2016-2024) (rookies excluded)",
         placeholder="show me the top 10 quarterbacks who overperformed in 2018",
     )
+with c2:
+    st.write("")  # spacer to vertically center the button a bit
+    run = st.button("Run", use_container_width=True)
 
-with colR:
-    st.markdown("**Examples**")
-    st.code("top 10 predicted underperforming wide receivers with an adp lower than 50 in 2025")
-    st.code("worst 15 underperformers in 2019")
-    st.code("Average Draft Position (ADP) of Joe Burrow from 2021 - 2025")
-    st.code("how did Derrick Henry perform in 2024")
-run = st.button("Run")
+# Examples on a second row
+st.markdown("**Examples**")
+ex1, ex2, ex3, ex4 = st.columns(4)
+with ex1: st.code("worst 15 underperformers in 2019")
+with ex2: st.code("Average Draft Position (ADP) of Joe Burrow from 2021 - 2025")
+with ex3: st.code("top 10 predicted underperforming wide receivers with an adp < 50 in 2025")
+with ex4: st.code("how did Derrick Henry perform in 2024")
 
 if run and question:
     try:
