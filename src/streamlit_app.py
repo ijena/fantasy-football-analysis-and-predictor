@@ -102,7 +102,8 @@ with c1:
         placeholder="show me the top 10 quarterbacks who overperformed in 2018",
     )
 with c2:
-    st.write("")  # spacer to vertically center the button a bit
+    st.write("") 
+    st.write("")# spacer to vertically center the button a bit
     run = st.button("Run", use_container_width=True)
 
 # Examples on a second row
