@@ -83,9 +83,7 @@ def llm_sql(user_question: str) -> str:
     resp = client.chat.completions.create(
         model="gpt-4.1-nano",
         temperature=0,
-        messages=[{"role": "user", "content": prompt}],
-        reasoning_effort = "low"
-    )
+        messages=[{"role": "user", "content": prompt}]    )
     sql = resp.choices[0].message.content.strip()
     banned = ["INSERT", "UPDATE", "DELETE", "DROP", "ALTER", "CREATE", "ATTACH", "COPY", "EXPORT"]
     if any(b in sql.upper() for b in banned):
@@ -105,7 +103,7 @@ with colL:
         )
     with button_col:
         st.write("")
-        # st.write("")
+        st.write("")
         run = st.button("Run",use_container_width=True)
 
 
