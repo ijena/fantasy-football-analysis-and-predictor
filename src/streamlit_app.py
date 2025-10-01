@@ -91,14 +91,13 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 def build_chart(df: pd.DataFrame):
-    # Decide what to plot
-    lower_cols = {c.lower(): c for c in df.columns}
+    # pick a y-column to plot
     ycol = None
+    lower = {c.lower(): c for c in df.columns}
 
-    if "ppg_diff" in lower_cols and "player" in lower_cols:
-        ycol = lower_cols["ppg_diff"]
+    if "ppg_diff" in lower and "player" in lower:
+        ycol = lower["ppg_diff"]
     else:
-        # first probability col
         prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
         if "player" in df.columns and prob_cols:
             ycol = prob_cols[0]
@@ -106,20 +105,21 @@ def build_chart(df: pd.DataFrame):
     if ycol is None or "player" not in df.columns:
         return None
 
-    # Coerce Y to numeric
-    df = df.copy()
-    df[ycol] = pd.to_numeric(df[ycol], errors="coerce")
-
-    # If all NaN after coercion, bail out
-    if df[ycol].isna().all():
+    # make a copy, coerce numeric, drop NaNs
+    d = df.copy()
+    d[ycol] = pd.to_numeric(d[ycol], errors="coerce")
+    if d[ycol].isna().all():
         return None
+    d = d.dropna(subset=[ycol])
 
-    # Drop rows without a numeric value
-    df = df.dropna(subset=[ycol])
+    # optional: tidy up year for display
+    if "year" in d.columns and pd.api.types.is_float_dtype(d["year"]):
+        d["year"] = d["year"].astype("Int64")
 
-    # Optional: keep top 50 to avoid super-wide charts
-    df = df.sort_values(ycol, ascending=False).head(50)
+    # keep top 50 by the chosen metric
+    d = d.sort_values(ycol, ascending=False).head(50)
 
+    # nicer axis title
     title_map = {
         "ppg_diff": "PPG vs Expectation",
         "average_probability_over": "Probability: Overperform",
@@ -128,13 +128,14 @@ def build_chart(df: pd.DataFrame):
     }
     y_title = title_map.get(ycol, ycol.replace("_", " ").title())
 
+    # NOTE: the key fix is using alt.Y(...), not alt.Field(...)
     return (
-        alt.Chart(df)
+        alt.Chart(d)
         .mark_bar()
         .encode(
             x=alt.X("player:N", sort="-y", title="Player"),
-            y=alt.Y(alt.Field(ycol, type="quantitative"), title=y_title),
-            tooltip=list(df.columns),
+            y=alt.Y(f"{ycol}:Q", title=y_title),
+            tooltip=list(d.columns),
         )
         .properties(height=420)
     )
