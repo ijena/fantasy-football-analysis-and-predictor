@@ -93,10 +93,7 @@ def llm_sql(user_question: str) -> str:
 def build_chart(df: pd.DataFrame):
     alt.data_transformers.disable_max_rows()
 
-    # pick a y-column to plot
-    st.write("Rows for chart:", len(df))
-    st.write("Min/Max:", float(df[ycol].min()), float(df[ycol].max()))
-
+    # choose y-column
     ycol = None
     lower = {c.lower(): c for c in df.columns}
 
@@ -110,21 +107,22 @@ def build_chart(df: pd.DataFrame):
     if ycol is None or "player" not in df.columns:
         return None
 
-    # make a copy, coerce numeric, drop NaNs
+    # optional debug AFTER ycol is set
+    # st.write("Rows for chart:", len(df))
+    # st.write("Min/Max:", float(pd.to_numeric(df[ycol], errors="coerce").min()),
+    #                      float(pd.to_numeric(df[ycol], errors="coerce").max()))
+
     d = df.copy()
     d[ycol] = pd.to_numeric(d[ycol], errors="coerce")
     if d[ycol].isna().all():
         return None
     d = d.dropna(subset=[ycol])
 
-    # optional: tidy up year for display
     if "year" in d.columns and pd.api.types.is_float_dtype(d["year"]):
         d["year"] = d["year"].astype("Int64")
 
-    # keep top 50 by the chosen metric
     d = d.sort_values(ycol, ascending=False).head(50)
 
-    # nicer axis title
     title_map = {
         "ppg_diff": "PPG vs Expectation",
         "average_probability_over": "Probability: Overperform",
@@ -133,7 +131,6 @@ def build_chart(df: pd.DataFrame):
     }
     y_title = title_map.get(ycol, ycol.replace("_", " ").title())
 
-    # NOTE: the key fix is using alt.Y(...), not alt.Field(...)
     return (
         alt.Chart(d)
         .mark_bar()
