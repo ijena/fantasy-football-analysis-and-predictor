@@ -1,5 +1,14 @@
 import streamlit as st
 
+# Hide the sidebar (including the collapse/expand arrow)
+hide_sidebar_style = """
+    <style>
+        [data-testid="stSidebar"] {display: none;}
+        [data-testid="stSidebarNav"] {display: none;}
+        [data-testid="collapsedControl"] {display: none;}
+    </style>
+"""
+st.markdown(hide_sidebar_style, unsafe_allow_html=True)
 HOME_PAGE = "streamlit_app.py"              # your main file
 GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
 
