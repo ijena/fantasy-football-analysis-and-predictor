@@ -167,7 +167,7 @@ if run and question:
 # ----------------- Results Display -----------------
 df = st.session_state.last_df
 if df is None:
-    st.info("Run a query to see results.")
+    pass
 else:
     st.subheader("Results")
 
