@@ -160,7 +160,7 @@ with colL:
     with button_col:
         st.write("")
         st.write("")
-        run = st.button("Run",use_container_width=True)
+        run = st.button("Run",width='stretch')
 
 
 with colR:
@@ -189,14 +189,14 @@ if run and question:
             )
 
             if view_mode == "Table":
-                st.dataframe(df, use_container_width=True)
+                st.dataframe(df, width='stretch')
             else:
                 chart = build_chart(df)
                 if chart is None:
                     st.warning("No chartable columns found for this query. Showing table instead.")
-                    st.dataframe(df, use_container_width=True)
+                    st.dataframe(df, width='stretch')
                 else:
-                    st.altair_chart(chart, use_container_width=True)
+                    st.altair_chart(chart, width='stretch')
 
             # Context/explanations based on columns present
             cols = set(c.lower() for c in df.columns)
