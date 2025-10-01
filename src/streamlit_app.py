@@ -219,5 +219,5 @@ if run and question:
         st.error(f"Error: {e}")
         
     with st.expander("Debug: column dtypes"):
-    st.write(df.dtypes)
+        st.write(df.dtypes)
 
