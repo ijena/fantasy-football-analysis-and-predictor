@@ -214,6 +214,10 @@ if run and question:
                     • PPR scoring; rookies excluded due to limited prior signal.
                     """
                 )
-
+    
     except Exception as e:
         st.error(f"Error: {e}")
+        
+    with st.expander("Debug: column dtypes"):
+    st.write(df.dtypes)
+
