@@ -90,6 +90,39 @@ def llm_sql(user_question: str) -> str:
         raise ValueError("Unsafe SQL generated.")
     return sql
 
+def build_chart(df: pd.DataFrame):
+    cols = set(c.lower() for c in df.columns)
+
+    # Historical (ppg_diff)
+    if "ppg_diff" in cols and "player" in cols:
+        return (
+            alt.Chart(df)
+            .mark_bar()
+            .encode(
+                x=alt.X("player:N", sort="-y", title="Player"),
+                y=alt.Y("ppg_diff:Q", title="PPG vs Expectation"),
+                tooltip=list(df.columns),
+            )
+            .properties(height=420)
+        )
+
+    # Predictions (probabilities)
+    prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
+    if "player" in df.columns and prob_cols:
+        ycol = prob_cols[0]   # show the first prob col returned by SQL
+        return (
+            alt.Chart(df)
+            .mark_bar()
+            .encode(
+                x=alt.X("player:N", sort="-y", title="Player"),
+                y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
+                tooltip=list(df.columns),
+            )
+            .properties(height=420)
+        )
+
+    return None
+
 # ----------------- UI -----------------
 st.title("🏈 Fantasy Football AI Performance Predictor")
 
