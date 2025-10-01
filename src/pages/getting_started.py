@@ -9,51 +9,81 @@ hide_sidebar_style = """
     </style>
 """
 st.markdown(hide_sidebar_style, unsafe_allow_html=True)
+
 HOME_PAGE = "streamlit_app.py"              # your main file
 GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
 
-# Make sure the page exists
-
-    # Build a horizontal nav bar
-nav_col1, nav_col2,_ = st.columns([0.10, 0.20,0.80],gap='small')
+# Build a horizontal nav bar
+nav_col1, nav_col2,_ = st.columns([0.10, 0.20,0.80], gap='small')
 with nav_col1:
     if st.button("🏠 Home"):
-            st.switch_page(HOME_PAGE)
+        st.switch_page(HOME_PAGE)
 with nav_col2:
     if st.button("📘 Getting Started"):
-            st.switch_page(GETTING_STARTED_PAGE)
+        st.switch_page(GETTING_STARTED_PAGE)
+
 st.set_page_config(page_title="Getting Started — Fantasy Football AI", layout="wide")
 
-st.title("📘Getting Started")
-st.markdown("""
-Welcome! This web app answers fantasy football questions in terms of expected overperformance and underperformance of NFL players relative to their average draft position (ADP) in fantasy football drafts.
-It can also answer historical questions about fantasy football player performance from 2016 to 2024.
----
+# Title
+st.markdown("<h1 style='font-size:32px;'>📘 Getting Started</h1>", unsafe_allow_html=True)
 
-## How to use this tool
-- **Predictions (2025):**
-  - Ask questions about predicted overperformers and underperformers for the 2025 season
-  - You can filter by player name, position, average draft position (ADP) and number of results
-  - Examples:
-  - `top 10 predicted overperformers for 2025`
-  - `who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025`
-  - `how will Josh Allen perform in 2025`
+# Intro
+st.markdown(
+    """
+    <p style='font-size:18px;'>
+    Welcome! This web app answers fantasy football questions in terms of expected 
+    overperformance and underperformance of NFL players relative to their average draft position (ADP) in fantasy football drafts.  
+    It can also answer historical questions about fantasy football player performance from 2016 to 2024.
+    </p>
+    <hr>
+    """, unsafe_allow_html=True
+)
 
-- **Historical data (2016–2024):**
-  - Ask questions about overperformers and underperformers from 2016 to 2024
-  - You can also ask questions about specific players in specific years to see their performance and average draft position (ADP)
-  - You can filter by player name, position, average draft position (ADP) and number of results
-  - Examples:
-  - `show me the top 10 quarterbacks who overperformed in 2018`
-  - `worst 15 underperformers in 2019`
-  - `Average Draft Position (ADP) of Joe Burrow from 2022 - 2024`
-  - 'how did Derrick Henry perform in 2024`
+# How to use
+st.markdown("<h2 style='font-size:24px;'>How to use this tool</h2>", unsafe_allow_html=True)
 
-## Constraints
-- Predictions and history are only for **Points Per Reception (PPR)** format.
-- Rookies are excluded due to lack of historical NFL data.
-- Kickers and defensive players are excluded.
-- Historical data is only from 2016 to 2024.
----
+st.markdown(
+    """
+    <p style='font-size:16px;'><b>Predictions (2025):</b></p>
+    <ul style='font-size:15px;'>
+      <li>Ask questions about predicted overperformers and underperformers for the 2025 season</li>
+      <li>You can filter by player name, position, average draft position (ADP) and number of results</li>
+      <li>Examples:</li>
+      <ul>
+        <li><code>top 10 predicted overperformers for 2025</code></li>
+        <li><code>who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025</code></li>
+        <li><code>how will Josh Allen perform in 2025</code></li>
+      </ul>
+    </ul>
 
-""")
+    <p style='font-size:16px;'><b>Historical data (2016–2024):</b></p>
+    <ul style='font-size:15px;'>
+      <li>Ask questions about overperformers and underperformers from 2016 to 2024</li>
+      <li>You can also ask questions about specific players in specific years to see their performance and ADP</li>
+      <li>You can filter by player name, position, ADP and number of results</li>
+      <li>Examples:</li>
+      <ul>
+        <li><code>show me the top 10 quarterbacks who overperformed in 2018</code></li>
+        <li><code>worst 15 underperformers in 2019</code></li>
+        <li><code>Average Draft Position (ADP) of Joe Burrow from 2022 - 2024</code></li>
+        <li><code>how did Derrick Henry perform in 2024</code></li>
+      </ul>
+    </ul>
+    """,
+    unsafe_allow_html=True
+)
+
+# Constraints
+st.markdown("<h2 style='font-size:24px;'>Constraints</h2>", unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <ul style='font-size:15px;'>
+      <li>Predictions and history are only for <b>Points Per Reception (PPR)</b> format.</li>
+      <li>Rookies are excluded due to lack of historical NFL data.</li>
+      <li>Kickers and defensive players are excluded.</li>
+      <li>Historical data is only from 2016 to 2024.</li>
+    </ul>
+    <hr>
+    """, unsafe_allow_html=True
+)
