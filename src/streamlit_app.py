@@ -5,6 +5,16 @@ import streamlit as st
 import altair as alt
 from openai import OpenAI
 
+# Hide the sidebar (including the collapse/expand arrow)
+hide_sidebar_style = """
+    <style>
+        [data-testid="stSidebar"] {display: none;}
+        [data-testid="stSidebarNav"] {display: none;}
+        [data-testid="collapsedControl"] {display: none;}
+    </style>
+"""
+st.markdown(hide_sidebar_style, unsafe_allow_html=True)
+
 # ----------------- Top Navigation -----------------
 HOME_PAGE = "streamlit_app.py"              # your main file
 GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
@@ -12,7 +22,7 @@ GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
 # Make sure the page exists
 
     # Build a horizontal nav bar
-nav_col1, nav_col2 = st.columns([0.10, 0.10],gap='small')
+nav_col1, nav_col2,_ = st.columns([0.10, 0.20,0.80],gap='small')
 with nav_col1:
     if st.button("🏠 Home"):
             st.switch_page(HOME_PAGE)
