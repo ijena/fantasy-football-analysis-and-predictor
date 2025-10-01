@@ -7,6 +7,9 @@ from openai import OpenAI
 
 # ----------------- App Config -----------------
 st.set_page_config(page_title="Fantasy Football AI", layout="wide")
+st.sidebar.markdown("### 📘 Help")
+st.sidebar.page_link("pages/getting_started.py", label="Getting Started")
+
 
 # ----------------- Secrets / Keys -----------------
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
