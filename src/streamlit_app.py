@@ -12,7 +12,7 @@ GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
 # Make sure the page exists
 
     # Build a horizontal nav bar
-nav_col1, nav_col2, _ = st.columns([0.15, 0.25, 0.6])
+nav_col1, nav_col2 = st.columns([0.10, 0.10],gap='small')
 with nav_col1:
     if st.button("🏠 Home"):
             st.switch_page(HOME_PAGE)
