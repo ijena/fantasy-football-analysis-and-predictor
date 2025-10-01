@@ -91,37 +91,54 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 def build_chart(df: pd.DataFrame):
-    cols = set(c.lower() for c in df.columns)
+    # Decide what to plot
+    lower_cols = {c.lower(): c for c in df.columns}
+    ycol = None
 
-    # Historical (ppg_diff)
-    if "ppg_diff" in cols and "player" in cols:
-        return (
-            alt.Chart(df)
-            .mark_bar()
-            .encode(
-                x=alt.X("player:N", sort="-y", title="Player"),
-                y=alt.Y("ppg_diff:Q", title="PPG vs Expectation"),
-                tooltip=list(df.columns),
-            )
-            .properties(height=420)
+    if "ppg_diff" in lower_cols and "player" in lower_cols:
+        ycol = lower_cols["ppg_diff"]
+    else:
+        # first probability col
+        prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
+        if "player" in df.columns and prob_cols:
+            ycol = prob_cols[0]
+
+    if ycol is None or "player" not in df.columns:
+        return None
+
+    # Coerce Y to numeric
+    df = df.copy()
+    df[ycol] = pd.to_numeric(df[ycol], errors="coerce")
+
+    # If all NaN after coercion, bail out
+    if df[ycol].isna().all():
+        return None
+
+    # Drop rows without a numeric value
+    df = df.dropna(subset=[ycol])
+
+    # Optional: keep top 50 to avoid super-wide charts
+    df = df.sort_values(ycol, ascending=False).head(50)
+
+    title_map = {
+        "ppg_diff": "PPG vs Expectation",
+        "average_probability_over": "Probability: Overperform",
+        "average_probability_under": "Probability: Underperform",
+        "average_probability_neutral": "Probability: Neutral",
+    }
+    y_title = title_map.get(ycol, ycol.replace("_", " ").title())
+
+    return (
+        alt.Chart(df)
+        .mark_bar()
+        .encode(
+            x=alt.X("player:N", sort="-y", title="Player"),
+            y=alt.Y(alt.Field(ycol, type="quantitative"), title=y_title),
+            tooltip=list(df.columns),
         )
+        .properties(height=420)
+    )
 
-    # Predictions (probabilities)
-    prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
-    if "player" in df.columns and prob_cols:
-        ycol = prob_cols[0]   # show the first prob col returned by SQL
-        return (
-            alt.Chart(df)
-            .mark_bar()
-            .encode(
-                x=alt.X("player:N", sort="-y", title="Player"),
-                y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
-                tooltip=list(df.columns),
-            )
-            .properties(height=420)
-        )
-
-    return None
 
 # ----------------- UI -----------------
 st.title("🏈 Fantasy Football AI Performance Predictor")
