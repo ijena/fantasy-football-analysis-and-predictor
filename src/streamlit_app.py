@@ -11,6 +11,7 @@ if st.sidebar.button("Open Getting Started"):
     try:
         st.switch_page("pages/getting_started.py")
     except Exception:
+        st.write(Exception)
         st.sidebar.warning("Use the sidebar pages menu to open Getting Started.")
 
 
