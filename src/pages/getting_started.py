@@ -50,9 +50,9 @@ st.markdown(
       <li>You can filter by player name, position, average draft position (ADP) and number of results</li>
       <li>Examples:</li>
       <ul>
-        <li><code>top 10 predicted overperformers for 2025</code></li>
-        <li><code>who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025</code></li>
-        <li><code>how will Josh Allen perform in 2025</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>top 10 predicted overperformers for 2025</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>how will Josh Allen perform in 2025</code></li>
       </ul>
     </ul>
 
@@ -63,10 +63,10 @@ st.markdown(
       <li>You can filter by player name, position, ADP and number of results</li>
       <li>Examples:</li>
       <ul>
-        <li><code>show me the top 10 quarterbacks who overperformed in 2018</code></li>
-        <li><code>worst 15 underperformers in 2019</code></li>
-        <li><code>Average Draft Position (ADP) of Joe Burrow from 2022 - 2024</code></li>
-        <li><code>how did Derrick Henry perform in 2024</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>show me the top 10 quarterbacks who overperformed in 2018</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>worst 15 underperformers in 2019</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>Average Draft Position (ADP) of Joe Burrow from 2022 - 2024</code></li>
+        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>how did Derrick Henry perform in 2024</code></li>
       </ul>
     </ul>
     """,
