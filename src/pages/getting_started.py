@@ -26,8 +26,8 @@ st.set_page_config(page_title="Getting Started — Fantasy Football AI", layout=
 
 st.title("📘Getting Started")
 st.markdown("""
-Welcome! This web app answers fantasy football player performance questions while also giving you historical player performance data
-
+Welcome! This web app answers fantasy football questions in terms of expected overperformance and underperformance of NFL players relative to their average draft position (ADP) in fantasy football drafts.
+It can also answer historical questions about fantasy football player performance from 2016 to 2024.
 ---
 
 ## How to use this tool
@@ -46,16 +46,14 @@ Welcome! This web app answers fantasy football player performance questions whil
   - Examples:
   - `show me the top 10 quarterbacks who overperformed in 2018`
   - `worst 15 underperformers in 2019`
-  - `Average Draft Position (ADP) of Joe Burrow from 2022 - 2024'
-  - 'how did Derrick Henry perform in 2024'
+  - `Average Draft Position (ADP) of Joe Burrow from 2022 - 2024`
+  - 'how did Derrick Henry perform in 2024`
 
 ## Constraints
-- Predictions and history are for **Points Per Reception (PPR)** format.
+- Predictions and history are only for **Points Per Reception (PPR)** format.
 - Rookies are excluded due to lack of historical NFL data.
 - Kickers and defensive players are excluded.
 - Historical data is only from 2016 to 2024.
-- If you ask outside the supported views, the AI should return no results.
-
 ---
 
 """)
