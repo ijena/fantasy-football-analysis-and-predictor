@@ -7,8 +7,12 @@ from openai import OpenAI
 
 # ----------------- App Config -----------------
 st.set_page_config(page_title="Fantasy Football AI", layout="wide")
-st.sidebar.markdown("### 📘 Help")
-st.sidebar.page_link("pages/getting_started.py", label="Getting Started")
+if st.sidebar.button("Open Getting Started"):
+    try:
+        st.switch_page("pages/getting_started.py")
+    except Exception:
+        st.sidebar.warning("Use the sidebar pages menu to open Getting Started.")
+
 
 
 # ----------------- Secrets / Keys -----------------
