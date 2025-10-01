@@ -63,6 +63,23 @@ def view_exists(view_name: str) -> bool:
         return not con.execute(q).df().empty
     except Exception:
         return False
+FRIENDLY_COLS = {
+    "player": "Player",
+    "position": "Position",
+    "year": "Season",
+    "AVG_ADP": "Average Draft Position",
+    "ppg_diff": "PPR points per game over Expectation",
+    "average_probability_over": "Probability of Overperforming",
+    "average_probability_under": "Probability of Underperforming",
+    "average_probability_neutral": "Probability of Neutral Performance",
+}
+
+def display_renamed(df: pd.DataFrame) -> pd.DataFrame:
+    """Return a view with user-friendly column labels, for display only."""
+    # Only rename columns that exist to avoid KeyErrors
+    cols_to_use = {k: v for k, v in FRIENDLY_COLS.items() if k in df.columns}
+    return df.rename(columns=cols_to_use)
+
 
 have_preds = view_exists("v_predictions")
 have_hist = view_exists("v_history")
@@ -213,12 +230,14 @@ else:
     )
 
     if view_mode == "Table":
-        st.dataframe(df, use_container_width=True)
+        # show friendly labels **only in the table**
+        st.dataframe(display_renamed(df), use_container_width=True)
     else:
+        # keep the original df (raw column names) for charts
         chart, used_y = build_chart(df)
         if chart is None:
             st.warning("No chartable column found. Showing table instead.")
-            st.dataframe(df, use_container_width=True)
+            st.dataframe(display_renamed(df), use_container_width=True)
         else:
             st.altair_chart(chart, use_container_width=True)
 
