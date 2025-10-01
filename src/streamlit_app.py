@@ -5,14 +5,31 @@ import streamlit as st
 import altair as alt
 from openai import OpenAI
 
+# ----------------- Top Navigation -----------------
+HOME_PAGE = "streamlit_app.py"              # your main file
+GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
+
+# Make sure the page exists
+if not os.path.exists(GETTING_STARTED_PAGE):
+    st.error(f"Missing page: {GETTING_STARTED_PAGE}")
+else:
+    # Build a horizontal nav bar
+    nav_col1, nav_col2, _ = st.columns([0.15, 0.25, 0.6])
+    with nav_col1:
+        if st.button("🏠 Home"):
+                st.switch_page(HOME_PAGE)
+    with nav_col2:
+        if st.button("📘 Getting Started"):
+                st.switch_page(GETTING_STARTED_PAGE)
+            
 # ----------------- App Config -----------------
 st.set_page_config(page_title="Fantasy Football AI", layout="wide")
-if st.sidebar.button("Open Getting Started"):
-    try:
-        st.switch_page("pages/getting_started.py")
-    except Exception:
-        # st.write(Exception)
-        st.sidebar.warning("Use the sidebar pages menu to open Getting Started.")
+# if st.sidebar.button("Open Getting Started"):
+#     try:
+#         st.switch_page("pages/getting_started.py")
+#     except Exception:
+#         # st.write(Exception)
+#         st.sidebar.warning("Use the sidebar pages menu to open Getting Started.")
 
 
 
