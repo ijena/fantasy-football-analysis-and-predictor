@@ -156,62 +156,47 @@ if run and question:
             st.info("Question was outside the scope of the data. Try another one.")
         else:
             st.subheader("Results")
-            st.dataframe(df, use_container_width=True)
 
-            # Explanations depending on data type
-            cols = set(c.lower() for c in df.columns)
+            # Choose how to view results
+            view_mode = st.segmented_control(
+                "View",
+                options=["Table", "Chart"],
+                default="Table",
+                help="Switch between a data table and a bar chart view."
+            )
 
-            if "ppg_diff" in cols:  # historical performance
-                st.markdown(
-                    """
-                    **Explanation:**  
-                    - `ppg_diff` = Actual fantasy points per game − Expected points per game (based on ADP).  
-                    - Positive values → the player **overperformed expectations**.  
-                    - Negative values → the player **underperformed expectations**.  
-                    - These values are valid only for Points Per Reception (PPR) scoring format.
-                    - ppg_Fantasy_PPR refers to actual fantasy points per game in PPR format.
-
-                    - Rookie seasons are excluded since they lack historical data.
-                    """
-                )
-                chart = (
-                    alt.Chart(df)
-                    .mark_bar()
-                    .encode(
-                        x=alt.X("player:N", sort="-y"),
-                        y=alt.Y("ppg_diff:Q"),
-                        tooltip=list(df.columns),
-                    )
-                    .properties(height=400)
-                )
-                st.altair_chart(chart, use_container_width=True)
-
-            elif any(c.startswith("average_probability") for c in df.columns):  # predictions
-                st.markdown(
-                    """
-                    **Explanation:**  
-                    - These probabilities are the model’s estimate of whether a player will:  
-                      • **Overperform** expectations (`average_probability_over`)  
-                      • **Underperform** expectations (`average_probability_under`)  
-                      • Stay around expectations (`average_probability_neutral`)  
-                    - These values are valid only for Points Per Reception (PPR) scoring format.
-                    - Rookies are excluded since they lack historical data.
-                    """
-                )
-                prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
-                if "player" in df.columns and prob_cols:
-                    ycol = prob_cols[0]
-                    chart = (
-                        alt.Chart(df)
-                        .mark_bar()
-                        .encode(
-                            x=alt.X("player:N", sort="-y"),
-                            y=alt.Y(f"{ycol}:Q"),
-                            tooltip=list(df.columns),
-                        )
-                        .properties(height=400)
-                    )
+            if view_mode == "Table":
+                st.dataframe(df, use_container_width=True)
+            else:
+                chart = build_chart(df)
+                if chart is None:
+                    st.warning("No chartable columns found for this query. Showing table instead.")
+                    st.dataframe(df, use_container_width=True)
+                else:
                     st.altair_chart(chart, use_container_width=True)
+
+            # Context/explanations based on columns present
+            cols = set(c.lower() for c in df.columns)
+            if "ppg_diff" in cols:
+                st.markdown(
+                    """
+                    **Explanation**  
+                    • `ppg_diff` = Actual fantasy points per game − Expected points per game (from ADP).  
+                    • Positive → **overperformed** · Negative → **underperformed**.  
+                    • PPR scoring; rookies excluded due to limited prior signal.
+                    """
+                )
+            elif any(c.startswith("average_probability") for c in df.columns):
+                st.markdown(
+                    """
+                    **Explanation**  
+                    • Model-estimated probabilities:  
+                      – **Overperform** (`average_probability_over`)  
+                      – **Underperform** (`average_probability_under`)  
+                      – **Neutral** (`average_probability_neutral`)  
+                    • PPR scoring; rookies excluded due to limited prior signal.
+                    """
+                )
 
     except Exception as e:
         st.error(f"Error: {e}")
