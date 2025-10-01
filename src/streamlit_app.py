@@ -91,7 +91,12 @@ def llm_sql(user_question: str) -> str:
     return sql
 
 def build_chart(df: pd.DataFrame):
+    alt.data_transformers.disable_max_rows()
+
     # pick a y-column to plot
+    st.write("Rows for chart:", len(df))
+    st.write("Min/Max:", float(df[ycol].min()), float(df[ycol].max()))
+
     ycol = None
     lower = {c.lower(): c for c in df.columns}
 
