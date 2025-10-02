@@ -18,17 +18,18 @@ st.markdown(hide_sidebar_style, unsafe_allow_html=True)
 # ----------------- Top Navigation -----------------
 HOME_PAGE = "streamlit_app.py"              # your main file
 GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
+HOW_IT_WORKS_PAGE = "pages/how_it_works.py"
 
-# Make sure the page exists
-
-    # Build a horizontal nav bar
-nav_col1, nav_col2,_ = st.columns([0.10, 0.20,0.80],gap='small')
+nav_col1, nav_col2, nav_col3, _ = st.columns([0.10, 0.20, 0.20, 0.50], gap="small")
 with nav_col1:
     if st.button("🏠 Home"):
-            st.switch_page(HOME_PAGE)
+        st.switch_page(HOME_PAGE)
 with nav_col2:
     if st.button("📘 Getting Started"):
-            st.switch_page(GETTING_STARTED_PAGE)
+        st.switch_page(GETTING_STARTED_PAGE)
+with nav_col3:
+    if st.button("🧠 How it works"):
+        st.switch_page(HOW_IT_WORKS_PAGE)
 
 # ----------------- App Config -----------------
 st.set_page_config(page_title="Fantasy Football AI", layout="wide")
