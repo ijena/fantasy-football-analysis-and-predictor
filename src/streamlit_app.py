@@ -172,13 +172,17 @@ def color_text(val):
     color = "green" if val > 0 else "red" if val < 0 else "black"
     return f"color: {color};"
 
-def style_table(df: pd.DataFrame) -> pd.io.formats.style.Styler:
+def style_table(df: pd.DataFrame):
+    """Return a styled DataFrame with only ppg_diff colored."""
     friendly = display_renamed(df).copy()
-    styler = friendly.style
+    styler = friendly.style  # ✅ use .style directly on the DataFrame
+
     ppg_friendly = "Points per game over Expectation"
     if ppg_friendly in friendly.columns:
         styler = styler.applymap(color_text, subset=[ppg_friendly])
+
     return styler
+
 
 # ----------------- Session State -----------------
 if "last_df" not in st.session_state:
