@@ -16,8 +16,9 @@ st.markdown("""
 HOME_PAGE = "streamlit_app.py"
 GETTING_STARTED_PAGE = "pages/getting_started.py"
 HOW_IT_WORKS_PAGE = "pages/how_it_works.py"
+ABOUT_PAGE = "pages/about.py"
 
-nav_col1, nav_col2, nav_col3, _ = st.columns([0.10, 0.15, 0.15, 0.80], gap="small")
+nav_col1, nav_col2, nav_col3, nav_col4, _ = st.columns([0.10, 0.15, 0.15, 0.10, 0.70], gap="small")
 with nav_col1:
     if st.button("🏠 Home"):
         st.switch_page(HOME_PAGE)
@@ -27,6 +28,9 @@ with nav_col2:
 with nav_col3:
     if st.button("🧠 How it works"):
         st.switch_page(HOW_IT_WORKS_PAGE)
+with nav_col4:
+    if st.button("ℹ️ About"):
+        st.switch_page(ABOUT_PAGE)
 
 # --------- Content ---------
 st.title("🧠 How it works")
