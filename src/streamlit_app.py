@@ -179,6 +179,49 @@ def build_chart(df: pd.DataFrame):
     )
     return chart, ycol
 
+def llm_summary(df: pd.DataFrame, user_question: str) -> str:
+    """
+    Summarize the query results in natural language using the AI agent.
+    Keeps payload small and focuses on relevant columns.
+    """
+    try:
+        # Keep result small for the model (first 30 rows, drop super-wide tables)
+        cols_priority = [c for c in df.columns if c.lower() in (
+            "player","position","year","avg_adp","adp",
+            "ppg_diff","average_probability_over","average_probability_under","average_probability_neutral"
+        )]
+        cols_use = cols_priority or list(df.columns[:10])  # fallback: first 10 columns
+        df_small = df[cols_use].head(30)
+
+        data_json = df_small.to_json(orient="records")
+
+        prompt = f"""
+You are an assistant that summarizes fantasy football query results into a concise,
+user-friendly paragraph or short bullet list.
+
+User question:
+{user_question}
+
+Data (JSON records):
+{data_json}
+
+Guidelines:
+- If results include probabilities, mention which probability column was returned and the top 3–5 players.
+- If results include ppg_diff, explain over vs under expectation and highlight top 3–5 values.
+- Mention year(s) or position(s) if clearly present in the data.
+- Keep it brief and helpful, no tables, no code.
+"""
+
+        resp = client.chat.completions.create(
+            model="gpt-4.1-nano",   # use nano if you prefer lower cost
+            temperature=0.3,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return resp.choices[0].message.content.strip()
+
+    except Exception as e:
+        return f"_Summary unavailable: {e}_"
+
 # ----------------- Session State -----------------
 if "last_df" not in st.session_state:
     st.session_state.last_df = None
@@ -222,6 +265,10 @@ if df is None:
     pass
 else:
     st.subheader("Results")
+    with st.spinner("Generating summary…"):
+        summary_text = llm_summary(df, question)
+    st.markdown("### Summary")
+    st.markdown(summary_text)
 
     view_mode = st.radio(
         "View",
