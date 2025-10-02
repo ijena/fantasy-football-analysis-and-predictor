@@ -214,7 +214,7 @@ Guidelines:
 
         resp = client.chat.completions.create(
             model="gpt-4.1-nano",   # use nano if you prefer lower cost
-            temperature=0.3,
+            temperature=0.2,
             messages=[{"role": "user", "content": prompt}],
         )
         return resp.choices[0].message.content.strip()
