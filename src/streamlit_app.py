@@ -177,6 +177,15 @@ def build_chart(df: pd.DataFrame):
         .properties(height=420)
     )
     return chart, ycol
+def color_text(val):
+    """Only change the text color (not background)."""
+    if pd.isna(val):
+        return ""
+    color = "green" if val > 0 else "red" if val < 0 else "black"
+    return f"color: {color};"
+
+
+
 
 # ----------------- Session State -----------------
 if "last_df" not in st.session_state:
@@ -223,7 +232,6 @@ else:
     st.subheader("Results")
 
     view_mode = st.radio(
-        "View",
         options=["Table", "Chart"],
         index=0,
         horizontal=True,
@@ -233,6 +241,11 @@ else:
     if view_mode == "Table":
         # show friendly labels **only in the table**
         st.dataframe(display_renamed(df), use_container_width=True)
+        if "ppg_diff" in df.columns:
+            styled_df = df.style.applymap(color_text, subset=["ppg_diff"])
+            st.dataframe(styled_df, use_container_width=True)
+        else:
+            st.dataframe(df, use_container_width=True)
     else:
         # keep the original df (raw column names) for charts
         chart, used_y = build_chart(df)
