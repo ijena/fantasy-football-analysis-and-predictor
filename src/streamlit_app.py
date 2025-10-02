@@ -5,9 +5,6 @@ import streamlit as st
 import altair as alt
 from openai import OpenAI
 
-# ----------------- App Config -----------------
-st.set_page_config(page_title="Fantasy Football AI", layout="wide")
-
 # Hide the sidebar (including the collapse/expand arrow)
 hide_sidebar_style = """
     <style>
@@ -19,16 +16,30 @@ hide_sidebar_style = """
 st.markdown(hide_sidebar_style, unsafe_allow_html=True)
 
 # ----------------- Top Navigation -----------------
-HOME_PAGE = "streamlit_app.py"
-GETTING_STARTED_PAGE = "pages/getting_started.py"
+HOME_PAGE = "streamlit_app.py"              # your main file
+GETTING_STARTED_PAGE = "pages/getting_started.py"  # rename to match your file
 
-nav_col1, nav_col2, _ = st.columns([0.10, 0.20, 0.80], gap='small')
+# Make sure the page exists
+
+    # Build a horizontal nav bar
+nav_col1, nav_col2,_ = st.columns([0.10, 0.20,0.80],gap='small')
 with nav_col1:
     if st.button("🏠 Home"):
-        st.switch_page(HOME_PAGE)
+            st.switch_page(HOME_PAGE)
 with nav_col2:
     if st.button("📘 Getting Started"):
-        st.switch_page(GETTING_STARTED_PAGE)
+            st.switch_page(GETTING_STARTED_PAGE)
+
+# ----------------- App Config -----------------
+st.set_page_config(page_title="Fantasy Football AI", layout="wide")
+# if st.sidebar.button("Open Getting Started"):
+#     try:
+#         st.switch_page("pages/getting_started.py")
+#     except Exception:
+#         # st.write(Exception)
+#         st.sidebar.warning("Use the sidebar pages menu to open Getting Started.")
+
+
 
 # ----------------- Secrets / Keys -----------------
 OPENAI_API_KEY = st.secrets.get("OPENAI_API_KEY", os.getenv("OPENAI_API_KEY"))
@@ -52,13 +63,13 @@ def view_exists(view_name: str) -> bool:
         return not con.execute(q).df().empty
     except Exception:
         return False
-
 FRIENDLY_COLS = {
     "player": "Player",
     "position": "Position",
     "year": "Season",
     "adp": "Average Draft Position",
     "AVG_ADP": "Average Draft Position",
+    "ppg_diff": "PPR points per game over Expectation",
     "ppg_diff": "Points per game over Expectation",
     "average_probability_over": "Probability of Overperforming",
     "average_probability_under": "Probability of Underperforming",
@@ -67,8 +78,10 @@ FRIENDLY_COLS = {
 
 def display_renamed(df: pd.DataFrame) -> pd.DataFrame:
     """Return a view with user-friendly column labels, for display only."""
+    # Only rename columns that exist to avoid KeyErrors
     cols_to_use = {k: v for k, v in FRIENDLY_COLS.items() if k in df.columns}
     return df.rename(columns=cols_to_use)
+
 
 have_preds = view_exists("v_predictions")
 have_hist = view_exists("v_history")
@@ -124,9 +137,11 @@ def build_chart(df: pd.DataFrame):
     alt.data_transformers.disable_max_rows()
     lower = {c.lower(): c for c in df.columns}
 
+    # Historical performance
     if "ppg_diff" in lower and "player" in lower:
         ycol = lower["ppg_diff"]
     else:
+        # Prediction probabilities
         prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
         ycol = prob_cols[0] if ("player" in df.columns and prob_cols) else None
 
@@ -163,26 +178,6 @@ def build_chart(df: pd.DataFrame):
         .properties(height=420)
     )
     return chart, ycol
-
-# ----------------- Styling -----------------
-def color_text(val):
-    """Only change the text color for ppg_diff (no background)."""
-    if pd.isna(val):
-        return ""
-    color = "green" if val > 0 else "red" if val < 0 else "black"
-    return f"color: {color};"
-
-def style_table(df: pd.DataFrame):
-    """Return a styled DataFrame with only ppg_diff colored."""
-    friendly = display_renamed(df).copy()
-    styler = friendly.style  # ✅ use .style directly on the DataFrame
-
-    ppg_friendly = "Points per game over Expectation"
-    if ppg_friendly in friendly.columns:
-        styler = styler.applymap(color_text, subset=[ppg_friendly])
-
-    return styler
-
 
 # ----------------- Session State -----------------
 if "last_df" not in st.session_state:
@@ -223,10 +218,13 @@ if run and question:
 
 # ----------------- Results Display -----------------
 df = st.session_state.last_df
-if df is not None:
+if df is None:
+    pass
+else:
     st.subheader("Results")
 
     view_mode = st.radio(
+        "View",
         options=["Table", "Chart"],
         index=0,
         horizontal=True,
@@ -234,16 +232,18 @@ if df is not None:
     )
 
     if view_mode == "Table":
-        st.dataframe(style_table(df), use_container_width=True)
+        # show friendly labels **only in the table**
+        st.dataframe(display_renamed(df), use_container_width=True)
     else:
+        # keep the original df (raw column names) for charts
         chart, used_y = build_chart(df)
         if chart is None:
             st.warning("No chartable column found. Showing table instead.")
-            st.dataframe(style_table(df), use_container_width=True)
+            st.dataframe(display_renamed(df), use_container_width=True)
         else:
             st.altair_chart(chart, use_container_width=True)
 
-    # Explanations
+    # ----------------- Explanations -----------------
     cols = set(c.lower() for c in df.columns)
     if "ppg_diff" in cols:
         st.markdown(
