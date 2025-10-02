@@ -47,7 +47,7 @@ st.markdown(
     <p style='font-size:18px;'><b>Predictions (2025):</b></p>
     <ul style='font-size:17px;'>
       <li>Ask questions about predicted overperformers and underperformers for the 2025 season</li>
-      <li>You can filter by player name, position, average draft position (ADP) and number of results</li>
+      <li>You can ask questions that are filtered by player name, position, average draft position (ADP) and number of results</li>
       <li>Examples:</li>
       <ul>
         <li><code>top 10 predicted overperformers for 2025</code></li>
@@ -59,7 +59,7 @@ st.markdown(
     <p style='font-size:18px;'><b>Historical data (2016–2024):</b></p>
     <ul style='font-size:17px;'>
       <li>Ask questions about overperformers and underperformers from 2016 to 2024</li>
-      <li>You can also ask questions about specific players in specific years to see their performance and ADP</li>
+      <li>You can ask questions about specific players in specific years to see their performance and ADP</li>
       <li>You can filter by player name, position, ADP and number of results</li>
       <li>Examples:</li>
       <ul>
