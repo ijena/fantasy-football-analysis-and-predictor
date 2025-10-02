@@ -291,25 +291,25 @@ else:
         else:
             st.altair_chart(chart, use_container_width=True)
 
-    # ----------------- Explanations -----------------
-    cols = set(c.lower() for c in df.columns)
-    if "ppg_diff" in cols:
-        st.markdown(
-            """
-            **Explanation**  
-            • `ppg_diff` = Actual fantasy points per game − Expected points per game (from ADP).  
-            • Positive → **overperformed** · Negative → **underperformed**.  
-            • PPR scoring; rookies excluded due to limited prior signal.
-            """
-        )
-    elif any(c.startswith("average_probability") for c in df.columns):
-        st.markdown(
-            """
-            **Explanation**  
-            • Model-estimated probabilities:  
-              – **Overperform** (`average_probability_over`)  
-              – **Underperform** (`average_probability_under`)  
-              – **Neutral** (`average_probability_neutral`)  
-            • PPR scoring; rookies excluded due to limited prior signal.
-            """
-        )
+    # # ----------------- Explanations -----------------
+    # cols = set(c.lower() for c in df.columns)
+    # if "ppg_diff" in cols:
+    #     st.markdown(
+    #         """
+    #         **Explanation**  
+    #         • `ppg_diff` = Actual fantasy points per game − Expected points per game (from ADP).  
+    #         • Positive → **overperformed** · Negative → **underperformed**.  
+    #         • PPR scoring; rookies excluded due to limited prior signal.
+    #         """
+    #     )
+    # elif any(c.startswith("average_probability") for c in df.columns):
+    #     st.markdown(
+    #         """
+    #         **Explanation**  
+    #         • Model-estimated probabilities:  
+    #           – **Overperform** (`average_probability_over`)  
+    #           – **Underperform** (`average_probability_under`)  
+    #           – **Neutral** (`average_probability_neutral`)  
+    #         • PPR scoring; rookies excluded due to limited prior signal.
+    #         """
+    #     )
