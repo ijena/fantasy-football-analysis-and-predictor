@@ -25,12 +25,12 @@ with nav_col2:
 st.set_page_config(page_title="Getting Started — Fantasy Football AI", layout="wide")
 
 # Title
-st.markdown("<h1 style='font-size:32px;'>📘 Getting Started</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='font-size:34px;'>📘 Getting Started</h1>", unsafe_allow_html=True)
 
 # Intro
 st.markdown(
     """
-    <p style='font-size:18px;'>
+    <p style='font-size:20px;'>
     Welcome! This web app answers fantasy football questions in terms of expected 
     overperformance and underperformance of NFL players relative to their average draft position (ADP) in fantasy football drafts.  
     It can also answer historical questions about fantasy football player performance from 2016 to 2024.
@@ -40,33 +40,33 @@ st.markdown(
 )
 
 # How to use
-st.markdown("<h2 style='font-size:24px;'>How to use this tool</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size:26px;'>How to use this tool</h2>", unsafe_allow_html=True)
 
 st.markdown(
     """
-    <p style='font-size:16px;'><b>Predictions (2025):</b></p>
-    <ul style='font-size:15px;'>
+    <p style='font-size:18px;'><b>Predictions (2025):</b></p>
+    <ul style='font-size:17px;'>
       <li>Ask questions about predicted overperformers and underperformers for the 2025 season</li>
       <li>You can filter by player name, position, average draft position (ADP) and number of results</li>
       <li>Examples:</li>
       <ul>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>top 10 predicted overperformers for 2025</code></li>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025</code></li>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>how will Josh Allen perform in 2025</code></li>
+        <li><code>top 10 predicted overperformers for 2025</code></li>
+        <li><code>who are the top 20 predicted underperforming wide receivers with an adp lower than 50 in 2025</code></li>
+        <li><code>how will Josh Allen perform in 2025</code></li>
       </ul>
     </ul>
 
-    <p style='font-size:16px;'><b>Historical data (2016–2024):</b></p>
-    <ul style='font-size:15px;'>
+    <p style='font-size:18px;'><b>Historical data (2016–2024):</b></p>
+    <ul style='font-size:17px;'>
       <li>Ask questions about overperformers and underperformers from 2016 to 2024</li>
       <li>You can also ask questions about specific players in specific years to see their performance and ADP</li>
       <li>You can filter by player name, position, ADP and number of results</li>
       <li>Examples:</li>
       <ul>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>show me the top 10 quarterbacks who overperformed in 2018</code></li>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>worst 15 underperformers in 2019</code></li>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>Average Draft Position (ADP) of Joe Burrow from 2022 - 2024</code></li>
-        &nbsp;&nbsp;&nbsp;&nbsp;<li><code>how did Derrick Henry perform in 2024</code></li>
+        <li><code>show me the top 10 quarterbacks who overperformed in 2018</code></li>
+        <li><code>worst 15 underperformers in 2019</code></li>
+        <li><code>Average Draft Position (ADP) of Joe Burrow from 2022 - 2024</code></li>
+        <li><code>how did Derrick Henry perform in 2024</code></li>
       </ul>
     </ul>
     """,
@@ -74,11 +74,11 @@ st.markdown(
 )
 
 # Constraints
-st.markdown("<h2 style='font-size:24px;'>Constraints</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='font-size:26px;'>Constraints</h2>", unsafe_allow_html=True)
 
 st.markdown(
     """
-    <ul style='font-size:15px;'>
+    <ul style='font-size:17px;'>
       <li>Predictions and history are only for <b>Points Per Reception (PPR)</b> format.</li>
       <li>Rookies are excluded due to lack of historical NFL data.</li>
       <li>Kickers and defensive players are excluded.</li>
