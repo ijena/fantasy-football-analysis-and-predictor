@@ -17,7 +17,7 @@ HOME_PAGE = "streamlit_app.py"
 GETTING_STARTED_PAGE = "pages/getting_started.py"
 HOW_IT_WORKS_PAGE = "pages/how_it_works.py"
 
-nav_col1, nav_col2, nav_col3, _ = st.columns([0.10, 0.20, 0.20, 0.80], gap="small")
+nav_col1, nav_col2, nav_col3, _ = st.columns([0.10, 0.20, 0.20, 0.90], gap="small")
 with nav_col1:
     if st.button("🏠 Home"):
         st.switch_page(HOME_PAGE)
