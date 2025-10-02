@@ -265,9 +265,10 @@ if df is None:
     pass
 else:
     st.subheader("Results")
+    st.subheader(question)
     with st.spinner("Generating summary…"):
         summary_text = llm_summary(df, question)
-    st.markdown("### Summary")
+    # st.markdown("### Summary")
     st.markdown(summary_text)
 
     view_mode = st.radio(
