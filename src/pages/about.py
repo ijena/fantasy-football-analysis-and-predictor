@@ -1,5 +1,11 @@
 # pages/about.py
 import streamlit as st
+from PIL import Image, ImageOps
+import streamlit as st
+
+img = Image.open("images/profile.jpg")
+img = ImageOps.exif_transpose(img)  # honors the EXIF orientation
+
 
 # --- Page config + hide sidebar ---
 st.set_page_config(page_title="About — Fantasy Football AI", layout="wide")
@@ -38,7 +44,7 @@ st.title("ℹ️ About")
 col1, col2 = st.columns([1, 3], gap="large")
 
 with col1:
-    st.image("images/profile.JPG", width=400)  # Replace with your image path
+    st.image(img, width=400)  # Replace with your image path
 
 with col2:
     st.markdown("""
@@ -60,7 +66,7 @@ with col2:
 st.markdown("---")
 
 # Full-width Sources section
-st.subheader("### Sources")
+st.subheader("Sources")
 st.markdown("""
 - Fantasy football ADP & performance data sourced from [FantasyPros](https://www.fantasypros.com) and public datasets.  
 - Predictions generated using fine-tuned ML models and OpenAI APIs.  
