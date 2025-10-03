@@ -32,7 +32,7 @@ Data sources: FantasyPros (ADP), Pro-Football-Reference, NFLVerse (advanced stat
 
 Expected PPR (PPG): derived from historical ADP vs outcomes (leak-safe, LOESS/binned fallback).
 
-Labels:
+**Labels: **
 
 Overperform: actual PPG ≥ expected + threshold (or ≥ 80th percentile vs expected)
 
