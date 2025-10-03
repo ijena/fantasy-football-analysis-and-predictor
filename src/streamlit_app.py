@@ -139,58 +139,71 @@ def llm_sql(user_question: str) -> str:
         raise ValueError("Unsafe SQL generated.")
     return sql
 
-# ----------------- Chart Builder -----------------
 def build_chart(df: pd.DataFrame):
-    
-
     alt.data_transformers.disable_max_rows()
     lower = {c.lower(): c for c in df.columns}
 
-    # ---------- HISTORICAL: scatter ppg_diff vs ADP (per-player colors) ----------
+    # ---------- HISTORICAL: scatter ppg_diff vs ADP ----------
     if "ppg_diff" in lower and ("avg_adp" in lower or "adp" in lower):
         adp_col = lower.get("avg_adp", lower.get("adp"))
-
         d = df.copy()
         d[adp_col] = pd.to_numeric(d[adp_col], errors="coerce")
         d["ppg_diff"] = pd.to_numeric(d["ppg_diff"], errors="coerce")
         d = d.dropna(subset=[adp_col, "ppg_diff"])
 
-        # (Optional) if there's a ton of rows, show the 500 with largest |ppg_diff|
-        # d = d.reindex(d["ppg_diff"].abs().sort_values(ascending=False).index).head(500)
-
         scatter = (
-    alt.Chart(d)
-    .mark_circle(size=70, opacity=0.9)
-    .encode(
-        x=alt.X(
-            f"{adp_col}:Q",
-            title="ADP (lower = earlier draft pick)",
-            scale=alt.Scale(reverse=True),
-            axis=alt.Axis(grid=False)  # disable grid on x
-        ),
-        y=alt.Y(
-            "ppg_diff:Q",
-            title="PPG vs Expectation",
-            axis=alt.Axis(grid=False)  # disable grid on y
-        ),
-        color=alt.Color(
-            "player:N",
-            legend=None,
-            scale=alt.Scale(scheme="dark2")  # darker palette
-        ),
-        tooltip=[c for c in d.columns]
-    )
-    .properties(height=450)  # optional dark background
-)
-
-
-        # zero reference line at ppg_diff = 0
+            alt.Chart(d)
+            .mark_circle(size=70, opacity=0.9)
+            .encode(
+                x=alt.X(f"{adp_col}:Q", title="ADP (lower = earlier pick)",
+                        scale=alt.Scale(reverse=True),
+                        axis=alt.Axis(grid=False)),
+                y=alt.Y("ppg_diff:Q", title="PPG vs Expectation",
+                        axis=alt.Axis(grid=False)),
+                color=alt.Color("player:N", legend=None, scale=alt.Scale(scheme="dark2")),
+                tooltip=list(d.columns),
+            )
+            .properties(height=450)
+        )
         zero_rule = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(strokeDash=[6,4]).encode(y="y:Q")
-
         return (scatter + zero_rule).interactive(), "ppg_diff_vs_adp"
 
-    # ---------- PREDICTIONS: keep your existing bar logic ----------
-    # (fallback to your previous bar chart for probabilities)
+    # ---------- ADP OVER YEARS: line + points ----------
+    if ("year" in lower) and ("avg_adp" in lower or "adp" in lower) \
+       and not any(c.lower().startswith("average_probability") for c in df.columns):
+        year_col = lower["year"]
+        adp_col = lower.get("avg_adp", lower.get("adp"))
+
+        d = df.copy()
+        # coerce types
+        d[year_col] = pd.to_numeric(d[year_col], errors="coerce")
+        d[adp_col]  = pd.to_numeric(d[adp_col],  errors="coerce")
+        d = d.dropna(subset=[year_col, adp_col])
+        d = d.sort_values(year_col)
+
+        # If multiple players slip in, color by player; otherwise single line
+        color_encoding = alt.value("#1f6f4a")  # dark green default
+        if "player" in d.columns and d["player"].nunique() > 1:
+            color_encoding = alt.Color("player:N", legend=alt.Legend(title="Player"),
+                                       scale=alt.Scale(scheme="dark2"))
+
+        line = (
+            alt.Chart(d)
+            .mark_line(point=True, strokeWidth=2)
+            .encode(
+                x=alt.X(f"{year_col}:O", title="Season", axis=alt.Axis(grid=False)),
+                y=alt.Y(f"{adp_col}:Q",
+                        title="ADP (lower = earlier pick)",
+                        scale=alt.Scale(reverse=True),
+                        axis=alt.Axis(grid=False)),
+                color=color_encoding,
+                tooltip=list(d.columns),
+            )
+            .properties(height=420)
+        )
+        return line.interactive(), "adp_over_years"
+
+    # ---------- PREDICTIONS: bar (fallback) ----------
     prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
     if "player" in df.columns and prob_cols:
         ycol = prob_cols[0]
@@ -202,9 +215,9 @@ def build_chart(df: pd.DataFrame):
             .mark_bar()
             .encode(
                 x=alt.X("player:N", sort="-y", title="Player"),
-                y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
+                y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title(),
+                        axis=alt.Axis(grid=False)),
                 tooltip=list(d.columns),
-                # color=alt.value("#264653")  # single darker color
             )
             .properties(height=420)
         )
