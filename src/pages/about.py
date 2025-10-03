@@ -61,9 +61,7 @@ with col2:
     - Artificial Intelligence  
     - Product Management  
 
-    If you want to report any issues, share feedback, or just chat:  
-    - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
-    - [Email](mailto:idhantjena7@gmail.com)  
+    If you want to report any issues, share feedback, or just chat, here is my [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
     
     Check out the entire code repository on [GitHub](https://github.com/ijena/fantasy-football-analysis-and-predictor)
 
