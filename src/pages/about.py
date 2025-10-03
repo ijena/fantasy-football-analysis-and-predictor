@@ -57,8 +57,10 @@ with col2:
     - Software Engineering  
     - Artificial Intelligence  
     - Product Management  
+    
+    Check out the code on [GitHub](https://github.com/ijena/fantasy-football-analysis-and-predictor)
 
-    📩 If you like what I have built and want to report any issues, share feedback, or just chat:  
+    📩 If you want to report any issues, share feedback, or just chat:  
     - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
     - [Email](mailto:idhantjena7@gmail.com)  
     """)
