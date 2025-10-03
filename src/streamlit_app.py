@@ -177,7 +177,7 @@ def build_chart(df: pd.DataFrame):
         color=alt.Color(
             "player:N",
             legend=None,
-            scale=alt.Scale(scheme="darker-2")  # darker palette
+            scale=alt.Scale(scheme="dark2")  # darker palette
         ),
         tooltip=[c for c in d.columns]
     )
