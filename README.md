@@ -1,12 +1,10 @@
-**Fantasy Football AI — Over/Underperformance vs ADP (Agentic AI + DuckDB + Streamlit)
-**
+__Fantasy Football AI — Over/Underperformance vs ADP (Agentic AI + DuckDB + Streamlit)__
 Predict which NFL players will overperform or underperform their Average Draft Position (ADP) — and explore historical performance — with an agentic AI interface that turns natural-language questions into safe SQL over DuckDB.
 Built with Python, XGBoost/Random Forest, DuckDB, Streamlit, and OpenAI.
 
-**Live App: https://fantasy-football-analysis-and-predictor.streamlit.app/
-**
-**✨ What this app does
-**
+__Live App: https://fantasy-football-analysis-and-predictor.streamlit.app/ __
+
+__✨ What this app does__
 Ask in plain English (agentic AI):
 “Top 10 predicted overperforming WRs in 2025 with ADP < 50” → instant table, chart, and summary.
 
@@ -16,8 +14,7 @@ History (2016–2024): actual PPG vs expectation (derived from historical ADP mo
 
 Visuals: sortable tables, probability bars, ADP vs PPG-diff scatter plots, ADP history per player line charts.
 
-**🧠 Agentic AI (how the “agent” works)
-**
+__🧠 Agentic AI (how the “agent” works)__
 A lightweight agent (OpenAI chat model) translates your question into read-only SQL against DuckDB views.
 
 The agent is schema-constrained (prompted with allowed views/columns) and guard-railed (DDL/unsafe keywords blocked).
@@ -26,13 +23,12 @@ Results are summarized in natural language above the table/chart.
 
 Models used in the app: gpt-4.1-nano (swap to your preferred model).
 
-**📊 Data & Features
-**
+__📊 Data & Features__
 Data sources: FantasyPros (ADP), Pro-Football-Reference, NFLVerse (advanced stats).
 
 Expected PPR (PPG): derived from historical ADP vs outcomes (leak-safe, LOESS/binned fallback).
 
-**Labels: **
+__Labels:__
 
 Overperform: actual PPG ≥ expected + threshold (or ≥ 80th percentile vs expected)
 
@@ -44,8 +40,8 @@ Positions: QB, RB, WR, TE (kickers/IDP excluded). Rookies excluded (limited prio
 
 Scoring: PPR only.
 
-**🏗️ Architecture
-**CSVs → Pandas preprocessing → Feature engineering
+__🏗️ Architecture__
+CSVs → Pandas preprocessing → Feature engineering
          ↓
   Joblib models (RF/XGB) → 2025 predictions
          ↓
@@ -53,8 +49,8 @@ Scoring: PPR only.
          ↓
   Streamlit UI + Agentic AI (LLM → SQL → results → charts + summary)
 
-**🧪 Reproducible Setup (Local)
-**1) Clone & install
+__🧪 Reproducible Setup (Local)__
+1) Clone & install
 git clone https://github.com/<you>/fantasy-football-analysis-and-predictor.git
 cd fantasy-football-analysis-and-predictor
 python -m venv .venv && source .venv/bin/activate  # (Windows: .venv\Scripts\activate)
@@ -83,8 +79,7 @@ v_adp(player, position, year, adp)
 4) Run the app
 streamlit run src/streamlit_app.py
 
-**🖥️ Deploy (Streamlit Community Cloud)
-**
+__🖥️ Deploy (Streamlit Community Cloud)__
 Push repo to GitHub (include requirements.txt and fantasy.duckdb OR the CSVs + loader).
 
 In Streamlit → “New app” → select this repo and src/streamlit_app.py.
@@ -93,8 +88,7 @@ Add Secrets: OPENAI_API_KEY.
 
 If you ship CSVs, add a postDeploy step or call load_duckdb.py on first run.
 
-**🔍 Example questions
-**
+__🔍 Example questions__
 Predictions (2025)
 
 “top 10 predicted overperformers for 2025”
@@ -109,8 +103,8 @@ History (2016–2024)
 
 “ADP of Joe Burrow from 2022–2024”
 
-**📁 Repo structure
-**src/
+__📁 Repo structure__
+src/
   ├─ streamlit_app.py        # main app (agent + UI)
   ├─ schema_setup.py         # creates views (optional if load script builds them)
   ├─ load_duckdb.py          # reads CSVs -> DuckDB tables + views
@@ -129,8 +123,7 @@ fantasy.duckdb               # built DB (or build on deploy)
 requirements.txt
 README.md
 
-**🧩 How it works
-**
+__🧩 How it works__
 Expected PPR per game is estimated from historical ADP vs outcomes with leak-safe fitting (prior years only).
 
 Classification models (RF/XGB) predict over/under/neutral vs expectation.
@@ -139,20 +132,18 @@ Multiple models are ensembled by averaging probabilities per player.
 
 Agentic AI converts questions → SQL for DuckDB → app renders tables, charts, and a natural-language summary.
 
-**📈 Visualizations
-**
+__📈 Visualizations__
 Probability bars: over_performance, under_performance, neutral_performance.
 
 Historical scatter: ppg_diff vs ADP (lower ADP = earlier pick).
 
 ADP trajectory: player’s ADP by year line chart.
 
-**⚠️ Limitations
-**
+__⚠️ Limitations__
 PPR only; no kickers/defensive players; rookies excluded.
 
-**🙋‍♂️ About the author
-**
+__🙋‍♂️ About the author__
+
 Built by Idhant Jena (UCI, CS — Intelligent Systems).
 I’m actively looking for full-time roles in Software Engineering, AI/Data Science, and Product Management.
 Connect: LinkedIn - https://www.linkedin.com/in/idhant-jena/
