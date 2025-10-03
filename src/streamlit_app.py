@@ -160,24 +160,30 @@ def build_chart(df: pd.DataFrame):
         # d = d.reindex(d["ppg_diff"].abs().sort_values(ascending=False).index).head(500)
 
         scatter = (
-            alt.Chart(d)
-            .mark_circle(size=70, opacity=0.9)
-            .encode(
-                x=alt.X(
-                    f"{adp_col}:Q",
-                    title="ADP (lower = earlier draft pick)",
-                    scale=alt.Scale(reverse=True)
-                ),
-                y=alt.Y("ppg_diff:Q", title="PPG vs Expectation"),
-                color=alt.Color(
-                    "player:N",
-                    legend=None,                     # big legends get unwieldy
-                    scale=alt.Scale(scheme="dark2")  # darker categorical palette
-                ),
-                tooltip=[c for c in d.columns]      # full tooltip
-            )
-            .properties(height=450)
-        )
+    alt.Chart(d)
+    .mark_circle(size=70, opacity=0.9)
+    .encode(
+        x=alt.X(
+            f"{adp_col}:Q",
+            title="ADP (lower = earlier draft pick)",
+            scale=alt.Scale(reverse=True),
+            axis=alt.Axis(grid=False)  # disable grid on x
+        ),
+        y=alt.Y(
+            "ppg_diff:Q",
+            title="PPG vs Expectation",
+            axis=alt.Axis(grid=False)  # disable grid on y
+        ),
+        color=alt.Color(
+            "player:N",
+            legend=None,
+            scale=alt.Scale(scheme="category20c")  # darker palette
+        ),
+        tooltip=[c for c in d.columns]
+    )
+    .properties(height=450)  # optional dark background
+)
+
 
         # zero reference line at ppg_diff = 0
         zero_rule = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(strokeDash=[6,4]).encode(y="y:Q")

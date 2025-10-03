@@ -43,7 +43,8 @@ st.markdown("""
 ### 1) Data preprocessing using Pandas in Python  
 - The web app uses fantasy football data from [FantasyPros](https://www.fantasypros.com) (ADP) and [Pro-Football-Reference](https://www.pro-football-reference.com) (player stats).  
 - Additionally, I gathered NFL player season statistics and advanced data from [NFLVerse](https://nflverse.nflverse.com/).  
-- All fantasy irrelevant data was excluded from these datasets (e.g., kickers, defensive players, offensive linemen, etc.)  
+- All fantasy irrelevant data was excluded from these datasets (e.g., kickers, defensive players, offensive linemen, etc.) 
+- I calculated average ADP for each player across different platforms (e.g., Sleeper, Yahoo) to get a consensus ADP for each player for each year.
 - The datasets were merged with cleaning and normalization of player names and handling missing values, to create a unified view of player ADP and performance from 2015 to 2024.  
 - Since Average Draft Position (ADP) defines player expectations in fantasy football, I calculated expected fantasy points per game based on ADP and player position using historical data.  
 - This was used to engineer "performance relative to expectations" which is the difference between actual and expected points per game.  
