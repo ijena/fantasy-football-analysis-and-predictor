@@ -35,34 +35,19 @@ with nav_col4:
 st.title("ℹ️ About")
 
 st.markdown("""
-### Project Overview
-This app is an **agentic AI assistant** built on top of:
-- **DuckDB** for data storage  
-- **Machine learning models** predicting fantasy football over/underperformance  
-- **Streamlit** for interactive visualizations  
-- **OpenAI models** for natural-language → SQL translation and summarization  
-
-It allows anyone to ask free-form questions like:  
-- *“Top 10 predicted overperformers for 2025”*  
-- *“How did Derrick Henry perform in 2024?”*  
-- *“Average Draft Position of Joe Burrow from 2021–2024”*  
-
-and get results as **tables, charts, and natural-language summaries**.
+Hey! I am Idhant Jena, a Class of 2025 undergraduate in Computer Science with a specialization in Intelligent Systems from the University of California, Irvine.
+I am passionate about the intersection of AI and sports analytics, and this project is a testament to that passion. I am
+currently looking for full-time opportunities in data science, software engineering, AI and Product Management. If you like what I have built and want to report any issues or feedback or just want to chat, 
+please connect with me on [LinkedIn](https://www.linkedin.com/in/idhantjena/) or [Email](mailto:idhantjena7@gmail.com) 
 
 ---
 
-### Creator
-This project was developed by **[Your Name]**, combining my interests in:
-- Sports analytics ⚽🏈  
-- Machine learning 🤖  
-- Interactive data visualization 📊  
-- Building real-world agentic AI applications  
+
 
 ---
 
-### Open Source & Sharing
-- Code hosted on GitHub (link if you want).  
-- Free to use and explore on Streamlit Community Cloud.  
+### Sources
+
 
 ---
 """)
