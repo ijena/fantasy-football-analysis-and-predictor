@@ -191,7 +191,7 @@ def build_chart(df: pd.DataFrame):
             alt.Chart(d)
             .mark_line(point=True, strokeWidth=2)
             .encode(
-                x=alt.X(f"{year_col}:O", title="Season", axis=alt.Axis(grid=False),labelAngle=0),
+                x=alt.X(f"{year_col}:O", title="Season", axis=alt.Axis(grid=False)),
                 y=alt.Y(f"{adp_col}:Q",
                         title="ADP (lower = earlier pick)",
                         scale=alt.Scale(reverse=False),
@@ -214,7 +214,7 @@ def build_chart(df: pd.DataFrame):
             alt.Chart(d)
             .mark_bar()
             .encode(
-                x=alt.X("player:N", sort="-y", title="Player",labelAngle=0),
+                x=alt.X("player:N", sort="-y", title="Player"),
                 y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title(),
                         axis=alt.Axis(grid=False)),
                 tooltip=list(d.columns),
