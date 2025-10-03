@@ -35,46 +35,40 @@ with nav_col4:
 # --------- Content ---------
 st.title("🧠 How it works")
 
-st.markdown("""
-This app combines **agentic AI** with your **ML models** and a **DuckDB** warehouse to answer natural-language
-questions about fantasy football performance.
+st.markdown(""" 
+### 1) Data preprocessing using Pandas in Python- 
+- The web app uses fantasy football data from [FantasyPros](https://www.fantasypros.com) (ADP) and [Pro-Football-Reference](https://www.pro-football-reference.com) (player stats).
+- Additionally, I gathered NFL player season statistics and advanced data from [NFLVerse](https://nflverse.nflverse.com/).
+- ALl fantasy irrelevant data was excluded from these datasets (e.g., kickers, defensive players, offensive linemen, etc.)
+- The datasets were merged with cleaning and normalization of player names and handling missing values, to create a unified view of player ADP and performance from 2015 to 2024.
+- Since Average Draft Position (ADP) defines player expectations in fantasy football, I calculated expected fantasy points per game based on ADP and player position using historical data.
+- This was used to engineer "performance relative to expectations" which is the difference between actual and expected points per game
 
-### 1) Data & storage (DuckDB)
-- You load two main datasets:
-  - **Predictions (2025)** with model probabilities for Over / Under / Neutral vs expectation.
-  - **History (2016–2024)** with actual performance vs expectation.
-- We create read-only views:
-  - `v_predictions(player, position, year, AVG_ADP, average_probability_over, average_probability_under, average_probability_neutral)`
-  - `v_history(player, position, year, AVG_ADP, ppg_diff)`
+### 2) Model training -
+- The merged dataset were split by fantasy relevant positions (QB, RB, WR, TE)
+- The data was split into training (2016-2020), validation (2021-2023) and test (2024) sets based on season year.
+- Classification models (Random Forest, XGBoost) were trained in Python on the historical training data to predict whether a player will overperform, underperform, or meet expectations based on their ADP and fantasy performance and statistical data from the previous season.
+- Overperformance is defined as exceeding expected points per game by 2 points or by being in the 80th percentile of performance relative to expectations
+- Underperformance is defined as failing to meet expected points per game by 2 points or less or by being in the 20th percentile of performance relative to expectations.
+- All other performances are classified as meeting expectations.
+- These models were fine-tuned using the validation set and evaluated on the test set to ensure they generalize well to unseen data.
 
-### 2) Expected points & labels
-- **Expectation** is derived from **ADP-based curves** trained on past seasons (leak-safe).
-- **Overperformance** (historical) uses `ppg_diff = actual PPR per game − expected PPR per game`.
-- **Predictions** (2025) are class probabilities from your saved models.
+### 3) Model predictions -
+- The trained models were saved using joblib for each type of model for each fantasy relevant position.
+- These models were used to generate predictions for the 2025 season based on Average Draft Position (ADP) data for the 2025 season.
+- The predictions include probabilities for each class (overperform, underperform, meet expectations) for each player based on their ADP.
+- The average probability for each class was calculated across all models for each player to create a consensus prediction.
 
-### 3) Agentic AI → SQL
-- A small **prompting policy** tells the model how to translate your question into **safe SQL**:
-  - 2025 → query `v_predictions` and sort by the right probability.
-  - ≤ 2024 → query `v_history` and sort by `ppg_diff`.
-  - ADP questions → query `v_adp` (if present).
-- The app **disallows DDL/DML** and screens for unsafe keywords before running.
+### 4) Data Storage (DuckDB)
+- The model predictions were stored in a DuckDB database called v_predictions. which included player details like name, position and ADP along with average probability of overperforming, underperforming and meeting expectations.
+- Historical performance data from 2016 to 2024 was also stored in a DuckDB view called v_history, which included player details, ADP and actual performance relative to expectations.
+- Player ADP data from 2015 to 2025 was stored in a DuckDB view called v_adp to allow the querying of player ADP.
 
-### 4) Results → Table, Chart, Summary
-- **Table**: we show user-friendly column names (e.g., “Probability of Overperforming”).
-- **Chart**: Altair bar charts for either `ppg_diff` (history) or the selected probability (predictions).
-- **Natural-language summary**: A short model-generated explanation for context.
+### 5) Model deployment (Streamlit + OpenAI)
+- The web app was built using Streamlit to provide an interactive interface for users to ask questions about player performance.
+- The user can ask questions about performance predictions based on 2025 ADP or player positions or ask for historical performance data from 2016 to 2024.
+- These natural language questions are processed using Agentic AI (OpenAI's GPT-4.1-nano model) to understand user intent and generate SQL queries to fetch relevant data from the DuckDB database.
+- The AI Agent has specific schema rules to ensure it generates safe and accurate SQL queries based on the user's question.
+- The results are then displayed in a user-friendly format, including tables and charts, along with a natural language summary generated by the AI Agent.
 
-### 5) Why agentic?
-- The “agent” takes your intent, **plans** the appropriate query, **executes** it, and **explains** the results.
-- This is more than keyword search; it’s task-oriented orchestration across **NL → SQL → Viz → Summary**.
-
-### 6) Limits & scope
-- PPR scoring only; rookies excluded due to limited prior signal.
-- 2016–2024 for history; 2025 for predictions.
-- Names must exist in the datasets (we do simple fuzzy fallback).
-
----
-**Tip:** Try asking:
-- “Top 10 predicted underperforming WR with ADP < 50 in 2025”
-- “Show me the biggest QB overperformers in 2018”
 """)

@@ -41,6 +41,7 @@ st.markdown(
     Welcome! This web app answers fantasy football questions in terms of expected 
     overperformance and underperformance of NFL players relative to their average draft position (ADP) in fantasy football drafts.  
     It can also answer historical questions about fantasy football player performance from 2016 to 2024.
+    The aim of this web app is to allow users to gain insight for fantasy football drafts using AI and machine learning by predicting overperformers and underperformers relative to their Average Draft Position(ADP)
     </p>
     <hr>
     """, unsafe_allow_html=True
