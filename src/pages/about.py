@@ -1,11 +1,9 @@
 # pages/about.py
 import streamlit as st
 from PIL import Image, ImageOps
-import streamlit as st
 
 img = Image.open("images/profile.JPG")
 img = ImageOps.exif_transpose(img)  # honors the EXIF orientation
-
 
 # --- Page config + hide sidebar ---
 st.set_page_config(page_title="About — Fantasy Football AI", layout="wide")
@@ -14,6 +12,11 @@ st.markdown("""
         [data-testid="stSidebar"] {display: none;}
         [data-testid="stSidebarNav"] {display: none;}
         [data-testid="collapsedControl"] {display: none;}
+        /* Force all markdown text to size 17px */
+        .stMarkdown, .stMarkdown p, .stMarkdown li, .stMarkdown h1, 
+        .stMarkdown h2, .stMarkdown h3, .stMarkdown h4 {
+            font-size: 17px !important;
+        }
     </style>
 """, unsafe_allow_html=True)
 
@@ -58,7 +61,7 @@ with col2:
     - Artificial Intelligence  
     - Product Management  
     
-    Check out the code on [GitHub](https://github.com/ijena/fantasy-football-analysis-and-predictor)
+    Check out the entire code repository on [GitHub](https://github.com/ijena/fantasy-football-analysis-and-predictor)
 
     📩 If you want to report any issues, share feedback, or just chat:  
     - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
