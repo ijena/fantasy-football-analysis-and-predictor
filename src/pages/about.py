@@ -1,7 +1,7 @@
 # pages/about.py
 import streamlit as st
 
-# Page config + hide sidebar
+# --- Page config + hide sidebar ---
 st.set_page_config(page_title="About — Fantasy Football AI", layout="wide")
 st.markdown("""
     <style>
@@ -34,20 +34,35 @@ with nav_col4:
 # --- Page Content ---
 st.title("ℹ️ About")
 
+# Profile + About in two columns
+col1, col2 = st.columns([1, 3], gap="large")
+
+with col1:
+    st.image("images/profile.JPG", width=220, caption="Idhant Jena")  # Replace with your image path
+
+with col2:
+    st.markdown("""
+    Hey! I am Idhant Jena, a Class of 2025 undergraduate in Computer Science (Intelligent Systems) from the University of California, Irvine.  
+
+    I am passionate about the intersection of AI and sports analytics, and this project is a testament to that passion.  
+
+    I am currently seeking full-time opportunities in:  
+    - Data Science  
+    - Software Engineering  
+    - Artificial Intelligence  
+    - Product Management  
+
+    📩 If you like what I have built and want to report any issues, share feedback, or just chat:  
+    - [LinkedIn](https://www.linkedin.com/in/idhantjena/)  
+    - [Email](mailto:idhantjena7@gmail.com)  
+    """)
+
+st.markdown("---")
+
+# Full-width Sources section
+st.subheader("### Sources")
 st.markdown("""
-Hey! I am Idhant Jena, a Class of 2025 undergraduate in Computer Science with a specialization in Intelligent Systems from the University of California, Irvine.
-I am passionate about the intersection of AI and sports analytics, and this project is a testament to that passion. I am
-currently looking for full-time opportunities in data science, software engineering, AI and Product Management. If you like what I have built and want to report any issues or feedback or just want to chat, 
-please connect with me on [LinkedIn](https://www.linkedin.com/in/idhantjena/) or [Email](mailto:idhantjena7@gmail.com) 
-
----
-
-
-
----
-
-### Sources
-
-
----
+- Fantasy football ADP & performance data sourced from [FantasyPros](https://www.fantasypros.com) and public datasets.  
+- Predictions generated using fine-tuned ML models and OpenAI APIs.  
+- Visualization powered by [Streamlit](https://streamlit.io) and [Altair](https://altair-viz.github.io).  
 """)
