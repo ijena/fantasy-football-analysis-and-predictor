@@ -53,7 +53,7 @@ with col2:
     - Product Management  
 
     📩 If you like what I have built and want to report any issues, share feedback, or just chat:  
-    - [LinkedIn](https://www.linkedin.com/in/idhantjena/)  
+    - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
     - [Email](mailto:idhantjena7@gmail.com)  
     """)
 
