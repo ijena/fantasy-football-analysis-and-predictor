@@ -141,8 +141,7 @@ def llm_sql(user_question: str) -> str:
 
 # ----------------- Chart Builder -----------------
 def build_chart(df: pd.DataFrame):
-    import altair as alt
-    import pandas as pd
+    
 
     alt.data_transformers.disable_max_rows()
     lower = {c.lower(): c for c in df.columns}
@@ -205,7 +204,7 @@ def build_chart(df: pd.DataFrame):
                 x=alt.X("player:N", sort="-y", title="Player"),
                 y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
                 tooltip=list(d.columns),
-                color=alt.value("#264653")  # single darker color
+                # color=alt.value("#264653")  # single darker color
             )
             .properties(height=420)
         )
