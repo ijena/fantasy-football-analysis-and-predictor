@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image, ImageOps
 import streamlit as st
 
-img = Image.open("images/profile.jpg")
+img = Image.open("images/profile.JPG")
 img = ImageOps.exif_transpose(img)  # honors the EXIF orientation
 
 
