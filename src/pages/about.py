@@ -60,20 +60,21 @@ with col2:
     - Software Engineering  
     - Artificial Intelligence  
     - Product Management  
+
+    If you want to report any issues, share feedback, or just chat:  
+    - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
+    - [Email](mailto:idhantjena7@gmail.com)  
     
     Check out the entire code repository on [GitHub](https://github.com/ijena/fantasy-football-analysis-and-predictor)
 
-    📩 If you want to report any issues, share feedback, or just chat:  
-    - [LinkedIn](https://www.linkedin.com/in/idhant-jena/)  
-    - [Email](mailto:idhantjena7@gmail.com)  
     """)
+    
 
 st.markdown("---")
 
 # Full-width Sources section
 st.subheader("Sources")
 st.markdown("""
-- Fantasy football ADP & performance data sourced from [FantasyPros](https://www.fantasypros.com) and public datasets.  
-- Predictions generated using fine-tuned ML models and OpenAI APIs.  
-- Visualization powered by [Streamlit](https://streamlit.io) and [Altair](https://altair-viz.github.io).  
-""")
+- Fantasy football Points Per Reception (PPR) ADP data (2015 - 2025) sourced from [FantasyPros](https://www.fantasypros.com)  
+- Fantasy football player statistics (2015 - 2024) sourced from [Pro-Football-Reference](https://www.pro-football-reference.com)
+- NFL player season statistics and advanced data from [NFLVerse] (https://nflverse.nflverse.com/)""")
