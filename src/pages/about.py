@@ -38,7 +38,7 @@ st.title("ℹ️ About")
 col1, col2 = st.columns([1, 3], gap="large")
 
 with col1:
-    st.image("images/profile.JPG", width=220, caption="Idhant Jena")  # Replace with your image path
+    st.image("images/profile.JPG", width=220)  # Replace with your image path
 
 with col2:
     st.markdown("""
