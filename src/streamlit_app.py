@@ -194,7 +194,7 @@ def build_chart(df: pd.DataFrame):
                 x=alt.X(f"{year_col}:O", title="Season", axis=alt.Axis(grid=False)),
                 y=alt.Y(f"{adp_col}:Q",
                         title="ADP (lower = earlier pick)",
-                        scale=alt.Scale(reverse=True),
+                        scale=alt.Scale(reverse=False),
                         axis=alt.Axis(grid=False)),
                 color=color_encoding,
                 tooltip=list(d.columns),
