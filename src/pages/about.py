@@ -73,8 +73,8 @@ with col2:
 st.markdown("---")
 
 # Full-width Sources section
-st.subheader("Sources")
+st.subheader("Data Sources")
 st.markdown("""
-- Fantasy football Points Per Reception (PPR) ADP data (2015 - 2025) sourced from [FantasyPros](https://www.fantasypros.com)  
-- Fantasy football player statistics (2015 - 2024) sourced from [Pro-Football-Reference](https://www.pro-football-reference.com)
-- NFL player season statistics and advanced data from [NFLVerse] (https://nflverse.nflverse.com/)""")
+- Fantasy football Points Per Reception (PPR) ADP data (2015 - 2025) from [FantasyPros](https://www.fantasypros.com)  
+- Fantasy football player statistics (2015 - 2024) from [Pro-Football-Reference](https://www.pro-football-reference.com)
+- NFL player season statistics and advanced data from [NFLVerse](https://nflverse.nflverse.com/)""")
