@@ -55,7 +55,7 @@ with col2:
 
     I am passionate about the intersection of AI and sports analytics, and this project is a testament to that passion.  
 
-    I am currently seeking full-time opportunities in:  
+    I am currently seeking entry-level full-time opportunities in:  
     - Data Science  
     - Software Engineering  
     - Artificial Intelligence  

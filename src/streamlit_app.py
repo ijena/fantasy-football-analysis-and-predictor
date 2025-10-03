@@ -144,47 +144,49 @@ def build_chart(df: pd.DataFrame):
     alt.data_transformers.disable_max_rows()
     lower = {c.lower(): c for c in df.columns}
 
-    # Historical performance
-    if "ppg_diff" in lower and "player" in lower:
-        ycol = lower["ppg_diff"]
-    else:
-        # Prediction probabilities
-        prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
-        ycol = prob_cols[0] if ("player" in df.columns and prob_cols) else None
+    # Historical performance → scatter plot
+    if "ppg_diff" in lower and ("avg_adp" in lower or "adp" in lower):
+        adp_col = lower.get("avg_adp", lower.get("adp"))
+        d = df.copy()
+        d[adp_col] = pd.to_numeric(d[adp_col], errors="coerce")
+        d["ppg_diff"] = pd.to_numeric(d["ppg_diff"], errors="coerce")
+        d = d.dropna(subset=[adp_col, "ppg_diff"])
 
-    if ycol is None or "player" not in df.columns:
-        return None, None
-
-    d = df.copy()
-    d[ycol] = pd.to_numeric(d[ycol], errors="coerce")
-    d = d.dropna(subset=[ycol])
-    if d.empty:
-        return None, ycol
-
-    if "year" in d.columns and pd.api.types.is_float_dtype(d["year"]):
-        d["year"] = d["year"].astype("Int64")
-
-    d = d.sort_values(ycol, ascending=False).head(50)
-
-    title_map = {
-        "ppg_diff": "PPG vs Expectation",
-        "average_probability_over": "Probability: Overperform",
-        "average_probability_under": "Probability: Underperform",
-        "average_probability_neutral": "Probability: Neutral",
-    }
-    y_title = title_map.get(ycol, ycol.replace("_", " ").title())
-
-    chart = (
-        alt.Chart(d)
-        .mark_bar()
-        .encode(
-            x=alt.X("player:N", sort="-y", title="Player"),
-            y=alt.Y(f"{ycol}:Q", title=y_title),
-            tooltip=list(d.columns),
+        scatter = (
+            alt.Chart(d)
+            .mark_circle(size=60, opacity=0.6)
+            .encode(
+                x=alt.X(f"{adp_col}:Q", title="ADP (lower = earlier draft pick)", scale=alt.Scale(reverse=True)),
+                y=alt.Y("ppg_diff:Q", title="PPG vs Expectation"),
+                color=alt.Color("position:N", legend=alt.Legend(title="Position")),
+                tooltip=["player:N", "position:N", "year:O", f"{adp_col}:Q", "ppg_diff:Q"]
+            )
+            .properties(height=420)
         )
-        .properties(height=420)
-    )
-    return chart, ycol
+
+        # Add a zero reference line
+        zero = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(color="gray").encode(y="y:Q")
+
+        return scatter + zero, "ppg_diff"
+
+    # Predictions → still bar chart
+    prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
+    if "player" in df.columns and prob_cols:
+        ycol = prob_cols[0]
+        chart = (
+            alt.Chart(df)
+            .mark_bar()
+            .encode(
+                x=alt.X("player:N", sort="-y", title="Player"),
+                y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
+                tooltip=list(df.columns),
+                color=alt.value("steelblue")
+            )
+            .properties(height=420)
+        )
+        return chart, ycol
+
+    return None, None
 
 def llm_summary(df: pd.DataFrame, user_question: str) -> str:
     """
