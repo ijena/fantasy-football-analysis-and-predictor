@@ -141,52 +141,72 @@ def llm_sql(user_question: str) -> str:
 
 # ----------------- Chart Builder -----------------
 def build_chart(df: pd.DataFrame):
+    import altair as alt
+    import pandas as pd
+
     alt.data_transformers.disable_max_rows()
     lower = {c.lower(): c for c in df.columns}
 
-    # Historical performance → scatter plot
+    # ---------- HISTORICAL: scatter ppg_diff vs ADP (per-player colors) ----------
     if "ppg_diff" in lower and ("avg_adp" in lower or "adp" in lower):
         adp_col = lower.get("avg_adp", lower.get("adp"))
+
         d = df.copy()
         d[adp_col] = pd.to_numeric(d[adp_col], errors="coerce")
         d["ppg_diff"] = pd.to_numeric(d["ppg_diff"], errors="coerce")
         d = d.dropna(subset=[adp_col, "ppg_diff"])
 
+        # (Optional) if there's a ton of rows, show the 500 with largest |ppg_diff|
+        # d = d.reindex(d["ppg_diff"].abs().sort_values(ascending=False).index).head(500)
+
         scatter = (
             alt.Chart(d)
-            .mark_circle(size=60, opacity=0.6)
+            .mark_circle(size=70, opacity=0.9)
             .encode(
-                x=alt.X(f"{adp_col}:Q", title="ADP (lower = earlier draft pick)", scale=alt.Scale(reverse=True)),
+                x=alt.X(
+                    f"{adp_col}:Q",
+                    title="ADP (lower = earlier draft pick)",
+                    scale=alt.Scale(reverse=True)
+                ),
                 y=alt.Y("ppg_diff:Q", title="PPG vs Expectation"),
-                color=alt.Color("position:N", legend=alt.Legend(title="Position")),
-                tooltip=["player:N", "position:N", "year:O", f"{adp_col}:Q", "ppg_diff:Q"]
+                color=alt.Color(
+                    "player:N",
+                    legend=None,                     # big legends get unwieldy
+                    scale=alt.Scale(scheme="dark2")  # darker categorical palette
+                ),
+                tooltip=[c for c in d.columns]      # full tooltip
             )
-            .properties(height=420)
+            .properties(height=450)
         )
 
-        # Add a zero reference line
-        zero = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(color="gray").encode(y="y:Q")
+        # zero reference line at ppg_diff = 0
+        zero_rule = alt.Chart(pd.DataFrame({"y": [0]})).mark_rule(strokeDash=[6,4]).encode(y="y:Q")
 
-        return scatter + zero, "ppg_diff"
+        return (scatter + zero_rule).interactive(), "ppg_diff_vs_adp"
 
-    # Predictions → still bar chart
+    # ---------- PREDICTIONS: keep your existing bar logic ----------
+    # (fallback to your previous bar chart for probabilities)
     prob_cols = [c for c in df.columns if c.lower().startswith("average_probability")]
     if "player" in df.columns and prob_cols:
         ycol = prob_cols[0]
+        d = df.copy()
+        d[ycol] = pd.to_numeric(d[ycol], errors="coerce")
+        d = d.dropna(subset=[ycol]).sort_values(ycol, ascending=False).head(50)
         chart = (
-            alt.Chart(df)
+            alt.Chart(d)
             .mark_bar()
             .encode(
                 x=alt.X("player:N", sort="-y", title="Player"),
                 y=alt.Y(f"{ycol}:Q", title=ycol.replace("_", " ").title()),
-                tooltip=list(df.columns),
-                color=alt.value("steelblue")
+                tooltip=list(d.columns),
+                color=alt.value("#264653")  # single darker color
             )
             .properties(height=420)
         )
         return chart, ycol
 
     return None, None
+
 
 def llm_summary(df: pd.DataFrame, user_question: str) -> str:
     """
