@@ -2,7 +2,7 @@ __Fantasy Football AI — Over/Underperformance vs ADP (Agentic AI + DuckDB + St
 Predict which NFL players will overperform or underperform their Average Draft Position (ADP) — and explore historical performance — with an agentic AI interface that turns natural-language questions into safe SQL over DuckDB.
 Built with Python, XGBoost/Random Forest, DuckDB, Streamlit, and OpenAI.
 
-__Live App: https://fantasy-football-analysis-and-predictor.streamlit.app/ __
+__Live App: https://fantasy-football-analysis-and-predictor.streamlit.app/__
 
 __✨ What this app does__ <br><br>
 Ask in plain English (agentic AI):
