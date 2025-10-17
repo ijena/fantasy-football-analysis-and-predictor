@@ -129,8 +129,8 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-5-nano",
-        temperature=1.0,
+        model="gpt-4.1-nano",
+        temperature=0.0,
         messages=[{"role": "user", "content": prompt}],
     )
     sql = resp.choices[0].message.content.strip()
@@ -299,12 +299,12 @@ with colR:
 # ----------------- Query Execution -----------------
 if run and question:
     try:
-        start_time = time.time()  # ⏱️ Start timer
+        # start_time = time.time()  # ⏱️ Start timer
 
         sql = llm_sql(question)
         df = con.execute(sql).df()
-        end_time = time.time()  # ⏱️ End timer
-        st.success(f"Query executed in {end_time - start_time:.2f} seconds.")
+        # end_time = time.time()  # ⏱️ End timer
+        # st.success(f"Query executed in {end_time - start_time:.2f} seconds.")
         st.session_state.last_df = df
     except Exception as e:
         st.error(f"Error: {e}")
