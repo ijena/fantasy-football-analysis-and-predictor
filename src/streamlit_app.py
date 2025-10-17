@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import altair as alt
 from openai import OpenAI
-
+import time
 # Hide the sidebar (including the collapse/expand arrow)
 hide_sidebar_style = """
     <style>
@@ -299,8 +299,12 @@ with colR:
 # ----------------- Query Execution -----------------
 if run and question:
     try:
+        start_time = time.time()  # ⏱️ Start timer
+
         sql = llm_sql(question)
         df = con.execute(sql).df()
+        end_time = time.time()  # ⏱️ End timer
+        st.success(f"Query executed in {end_time - start_time:.2f} seconds.")
         st.session_state.last_df = df
     except Exception as e:
         st.error(f"Error: {e}")
