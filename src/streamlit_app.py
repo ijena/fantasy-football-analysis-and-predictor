@@ -129,8 +129,8 @@ def llm_sql(user_question: str) -> str:
     """Ask the model for SQL only."""
     prompt = f"{SCHEMA_GUIDE}\n\nUser: {user_question}\nSQL:"
     resp = client.chat.completions.create(
-        model="gpt-4.1-nano",
-        temperature=0.0,
+        model="gpt-5.1-nano",
+        temperature=1.0,
         messages=[{"role": "user", "content": prompt}],
     )
     sql = resp.choices[0].message.content.strip()
